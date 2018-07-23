@@ -8,18 +8,8 @@
 @prefix vann:    <http://purl.org/vocab/vann/> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 
-<http://disk-project.org/ontology/disk>
+<http://disk-project.org/ontology/disk#>
       a       owl:Ontology ;
-      rdfs:label "DISK Ontology"@en ;
-      dc:creator "Varun Ratnakar" , "Yolanda Gil" , "Daniel Garijo" ;
-      terms:abstract "The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard"@en ;
-      terms:created "2018-07-23"^^xsd:dateTime ;
-      terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
-      terms:title "The DISK Ontology"@en ;
-      vann:preferredNamespacePrefix
-              "disk" ;
-      vann:preferredNamespaceUri
-              "http://disk-project.org/ontology/disk#"^^xsd:anyURI ;
       owl:versionInfo "1.0.0" .
 
 :hasDataQuery
@@ -35,6 +25,14 @@
       rdfs:domain owl:Thing , :WorkflowBinding ;
       rdfs:label "has id"@en ;
       rdfs:range xsd:string .
+
+:hasTriggeredLineOfInquiryStatus 
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Property that tells the triggered lline Of inquiry's status"@en ;
+      rdfs:domain :TriggeredLineOfInquiry ;
+      rdfs:label "Triggered Line Of Inquiry Status"@en ;
+      rdfs:range xsd:string .
+
 
 :hasResultingHypothesis
       a       owl:ObjectProperty ;
