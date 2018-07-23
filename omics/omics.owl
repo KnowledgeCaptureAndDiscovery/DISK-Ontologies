@@ -1,228 +1,257 @@
-@prefix : <http://disk-project.org/ontology/omics#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@base <http://disk-project.org/ontology/omics> .
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://disk-project.org/ontology/omics#"
+     xml:base="http://disk-project.org/ontology/omics"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://disk-project.org/ontology/omics"/>
+    
 
-<http://disk-project.org/ontology/omics> rdf:type owl:Ontology ;
-	dc:creator "Varun Ratnakar";
-	dc:contributor "Daniel Garijo", "Yolanda Gil";
-	rdfs:comment "The omics vocabulary introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.  "@en;
-	dcterms:abstract "The omics vocabulary introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.  "@en;
-	dc:description "The omics vocabulary introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.  "@en;
-	dc:title "The Disk-omics Ontology"@en;
-	dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0>;
-	owl:versionIRI <http://www.disk-project.org/ontology/omics/omics-1.0.0.owl#UPDATE> ;
-	owl:versionInfo "1.0.0 First Draft" ;
-	dc:created "2016-03-24T20:18:00Z"^^xsd:dateTime;
-	vann:preferredNamespaceUri <http://disk-project.org/ontology/omics>;
-	vann:preferredNamespacePrefix "omics".
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-#################################################################
-#
-#    Object Properties
-#
-#################################################################
+    
 
 
-###  http://disk-project.org/ontology/omics#collectedFrom
+    <!-- http://disk-project.org/ontology/omics#collectedFrom -->
 
-:collectedFrom rdf:type owl:ObjectProperty ;
-               
-               rdfs:range :Patient ;
-               
-               rdfs:domain :Tissue .
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#collectedFrom">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Sample"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/omics#Patient"/>
+    </owl:ObjectProperty>
+    
 
 
+    <!-- http://disk-project.org/ontology/omics#experimentedOn -->
 
-###  http://disk-project.org/ontology/omics#experimentedOn
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#experimentedOn">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Experiment"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Sample"/>
+    </owl:ObjectProperty>
+    
 
-:experimentedOn rdf:type owl:ObjectProperty ;
-                
-                rdfs:domain :Experiment ,
-                            :Tissue .
 
+    <!-- http://disk-project.org/ontology/omics#hasDiagnosis -->
 
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#hasDiagnosis">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Patient"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/omics#Diagnosis"/>
+    </owl:ObjectProperty>
+    
 
-###  http://disk-project.org/ontology/omics#hasDiagnosis
 
-:hasDiagnosis rdf:type owl:ObjectProperty ;
-              
-              rdfs:range :Diagnosis ;
-              
-              rdfs:domain :Patient .
+    <!-- http://disk-project.org/ontology/omics#isDiagnosedWith -->
 
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#isDiagnosedWith">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Diagnosis"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/omics#Cancer"/>
+    </owl:ObjectProperty>
+    
 
 
-###  http://disk-project.org/ontology/omics#isDiagnosedWith
+    <!-- http://disk-project.org/ontology/omics#producedData -->
 
-:isDiagnosedWith rdf:type owl:ObjectProperty ;
-                 
-                 rdfs:range :Cancer ;
-                 
-                 rdfs:domain :Diagnosis .
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#producedData">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Experiment"/>
+    </owl:ObjectProperty>
+    
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-###  http://disk-project.org/ontology/omics#producedData
+    
 
-:producedData rdf:type owl:ObjectProperty ;
-              
-              rdfs:domain :Experiment .
 
+    <!-- http://disk-project.org/ontology/omics#collectedAt -->
 
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/omics#collectedAt">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Sample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
 
 
+    <!-- http://disk-project.org/ontology/omics#diagnosedAt -->
 
-#################################################################
-#
-#    Data properties
-#
-#################################################################
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/omics#diagnosedAt">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Diagnosis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://disk-project.org/ontology/omics#collectedAt
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-:collectedAt rdf:type owl:DatatypeProperty ;
-             
-             rdfs:domain :Tissue ;
-             
-             rdfs:range xsd:dateTime .
+    
 
 
+    <!-- http://disk-project.org/ontology/disk#Data -->
 
-###  http://disk-project.org/ontology/omics#diagnosedAt
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Data"/>
+    
 
-:diagnosedAt rdf:type owl:DatatypeProperty ;
-             
-             rdfs:domain :Diagnosis ;
-             
-             rdfs:range xsd:dateTime .
 
+    <!-- http://disk-project.org/ontology/omics#Cancer -->
 
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Cancer"/>
+    
 
 
+    <!-- http://disk-project.org/ontology/omics#Diagnosis -->
 
-#################################################################
-#
-#    Classes
-#
-#################################################################
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Diagnosis"/>
+    
 
 
-###  http://disk-project.org/ontology/disk#Data
+    <!-- http://disk-project.org/ontology/omics#Experiment -->
 
-<http://disk-project.org/ontology/disk#Data> rdf:type owl:Class .
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Experiment"/>
+    
 
 
+    <!-- http://disk-project.org/ontology/omics#Gene -->
 
-###  http://disk-project.org/ontology/omics#Cancer
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Gene"/>
+    
 
-:Cancer rdf:type owl:Class .
 
+    <!-- http://disk-project.org/ontology/omics#MassSpecData -->
 
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#MassSpecData">
+        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+    </owl:Class>
+    
 
-###  http://disk-project.org/ontology/omics#Diagnosis
 
-:Diagnosis rdf:type owl:Class .
+    <!-- http://disk-project.org/ontology/omics#Patient -->
 
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Patient"/>
+    
 
 
-###  http://disk-project.org/ontology/omics#Experiment
+    <!-- http://disk-project.org/ontology/omics#Protein -->
 
-:Experiment rdf:type owl:Class .
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Protein"/>
+    
 
 
+    <!-- http://disk-project.org/ontology/omics#RNASeq -->
 
-###  http://disk-project.org/ontology/omics#Gene
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#RNASeq">
+        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+    </owl:Class>
+    
 
-:Gene rdf:type owl:Class .
 
+    <!-- http://disk-project.org/ontology/omics#Sample -->
 
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Sample"/>
+    
 
-###  http://disk-project.org/ontology/omics#MassSpecData
 
-:MassSpecData rdf:type owl:Class ;
-              
-              rdfs:subClassOf <http://disk-project.org/ontology/disk#Data> .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
+    
 
 
-###  http://disk-project.org/ontology/omics#Patient
+    <!-- http://disk-project.org/ontology/omics#CEACAM6 -->
 
-:Patient rdf:type owl:Class .
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#CEACAM6">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
 
 
+    <!-- http://disk-project.org/ontology/omics#ColonCancer -->
 
-###  http://disk-project.org/ontology/omics#Protein
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#ColonCancer">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Cancer"/>
+    </owl:NamedIndividual>
+    
 
-:Protein rdf:type owl:Class .
 
+    <!-- http://disk-project.org/ontology/omics#ColonCancerDummySubtype -->
 
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#ColonCancerDummySubtype">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Cancer"/>
+    </owl:NamedIndividual>
+    
 
-###  http://disk-project.org/ontology/omics#Tissue
 
-:Tissue rdf:type owl:Class .
+    <!-- http://disk-project.org/ontology/omics#DummyProtein -->
 
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#DummyProtein">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
 
 
+    <!-- http://disk-project.org/ontology/omics#EGFR -->
 
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#EGFR">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
 
-#################################################################
-#
-#    Individuals
-#
-#################################################################
 
+    <!-- http://disk-project.org/ontology/omics#HNF4a -->
 
-###  http://disk-project.org/ontology/omics#ColonCancer
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#HNF4a">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Gene"/>
+    </owl:NamedIndividual>
+    
 
-:ColonCancer rdf:type :Cancer ,
-                      owl:NamedIndividual .
 
+    <!-- http://disk-project.org/ontology/omics#KRAS -->
 
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#KRAS">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
 
-###  http://disk-project.org/ontology/omics#ColonCancerDummySubtype
 
-:ColonCancerDummySubtype rdf:type :Cancer ,
-                                  owl:NamedIndividual .
+    <!-- http://disk-project.org/ontology/omics#NACA2 -->
 
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#NACA2">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
 
 
-###  http://disk-project.org/ontology/omics#DummyProtein
+    <!-- http://disk-project.org/ontology/omics#PRKCDBP -->
 
-:DummyProtein rdf:type :Protein ,
-                       owl:NamedIndividual .
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#PRKCDBP">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
 
-###  http://disk-project.org/ontology/omics#EGFR
-
-:EGFR rdf:type :Protein ,
-               owl:NamedIndividual .
-
-
-
-###  http://disk-project.org/ontology/omics#HNF4a
-
-:HNF4a rdf:type :Gene ,
-                owl:NamedIndividual .
-
-
-
-###  http://disk-project.org/ontology/omics#KRAS
-
-:KRAS rdf:type :Protein ,
-               owl:NamedIndividual .
-
-
-
-
-###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
