@@ -16,8 +16,8 @@
 <!--         <dc:creator>Varun Ratnakar</dc:creator> -->
 <!--         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://disk-project.org/ontology/disk#</vann:preferredNamespaceUri>
         <vann:preferredNamespacePrefix>disk</vann:preferredNamespacePrefix> -->
-        <owl:versionInfo>1.0.0</owl:versionInfo>
-        <rdfs:label xml:lang="en">DISK Ontology</rdfs:label>
+<!--         <owl:versionInfo>1.0.0</owl:versionInfo>
+        <rdfs:label xml:lang="en">DISK Ontology</rdfs:label> -->
 <!--         <dc:creator>Daniel Garijo</dc:creator> -->
 <!--         <terms:abstract xml:lang="en">The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard</terms:abstract> -->
     </owl:Ontology>
