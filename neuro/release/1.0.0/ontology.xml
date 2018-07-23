@@ -137,10 +137,10 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#collectedAt -->
+    <!-- http://disk-project.org/ontology/neuro#collectedAt -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#collectedAt">
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/neuro#collectedAt">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#BrainScan"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Describes when a Brain Scan was collected.</rdfs:comment>
@@ -149,10 +149,10 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#diagnosedAt -->
+    <!-- http://disk-project.org/ontology/neuro#diagnosedAt -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#diagnosedAt">
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/neuro#diagnosedAt">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#Diagnosis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Describes when a Patient recieved a Diagnosis.</rdfs:comment>
@@ -161,10 +161,10 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#hasAge -->
+    <!-- http://disk-project.org/ontology/neuro#hasAge -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasAge">
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/neuro#hasAge">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#Patient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">Describes the age of an individual of a cohort.</rdfs:comment>
@@ -173,10 +173,10 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#hasSex -->
+    <!-- http://disk-project.org/ontology/neuro#hasSex -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasSex">
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/neuro#hasSex">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#Patient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the sex of an individual of a cohort.</rdfs:comment>
@@ -301,37 +301,37 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#APOE4 -->
+    <!-- http://disk-project.org/ontology/neuro#APOE4 -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#APOE4">
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/neuro#APOE4">
         <rdf:type rdf:resource="http://disk-project.org/ontology/neuro#Gene"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#HippocampalVoume -->
+    <!-- http://disk-project.org/ontology/neuro#HippocampalVoume -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#HippocampalVoume">
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/neuro#HippocampalVoume">
         <rdf:type rdf:resource="http://disk-project.org/ontology/neuro#BrainCharacteristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#MajorDepression -->
+    <!-- http://disk-project.org/ontology/neuro#MajorDepression -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#MajorDepression">
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/neuro#MajorDepression">
         <rdf:type rdf:resource="http://disk-project.org/ontology/neuro#NeurologicalDisorder"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#Schizophrenia -->
+    <!-- http://disk-project.org/ontology/neuro#Schizophrenia -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#Schizophrenia">
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/neuro#Schizophrenia">
         <rdf:type rdf:resource="http://disk-project.org/ontology/neuro#NeurologicalDisorder"/>
     </owl:NamedIndividual>
 </rdf:RDF>
