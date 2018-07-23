@@ -1,19 +1,17 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/disk/ontology/neuro#"
-     xml:base="https://w3id.org/disk/ontology/neuro"
-     xmlns:enigma="https://w3id.org/enigma#"
+<rdf:RDF xmlns="http://disk-project.org/ontology/neuro#"
+     xml:base="http://disk-project.org/ontology/neuro"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/disk/ontology/neuro">
-        <owl:versionIRI rdf:resource="https://w3id.org/disk/ontology/neuro/1.0.0"/>
-        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naomi</terms:creator>
+    <owl:Ontology rdf:about="http://disk-project.org/ontology/neuro">
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naomi Perez</terms:creator>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The DISK Neuro Ontology</terms:title>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v1.0.0</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v2.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -44,13 +42,6 @@
     
 
 
-    <!-- https://w3id.org/enigma#preferredNamespacePrefix -->
-
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/enigma#preferredNamespacePrefix"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -67,7 +58,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/neuro#collectedFrom">
-        <rdfs:domain rdf:resource="https://w3id.org/enigma#BrainScan"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#BrainScan"/>
         <rdfs:range rdf:resource="http://disk-project.org/ontology/neuro#Patient"/>
         <rdfs:comment xml:lang="en">Describes which Patient a Brain Scan was collected from.</rdfs:comment>
         <rdfs:label xml:lang="en">collected from</rdfs:label>
@@ -79,8 +70,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/neuro#experimentedOn">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#BrainScan"/>
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#Experiment"/>
-        <rdfs:domain rdf:resource="https://w3id.org/enigma#BrainScan"/>
         <rdfs:comment xml:lang="en">Denotes that an experiment and a Brain Scan can be experimented on.</rdfs:comment>
         <rdfs:label xml:lang="en">experimented on</rdfs:label>
     </owl:ObjectProperty>
@@ -111,6 +102,18 @@
     
 
 
+    <!-- http://disk-project.org/ontology/neuro#observedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/neuro#observedFrom">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#BrainCharacteristic"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/neuro#BrainScan"/>
+        <rdfs:comment xml:lang="en">Describes which Brain Scan the brain characteristic was observed from</rdfs:comment>
+        <rdfs:label xml:lang="en">observed from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://disk-project.org/ontology/neuro#producedData -->
 
 
@@ -118,18 +121,6 @@
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#Experiment"/>
         <rdfs:comment xml:lang="en">Dsecribes an experiment that produced data.</rdfs:comment>
         <rdfs:label xml:lang="en">produced data</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/enigma#observedFrom -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/enigma#observedFrom">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#BrainCharacteristic"/>
-        <rdfs:range rdf:resource="https://w3id.org/enigma#BrainScan"/>
-        <rdfs:comment xml:lang="en">Describes which Brain Scan the brain characteristic was observed from</rdfs:comment>
-        <rdfs:label xml:lang="en">observed from</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -146,11 +137,11 @@
     
 
 
-    <!-- http://disk-project.org/ontology/neuro#collectedAt -->
+    <!-- https://w3id.org/disk/ontology/neuro#collectedAt -->
 
 
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/neuro#collectedAt">
-        <rdfs:domain rdf:resource="https://w3id.org/enigma#BrainScan"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#collectedAt">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#BrainScan"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Describes when a Brain Scan was collected.</rdfs:comment>
         <rdfs:label xml:lang="en">collected at</rdfs:label>
@@ -158,10 +149,10 @@
     
 
 
-    <!-- http://disk-project.org/ontology/neuro#diagnosedAt -->
+    <!-- https://w3id.org/disk/ontology/neuro#diagnosedAt -->
 
 
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/neuro#diagnosedAt">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#diagnosedAt">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#Diagnosis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Describes when a Patient recieved a Diagnosis.</rdfs:comment>
@@ -170,10 +161,10 @@
     
 
 
-    <!-- https://w3id.org/enigma#hasAge -->
+    <!-- https://w3id.org/disk/ontology/neuro#hasAge -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/enigma#hasAge">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasAge">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#Patient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">Describes the age of an individual of a cohort.</rdfs:comment>
@@ -182,10 +173,10 @@
     
 
 
-    <!-- https://w3id.org/enigma#hasSex -->
+    <!-- https://w3id.org/disk/ontology/neuro#hasSex -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/enigma#hasSex">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasSex">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/neuro#Patient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the sex of an individual of a cohort.</rdfs:comment>
@@ -226,6 +217,17 @@
     
 
 
+    <!-- http://disk-project.org/ontology/neuro#BrainScan -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/neuro#BrainScan">
+        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:comment xml:lang="en">An image of an individual&apos;s brain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Brain Scan</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://disk-project.org/ontology/neuro#Diagnosis -->
 
 
@@ -256,6 +258,17 @@
     
 
 
+    <!-- http://disk-project.org/ontology/neuro#GeneticData -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/neuro#GeneticData">
+        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:comment xml:lang="en">Data storing information about particpants genes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Genetic Data</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://disk-project.org/ontology/neuro#NeurologicalDisorder -->
 
 
@@ -276,16 +289,6 @@
     
 
 
-    <!-- https://w3id.org/enigma#BrainScan -->
-
-
-    <owl:Class rdf:about="https://w3id.org/enigma#BrainScan">
-        <rdfs:comment xml:lang="en">An image of an individual&apos;s brain.</rdfs:comment>
-        <rdfs:label xml:lang="en">Brain Scan</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -298,37 +301,37 @@
     
 
 
-    <!-- https://w3id.org/enigma#APOE4 -->
+    <!-- https://w3id.org/disk/ontology/neuro#APOE4 -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/enigma#APOE4">
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#APOE4">
         <rdf:type rdf:resource="http://disk-project.org/ontology/neuro#Gene"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/enigma#HippocampalVoume -->
+    <!-- https://w3id.org/disk/ontology/neuro#HippocampalVoume -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/enigma#HippocampalVoume">
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#HippocampalVoume">
         <rdf:type rdf:resource="http://disk-project.org/ontology/neuro#BrainCharacteristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/enigma#MajorDepression -->
+    <!-- https://w3id.org/disk/ontology/neuro#MajorDepression -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/enigma#MajorDepression">
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#MajorDepression">
         <rdf:type rdf:resource="http://disk-project.org/ontology/neuro#NeurologicalDisorder"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/enigma#Schizophrenia -->
+    <!-- https://w3id.org/disk/ontology/neuro#Schizophrenia -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/enigma#Schizophrenia">
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#Schizophrenia">
         <rdf:type rdf:resource="http://disk-project.org/ontology/neuro#NeurologicalDisorder"/>
     </owl:NamedIndividual>
 </rdf:RDF>
