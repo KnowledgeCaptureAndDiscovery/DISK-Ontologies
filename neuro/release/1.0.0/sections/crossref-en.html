@@ -4,34 +4,38 @@ This section provides details for each class and property defined by The DISK Ne
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#BrainCharacteristic"
+         <a href="#BrainCharacteristic"
             title="http://disk-project.org/ontology/neuro#BrainCharacteristic">Brain Characteristic</a>
       </li>
       <li>
-         <a href="#https://w3id.org/enigma#BrainScan" title="https://w3id.org/enigma#BrainScan">Brain Scan</a>
+         <a href="#BrainScan" title="http://disk-project.org/ontology/neuro#BrainScan">Brain Scan</a>
       </li>
       <li>
          <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">Data</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#Diagnosis" title="http://disk-project.org/ontology/neuro#Diagnosis">Diagnosis</a>
+         <a href="#Diagnosis" title="http://disk-project.org/ontology/neuro#Diagnosis">Diagnosis</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#Experiment"
+         <a href="#Experiment"
             title="http://disk-project.org/ontology/neuro#Experiment">Experiment</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#Gene" title="http://disk-project.org/ontology/neuro#Gene">Gene</a>
+         <a href="#Gene" title="http://disk-project.org/ontology/neuro#Gene">Gene</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#NeurologicalDisorder"
+         <a href="#GeneticData"
+            title="http://disk-project.org/ontology/neuro#GeneticData">Genetic Data</a>
+      </li>
+      <li>
+         <a href="#NeurologicalDisorder"
             title="http://disk-project.org/ontology/neuro#NeurologicalDisorder">Neurological Disorder</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
+         <a href="#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
       </li>
    </ul>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#BrainCharacteristic">
+   <div class="entity" id="BrainCharacteristic">
       <h3>Brain Characteristic<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
@@ -44,40 +48,48 @@ This section provides details for each class and property defined by The DISK Ne
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/enigma#observedFrom" title="https://w3id.org/enigma#observedFrom">observed from</a>
+            <a href="#observedFrom"
+               title="http://disk-project.org/ontology/neuro#observedFrom">observed from</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#https://w3id.org/enigma#HippocampalVoume" title="https://w3id.org/enigma#HippocampalVoume">hippocampal voume</a>
+            <a href="#HippocampalVoume"
+               title="http://disk-project.org/ontology/neuro#HippocampalVoume">hippocampal voume</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/enigma#BrainScan">
+   <div class="entity" id="BrainScan">
       <h3>Brain Scan<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/enigma#BrainScan</p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#BrainScan</p>
       <div class="comment">
          <span class="markdown">An image of an individual's brain.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">Data</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#collectedAt"
+            <a href="#collectedAt"
                title="http://disk-project.org/ontology/neuro#collectedAt">collected at</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://disk-project.org/ontology/neuro#collectedFrom"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#collectedFrom"
                title="http://disk-project.org/ontology/neuro#collectedFrom">collected from</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://disk-project.org/ontology/neuro#experimentedOn"
+            <sup class="type-op" title="object property">op</sup>, <a href="#experimentedOn"
                title="http://disk-project.org/ontology/neuro#experimentedOn">experimented on</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#https://w3id.org/enigma#observedFrom" title="https://w3id.org/enigma#observedFrom">observed from</a>
+            <a href="#observedFrom"
+               title="http://disk-project.org/ontology/neuro#observedFrom">observed from</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -92,8 +104,17 @@ This section provides details for each class and property defined by The DISK Ne
       <div class="comment">
          <span class="markdown">Data containing relevant information.</span>
       </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#BrainScan" title="http://disk-project.org/ontology/neuro#BrainScan">Brain Scan</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GeneticData"
+               title="http://disk-project.org/ontology/neuro#GeneticData">Genetic Data</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#Diagnosis">
+   <div class="entity" id="Diagnosis">
       <h3>Diagnosis<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
@@ -106,21 +127,21 @@ This section provides details for each class and property defined by The DISK Ne
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#diagnosedAt"
+            <a href="#diagnosedAt"
                title="http://disk-project.org/ontology/neuro#diagnosedAt">diagnosed at</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://disk-project.org/ontology/neuro#isDiagnosedWith"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isDiagnosedWith"
                title="http://disk-project.org/ontology/neuro#isDiagnosedWith">is diagnosed with</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#hasDiagnosis"
+            <a href="#hasDiagnosis"
                title="http://disk-project.org/ontology/neuro#hasDiagnosis">has diagnosis</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#Experiment">
+   <div class="entity" id="Experiment">
       <h3>Experiment<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
@@ -133,15 +154,15 @@ This section provides details for each class and property defined by The DISK Ne
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#experimentedOn"
+            <a href="#experimentedOn"
                title="http://disk-project.org/ontology/neuro#experimentedOn">experimented on</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://disk-project.org/ontology/neuro#producedData"
+            <sup class="type-op" title="object property">op</sup>, <a href="#producedData"
                title="http://disk-project.org/ontology/neuro#producedData">produced data</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#Gene">
+   <div class="entity" id="Gene">
       <h3>Gene<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
@@ -154,12 +175,30 @@ This section provides details for each class and property defined by The DISK Ne
       <dl class="description">
          <dt>has members</dt>
          <dd>
-            <a href="#https://w3id.org/enigma#APOE4" title="https://w3id.org/enigma#APOE4">a p o e4</a>
+            <a href="#APOE4" title="http://disk-project.org/ontology/neuro#APOE4">a p o e4</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#NeurologicalDisorder">
+   <div class="entity" id="GeneticData">
+      <h3>Genetic Data<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#GeneticData</p>
+      <div class="comment">
+         <span class="markdown">Data storing information about particpants genes.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">Data</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NeurologicalDisorder">
       <h3>Neurological Disorder<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
@@ -172,19 +211,21 @@ This section provides details for each class and property defined by The DISK Ne
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#isDiagnosedWith"
+            <a href="#isDiagnosedWith"
                title="http://disk-project.org/ontology/neuro#isDiagnosedWith">is diagnosed with</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#https://w3id.org/enigma#MajorDepression" title="https://w3id.org/enigma#MajorDepression">major depression</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/enigma#Schizophrenia" title="https://w3id.org/enigma#Schizophrenia">schizophrenia</a>
+            <a href="#MajorDepression"
+               title="http://disk-project.org/ontology/neuro#MajorDepression">major depression</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Schizophrenia"
+               title="http://disk-project.org/ontology/neuro#Schizophrenia">schizophrenia</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#Patient">
+   <div class="entity" id="Patient">
       <h3>Patient<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
@@ -197,15 +238,15 @@ This section provides details for each class and property defined by The DISK Ne
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/enigma#hasAge" title="https://w3id.org/enigma#hasAge">has age</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://disk-project.org/ontology/neuro#hasDiagnosis"
+            <a href="#hasAge" title="http://disk-project.org/ontology/neuro#hasAge">has age</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDiagnosis"
                title="http://disk-project.org/ontology/neuro#hasDiagnosis">has diagnosis</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/enigma#hasSex" title="https://w3id.org/enigma#hasSex">has sex</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSex" title="http://disk-project.org/ontology/neuro#hasSex">has sex</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#collectedFrom"
+            <a href="#collectedFrom"
                title="http://disk-project.org/ontology/neuro#collectedFrom">collected from</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -215,30 +256,31 @@ This section provides details for each class and property defined by The DISK Ne
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#collectedFrom"
+         <a href="#collectedFrom"
             title="http://disk-project.org/ontology/neuro#collectedFrom">collected from</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#experimentedOn"
+         <a href="#experimentedOn"
             title="http://disk-project.org/ontology/neuro#experimentedOn">experimented on</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#hasDiagnosis"
+         <a href="#hasDiagnosis"
             title="http://disk-project.org/ontology/neuro#hasDiagnosis">has diagnosis</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#isDiagnosedWith"
+         <a href="#isDiagnosedWith"
             title="http://disk-project.org/ontology/neuro#isDiagnosedWith">is diagnosed with</a>
       </li>
       <li>
-         <a href="#https://w3id.org/enigma#observedFrom" title="https://w3id.org/enigma#observedFrom">observed from</a>
+         <a href="#observedFrom"
+            title="http://disk-project.org/ontology/neuro#observedFrom">observed from</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#producedData"
+         <a href="#producedData"
             title="http://disk-project.org/ontology/neuro#producedData">produced data</a>
       </li>
    </ul>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#collectedFrom">
+   <div class="entity" id="collectedFrom">
       <h3>collected from<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -252,18 +294,18 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/enigma#BrainScan" title="https://w3id.org/enigma#BrainScan">Brain Scan</a>
+               <a href="#BrainScan" title="http://disk-project.org/ontology/neuro#BrainScan">Brain Scan</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
+               <a href="#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#experimentedOn">
+   <div class="entity" id="experimentedOn">
       <h3>experimented on<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -277,18 +319,18 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Experiment"
-                  title="http://disk-project.org/ontology/neuro#Experiment">Experiment</a>
+               <a href="#BrainScan" title="http://disk-project.org/ontology/neuro#BrainScan">Brain Scan</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
-               <a href="#https://w3id.org/enigma#BrainScan" title="https://w3id.org/enigma#BrainScan">Brain Scan</a>
+               <a href="#Experiment"
+                  title="http://disk-project.org/ontology/neuro#Experiment">Experiment</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#hasDiagnosis">
+   <div class="entity" id="hasDiagnosis">
       <h3>has diagnosis<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -302,18 +344,18 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
+               <a href="#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Diagnosis" title="http://disk-project.org/ontology/neuro#Diagnosis">Diagnosis</a>
+               <a href="#Diagnosis" title="http://disk-project.org/ontology/neuro#Diagnosis">Diagnosis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#isDiagnosedWith">
+   <div class="entity" id="isDiagnosedWith">
       <h3>is diagnosed with<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -327,25 +369,25 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Diagnosis" title="http://disk-project.org/ontology/neuro#Diagnosis">Diagnosis</a>
+               <a href="#Diagnosis" title="http://disk-project.org/ontology/neuro#Diagnosis">Diagnosis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#NeurologicalDisorder"
+               <a href="#NeurologicalDisorder"
                   title="http://disk-project.org/ontology/neuro#NeurologicalDisorder">Neurological Disorder</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/enigma#observedFrom">
+   <div class="entity" id="observedFrom">
       <h3>observed from<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/enigma#observedFrom</p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#observedFrom</p>
       <div class="comment">
          <span class="markdown">Describes which Brain Scan the brain characteristic was observed from</span>
       </div>
@@ -353,19 +395,19 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#BrainCharacteristic"
+               <a href="#BrainCharacteristic"
                   title="http://disk-project.org/ontology/neuro#BrainCharacteristic">Brain Characteristic</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://w3id.org/enigma#BrainScan" title="https://w3id.org/enigma#BrainScan">Brain Scan</a>
+               <a href="#BrainScan" title="http://disk-project.org/ontology/neuro#BrainScan">Brain Scan</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#producedData">
+   <div class="entity" id="producedData">
       <h3>produced data<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
@@ -379,7 +421,7 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Experiment"
+               <a href="#Experiment"
                   title="http://disk-project.org/ontology/neuro#Experiment">Experiment</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
@@ -390,21 +432,21 @@ This section provides details for each class and property defined by The DISK Ne
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#collectedAt"
+         <a href="#collectedAt"
             title="http://disk-project.org/ontology/neuro#collectedAt">collected at</a>
       </li>
       <li>
-         <a href="#http://disk-project.org/ontology/neuro#diagnosedAt"
+         <a href="#diagnosedAt"
             title="http://disk-project.org/ontology/neuro#diagnosedAt">diagnosed at</a>
       </li>
       <li>
-         <a href="#https://w3id.org/enigma#hasAge" title="https://w3id.org/enigma#hasAge">has age</a>
+         <a href="#hasAge" title="http://disk-project.org/ontology/neuro#hasAge">has age</a>
       </li>
       <li>
-         <a href="#https://w3id.org/enigma#hasSex" title="https://w3id.org/enigma#hasSex">has sex</a>
+         <a href="#hasSex" title="http://disk-project.org/ontology/neuro#hasSex">has sex</a>
       </li>
    </ul>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#collectedAt">
+   <div class="entity" id="collectedAt">
       <h3>collected at<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
@@ -418,7 +460,7 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/enigma#BrainScan" title="https://w3id.org/enigma#BrainScan">Brain Scan</a>
+               <a href="#BrainScan" title="http://disk-project.org/ontology/neuro#BrainScan">Brain Scan</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -428,7 +470,7 @@ This section provides details for each class and property defined by The DISK Ne
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://disk-project.org/ontology/neuro#diagnosedAt">
+   <div class="entity" id="diagnosedAt">
       <h3>diagnosed at<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
@@ -442,7 +484,7 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Diagnosis" title="http://disk-project.org/ontology/neuro#Diagnosis">Diagnosis</a>
+               <a href="#Diagnosis" title="http://disk-project.org/ontology/neuro#Diagnosis">Diagnosis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -452,13 +494,13 @@ This section provides details for each class and property defined by The DISK Ne
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/enigma#hasAge">
+   <div class="entity" id="hasAge">
       <h3>has age<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/enigma#hasAge</p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#hasAge</p>
       <div class="comment">
          <span class="markdown">Describes the age of an individual of a cohort.</span>
       </div>
@@ -466,7 +508,7 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
+               <a href="#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -476,13 +518,13 @@ This section provides details for each class and property defined by The DISK Ne
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/enigma#hasSex">
+   <div class="entity" id="hasSex">
       <h3>has sex<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/enigma#hasSex</p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#hasSex</p>
       <div class="comment">
          <span class="markdown">Describes the sex of an individual of a cohort.</span>
       </div>
@@ -490,7 +532,7 @@ This section provides details for each class and property defined by The DISK Ne
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://disk-project.org/ontology/neuro#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
+               <a href="#Patient" title="http://disk-project.org/ontology/neuro#Patient">Patient</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -504,84 +546,87 @@ This section provides details for each class and property defined by The DISK Ne
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://w3id.org/enigma#APOE4" title="https://w3id.org/enigma#APOE4">
+         <a href="#APOE4" title="http://disk-project.org/ontology/neuro#APOE4">
             <span>a p o e4</span>
          </a>
       </li>
       <li>
-         <a href="#https://w3id.org/enigma#HippocampalVoume" title="https://w3id.org/enigma#HippocampalVoume">
+         <a href="#HippocampalVoume"
+            title="http://disk-project.org/ontology/neuro#HippocampalVoume">
             <span>hippocampal voume</span>
          </a>
       </li>
       <li>
-         <a href="#https://w3id.org/enigma#MajorDepression" title="https://w3id.org/enigma#MajorDepression">
+         <a href="#MajorDepression"
+            title="http://disk-project.org/ontology/neuro#MajorDepression">
             <span>major depression</span>
          </a>
       </li>
       <li>
-         <a href="#https://w3id.org/enigma#Schizophrenia" title="https://w3id.org/enigma#Schizophrenia">
+         <a href="#Schizophrenia"
+            title="http://disk-project.org/ontology/neuro#Schizophrenia">
             <span>schizophrenia</span>
          </a>
       </li>
    </ul>
-   <div class="entity" id="https://w3id.org/enigma#APOE4">
+   <div class="entity" id="APOE4">
       <h3>a p o e4<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/enigma#APOE4</p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#APOE4</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#Gene" title="http://disk-project.org/ontology/neuro#Gene">Gene</a>
+            <a href="#Gene" title="http://disk-project.org/ontology/neuro#Gene">Gene</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/enigma#HippocampalVoume">
+   <div class="entity" id="HippocampalVoume">
       <h3>hippocampal voume<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/enigma#HippocampalVoume</p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#HippocampalVoume</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#BrainCharacteristic"
+            <a href="#BrainCharacteristic"
                title="http://disk-project.org/ontology/neuro#BrainCharacteristic">Brain Characteristic</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/enigma#MajorDepression">
+   <div class="entity" id="MajorDepression">
       <h3>major depression<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/enigma#MajorDepression</p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#MajorDepression</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#NeurologicalDisorder"
+            <a href="#NeurologicalDisorder"
                title="http://disk-project.org/ontology/neuro#NeurologicalDisorder">Neurological Disorder</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/enigma#Schizophrenia">
+   <div class="entity" id="Schizophrenia">
       <h3>schizophrenia<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/enigma#Schizophrenia</p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/neuro#Schizophrenia</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#http://disk-project.org/ontology/neuro#NeurologicalDisorder"
+            <a href="#NeurologicalDisorder"
                title="http://disk-project.org/ontology/neuro#NeurologicalDisorder">Neurological Disorder</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
