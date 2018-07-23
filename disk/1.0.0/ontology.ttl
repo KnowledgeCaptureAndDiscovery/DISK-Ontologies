@@ -10,7 +10,6 @@
 
 <http://disk-project.org/ontology/disk>
       a       owl:Ontology ;
-      owl:versionInfo "1.0.0" .
 
 :hasDataQuery
       a       owl:DatatypeProperty ;
