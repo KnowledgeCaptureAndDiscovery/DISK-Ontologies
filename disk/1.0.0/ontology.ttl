@@ -1,6 +1,7 @@
 @prefix :        <http://disk-project.org/ontology/disk#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
 @prefix xml:     <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -9,6 +10,17 @@
 
 <http://disk-project.org/ontology/disk>
       a       owl:Ontology ;
+      rdfs:label "DISK Ontology"@en ;
+      dc:creator "Varun Ratnakar" , "Yolanda Gil" , "Daniel Garijo" ;
+      terms:abstract "The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard"@en ;
+      terms:created "2018-07-23"^^xsd:dateTime ;
+      terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
+      terms:title "The DISK Ontology"@en ;
+      vann:preferredNamespacePrefix
+              "disk" ;
+      vann:preferredNamespaceUri
+              "http://disk-project.org/ontology/disk#"^^xsd:anyURI ;
+      owl:versionInfo "1.0.0" .
 
 :hasDataQuery
       a       owl:DatatypeProperty ;
