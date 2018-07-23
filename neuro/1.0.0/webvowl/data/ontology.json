@@ -1,0 +1,430 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.2-SNAPSHOT), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://disk-project.org/ontology/neuro", "https://w3id.org/enigma", "http://www.w3.org/2000/01/rdf-schema", "http://disk-project.org/ontology/disk", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "undefined" : "The DISK Neuro Ontology"
+    },
+    "iri" : "https://w3id.org/disk/ontology/neuro",
+    "version" : "v1.0.0",
+    "author" : [ "Naomi" ],
+    "comments" : {
+      "undefined" : "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Naomi",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "The DISK Neuro Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 8,
+    "objectPropertyCount" : 6,
+    "datatypePropertyCount" : 4,
+    "individualCount" : 4
+  },
+  "class" : [ {
+    "id" : "3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#Experiment",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Experiment",
+      "en" : "Experiment"
+    },
+    "comment" : {
+      "en" : "Describes a scientific experiment that produced data."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "11",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "10", "6" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#Data",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Data",
+      "en" : "Data"
+    },
+    "comment" : {
+      "en" : "Data containing relevant information."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/enigma#BrainScan",
+    "baseIri" : "https://w3id.org/enigma",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BrainScan",
+      "en" : "Brain Scan"
+    },
+    "comment" : {
+      "en" : "An image of an individual's brain."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#Patient",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Patient",
+      "en" : "Patient"
+    },
+    "comment" : {
+      "en" : "An individual participating in an ENIGMA cohort."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#NeurologicalDisorder",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NeurologicalDisorder",
+      "en" : "Neurological Disorder"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/enigma#Schizophrenia",
+      "baseIri" : "https://w3id.org/enigma",
+      "labels" : {
+        "IRI-based" : "Schizophrenia"
+      }
+    }, {
+      "iri" : "https://w3id.org/enigma#MajorDepression",
+      "baseIri" : "https://w3id.org/enigma",
+      "labels" : {
+        "IRI-based" : "MajorDepression"
+      }
+    } ],
+    "comment" : {
+      "en" : "Any disorder of the nervous system. Structural, biochemical or electrical abnormalities in the brain, spinal cord or other nerves can result in a range of symptoms."
+    },
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#Diagnosis",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Diagnosis",
+      "en" : "Diagnosis"
+    },
+    "comment" : {
+      "en" : "An individual's medical diagnosis."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#Gene",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Gene",
+      "en" : "Gene"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/enigma#APOE4",
+      "baseIri" : "https://w3id.org/enigma",
+      "labels" : {
+        "IRI-based" : "APOE4"
+      }
+    } ],
+    "comment" : {
+      "en" : "A unit of heredity that is transferred from a parent to offspring."
+    },
+    "attributes" : [ "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#BrainCharacteristic",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BrainCharacteristic",
+      "en" : "Brain Characteristic"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/enigma#HippocampalVoume",
+      "baseIri" : "https://w3id.org/enigma",
+      "labels" : {
+        "IRI-based" : "HippocampalVoume"
+      }
+    } ],
+    "comment" : {
+      "en" : "A specific feature of an individuals brain, identified through MRI, EEG, or other methods of brain imaging."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/enigma#hasSex",
+    "baseIri" : "https://w3id.org/enigma",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasSex",
+      "en" : "has sex"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Describes the sex of an individual of a cohort."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/enigma#observedFrom",
+    "baseIri" : "https://w3id.org/enigma",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "observedFrom",
+      "en" : "observed from"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Describes which Brain Scan the brain characteristic was observed from"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#diagnosedAt",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "diagnosedAt",
+      "en" : "diagnosed at"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Describes when a Patient recieved a Diagnosis."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#hasDiagnosis",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasDiagnosis",
+      "en" : "has diagnosis"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Describes the Diagnosis of a Patient"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#collectedAt",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "collectedAt",
+      "en" : "collected at"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Describes when a Brain Scan was collected."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#producedData",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "producedData",
+      "en" : "produced data"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Dsecribes an experiment that produced data."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#isDiagnosedWith",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "isDiagnosedWith",
+      "en" : "is diagnosed with"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Describes which Neurological Disorder a Patient was diagnosed with."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#collectedFrom",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "collectedFrom",
+      "en" : "collected from"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Describes which Patient a Brain Scan was collected from."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/enigma#hasAge",
+    "baseIri" : "https://w3id.org/enigma",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasAge",
+      "en" : "has age"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Describes the age of an individual of a cohort."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://disk-project.org/ontology/neuro#experimentedOn",
+    "baseIri" : "http://disk-project.org/ontology/neuro",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "experimentedOn",
+      "en" : "experimented on"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Denotes that an experiment and a Brain Scan can be experimented on."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "23"
+  } ]
+}
