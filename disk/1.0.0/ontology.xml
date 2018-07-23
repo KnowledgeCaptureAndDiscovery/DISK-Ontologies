@@ -14,8 +14,8 @@
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://creativecommons.org/licenses/by-nc-sa/2.0/</terms:license>
         <terms:title xml:lang="en">The DISK Ontology</terms:title>
         <dc:creator>Varun Ratnakar</dc:creator>
-        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://disk-project.org/ontology/disk#</vann:preferredNamespaceUri>
-        <vann:preferredNamespacePrefix>disk</vann:preferredNamespacePrefix>
+<!--         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://disk-project.org/ontology/disk#</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix>disk</vann:preferredNamespacePrefix> -->
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <rdfs:label xml:lang="en">DISK Ontology</rdfs:label>
         <dc:creator>Daniel Garijo</dc:creator>
