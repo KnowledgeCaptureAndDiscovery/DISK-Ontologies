@@ -77,33 +77,33 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/disk/ontology/neuro#collectedAt
-<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/neuro#BrainScan> .
-<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when a Brain Scan was collected."@en .
-<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#label> "collected at"@en .
+# http://disk-project.org/ontology/neuro#collectedAt
+<http://disk-project.org/ontology/neuro#collectedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/neuro#BrainScan> .
+<http://disk-project.org/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://disk-project.org/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when a Brain Scan was collected."@en .
+<http://disk-project.org/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#label> "collected at"@en .
 # 
-# https://w3id.org/disk/ontology/neuro#diagnosedAt
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/neuro#Diagnosis> .
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when a Patient recieved a Diagnosis."@en .
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#label> "diagnosed at"@en .
+# http://disk-project.org/ontology/neuro#diagnosedAt
+<http://disk-project.org/ontology/neuro#diagnosedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/neuro#Diagnosis> .
+<http://disk-project.org/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://disk-project.org/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when a Patient recieved a Diagnosis."@en .
+<http://disk-project.org/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#label> "diagnosed at"@en .
 # 
-# https://w3id.org/disk/ontology/neuro#hasAge
-<https://w3id.org/disk/ontology/neuro#hasAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/disk/ontology/neuro#hasAge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/neuro#Patient> .
-<https://w3id.org/disk/ontology/neuro#hasAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<https://w3id.org/disk/ontology/neuro#hasAge> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the age of an individual of a cohort."@en .
-<https://w3id.org/disk/ontology/neuro#hasAge> <http://www.w3.org/2000/01/rdf-schema#label> "has age"@en .
+# http://disk-project.org/ontology/neuro#hasAge
+<http://disk-project.org/ontology/neuro#hasAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/neuro#hasAge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/neuro#Patient> .
+<http://disk-project.org/ontology/neuro#hasAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://disk-project.org/ontology/neuro#hasAge> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the age of an individual of a cohort."@en .
+<http://disk-project.org/ontology/neuro#hasAge> <http://www.w3.org/2000/01/rdf-schema#label> "has age"@en .
 # 
-# https://w3id.org/disk/ontology/neuro#hasSex
-<https://w3id.org/disk/ontology/neuro#hasSex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/disk/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/neuro#Patient> .
-<https://w3id.org/disk/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/disk/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the sex of an individual of a cohort." .
-<https://w3id.org/disk/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#label> "has sex"@en .
+# http://disk-project.org/ontology/neuro#hasSex
+<http://disk-project.org/ontology/neuro#hasSex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/neuro#Patient> .
+<http://disk-project.org/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the sex of an individual of a cohort." .
+<http://disk-project.org/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#label> "has sex"@en .
 # 
 # 
 # 
@@ -170,20 +170,20 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/disk/ontology/neuro#APOE4
-<https://w3id.org/disk/ontology/neuro#APOE4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/disk/ontology/neuro#APOE4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/neuro#Gene> .
+# http://disk-project.org/ontology/neuro#APOE4
+<http://disk-project.org/ontology/neuro#APOE4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/neuro#APOE4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/neuro#Gene> .
 # 
-# https://w3id.org/disk/ontology/neuro#HippocampalVoume
-<https://w3id.org/disk/ontology/neuro#HippocampalVoume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/disk/ontology/neuro#HippocampalVoume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/neuro#BrainCharacteristic> .
+# http://disk-project.org/ontology/neuro#HippocampalVoume
+<http://disk-project.org/ontology/neuro#HippocampalVoume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/neuro#HippocampalVoume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/neuro#BrainCharacteristic> .
 # 
-# https://w3id.org/disk/ontology/neuro#MajorDepression
-<https://w3id.org/disk/ontology/neuro#MajorDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/disk/ontology/neuro#MajorDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/neuro#NeurologicalDisorder> .
+# http://disk-project.org/ontology/neuro#MajorDepression
+<http://disk-project.org/ontology/neuro#MajorDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/neuro#MajorDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/neuro#NeurologicalDisorder> .
 # 
-# https://w3id.org/disk/ontology/neuro#Schizophrenia
-<https://w3id.org/disk/ontology/neuro#Schizophrenia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/disk/ontology/neuro#Schizophrenia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/neuro#NeurologicalDisorder> .
+# http://disk-project.org/ontology/neuro#Schizophrenia
+<http://disk-project.org/ontology/neuro#Schizophrenia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/neuro#Schizophrenia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/neuro#NeurologicalDisorder> .
 # 
 # Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
