@@ -1,0 +1,198 @@
+@prefix : <https://w3id.org/disk/ontology/neuro#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/disk/ontology/neuro> .
+
+<https://w3id.org/disk/ontology/neuro> rdf:type owl:Ontology ;
+                                        <http://purl.org/dc/terms/creator> "Naomi Perez"^^xsd:string ;
+                                        <http://purl.org/dc/terms/title> "The DISK Neuro Ontology"^^xsd:string ;
+                                        rdfs:comment "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."^^xsd:string ;
+                                        owl:versionInfo "v2.0.0"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/disk/ontology/neuro#collectedFrom
+:collectedFrom rdf:type owl:ObjectProperty ;
+               rdfs:domain :BrainScan ;
+               rdfs:range :Patient ;
+               rdfs:comment "Describes which Patient a Brain Scan was collected from."@en ;
+               rdfs:label "collected from"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#experimentedOn
+:experimentedOn rdf:type owl:ObjectProperty ;
+                rdfs:domain :BrainScan ,
+                            :Experiment ;
+                rdfs:comment "Denotes that an experiment and a Brain Scan can be experimented on."@en ;
+                rdfs:label "experimented on"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#hasDiagnosis
+:hasDiagnosis rdf:type owl:ObjectProperty ;
+              rdfs:domain :Patient ;
+              rdfs:range :Diagnosis ;
+              rdfs:comment "Describes the Diagnosis of a Patient"^^xsd:string ;
+              rdfs:label "has diagnosis"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#isDiagnosedWith
+:isDiagnosedWith rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Diagnosis ;
+                 rdfs:range :NeurologicalDisorder ;
+                 rdfs:comment "Describes which Neurological Disorder a Patient was diagnosed with."@en ;
+                 rdfs:label "is diagnosed with"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#observedFrom
+:observedFrom rdf:type owl:ObjectProperty ;
+              rdfs:domain :BrainCharacteristic ;
+              rdfs:range :BrainScan ;
+              rdfs:comment "Describes which Brain Scan the brain characteristic was observed from"@en ;
+              rdfs:label "observed from"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#producedData
+:producedData rdf:type owl:ObjectProperty ;
+              rdfs:domain :Experiment ;
+              rdfs:comment "Dsecribes an experiment that produced data."@en ;
+              rdfs:label "produced data"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/disk/ontology/neuro#collectedAt
+:collectedAt rdf:type owl:DatatypeProperty ;
+             rdfs:domain :BrainScan ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "Describes when a Brain Scan was collected."@en ;
+             rdfs:label "collected at"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#diagnosedAt
+:diagnosedAt rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Diagnosis ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "Describes when a Patient recieved a Diagnosis."@en ;
+             rdfs:label "diagnosed at"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#hasAge
+:hasAge rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Patient ;
+        rdfs:range xsd:int ;
+        rdfs:comment "Describes the age of an individual of a cohort."@en ;
+        rdfs:label "has age"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#hasSex
+:hasSex rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Patient ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Describes the sex of an individual of a cohort."^^xsd:string ;
+        rdfs:label "has sex"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://disk-project.org/ontology/disk#Data
+<http://disk-project.org/ontology/disk#Data> rdf:type owl:Class ;
+                                             rdfs:comment "Data containing relevant information."@en ;
+                                             rdfs:label "Data"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#BrainCharacteristic
+:BrainCharacteristic rdf:type owl:Class ;
+                     rdfs:comment "A specific feature of an individuals brain, identified through MRI, EEG, or other methods of brain imaging."@en ;
+                     rdfs:label "Brain Characteristic"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#BrainScan
+:BrainScan rdf:type owl:Class ;
+           rdfs:subClassOf <http://disk-project.org/ontology/disk#Data> ;
+           rdfs:comment "An image of an individual's brain."@en ;
+           rdfs:label "Brain Scan"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#Diagnosis
+:Diagnosis rdf:type owl:Class ;
+           rdfs:comment "An individual's medical diagnosis."@en ;
+           rdfs:label "Diagnosis"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#Experiment
+:Experiment rdf:type owl:Class ;
+            rdfs:comment "Describes a scientific experiment that produced data."@en ;
+            rdfs:label "Experiment"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#Gene
+:Gene rdf:type owl:Class ;
+      rdfs:comment "A unit of heredity that is transferred from a parent to offspring."@en ;
+      rdfs:label "Gene"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#GeneticData
+:GeneticData rdf:type owl:Class ;
+             rdfs:subClassOf <http://disk-project.org/ontology/disk#Data> ;
+             rdfs:comment "Data storing information about particpants genes."@en ;
+             rdfs:label "Genetic Data"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#NeurologicalDisorder
+:NeurologicalDisorder rdf:type owl:Class ;
+                      rdfs:comment "Any disorder of the nervous system. Structural, biochemical or electrical abnormalities in the brain, spinal cord or other nerves can result in a range of symptoms."@en ;
+                      rdfs:label "Neurological Disorder"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#Patient
+:Patient rdf:type owl:Class ;
+         rdfs:comment "An individual participating in an ENIGMA cohort."@en ;
+         rdfs:label "Patient"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/disk/ontology/neuro#APOE4
+:APOE4 rdf:type owl:NamedIndividual ,
+                :Gene .
+
+
+###  https://w3id.org/disk/ontology/neuro#HippocampalVoume
+:HippocampalVoume rdf:type owl:NamedIndividual ,
+                           :BrainCharacteristic .
+
+
+###  https://w3id.org/disk/ontology/neuro#MajorDepression
+:MajorDepression rdf:type owl:NamedIndividual ,
+                          :NeurologicalDisorder .
+
+
+###  https://w3id.org/disk/ontology/neuro#Schizophrenia
+:Schizophrenia rdf:type owl:NamedIndividual ,
+                        :NeurologicalDisorder .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
