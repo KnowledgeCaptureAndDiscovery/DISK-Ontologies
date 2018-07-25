@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://disk-project.org/ontology/omics#"
+     xml:base="http://disk-project.org/ontology/omics"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://disk-project.org/ontology/omics"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#collectedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#collectedFrom">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Sample"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/omics#Patient"/>
+        <rdfs:comment xml:lang="en">Describes the individual a sample was collected from.</rdfs:comment>
+        <rdfs:label xml:lang="en">collected from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#experimentedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#experimentedOn">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Experiment"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Sample"/>
+        <rdfs:comment xml:lang="en">Describes the experiment or sample that was experimented on.</rdfs:comment>
+        <rdfs:label xml:lang="en">experimented on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#hasDiagnosis -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#hasDiagnosis">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Patient"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/omics#Diagnosis"/>
+        <rdfs:comment xml:lang="en">Describes the medical diagnosis a patient has received.</rdfs:comment>
+        <rdfs:label xml:lang="en">has diagnosis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#isDiagnosedWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#isDiagnosedWith">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Diagnosis"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/omics#Cancer"/>
+        <rdfs:comment xml:lang="en">Describes the diagnosis of a patient (type of cancer).</rdfs:comment>
+        <rdfs:label xml:lang="en">is diagnosed with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#producedData -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/omics#producedData">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Experiment"/>
+        <rdfs:comment xml:lang="en">Describes the data produced by an experiment.</rdfs:comment>
+        <rdfs:label xml:lang="en">produced data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#collectedAt -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/omics#collectedAt">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Sample"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Describes the date and time a sample was collected.</rdfs:comment>
+        <rdfs:label xml:lang="en">collected at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#diagnosedAt -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/omics#diagnosedAt">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/omics#Diagnosis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Describes the date and time a diagnosis was given.</rdfs:comment>
+        <rdfs:label xml:lang="en">diagnosed at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#Data -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Data">
+        <rdfs:comment xml:lang="en">Data containing relevant information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#Cancer -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Cancer">
+        <rdfs:comment xml:lang="en">A group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#Diagnosis -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Diagnosis">
+        <rdfs:comment xml:lang="en">An individual&apos;s medical diagnosis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#Experiment -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Experiment">
+        <rdfs:comment xml:lang="en">Describes a scientific experiment that produced data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#Gene -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Gene">
+        <rdfs:comment xml:lang="en">A unit of heredity that is transferred from a parent to offspring.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#MassSpecData -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#MassSpecData">
+        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:comment xml:lang="en">Data resulting from a scientific technique for measuring the mass-to-charge ratio of ions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#Patient -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Patient">
+        <rdfs:comment xml:lang="en">An individual with a diagnosis and data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#Protein -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Protein">
+        <rdfs:comment xml:lang="en">Large molecules composed of one or more chains of amino acids in a specific order determined by the base sequence of nucleotides in the DNA coding for the protein.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#RNASeq -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#RNASeq">
+        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:comment xml:lang="en">Data revealing the presence and quantity of RNA in a biological sample at a given moment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#Sample -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/omics#Sample">
+        <rdfs:comment xml:lang="en">A unit of data used for analysis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#CEACAM6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#CEACAM6">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#ColonCancer -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#ColonCancer">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Cancer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#ColonCancerDummySubtype -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#ColonCancerDummySubtype">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Cancer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#DummyProtein -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#DummyProtein">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#EGFR -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#EGFR">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#HNF4a -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#HNF4a">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Gene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#KRAS -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#KRAS">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#NACA2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#NACA2">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://disk-project.org/ontology/omics#PRKCDBP -->
+
+
+    <owl:NamedIndividual rdf:about="http://disk-project.org/ontology/omics#PRKCDBP">
+        <rdf:type rdf:resource="http://disk-project.org/ontology/omics#Protein"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

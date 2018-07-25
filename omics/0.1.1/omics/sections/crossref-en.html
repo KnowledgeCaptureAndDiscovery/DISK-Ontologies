@@ -1,0 +1,680 @@
+<h2  id="crossreference" class="list">Cross reference for The DISK Omics Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The DISK Omics Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Cancer" title="http://disk-project.org/ontology/omics#Cancer">
+            <span>cancer</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">
+            <span>data</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Diagnosis" title="http://disk-project.org/ontology/omics#Diagnosis">
+            <span>diagnosis</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Experiment"
+            title="http://disk-project.org/ontology/omics#Experiment">
+            <span>experiment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Gene" title="http://disk-project.org/ontology/omics#Gene">
+            <span>gene</span>
+         </a>
+      </li>
+      <li>
+         <a href="#MassSpecData"
+            title="http://disk-project.org/ontology/omics#MassSpecData">
+            <span>mass spec data</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Patient" title="http://disk-project.org/ontology/omics#Patient">
+            <span>patient</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Protein" title="http://disk-project.org/ontology/omics#Protein">
+            <span>protein</span>
+         </a>
+      </li>
+      <li>
+         <a href="#RNASeq" title="http://disk-project.org/ontology/omics#RNASeq">
+            <span>r n a seq</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Sample" title="http://disk-project.org/ontology/omics#Sample">
+            <span>sample</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="Cancer">
+      <h3>cancer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#Cancer</p>
+      <div class="comment">
+         <span class="markdown">A group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isDiagnosedWith"
+               title="http://disk-project.org/ontology/omics#isDiagnosedWith">is diagnosed with</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#ColonCancer"
+               title="http://disk-project.org/ontology/omics#ColonCancer">colon cancer</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ColonCancerDummySubtype"
+               title="http://disk-project.org/ontology/omics#ColonCancerDummySubtype">colon cancer dummy subtype</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://disk-project.org/ontology/disk#Data">
+      <h3>data<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#Data</p>
+      <div class="comment">
+         <span class="markdown">Data containing relevant information.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#MassSpecData"
+               title="http://disk-project.org/ontology/omics#MassSpecData">mass spec data</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RNASeq" title="http://disk-project.org/ontology/omics#RNASeq">r n a seq</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Diagnosis">
+      <h3>diagnosis<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#Diagnosis</p>
+      <div class="comment">
+         <span class="markdown">An individual's medical diagnosis.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#diagnosedAt"
+               title="http://disk-project.org/ontology/omics#diagnosedAt">diagnosed at</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isDiagnosedWith"
+               title="http://disk-project.org/ontology/omics#isDiagnosedWith">is diagnosed with</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasDiagnosis"
+               title="http://disk-project.org/ontology/omics#hasDiagnosis">has diagnosis</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Experiment">
+      <h3>experiment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#Experiment</p>
+      <div class="comment">
+         <span class="markdown">Describes a scientific experiment that produced data.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#experimentedOn"
+               title="http://disk-project.org/ontology/omics#experimentedOn">experimented on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#producedData"
+               title="http://disk-project.org/ontology/omics#producedData">produced data</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Gene">
+      <h3>gene<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#Gene</p>
+      <div class="comment">
+         <span class="markdown">A unit of heredity that is transferred from a parent to offspring.</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#HNF4a" title="http://disk-project.org/ontology/omics#HNF4a">h n f4a</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MassSpecData">
+      <h3>mass spec data<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#MassSpecData</p>
+      <div class="comment">
+         <span class="markdown">Data resulting from a scientific technique for measuring the mass-to-charge ratio of ions.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">data</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Patient">
+      <h3>patient<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#Patient</p>
+      <div class="comment">
+         <span class="markdown">An individual with a diagnosis and data.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasDiagnosis"
+               title="http://disk-project.org/ontology/omics#hasDiagnosis">has diagnosis</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#collectedFrom"
+               title="http://disk-project.org/ontology/omics#collectedFrom">collected from</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Protein">
+      <h3>protein<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#Protein</p>
+      <div class="comment">
+         <span class="markdown">Large molecules composed of one or more chains of amino acids in a specific order determined by the base sequence of nucleotides in the DNA coding for the protein.</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#CEACAM6" title="http://disk-project.org/ontology/omics#CEACAM6">c e a c a m6</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DummyProtein"
+               title="http://disk-project.org/ontology/omics#DummyProtein">dummy protein</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#EGFR" title="http://disk-project.org/ontology/omics#EGFR">e g f r</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#KRAS" title="http://disk-project.org/ontology/omics#KRAS">k r a s</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#NACA2" title="http://disk-project.org/ontology/omics#NACA2">n a c a2</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PRKCDBP" title="http://disk-project.org/ontology/omics#PRKCDBP">p r k c d b p</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RNASeq">
+      <h3>r n a seq<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#RNASeq</p>
+      <div class="comment">
+         <span class="markdown">Data revealing the presence and quantity of RNA in a biological sample at a given moment.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">data</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Sample">
+      <h3>sample<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#Sample</p>
+      <div class="comment">
+         <span class="markdown">A unit of data used for analysis.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#collectedAt"
+               title="http://disk-project.org/ontology/omics#collectedAt">collected at</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#collectedFrom"
+               title="http://disk-project.org/ontology/omics#collectedFrom">collected from</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#experimentedOn"
+               title="http://disk-project.org/ontology/omics#experimentedOn">experimented on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#collectedFrom"
+            title="http://disk-project.org/ontology/omics#collectedFrom">collected from</a>
+      </li>
+      <li>
+         <a href="#experimentedOn"
+            title="http://disk-project.org/ontology/omics#experimentedOn">experimented on</a>
+      </li>
+      <li>
+         <a href="#hasDiagnosis"
+            title="http://disk-project.org/ontology/omics#hasDiagnosis">has diagnosis</a>
+      </li>
+      <li>
+         <a href="#isDiagnosedWith"
+            title="http://disk-project.org/ontology/omics#isDiagnosedWith">is diagnosed with</a>
+      </li>
+      <li>
+         <a href="#producedData"
+            title="http://disk-project.org/ontology/omics#producedData">produced data</a>
+      </li>
+   </ul>
+   <div class="entity" id="collectedFrom">
+      <h3>collected from<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#collectedFrom</p>
+      <div class="comment">
+         <span class="markdown">Describes the individual a sample was collected from.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://disk-project.org/ontology/omics#Sample">sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Patient" title="http://disk-project.org/ontology/omics#Patient">patient</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="experimentedOn">
+      <h3>experimented on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#experimentedOn</p>
+      <div class="comment">
+         <span class="markdown">Describes the experiment or sample that was experimented on.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Experiment"
+                  title="http://disk-project.org/ontology/omics#Experiment">experiment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Sample" title="http://disk-project.org/ontology/omics#Sample">sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDiagnosis">
+      <h3>has diagnosis<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#hasDiagnosis</p>
+      <div class="comment">
+         <span class="markdown">Describes the medical diagnosis a patient has received.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Patient" title="http://disk-project.org/ontology/omics#Patient">patient</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Diagnosis" title="http://disk-project.org/ontology/omics#Diagnosis">diagnosis</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isDiagnosedWith">
+      <h3>is diagnosed with<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#isDiagnosedWith</p>
+      <div class="comment">
+         <span class="markdown">Describes the diagnosis of a patient (type of cancer).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Diagnosis" title="http://disk-project.org/ontology/omics#Diagnosis">diagnosis</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Cancer" title="http://disk-project.org/ontology/omics#Cancer">cancer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="producedData">
+      <h3>produced data<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#producedData</p>
+      <div class="comment">
+         <span class="markdown">Describes the data produced by an experiment.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Experiment"
+                  title="http://disk-project.org/ontology/omics#Experiment">experiment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#collectedAt"
+            title="http://disk-project.org/ontology/omics#collectedAt">collected at</a>
+      </li>
+      <li>
+         <a href="#diagnosedAt"
+            title="http://disk-project.org/ontology/omics#diagnosedAt">diagnosed at</a>
+      </li>
+   </ul>
+   <div class="entity" id="collectedAt">
+      <h3>collected at<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#collectedAt</p>
+      <div class="comment">
+         <span class="markdown">Describes the date and time a sample was collected.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://disk-project.org/ontology/omics#Sample">sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="diagnosedAt">
+      <h3>diagnosed at<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#diagnosedAt</p>
+      <div class="comment">
+         <span class="markdown">Describes the date and time a diagnosis was given.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Diagnosis" title="http://disk-project.org/ontology/omics#Diagnosis">diagnosis</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#CEACAM6" title="http://disk-project.org/ontology/omics#CEACAM6">
+            <span>c e a c a m6</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ColonCancer"
+            title="http://disk-project.org/ontology/omics#ColonCancer">
+            <span>colon cancer</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ColonCancerDummySubtype"
+            title="http://disk-project.org/ontology/omics#ColonCancerDummySubtype">
+            <span>colon cancer dummy subtype</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DummyProtein"
+            title="http://disk-project.org/ontology/omics#DummyProtein">
+            <span>dummy protein</span>
+         </a>
+      </li>
+      <li>
+         <a href="#EGFR" title="http://disk-project.org/ontology/omics#EGFR">
+            <span>e g f r</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HNF4a" title="http://disk-project.org/ontology/omics#HNF4a">
+            <span>h n f4a</span>
+         </a>
+      </li>
+      <li>
+         <a href="#KRAS" title="http://disk-project.org/ontology/omics#KRAS">
+            <span>k r a s</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NACA2" title="http://disk-project.org/ontology/omics#NACA2">
+            <span>n a c a2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PRKCDBP" title="http://disk-project.org/ontology/omics#PRKCDBP">
+            <span>p r k c d b p</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="CEACAM6">
+      <h3>c e a c a m6<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#CEACAM6</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Protein" title="http://disk-project.org/ontology/omics#Protein">protein</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ColonCancer">
+      <h3>colon cancer<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#ColonCancer</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Cancer" title="http://disk-project.org/ontology/omics#Cancer">cancer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ColonCancerDummySubtype">
+      <h3>colon cancer dummy subtype<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#ColonCancerDummySubtype</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Cancer" title="http://disk-project.org/ontology/omics#Cancer">cancer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DummyProtein">
+      <h3>dummy protein<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#DummyProtein</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Protein" title="http://disk-project.org/ontology/omics#Protein">protein</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EGFR">
+      <h3>e g f r<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#EGFR</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Protein" title="http://disk-project.org/ontology/omics#Protein">protein</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HNF4a">
+      <h3>h n f4a<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#HNF4a</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Gene" title="http://disk-project.org/ontology/omics#Gene">gene</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="KRAS">
+      <h3>k r a s<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#KRAS</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Protein" title="http://disk-project.org/ontology/omics#Protein">protein</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NACA2">
+      <h3>n a c a2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#NACA2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Protein" title="http://disk-project.org/ontology/omics#Protein">protein</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PRKCDBP">
+      <h3>p r k c d b p<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/omics#PRKCDBP</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Protein" title="http://disk-project.org/ontology/omics#Protein">protein</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

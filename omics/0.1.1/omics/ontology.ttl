@@ -1,0 +1,179 @@
+@prefix : <http://disk-project.org/ontology/omics#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://disk-project.org/ontology/omics> .
+
+<http://disk-project.org/ontology/omics> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://disk-project.org/ontology/omics#collectedFrom
+:collectedFrom rdf:type owl:ObjectProperty ;
+               rdfs:domain :Sample ;
+               rdfs:range :Patient ;
+               rdfs:comment "Describes the individual a sample was collected from."@en ;
+               rdfs:label "collected from"@en .
+
+
+###  http://disk-project.org/ontology/omics#experimentedOn
+:experimentedOn rdf:type owl:ObjectProperty ;
+                rdfs:domain :Experiment ,
+                            :Sample ;
+                rdfs:comment "Describes the experiment or sample that was experimented on."@en ;
+                rdfs:label "experimented on"@en .
+
+
+###  http://disk-project.org/ontology/omics#hasDiagnosis
+:hasDiagnosis rdf:type owl:ObjectProperty ;
+              rdfs:domain :Patient ;
+              rdfs:range :Diagnosis ;
+              rdfs:comment "Describes the medical diagnosis a patient has received."@en ;
+              rdfs:label "has diagnosis"@en .
+
+
+###  http://disk-project.org/ontology/omics#isDiagnosedWith
+:isDiagnosedWith rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Diagnosis ;
+                 rdfs:range :Cancer ;
+                 rdfs:comment "Describes the diagnosis of a patient (type of cancer)."@en ;
+                 rdfs:label "is diagnosed with"@en .
+
+
+###  http://disk-project.org/ontology/omics#producedData
+:producedData rdf:type owl:ObjectProperty ;
+              rdfs:domain :Experiment ;
+              rdfs:comment "Describes the data produced by an experiment."@en ;
+              rdfs:label "produced data"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://disk-project.org/ontology/omics#collectedAt
+:collectedAt rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Sample ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "Describes the date and time a sample was collected."@en ;
+             rdfs:label "collected at"@en .
+
+
+###  http://disk-project.org/ontology/omics#diagnosedAt
+:diagnosedAt rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Diagnosis ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "Describes the date and time a diagnosis was given."@en ;
+             rdfs:label "diagnosed at"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://disk-project.org/ontology/disk#Data
+<http://disk-project.org/ontology/disk#Data> rdf:type owl:Class ;
+                                             rdfs:comment "Data containing relevant information."@en .
+
+
+###  http://disk-project.org/ontology/omics#Cancer
+:Cancer rdf:type owl:Class ;
+        rdfs:comment "A group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body."@en .
+
+
+###  http://disk-project.org/ontology/omics#Diagnosis
+:Diagnosis rdf:type owl:Class ;
+           rdfs:comment "An individual's medical diagnosis."@en .
+
+
+###  http://disk-project.org/ontology/omics#Experiment
+:Experiment rdf:type owl:Class ;
+            rdfs:comment "Describes a scientific experiment that produced data."@en .
+
+
+###  http://disk-project.org/ontology/omics#Gene
+:Gene rdf:type owl:Class ;
+      rdfs:comment "A unit of heredity that is transferred from a parent to offspring."@en .
+
+
+###  http://disk-project.org/ontology/omics#MassSpecData
+:MassSpecData rdf:type owl:Class ;
+              rdfs:subClassOf <http://disk-project.org/ontology/disk#Data> ;
+              rdfs:comment "Data resulting from a scientific technique for measuring the mass-to-charge ratio of ions."@en .
+
+
+###  http://disk-project.org/ontology/omics#Patient
+:Patient rdf:type owl:Class ;
+         rdfs:comment "An individual with a diagnosis and data."@en .
+
+
+###  http://disk-project.org/ontology/omics#Protein
+:Protein rdf:type owl:Class ;
+         rdfs:comment "Large molecules composed of one or more chains of amino acids in a specific order determined by the base sequence of nucleotides in the DNA coding for the protein."@en .
+
+
+###  http://disk-project.org/ontology/omics#RNASeq
+:RNASeq rdf:type owl:Class ;
+        rdfs:subClassOf <http://disk-project.org/ontology/disk#Data> ;
+        rdfs:comment "Data revealing the presence and quantity of RNA in a biological sample at a given moment."@en .
+
+
+###  http://disk-project.org/ontology/omics#Sample
+:Sample rdf:type owl:Class ;
+        rdfs:comment "A unit of data used for analysis."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://disk-project.org/ontology/omics#CEACAM6
+:CEACAM6 rdf:type owl:NamedIndividual ,
+                  :Protein .
+
+
+###  http://disk-project.org/ontology/omics#ColonCancer
+:ColonCancer rdf:type owl:NamedIndividual ,
+                      :Cancer .
+
+
+###  http://disk-project.org/ontology/omics#ColonCancerDummySubtype
+:ColonCancerDummySubtype rdf:type owl:NamedIndividual ,
+                                  :Cancer .
+
+
+###  http://disk-project.org/ontology/omics#DummyProtein
+:DummyProtein rdf:type owl:NamedIndividual ,
+                       :Protein .
+
+
+###  http://disk-project.org/ontology/omics#EGFR
+:EGFR rdf:type owl:NamedIndividual ,
+               :Protein .
+
+
+###  http://disk-project.org/ontology/omics#HNF4a
+:HNF4a rdf:type owl:NamedIndividual ,
+                :Gene .
+
+
+###  http://disk-project.org/ontology/omics#KRAS
+:KRAS rdf:type owl:NamedIndividual ,
+               :Protein .
+
+
+###  http://disk-project.org/ontology/omics#NACA2
+:NACA2 rdf:type owl:NamedIndividual ,
+                :Protein .
+
+
+###  http://disk-project.org/ontology/omics#PRKCDBP
+:PRKCDBP rdf:type owl:NamedIndividual ,
+                  :Protein .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

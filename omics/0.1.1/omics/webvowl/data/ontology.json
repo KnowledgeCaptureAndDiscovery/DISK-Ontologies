@@ -1,0 +1,393 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.2-SNAPSHOT), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://disk-project.org/ontology/omics", "http://disk-project.org/ontology/disk", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://disk-project.org/ontology/omics"
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 10,
+    "objectPropertyCount" : 5,
+    "datatypePropertyCount" : 2,
+    "individualCount" : 9
+  },
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "0",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#Experiment",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Experiment"
+    },
+    "comment" : {
+      "en" : "Describes a scientific experiment that produced data."
+    },
+    "id" : "4"
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "6" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#Sample",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sample"
+    },
+    "comment" : {
+      "en" : "A unit of data used for analysis."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#Data",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Data"
+    },
+    "subClasses" : [ "8", "11" ],
+    "comment" : {
+      "en" : "Data containing relevant information."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#Patient",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Patient"
+    },
+    "comment" : {
+      "en" : "An individual with a diagnosis and data."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#Diagnosis",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Diagnosis"
+    },
+    "comment" : {
+      "en" : "An individual's medical diagnosis."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#Gene",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Gene"
+    },
+    "individuals" : [ {
+      "iri" : "http://disk-project.org/ontology/omics#HNF4a",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "HNF4a"
+      }
+    } ],
+    "comment" : {
+      "en" : "A unit of heredity that is transferred from a parent to offspring."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#Protein",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Protein"
+    },
+    "individuals" : [ {
+      "iri" : "http://disk-project.org/ontology/omics#PRKCDBP",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "PRKCDBP"
+      }
+    }, {
+      "iri" : "http://disk-project.org/ontology/omics#KRAS",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "KRAS"
+      }
+    }, {
+      "iri" : "http://disk-project.org/ontology/omics#CEACAM6",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "CEACAM6"
+      }
+    }, {
+      "iri" : "http://disk-project.org/ontology/omics#NACA2",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "NACA2"
+      }
+    }, {
+      "iri" : "http://disk-project.org/ontology/omics#DummyProtein",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "DummyProtein"
+      }
+    }, {
+      "iri" : "http://disk-project.org/ontology/omics#EGFR",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "EGFR"
+      }
+    } ],
+    "comment" : {
+      "en" : "Large molecules composed of one or more chains of amino acids in a specific order determined by the base sequence of nucleotides in the DNA coding for the protein."
+    },
+    "id" : "21"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#RNASeq",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RNASeq"
+    },
+    "comment" : {
+      "en" : "Data revealing the presence and quantity of RNA in a biological sample at a given moment."
+    },
+    "id" : "11",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#MassSpecData",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MassSpecData"
+    },
+    "comment" : {
+      "en" : "Data resulting from a scientific technique for measuring the mass-to-charge ratio of ions."
+    },
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#Cancer",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cancer"
+    },
+    "individuals" : [ {
+      "iri" : "http://disk-project.org/ontology/omics#ColonCancerDummySubtype",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "ColonCancerDummySubtype"
+      }
+    }, {
+      "iri" : "http://disk-project.org/ontology/omics#ColonCancer",
+      "baseIri" : "http://disk-project.org/ontology/omics",
+      "labels" : {
+        "IRI-based" : "ColonCancer"
+      }
+    } ],
+    "comment" : {
+      "en" : "A group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body."
+    },
+    "id" : "18"
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://disk-project.org/ontology/omics#diagnosedAt",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "diagnosedAt",
+      "en" : "diagnosed at"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Describes the date and time a diagnosis was given."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "1"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
+  }, {
+    "range" : "9",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#hasDiagnosis",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasDiagnosis",
+      "en" : "has diagnosis"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Describes the medical diagnosis a patient has received."
+    },
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#collectedAt",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "collectedAt",
+      "en" : "collected at"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Describes the date and time a sample was collected."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#producedData",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "producedData",
+      "en" : "produced data"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Describes the data produced by an experiment."
+    },
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#isDiagnosedWith",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "isDiagnosedWith",
+      "en" : "is diagnosed with"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Describes the diagnosis of a patient (type of cancer)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#collectedFrom",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "collectedFrom",
+      "en" : "collected from"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Describes the individual a sample was collected from."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://disk-project.org/ontology/omics#experimentedOn",
+    "baseIri" : "http://disk-project.org/ontology/omics",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "experimentedOn",
+      "en" : "experimented on"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Describes the experiment or sample that was experimented on."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  } ]
+}
