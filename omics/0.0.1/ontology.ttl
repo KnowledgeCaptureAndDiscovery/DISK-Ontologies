@@ -6,7 +6,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://disk-project.org/ontology/omics> .
 
-<http://disk-project.org/ontology/omics> rdf:type owl:Ontology .
+<http://disk-project.org/ontology/omics> rdf:type owl:Ontology ;
+                                          rdfs:comment "The DISK Omics Ontology"@en ,
+                                                       "The DISK Omics ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc."@en ;
+                                          owl:versionInfo "v0.0.1"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
@@ -77,54 +88,64 @@
 
 ###  http://disk-project.org/ontology/disk#Data
 <http://disk-project.org/ontology/disk#Data> rdf:type owl:Class ;
-                                             rdfs:comment "Data containing relevant information."@en .
+                                             rdfs:comment "Data containing relevant information."@en ;
+                                             rdfs:label "Data"@en .
 
 
 ###  http://disk-project.org/ontology/omics#Cancer
 :Cancer rdf:type owl:Class ;
-        rdfs:comment "A group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body."@en .
+        rdfs:comment "A group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body."@en ;
+        rdfs:label "Cancer"@en .
 
 
 ###  http://disk-project.org/ontology/omics#Diagnosis
 :Diagnosis rdf:type owl:Class ;
-           rdfs:comment "An individual's medical diagnosis."@en .
+           rdfs:comment "An individual's medical diagnosis."@en ;
+           rdfs:label "Diagnosis"@en .
 
 
 ###  http://disk-project.org/ontology/omics#Experiment
 :Experiment rdf:type owl:Class ;
-            rdfs:comment "Describes a scientific experiment that produced data."@en .
+            rdfs:comment "Describes a scientific experiment that produced data."@en ;
+            rdfs:label "Experiment"@en .
 
 
 ###  http://disk-project.org/ontology/omics#Gene
 :Gene rdf:type owl:Class ;
-      rdfs:comment "A unit of heredity that is transferred from a parent to offspring."@en .
+      rdfs:comment "A unit of heredity that is transferred from a parent to offspring."@en ;
+      rdfs:label "Gene"@en .
 
 
 ###  http://disk-project.org/ontology/omics#MassSpecData
 :MassSpecData rdf:type owl:Class ;
               rdfs:subClassOf <http://disk-project.org/ontology/disk#Data> ;
-              rdfs:comment "Data resulting from a scientific technique for measuring the mass-to-charge ratio of ions."@en .
+              rdfs:comment "Data resulting from a scientific technique for measuring the mass-to-charge ratio of ions."@en ;
+              rdfs:label "Mass Spectrometry Data"@en .
 
 
 ###  http://disk-project.org/ontology/omics#Patient
 :Patient rdf:type owl:Class ;
-         rdfs:comment "An individual with a diagnosis and data."@en .
+         rdfs:comment "An individual with a diagnosis and data."@en ;
+         rdfs:label "Patient"@en .
 
 
 ###  http://disk-project.org/ontology/omics#Protein
 :Protein rdf:type owl:Class ;
-         rdfs:comment "Large molecules composed of one or more chains of amino acids in a specific order determined by the base sequence of nucleotides in the DNA coding for the protein."@en .
+         rdfs:comment "Large molecules composed of one or more chains of amino acids in a specific order determined by the base sequence of nucleotides in the DNA coding for the protein."@en ;
+         rdfs:label "Protein"@en .
 
 
 ###  http://disk-project.org/ontology/omics#RNASeq
 :RNASeq rdf:type owl:Class ;
         rdfs:subClassOf <http://disk-project.org/ontology/disk#Data> ;
-        rdfs:comment "Data revealing the presence and quantity of RNA in a biological sample at a given moment."@en .
+        rdfs:comment "Data revealing the presence and quantity of RNA in a biological sample at a given moment."@en ;
+        rdfs:label "RNA Sequence"@en .
 
 
 ###  http://disk-project.org/ontology/omics#Sample
 :Sample rdf:type owl:Class ;
-        rdfs:comment "A unit of data used for analysis."@en .
+        rdfs:comment "A unit of data used for analysis."@en ;
+        rdfs:label "Sample"@en .
 
 
 #################################################################

@@ -1,4 +1,19 @@
 <http://disk-project.org/ontology/omics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/2000/01/rdf-schema#comment> "The DISK Omics Ontology"@en .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/2000/01/rdf-schema#comment> "The DISK Omics ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc."@en .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/2002/07/owl#versionInfo> "v0.0.1"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -77,44 +92,54 @@
 # http://disk-project.org/ontology/disk#Data
 <http://disk-project.org/ontology/disk#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/disk#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "Data containing relevant information."@en .
+<http://disk-project.org/ontology/disk#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data"@en .
 # 
 # http://disk-project.org/ontology/omics#Cancer
 <http://disk-project.org/ontology/omics#Cancer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#Cancer> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body."@en .
+<http://disk-project.org/ontology/omics#Cancer> <http://www.w3.org/2000/01/rdf-schema#label> "Cancer"@en .
 # 
 # http://disk-project.org/ontology/omics#Diagnosis
 <http://disk-project.org/ontology/omics#Diagnosis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#Diagnosis> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual's medical diagnosis."@en .
+<http://disk-project.org/ontology/omics#Diagnosis> <http://www.w3.org/2000/01/rdf-schema#label> "Diagnosis"@en .
 # 
 # http://disk-project.org/ontology/omics#Experiment
 <http://disk-project.org/ontology/omics#Experiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#Experiment> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a scientific experiment that produced data."@en .
+<http://disk-project.org/ontology/omics#Experiment> <http://www.w3.org/2000/01/rdf-schema#label> "Experiment"@en .
 # 
 # http://disk-project.org/ontology/omics#Gene
 <http://disk-project.org/ontology/omics#Gene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#Gene> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of heredity that is transferred from a parent to offspring."@en .
+<http://disk-project.org/ontology/omics#Gene> <http://www.w3.org/2000/01/rdf-schema#label> "Gene"@en .
 # 
 # http://disk-project.org/ontology/omics#MassSpecData
 <http://disk-project.org/ontology/omics#MassSpecData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#MassSpecData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Data> .
 <http://disk-project.org/ontology/omics#MassSpecData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data resulting from a scientific technique for measuring the mass-to-charge ratio of ions."@en .
+<http://disk-project.org/ontology/omics#MassSpecData> <http://www.w3.org/2000/01/rdf-schema#label> "Mass Spectrometry Data"@en .
 # 
 # http://disk-project.org/ontology/omics#Patient
 <http://disk-project.org/ontology/omics#Patient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#Patient> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual with a diagnosis and data."@en .
+<http://disk-project.org/ontology/omics#Patient> <http://www.w3.org/2000/01/rdf-schema#label> "Patient"@en .
 # 
 # http://disk-project.org/ontology/omics#Protein
 <http://disk-project.org/ontology/omics#Protein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#Protein> <http://www.w3.org/2000/01/rdf-schema#comment> "Large molecules composed of one or more chains of amino acids in a specific order determined by the base sequence of nucleotides in the DNA coding for the protein."@en .
+<http://disk-project.org/ontology/omics#Protein> <http://www.w3.org/2000/01/rdf-schema#label> "Protein"@en .
 # 
 # http://disk-project.org/ontology/omics#RNASeq
 <http://disk-project.org/ontology/omics#RNASeq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#RNASeq> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Data> .
 <http://disk-project.org/ontology/omics#RNASeq> <http://www.w3.org/2000/01/rdf-schema#comment> "Data revealing the presence and quantity of RNA in a biological sample at a given moment."@en .
+<http://disk-project.org/ontology/omics#RNASeq> <http://www.w3.org/2000/01/rdf-schema#label> "RNA Sequence"@en .
 # 
 # http://disk-project.org/ontology/omics#Sample
 <http://disk-project.org/ontology/omics#Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/omics#Sample> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of data used for analysis."@en .
+<http://disk-project.org/ontology/omics#Sample> <http://www.w3.org/2000/01/rdf-schema#label> "Sample"@en .
 # 
 # 
 # 

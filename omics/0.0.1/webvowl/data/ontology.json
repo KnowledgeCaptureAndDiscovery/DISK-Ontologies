@@ -3,7 +3,19 @@
   "header" : {
     "languages" : [ "en" ],
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://disk-project.org/ontology/omics", "http://disk-project.org/ontology/disk", "http://www.w3.org/2001/XMLSchema" ],
-    "iri" : "http://disk-project.org/ontology/omics"
+    "iri" : "http://disk-project.org/ontology/omics",
+    "version" : "v0.0.1",
+    "comments" : {
+      "en" : "The DISK Omics Ontology"
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "v0.0.1",
+        "type" : "label"
+      } ]
+    }
   },
   "namespace" : [ ],
   "metrics" : {
@@ -67,7 +79,8 @@
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Experiment"
+      "IRI-based" : "Experiment",
+      "en" : "Experiment"
     },
     "comment" : {
       "en" : "Describes a scientific experiment that produced data."
@@ -76,14 +89,15 @@
   }, {
     "instances" : 0,
     "union" : [ "4", "6" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "5"
   }, {
     "iri" : "http://disk-project.org/ontology/omics#Sample",
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Sample"
+      "IRI-based" : "Sample",
+      "en" : "Sample"
     },
     "comment" : {
       "en" : "A unit of data used for analysis."
@@ -94,7 +108,8 @@
     "baseIri" : "http://disk-project.org/ontology/disk",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Data"
+      "IRI-based" : "Data",
+      "en" : "Data"
     },
     "subClasses" : [ "8", "11" ],
     "comment" : {
@@ -107,7 +122,8 @@
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Patient"
+      "IRI-based" : "Patient",
+      "en" : "Patient"
     },
     "comment" : {
       "en" : "An individual with a diagnosis and data."
@@ -132,7 +148,8 @@
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Diagnosis"
+      "IRI-based" : "Diagnosis",
+      "en" : "Diagnosis"
     },
     "comment" : {
       "en" : "An individual's medical diagnosis."
@@ -143,7 +160,8 @@
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Gene"
+      "IRI-based" : "Gene",
+      "en" : "Gene"
     },
     "individuals" : [ {
       "iri" : "http://disk-project.org/ontology/omics#HNF4a",
@@ -161,7 +179,8 @@
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Protein"
+      "IRI-based" : "Protein",
+      "en" : "Protein"
     },
     "individuals" : [ {
       "iri" : "http://disk-project.org/ontology/omics#PRKCDBP",
@@ -209,7 +228,8 @@
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "RNASeq"
+      "IRI-based" : "RNASeq",
+      "en" : "RNA Sequence"
     },
     "comment" : {
       "en" : "Data revealing the presence and quantity of RNA in a biological sample at a given moment."
@@ -221,7 +241,8 @@
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "MassSpecData"
+      "IRI-based" : "MassSpecData",
+      "en" : "Mass Spectrometry Data"
     },
     "comment" : {
       "en" : "Data resulting from a scientific technique for measuring the mass-to-charge ratio of ions."
@@ -233,7 +254,8 @@
     "baseIri" : "http://disk-project.org/ontology/omics",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Cancer"
+      "IRI-based" : "Cancer",
+      "en" : "Cancer"
     },
     "individuals" : [ {
       "iri" : "http://disk-project.org/ontology/omics#ColonCancerDummySubtype",
