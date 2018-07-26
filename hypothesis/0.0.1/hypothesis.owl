@@ -13,6 +13,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://disk-project.org/ontology/hypothesis#example -->
+
+    <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/hypothesis#example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -23,13 +40,19 @@
 
     <!-- http://disk-project.org/ontology/hypothesis#associatedWith -->
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#associatedWith"/>
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#associatedWith">
+        <example xml:lang="en">EGFR Protein associatedWith Colon Cancer.</example>
+        <rdfs:comment xml:lang="en">Describes an association between two entities.</rdfs:comment>
+        <rdfs:label xml:lang="en">associated with</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://disk-project.org/ontology/hypothesis#expressedIn -->
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#expressedIn"/>
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#expressedIn">
+        <rdfs:label xml:lang="en">expressed in</rdfs:label>
+    </owl:ObjectProperty>
 </rdf:RDF>
 
 
