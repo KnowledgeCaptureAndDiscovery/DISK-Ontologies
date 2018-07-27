@@ -283,9 +283,9 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#HippocampalVoume -->
+    <!-- https://w3id.org/disk/ontology/neuro#HippocampalVolume -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#HippocampalVoume">
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#HippocampalVolume">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/neuro#BrainCharacteristic"/>
     </owl:NamedIndividual>
     
