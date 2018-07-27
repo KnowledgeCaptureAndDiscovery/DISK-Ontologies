@@ -110,6 +110,13 @@
         rdfs:comment "Describes the sex of an individual of a cohort."^^xsd:string ;
         rdfs:label "has sex"@en .
 
+###  https://w3id.org/disk/ontology/neuro#hasEnigmaQueryLiteral
+:hasEnigmaQueryLiteral rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Data ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Describes the Enigma Query to be fetched."^^xsd:string ;
+        rdfs:label "has Enigma query literal"@en .
+
 
 #################################################################
 #    Classes
