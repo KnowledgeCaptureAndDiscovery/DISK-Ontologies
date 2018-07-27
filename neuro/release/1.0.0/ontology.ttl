@@ -111,7 +111,7 @@
         rdfs:label "has sex"@en .
 
 ###  https://w3id.org/disk/ontology/neuro#hasEnigmaQueryLiteral
-:hasSex rdf:type owl:DatatypeProperty ;
+:hasEnigmaQueryLiteral rdf:type owl:DatatypeProperty ;
         rdfs:domain :Data ;
         rdfs:range xsd:string ;
         rdfs:comment "Describes the Enigma Query to be fetched."^^xsd:string ;
