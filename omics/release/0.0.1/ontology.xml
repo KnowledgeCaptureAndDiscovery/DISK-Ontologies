@@ -8,8 +8,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://disk-project.org/ontology/omics">
-        <rdfs:comment xml:lang="en">The DISK Omics Ontology</rdfs:comment>
-        <rdfs:comment xml:lang="en">The DISK Omics ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.</rdfs:comment>
+        <terms:contributor xml:lang="en">Yolanda Gil</terms:contributor>
+        <terms:creator xml:lang="en">Daniel Garijo</terms:creator>
+        <terms:creator xml:lang="en">Varun Ratnakar</terms:creator>
+        <rdfs:comment xml:lang="en">The Omics Hypothesis Ontology</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Omics Hypothesis ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.</rdfs:comment>
         <owl:versionInfo xml:lang="en">v0.0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -24,6 +27,20 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 

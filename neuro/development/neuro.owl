@@ -83,16 +83,6 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#hasCohortGroup -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasCohortGroup">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
-        <rdfs:range rdf:resource="https://w3id.org/enigma#CohortGroup"/>
-        <rdfs:label xml:lang="en">has cohort group</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/disk/ontology/neuro#hasDiagnosis -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasDiagnosis">
@@ -310,15 +300,6 @@
     <owl:Class rdf:about="https://w3id.org/enigma#Cohort">
         <rdfs:comment xml:lang="en">A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria</rdfs:comment>
         <rdfs:label xml:lang="en">Cohort</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/enigma#CohortGroup -->
-
-    <owl:Class rdf:about="https://w3id.org/enigma#CohortGroup">
-        <rdfs:comment xml:lang="en">A subset of Cohort, which either forms the patient group or control group.</rdfs:comment>
-        <rdfs:label xml:lang="en">Cohort Group</rdfs:label>
     </owl:Class>
     
 

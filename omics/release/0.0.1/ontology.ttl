@@ -7,13 +7,24 @@
 @base <http://disk-project.org/ontology/omics> .
 
 <http://disk-project.org/ontology/omics> rdf:type owl:Ontology ;
-                                          rdfs:comment "The DISK Omics Ontology"@en ,
-                                                       "The DISK Omics ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc."@en ;
+                                          <http://purl.org/dc/terms/contributor> "Yolanda Gil"@en ;
+                                          <http://purl.org/dc/terms/creator> "Daniel Garijo"@en ,
+                                                                             "Varun Ratnakar"@en ;
+                                          rdfs:comment "The Omics Hypothesis Ontology"@en ,
+                                                       "The Omics Hypothesis ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc."@en ;
                                           owl:versionInfo "v0.0.1"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .

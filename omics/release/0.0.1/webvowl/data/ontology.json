@@ -5,10 +5,28 @@
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://disk-project.org/ontology/omics", "http://disk-project.org/ontology/disk", "http://www.w3.org/2001/XMLSchema" ],
     "iri" : "http://disk-project.org/ontology/omics",
     "version" : "v0.0.1",
+    "author" : [ "Varun Ratnakar", "Daniel Garijo" ],
     "comments" : {
-      "en" : "The DISK Omics Ontology"
+      "en" : "The Omics Hypothesis ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc."
     },
     "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Varun Ratnakar",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Daniel Garijo",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Yolanda Gil",
+        "type" : "label"
+      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "en",
@@ -89,7 +107,7 @@
   }, {
     "instances" : 0,
     "union" : [ "4", "6" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "5"
   }, {
     "iri" : "http://disk-project.org/ontology/omics#Sample",

@@ -1,6 +1,9 @@
 <http://disk-project.org/ontology/omics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://disk-project.org/ontology/omics> <http://www.w3.org/2000/01/rdf-schema#comment> "The DISK Omics Ontology"@en .
-<http://disk-project.org/ontology/omics> <http://www.w3.org/2000/01/rdf-schema#comment> "The DISK Omics ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc."@en .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/terms/contributor> "Yolanda Gil"@en .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/terms/creator> "Daniel Garijo"@en .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/terms/creator> "Varun Ratnakar"@en .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/2000/01/rdf-schema#comment> "The Omics Hypothesis Ontology"@en .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/2000/01/rdf-schema#comment> "The Omics Hypothesis ontology introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc."@en .
 <http://disk-project.org/ontology/omics> <http://www.w3.org/2002/07/owl#versionInfo> "v0.0.1"@en .
 # 
 # 
@@ -10,6 +13,12 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
