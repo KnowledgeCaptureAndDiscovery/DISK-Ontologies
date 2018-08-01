@@ -8,9 +8,9 @@
 
 <https://w3id.org/disk/ontology/neuro> rdf:type owl:Ontology ;
                                         <http://purl.org/dc/terms/creator> "Naomi Perez"^^xsd:string ;
-                                        <http://purl.org/dc/terms/title> "The DISK Neuro Ontology"^^xsd:string ;
+                                        <http://purl.org/dc/terms/title> "The ENIGMA Hypothesis Ontology"@en ;
                                         rdfs:comment "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."^^xsd:string ;
-                                        owl:versionInfo "v2.0.0"^^xsd:string .
+                                        owl:versionInfo "v1.0.0"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -42,6 +42,21 @@
                             :Experiment ;
                 rdfs:comment "Denotes that an experiment and a Brain Scan can be experimented on."@en ;
                 rdfs:label "experimented on"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#hasCohort
+:hasCohort rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+           rdfs:range <https://w3id.org/enigma#Cohort> ;
+           rdfs:comment "Describes the cohort a dataset is associated with."@en ;
+           rdfs:label "has cohort"^^xsd:string .
+
+
+###  https://w3id.org/disk/ontology/neuro#hasCohortGroup
+:hasCohortGroup rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+                rdfs:range <https://w3id.org/enigma#CohortGroup> ;
+                rdfs:label "has cohort group"@en .
 
 
 ###  https://w3id.org/disk/ontology/neuro#hasDiagnosis
@@ -87,12 +102,12 @@
              rdfs:label "collected at"@en .
 
 
-###  https://w3id.org/disk/ontology/neuro#diagnosedAt
-:diagnosedAt rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Diagnosis ;
-             rdfs:range xsd:dateTime ;
-             rdfs:comment "Describes when a Patient recieved a Diagnosis."@en ;
-             rdfs:label "diagnosed at"@en .
+###  https://w3id.org/disk/ontology/neuro#diagnosedAtAge
+:diagnosedAtAge rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Diagnosis ;
+                rdfs:range xsd:int ;
+                rdfs:comment "Describes the age at which a Patient recieved a Diagnosis."@en ;
+                rdfs:label "diagnosed at age"@en .
 
 
 ###  https://w3id.org/disk/ontology/neuro#hasAge
@@ -110,12 +125,17 @@
         rdfs:comment "Describes the sex of an individual of a cohort."^^xsd:string ;
         rdfs:label "has sex"@en .
 
-###  https://w3id.org/disk/ontology/neuro#hasEnigmaQueryLiteral
-:hasEnigmaQueryLiteral rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Data ;
-        rdfs:range xsd:string ;
-        rdfs:comment "Describes the Enigma Query to be fetched."^^xsd:string ;
-        rdfs:label "has Enigma query literal"@en .
+
+###  https://w3id.org/disk/ontology/neuro#isRawData
+:isRawData rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+           rdfs:label "is raw data"@en .
+
+
+###  https://w3id.org/disk/ontology/neuro#isRegressionResults
+:isRegressionResults rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+                     rdfs:label "is regression results"@en .
 
 
 #################################################################
@@ -124,7 +144,7 @@
 
 ###  http://disk-project.org/ontology/disk#Data
 <http://disk-project.org/ontology/disk#Data> rdf:type owl:Class ;
-                                             rdfs:comment "Data containing relevant information."@en ;
+                                             rdfs:comment "The results produced as a result of executing a workflow from a given line of inquiry."@en ;
                                              rdfs:label "Data"@en .
 
 
@@ -178,6 +198,18 @@
          rdfs:label "Patient"@en .
 
 
+###  https://w3id.org/enigma#Cohort
+<https://w3id.org/enigma#Cohort> rdf:type owl:Class ;
+                                 rdfs:label "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en ,
+                                            "Cohort"@en .
+
+
+###  https://w3id.org/enigma#CohortGroup
+<https://w3id.org/enigma#CohortGroup> rdf:type owl:Class ;
+                                      rdfs:comment "A subset of Cohort, which either forms the patient group or control group."@en ;
+                                      rdfs:label "Cohort Group"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -187,9 +219,9 @@
                 :Gene .
 
 
-###  https://w3id.org/disk/ontology/neuro#HippocampalVoume
-:HippocampalVoume rdf:type owl:NamedIndividual ,
-                           :BrainCharacteristic .
+###  https://w3id.org/disk/ontology/neuro#HippocampalVolume
+:HippocampalVolume rdf:type owl:NamedIndividual ,
+                            :BrainCharacteristic .
 
 
 ###  https://w3id.org/disk/ontology/neuro#MajorDepression

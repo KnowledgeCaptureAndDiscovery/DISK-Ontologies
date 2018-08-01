@@ -9,9 +9,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/disk/ontology/neuro">
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naomi Perez</terms:creator>
-        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The DISK Neuro Ontology</terms:title>
+        <terms:title xml:lang="en">The ENIGMA Hypothesis Ontology</terms:title>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v2.0.0</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v1.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -74,6 +74,29 @@
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/neuro#Experiment"/>
         <rdfs:comment xml:lang="en">Denotes that an experiment and a Brain Scan can be experimented on.</rdfs:comment>
         <rdfs:label xml:lang="en">experimented on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/disk/ontology/neuro#hasCohort -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasCohort">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:range rdf:resource="https://w3id.org/enigma#Cohort"/>
+        <rdfs:comment xml:lang="en">Describes the cohort a dataset is associated with.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has cohort</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/disk/ontology/neuro#hasCohortGroup -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasCohortGroup">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:range rdf:resource="https://w3id.org/enigma#CohortGroup"/>
+        <rdfs:label xml:lang="en">has cohort group</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -149,14 +172,14 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#diagnosedAt -->
+    <!-- https://w3id.org/disk/ontology/neuro#diagnosedAtAge -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#diagnosedAt">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#diagnosedAtAge">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/neuro#Diagnosis"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">Describes when a Patient recieved a Diagnosis.</rdfs:comment>
-        <rdfs:label xml:lang="en">diagnosed at</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Describes the age at which a Patient recieved a Diagnosis.</rdfs:comment>
+        <rdfs:label xml:lang="en">diagnosed at age</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -185,6 +208,26 @@
     
 
 
+    <!-- https://w3id.org/disk/ontology/neuro#isRawData -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#isRawData">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:label xml:lang="en">is raw data</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/disk/ontology/neuro#isRegressionResults -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#isRegressionResults">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:label xml:lang="en">is regression results</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -201,7 +244,7 @@
 
 
     <owl:Class rdf:about="http://disk-project.org/ontology/disk#Data">
-        <rdfs:comment xml:lang="en">Data containing relevant information.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The results produced as a result of executing a workflow from a given line of inquiry.</rdfs:comment>
         <rdfs:label xml:lang="en">Data</rdfs:label>
     </owl:Class>
     
@@ -289,6 +332,26 @@
     
 
 
+    <!-- https://w3id.org/enigma#Cohort -->
+
+
+    <owl:Class rdf:about="https://w3id.org/enigma#Cohort">
+        <rdfs:label xml:lang="en">A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria</rdfs:label>
+        <rdfs:label xml:lang="en">Cohort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/enigma#CohortGroup -->
+
+
+    <owl:Class rdf:about="https://w3id.org/enigma#CohortGroup">
+        <rdfs:comment xml:lang="en">A subset of Cohort, which either forms the patient group or control group.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cohort Group</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -310,10 +373,10 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#HippocampalVoume -->
+    <!-- https://w3id.org/disk/ontology/neuro#HippocampalVolume -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#HippocampalVoume">
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/neuro#HippocampalVolume">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/neuro#BrainCharacteristic"/>
     </owl:NamedIndividual>
     

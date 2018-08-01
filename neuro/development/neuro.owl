@@ -9,8 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/disk/ontology/neuro">
         <owl:versionInfo>v1.0.0</owl:versionInfo>
+        <terms:title xml:lang="en">The ENIGMA Hypothesis Ontology</terms:title>
         <rdfs:comment>An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</rdfs:comment>
-        <terms:title>The DISK Neuro Ontology</terms:title>
         <terms:creator>Naomi Perez</terms:creator>
     </owl:Ontology>
     
@@ -68,6 +68,27 @@
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/neuro#Experiment"/>
         <rdfs:comment xml:lang="en">Denotes that an experiment and a Brain Scan can be experimented on.</rdfs:comment>
         <rdfs:label xml:lang="en">experimented on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/disk/ontology/neuro#hasCohort -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasCohort">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:range rdf:resource="https://w3id.org/enigma#Cohort"/>
+        <rdfs:comment xml:lang="en">Describes the cohort a dataset is associated with.</rdfs:comment>
+        <rdfs:label>has cohort</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/disk/ontology/neuro#hasCohortGroup -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasCohortGroup">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:range rdf:resource="https://w3id.org/enigma#CohortGroup"/>
+        <rdfs:label xml:lang="en">has cohort group</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -170,6 +191,24 @@
     
 
 
+    <!-- https://w3id.org/disk/ontology/neuro#isRawData -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#isRawData">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:label xml:lang="en">is raw data</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/disk/ontology/neuro#isRegressionResults -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#isRegressionResults">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:label xml:lang="en">is regression results</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -184,7 +223,7 @@
     <!-- http://disk-project.org/ontology/disk#Data -->
 
     <owl:Class rdf:about="http://disk-project.org/ontology/disk#Data">
-        <rdfs:comment xml:lang="en">Data containing relevant information.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The results produced as a result of executing a workflow from a given line of inquiry.</rdfs:comment>
         <rdfs:label xml:lang="en">Data</rdfs:label>
     </owl:Class>
     
@@ -260,6 +299,24 @@
     <owl:Class rdf:about="https://w3id.org/disk/ontology/neuro#Patient">
         <rdfs:comment xml:lang="en">An individual participating in an ENIGMA cohort.</rdfs:comment>
         <rdfs:label xml:lang="en">Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/enigma#Cohort -->
+
+    <owl:Class rdf:about="https://w3id.org/enigma#Cohort">
+        <rdfs:comment xml:lang="en">A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria</rdfs:comment>
+        <rdfs:label xml:lang="en">Cohort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/enigma#CohortGroup -->
+
+    <owl:Class rdf:about="https://w3id.org/enigma#CohortGroup">
+        <rdfs:comment xml:lang="en">A subset of Cohort, which either forms the patient group or control group.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cohort Group</rdfs:label>
     </owl:Class>
     
 

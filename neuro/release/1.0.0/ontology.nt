@@ -1,8 +1,8 @@
 <https://w3id.org/disk/ontology/neuro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/disk/ontology/neuro> <http://purl.org/dc/terms/creator> "Naomi Perez" .
-<https://w3id.org/disk/ontology/neuro> <http://purl.org/dc/terms/title> "The DISK Neuro Ontology" .
+<https://w3id.org/disk/ontology/neuro> <http://purl.org/dc/terms/title> "The ENIGMA Hypothesis Ontology"@en .
 <https://w3id.org/disk/ontology/neuro> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain." .
-<https://w3id.org/disk/ontology/neuro> <http://www.w3.org/2002/07/owl#versionInfo> "v2.0.0" .
+<https://w3id.org/disk/ontology/neuro> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
 # 
 # 
 # #################################################################
@@ -40,6 +40,19 @@
 <https://w3id.org/disk/ontology/neuro#experimentedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/disk/ontology/neuro#Experiment> .
 <https://w3id.org/disk/ontology/neuro#experimentedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes that an experiment and a Brain Scan can be experimented on."@en .
 <https://w3id.org/disk/ontology/neuro#experimentedOn> <http://www.w3.org/2000/01/rdf-schema#label> "experimented on"@en .
+# 
+# https://w3id.org/disk/ontology/neuro#hasCohort
+<https://w3id.org/disk/ontology/neuro#hasCohort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/disk/ontology/neuro#hasCohort> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
+<https://w3id.org/disk/ontology/neuro#hasCohort> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/enigma#Cohort> .
+<https://w3id.org/disk/ontology/neuro#hasCohort> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the cohort a dataset is associated with."@en .
+<https://w3id.org/disk/ontology/neuro#hasCohort> <http://www.w3.org/2000/01/rdf-schema#label> "has cohort" .
+# 
+# https://w3id.org/disk/ontology/neuro#hasCohortGroup
+<https://w3id.org/disk/ontology/neuro#hasCohortGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/disk/ontology/neuro#hasCohortGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
+<https://w3id.org/disk/ontology/neuro#hasCohortGroup> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/enigma#CohortGroup> .
+<https://w3id.org/disk/ontology/neuro#hasCohortGroup> <http://www.w3.org/2000/01/rdf-schema#label> "has cohort group"@en .
 # 
 # https://w3id.org/disk/ontology/neuro#hasDiagnosis
 <https://w3id.org/disk/ontology/neuro#hasDiagnosis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -84,12 +97,12 @@
 <https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when a Brain Scan was collected."@en .
 <https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#label> "collected at"@en .
 # 
-# https://w3id.org/disk/ontology/neuro#diagnosedAt
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/disk/ontology/neuro#Diagnosis> .
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when a Patient recieved a Diagnosis."@en .
-<https://w3id.org/disk/ontology/neuro#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#label> "diagnosed at"@en .
+# https://w3id.org/disk/ontology/neuro#diagnosedAtAge
+<https://w3id.org/disk/ontology/neuro#diagnosedAtAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/disk/ontology/neuro#diagnosedAtAge> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/disk/ontology/neuro#Diagnosis> .
+<https://w3id.org/disk/ontology/neuro#diagnosedAtAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/disk/ontology/neuro#diagnosedAtAge> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the age at which a Patient recieved a Diagnosis."@en .
+<https://w3id.org/disk/ontology/neuro#diagnosedAtAge> <http://www.w3.org/2000/01/rdf-schema#label> "diagnosed at age"@en .
 # 
 # https://w3id.org/disk/ontology/neuro#hasAge
 <https://w3id.org/disk/ontology/neuro#hasAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -105,6 +118,16 @@
 <https://w3id.org/disk/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the sex of an individual of a cohort." .
 <https://w3id.org/disk/ontology/neuro#hasSex> <http://www.w3.org/2000/01/rdf-schema#label> "has sex"@en .
 # 
+# https://w3id.org/disk/ontology/neuro#isRawData
+<https://w3id.org/disk/ontology/neuro#isRawData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/disk/ontology/neuro#isRawData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
+<https://w3id.org/disk/ontology/neuro#isRawData> <http://www.w3.org/2000/01/rdf-schema#label> "is raw data"@en .
+# 
+# https://w3id.org/disk/ontology/neuro#isRegressionResults
+<https://w3id.org/disk/ontology/neuro#isRegressionResults> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/disk/ontology/neuro#isRegressionResults> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
+<https://w3id.org/disk/ontology/neuro#isRegressionResults> <http://www.w3.org/2000/01/rdf-schema#label> "is regression results"@en .
+# 
 # 
 # 
 # #################################################################
@@ -116,7 +139,7 @@
 # 
 # http://disk-project.org/ontology/disk#Data
 <http://disk-project.org/ontology/disk#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://disk-project.org/ontology/disk#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "Data containing relevant information."@en .
+<http://disk-project.org/ontology/disk#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "The results produced as a result of executing a workflow from a given line of inquiry."@en .
 <http://disk-project.org/ontology/disk#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data"@en .
 # 
 # https://w3id.org/disk/ontology/neuro#BrainCharacteristic
@@ -161,6 +184,16 @@
 <https://w3id.org/disk/ontology/neuro#Patient> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual participating in an ENIGMA cohort."@en .
 <https://w3id.org/disk/ontology/neuro#Patient> <http://www.w3.org/2000/01/rdf-schema#label> "Patient"@en .
 # 
+# https://w3id.org/enigma#Cohort
+<https://w3id.org/enigma#Cohort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/enigma#Cohort> <http://www.w3.org/2000/01/rdf-schema#label> "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en .
+<https://w3id.org/enigma#Cohort> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort"@en .
+# 
+# https://w3id.org/enigma#CohortGroup
+<https://w3id.org/enigma#CohortGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/enigma#CohortGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A subset of Cohort, which either forms the patient group or control group."@en .
+<https://w3id.org/enigma#CohortGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort Group"@en .
+# 
 # 
 # 
 # #################################################################
@@ -174,9 +207,9 @@
 <https://w3id.org/disk/ontology/neuro#APOE4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/disk/ontology/neuro#APOE4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/disk/ontology/neuro#Gene> .
 # 
-# https://w3id.org/disk/ontology/neuro#HippocampalVoume
-<https://w3id.org/disk/ontology/neuro#HippocampalVoume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/disk/ontology/neuro#HippocampalVoume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/disk/ontology/neuro#BrainCharacteristic> .
+# https://w3id.org/disk/ontology/neuro#HippocampalVolume
+<https://w3id.org/disk/ontology/neuro#HippocampalVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/disk/ontology/neuro#HippocampalVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/disk/ontology/neuro#BrainCharacteristic> .
 # 
 # https://w3id.org/disk/ontology/neuro#MajorDepression
 <https://w3id.org/disk/ontology/neuro#MajorDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
