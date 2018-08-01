@@ -8,7 +8,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/disk/ontology/neuro">
-        <owl:versionInfo>v2.0.0</owl:versionInfo>
+        <owl:versionInfo>v1.0.0</owl:versionInfo>
         <rdfs:comment>An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</rdfs:comment>
         <terms:title>The DISK Neuro Ontology</terms:title>
         <terms:creator>Naomi Perez</terms:creator>
@@ -137,13 +137,13 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/neuro#diagnosedAt -->
+    <!-- https://w3id.org/disk/ontology/neuro#diagnosedAtAge -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#diagnosedAt">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/neuro#diagnosedAtAge">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/neuro#Diagnosis"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">Describes when a Patient recieved a Diagnosis.</rdfs:comment>
-        <rdfs:label xml:lang="en">diagnosed at</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Describes the age at which a Patient recieved a Diagnosis.</rdfs:comment>
+        <rdfs:label xml:lang="en">diagnosed at age</rdfs:label>
     </owl:DatatypeProperty>
     
 
