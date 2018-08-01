@@ -96,9 +96,9 @@
 
 ###  https://w3id.org/disk/ontology/neuro#collectedAt
 :collectedAt rdf:type owl:DatatypeProperty ;
-             rdfs:domain :BrainScan ;
+             rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
              rdfs:range xsd:dateTime ;
-             rdfs:comment "Describes when a Brain Scan was collected."@en ;
+             rdfs:comment "Describes when data was collected."@en ;
              rdfs:label "collected at"@en .
 
 
@@ -129,12 +129,14 @@
 ###  https://w3id.org/disk/ontology/neuro#isRawData
 :isRawData rdf:type owl:DatatypeProperty ;
            rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+           rdfs:range xsd:string ;
            rdfs:label "is raw data"@en .
 
 
 ###  https://w3id.org/disk/ontology/neuro#isRegressionResults
 :isRegressionResults rdf:type owl:DatatypeProperty ;
                      rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+                     rdfs:range xsd:string ;
                      rdfs:label "is regression results"@en .
 
 
@@ -200,8 +202,8 @@
 
 ###  https://w3id.org/enigma#Cohort
 <https://w3id.org/enigma#Cohort> rdf:type owl:Class ;
-                                 rdfs:label "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en ,
-                                            "Cohort"@en .
+                                 rdfs:comment "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en ;
+                                 rdfs:label "Cohort"@en .
 
 
 ###  https://w3id.org/enigma#CohortGroup

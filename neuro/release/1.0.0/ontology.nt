@@ -92,9 +92,9 @@
 # 
 # https://w3id.org/disk/ontology/neuro#collectedAt
 <https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/disk/ontology/neuro#BrainScan> .
+<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
 <https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when a Brain Scan was collected."@en .
+<https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when data was collected."@en .
 <https://w3id.org/disk/ontology/neuro#collectedAt> <http://www.w3.org/2000/01/rdf-schema#label> "collected at"@en .
 # 
 # https://w3id.org/disk/ontology/neuro#diagnosedAtAge
@@ -121,11 +121,13 @@
 # https://w3id.org/disk/ontology/neuro#isRawData
 <https://w3id.org/disk/ontology/neuro#isRawData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/disk/ontology/neuro#isRawData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
+<https://w3id.org/disk/ontology/neuro#isRawData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/disk/ontology/neuro#isRawData> <http://www.w3.org/2000/01/rdf-schema#label> "is raw data"@en .
 # 
 # https://w3id.org/disk/ontology/neuro#isRegressionResults
 <https://w3id.org/disk/ontology/neuro#isRegressionResults> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/disk/ontology/neuro#isRegressionResults> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
+<https://w3id.org/disk/ontology/neuro#isRegressionResults> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/disk/ontology/neuro#isRegressionResults> <http://www.w3.org/2000/01/rdf-schema#label> "is regression results"@en .
 # 
 # 
@@ -186,7 +188,7 @@
 # 
 # https://w3id.org/enigma#Cohort
 <https://w3id.org/enigma#Cohort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/enigma#Cohort> <http://www.w3.org/2000/01/rdf-schema#label> "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en .
+<https://w3id.org/enigma#Cohort> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en .
 <https://w3id.org/enigma#Cohort> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort"@en .
 # 
 # https://w3id.org/enigma#CohortGroup

@@ -82,8 +82,7 @@ This section provides details for each class and property defined by The ENIGMA 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#collectedAt" title="https://w3id.org/disk/ontology/neuro#collectedAt">collected at</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#collectedFrom"
+            <a href="#collectedFrom"
                title="https://w3id.org/disk/ontology/neuro#collectedFrom">collected from</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#experimentedOn"
                title="https://w3id.org/disk/ontology/neuro#experimentedOn">experimented on</a>
@@ -153,7 +152,8 @@ This section provides details for each class and property defined by The ENIGMA 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasCohort" title="https://w3id.org/disk/ontology/neuro#hasCohort">has cohort</a>
+            <a href="#collectedAt" title="https://w3id.org/disk/ontology/neuro#collectedAt">collected at</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCohort" title="https://w3id.org/disk/ontology/neuro#hasCohort">has cohort</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasCohortGroup"
                title="https://w3id.org/disk/ontology/neuro#hasCohortGroup">has cohort group</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isRawData" title="https://w3id.org/disk/ontology/neuro#isRawData">is raw data</a>
@@ -558,13 +558,13 @@ This section provides details for each class and property defined by The ENIGMA 
       <p>
          <strong>IRI:</strong> https://w3id.org/disk/ontology/neuro#collectedAt</p>
       <div class="comment">
-         <span class="markdown">Describes when a Brain Scan was collected.</span>
+         <span class="markdown">Describes when data was collected.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#BrainScan" title="https://w3id.org/disk/ontology/neuro#BrainScan">Brain Scan</a>
+               <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">Data</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -660,6 +660,10 @@ This section provides details for each class and property defined by The ENIGMA 
                <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">Data</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
          </dl>
       </div>
    </div>
@@ -676,6 +680,10 @@ This section provides details for each class and property defined by The ENIGMA 
             <dd>
                <a href="#http://disk-project.org/ontology/disk#Data" title="http://disk-project.org/ontology/disk#Data">Data</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
