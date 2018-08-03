@@ -9,8 +9,8 @@
     "iri" : "https://w3id.org/disk/ontology/neuro",
     "version" : "v1.0.0",
     "author" : [ "Naomi Perez" ],
-    "comments" : {
-      "undefined" : "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."
+    "description" : {
+      "en" : "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."
     },
     "other" : {
       "creator" : [ {
@@ -35,8 +35,8 @@
   },
   "namespace" : [ ],
   "metrics" : {
-    "classCount" : 11,
-    "objectPropertyCount" : 8,
+    "classCount" : 10,
+    "objectPropertyCount" : 7,
     "datatypePropertyCount" : 6,
     "individualCount" : 4
   },
@@ -57,48 +57,45 @@
     "type" : "rdfs:Datatype"
   }, {
     "id" : "8",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "13",
     "type" : "owl:Thing"
   }, {
     "id" : "14",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "11",
-    "type" : "owl:Class"
-  }, {
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "21",
+    "id" : "9",
     "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "20",
     "type" : "owl:Class"
   }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
     "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "31",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -154,22 +151,9 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "https://w3id.org/enigma#CohortGroup",
-    "baseIri" : "https://w3id.org/enigma",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "CohortGroup",
-      "en" : "Cohort Group"
-    },
-    "comment" : {
-      "en" : "A subset of Cohort, which either forms the patient group or control group."
-    },
-    "attributes" : [ "external" ],
-    "id" : "8"
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "9",
+    "id" : "8",
     "label" : {
       "IRI-based" : "string"
     }
@@ -181,7 +165,7 @@
       "IRI-based" : "Data",
       "en" : "Data"
     },
-    "subClasses" : [ "10", "11" ],
+    "subClasses" : [ "9", "10" ],
     "comment" : {
       "en" : "The results produced as a result of executing a workflow from a given line of inquiry."
     },
@@ -190,22 +174,22 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "12",
+    "id" : "11",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "14",
+    "id" : "13",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "instances" : 0,
-    "union" : [ "10", "16" ],
+    "union" : [ "9", "15" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "15"
+    "id" : "14"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -224,7 +208,7 @@
     "comment" : {
       "en" : "Data storing information about particpants genes."
     },
-    "id" : "11",
+    "id" : "10",
     "superClasses" : [ "3" ]
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#BrainScan",
@@ -237,12 +221,12 @@
     "comment" : {
       "en" : "An image of an individual's brain."
     },
-    "id" : "10",
+    "id" : "9",
     "superClasses" : [ "3" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "23",
+    "id" : "22",
     "label" : {
       "IRI-based" : "int"
     }
@@ -270,7 +254,7 @@
     "comment" : {
       "en" : "Any disorder of the nervous system. Structural, biochemical or electrical abnormalities in the brain, spinal cord or other nerves can result in a range of symptoms."
     },
-    "id" : "21"
+    "id" : "20"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#Diagnosis",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
@@ -282,7 +266,7 @@
     "comment" : {
       "en" : "An individual's medical diagnosis."
     },
-    "id" : "20"
+    "id" : "19"
   }, {
     "iri" : "https://w3id.org/enigma#Cohort",
     "baseIri" : "https://w3id.org/enigma",
@@ -295,7 +279,7 @@
       "en" : "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"
     },
     "attributes" : [ "external" ],
-    "id" : "30"
+    "id" : "29"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#Experiment",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
@@ -307,7 +291,7 @@
     "comment" : {
       "en" : "Describes a scientific experiment that produced data."
     },
-    "id" : "16"
+    "id" : "15"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#Gene",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
@@ -326,55 +310,52 @@
     "comment" : {
       "en" : "A unit of heredity that is transferred from a parent to offspring."
     },
-    "id" : "31"
+    "id" : "30"
   } ],
   "property" : [ {
     "id" : "2",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "13",
+    "id" : "12",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "17",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "18",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "19",
+    "id" : "18",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "22",
+    "id" : "21",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "24",
     "type" : "owl:objectProperty"
   }, {
     "id" : "25",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "26",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "27",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "28",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "29",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "32",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "33",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "34",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "35",
+    "id" : "33",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -394,18 +375,18 @@
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#isRegressionResults",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "9",
+    "range" : "8",
     "label" : {
       "IRI-based" : "isRegressionResults",
       "en" : "is regression results"
     },
     "domain" : "3",
     "attributes" : [ "datatype" ],
-    "id" : "13"
+    "id" : "12"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#observedFrom",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "10",
+    "range" : "9",
     "label" : {
       "IRI-based" : "observedFrom",
       "en" : "observed from"
@@ -415,26 +396,26 @@
       "en" : "Describes which Brain Scan the brain characteristic was observed from"
     },
     "attributes" : [ "object" ],
-    "id" : "17"
+    "id" : "16"
   }, {
     "range" : "3",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "18"
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#isDiagnosedWith",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "21",
+    "range" : "20",
     "label" : {
       "IRI-based" : "isDiagnosedWith",
       "en" : "is diagnosed with"
     },
-    "domain" : "20",
+    "domain" : "19",
     "comment" : {
       "en" : "Describes which Neurological Disorder a Patient was diagnosed with."
     },
     "attributes" : [ "object" ],
-    "id" : "19"
+    "id" : "18"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#hasSex",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
@@ -448,35 +429,35 @@
       "undefined" : "Describes the sex of an individual of a cohort."
     },
     "attributes" : [ "datatype" ],
-    "id" : "22"
+    "id" : "21"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#producedData",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "12",
+    "range" : "11",
     "label" : {
       "IRI-based" : "producedData",
       "en" : "produced data"
     },
-    "domain" : "16",
+    "domain" : "15",
     "comment" : {
       "en" : "Dsecribes an experiment that produced data."
     },
     "attributes" : [ "object" ],
-    "id" : "24"
+    "id" : "23"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#experimentedOn",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "14",
+    "range" : "13",
     "label" : {
       "IRI-based" : "experimentedOn",
       "en" : "experimented on"
     },
-    "domain" : "15",
+    "domain" : "14",
     "comment" : {
       "en" : "Denotes that an experiment and a Brain Scan can be experimented on."
     },
     "attributes" : [ "object" ],
-    "id" : "25"
+    "id" : "24"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#hasAge",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
@@ -490,7 +471,7 @@
       "en" : "Describes the age of an individual of a cohort."
     },
     "attributes" : [ "datatype" ],
-    "id" : "26"
+    "id" : "25"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#collectedFrom",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
@@ -499,30 +480,30 @@
       "IRI-based" : "collectedFrom",
       "en" : "collected from"
     },
-    "domain" : "10",
+    "domain" : "9",
     "comment" : {
       "en" : "Describes which Patient a Brain Scan was collected from."
     },
     "attributes" : [ "object" ],
-    "id" : "27"
+    "id" : "26"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#diagnosedAtAge",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "23",
+    "range" : "22",
     "label" : {
       "IRI-based" : "diagnosedAtAge",
       "en" : "diagnosed at age"
     },
-    "domain" : "20",
+    "domain" : "19",
     "comment" : {
       "en" : "Describes the age at which a Patient recieved a Diagnosis."
     },
     "attributes" : [ "datatype" ],
-    "id" : "28"
+    "id" : "27"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#hasCohort",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "30",
+    "range" : "29",
     "label" : {
       "IRI-based" : "hasCohort",
       "undefined" : "has cohort"
@@ -532,7 +513,7 @@
       "en" : "Describes the cohort a dataset is associated with."
     },
     "attributes" : [ "object" ],
-    "id" : "29"
+    "id" : "28"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#isRawData",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
@@ -543,16 +524,16 @@
     },
     "domain" : "3",
     "attributes" : [ "datatype" ],
-    "id" : "32"
+    "id" : "31"
   }, {
     "range" : "3",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "33"
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
   }, {
     "iri" : "https://w3id.org/disk/ontology/neuro#hasDiagnosis",
     "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "20",
+    "range" : "19",
     "label" : {
       "IRI-based" : "hasDiagnosis",
       "en" : "has diagnosis"
@@ -562,17 +543,6 @@
       "undefined" : "Describes the Diagnosis of a Patient"
     },
     "attributes" : [ "object" ],
-    "id" : "34"
-  }, {
-    "iri" : "https://w3id.org/disk/ontology/neuro#hasCohortGroup",
-    "baseIri" : "https://w3id.org/disk/ontology/neuro",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "hasCohortGroup",
-      "en" : "has cohort group"
-    },
-    "domain" : "3",
-    "attributes" : [ "object" ],
-    "id" : "35"
+    "id" : "33"
   } ]
 }

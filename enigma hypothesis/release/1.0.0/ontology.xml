@@ -9,8 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/disk/ontology/neuro">
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naomi Perez</terms:creator>
+        <terms:description xml:lang="en">An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</terms:description>
         <terms:title xml:lang="en">The ENIGMA Hypothesis Ontology</terms:title>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v1.0.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -32,6 +32,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
     
 
 
@@ -86,17 +93,6 @@
         <rdfs:range rdf:resource="https://w3id.org/enigma#Cohort"/>
         <rdfs:comment xml:lang="en">Describes the cohort a dataset is associated with.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has cohort</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/disk/ontology/neuro#hasCohortGroup -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/neuro#hasCohortGroup">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
-        <rdfs:range rdf:resource="https://w3id.org/enigma#CohortGroup"/>
-        <rdfs:label xml:lang="en">has cohort group</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -340,16 +336,6 @@
     <owl:Class rdf:about="https://w3id.org/enigma#Cohort">
         <rdfs:comment xml:lang="en">A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria</rdfs:comment>
         <rdfs:label xml:lang="en">Cohort</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/enigma#CohortGroup -->
-
-
-    <owl:Class rdf:about="https://w3id.org/enigma#CohortGroup">
-        <rdfs:comment xml:lang="en">A subset of Cohort, which either forms the patient group or control group.</rdfs:comment>
-        <rdfs:label xml:lang="en">Cohort Group</rdfs:label>
     </owl:Class>
     
 

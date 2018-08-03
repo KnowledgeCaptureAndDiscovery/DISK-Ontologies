@@ -1,7 +1,7 @@
 <https://w3id.org/disk/ontology/neuro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/disk/ontology/neuro> <http://purl.org/dc/terms/creator> "Naomi Perez" .
+<https://w3id.org/disk/ontology/neuro> <http://purl.org/dc/terms/description> "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."@en .
 <https://w3id.org/disk/ontology/neuro> <http://purl.org/dc/terms/title> "The ENIGMA Hypothesis Ontology"@en .
-<https://w3id.org/disk/ontology/neuro> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain." .
 <https://w3id.org/disk/ontology/neuro> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
 # 
 # 
@@ -14,6 +14,9 @@
 # 
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -47,12 +50,6 @@
 <https://w3id.org/disk/ontology/neuro#hasCohort> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/enigma#Cohort> .
 <https://w3id.org/disk/ontology/neuro#hasCohort> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the cohort a dataset is associated with."@en .
 <https://w3id.org/disk/ontology/neuro#hasCohort> <http://www.w3.org/2000/01/rdf-schema#label> "has cohort" .
-# 
-# https://w3id.org/disk/ontology/neuro#hasCohortGroup
-<https://w3id.org/disk/ontology/neuro#hasCohortGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/disk/ontology/neuro#hasCohortGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
-<https://w3id.org/disk/ontology/neuro#hasCohortGroup> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/enigma#CohortGroup> .
-<https://w3id.org/disk/ontology/neuro#hasCohortGroup> <http://www.w3.org/2000/01/rdf-schema#label> "has cohort group"@en .
 # 
 # https://w3id.org/disk/ontology/neuro#hasDiagnosis
 <https://w3id.org/disk/ontology/neuro#hasDiagnosis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -190,11 +187,6 @@
 <https://w3id.org/enigma#Cohort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/enigma#Cohort> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en .
 <https://w3id.org/enigma#Cohort> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort"@en .
-# 
-# https://w3id.org/enigma#CohortGroup
-<https://w3id.org/enigma#CohortGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/enigma#CohortGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A subset of Cohort, which either forms the patient group or control group."@en .
-<https://w3id.org/enigma#CohortGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort Group"@en .
 # 
 # 
 # 

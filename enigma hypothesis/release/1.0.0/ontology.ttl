@@ -8,8 +8,8 @@
 
 <https://w3id.org/disk/ontology/neuro> rdf:type owl:Ontology ;
                                         <http://purl.org/dc/terms/creator> "Naomi Perez"^^xsd:string ;
+                                        <http://purl.org/dc/terms/description> "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."@en ;
                                         <http://purl.org/dc/terms/title> "The ENIGMA Hypothesis Ontology"@en ;
-                                        rdfs:comment "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."^^xsd:string ;
                                         owl:versionInfo "v1.0.0"^^xsd:string .
 
 #################################################################
@@ -18,6 +18,10 @@
 
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -50,13 +54,6 @@
            rdfs:range <https://w3id.org/enigma#Cohort> ;
            rdfs:comment "Describes the cohort a dataset is associated with."@en ;
            rdfs:label "has cohort"^^xsd:string .
-
-
-###  https://w3id.org/disk/ontology/neuro#hasCohortGroup
-:hasCohortGroup rdf:type owl:ObjectProperty ;
-                rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
-                rdfs:range <https://w3id.org/enigma#CohortGroup> ;
-                rdfs:label "has cohort group"@en .
 
 
 ###  https://w3id.org/disk/ontology/neuro#hasDiagnosis
@@ -204,12 +201,6 @@
 <https://w3id.org/enigma#Cohort> rdf:type owl:Class ;
                                  rdfs:comment "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en ;
                                  rdfs:label "Cohort"@en .
-
-
-###  https://w3id.org/enigma#CohortGroup
-<https://w3id.org/enigma#CohortGroup> rdf:type owl:Class ;
-                                      rdfs:comment "A subset of Cohort, which either forms the patient group or control group."@en ;
-                                      rdfs:label "Cohort Group"@en .
 
 
 #################################################################
