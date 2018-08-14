@@ -10,6 +10,7 @@
     <owl:Ontology rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis">
         <owl:versionInfo>v1.0.0</owl:versionInfo>
         <terms:title xml:lang="en">The ENIGMA Hypothesis Ontology</terms:title>
+        <terms:license xml:lang="en">https://creativecommons.org/licenses/by/2.0/</terms:license>
         <terms:description xml:lang="en">An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</terms:description>
         <terms:creator>Naomi Perez</terms:creator>
     </owl:Ontology>
@@ -36,6 +37,12 @@
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
