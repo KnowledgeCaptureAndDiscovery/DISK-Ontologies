@@ -1,6 +1,7 @@
 <https://w3id.org/disk/ontology/enigma_hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/disk/ontology/enigma_hypothesis> <http://purl.org/dc/terms/creator> "Naomi Perez" .
 <https://w3id.org/disk/ontology/enigma_hypothesis> <http://purl.org/dc/terms/description> "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."@en .
+<https://w3id.org/disk/ontology/enigma_hypothesis> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/2.0/"@en .
 <https://w3id.org/disk/ontology/enigma_hypothesis> <http://purl.org/dc/terms/title> "The ENIGMA Hypothesis Ontology"@en .
 <https://w3id.org/disk/ontology/enigma_hypothesis> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
 # 
@@ -17,6 +18,9 @@
 # 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
