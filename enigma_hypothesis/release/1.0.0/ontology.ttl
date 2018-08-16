@@ -136,6 +136,12 @@
                      rdfs:range xsd:string ;
                      rdfs:label "is regression results"@en .
 
+###  https://w3id.org/disk/ontology/enigma_hypothesis#hasEnigmaQueryLiteral
+:hasEnigmaQueryLiteral rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "has Enigma Query literal"@en .
+
 
 #################################################################
 #    Classes
