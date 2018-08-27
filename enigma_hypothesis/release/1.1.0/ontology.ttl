@@ -9,6 +9,7 @@
 <https://w3id.org/disk/ontology/enigma_hypothesis> rdf:type owl:Ontology ;
                                                     <http://purl.org/dc/terms/creator> "Naomi Perez"^^xsd:string ;
                                                     <http://purl.org/dc/terms/description> "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."@en ;
+                                                    <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/2.0/"@en ;
                                                     <http://purl.org/dc/terms/title> "The ENIGMA Hypothesis Ontology"@en ;
                                                     owl:versionInfo "v1.0.0"^^xsd:string .
 
@@ -22,6 +23,10 @@
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -51,7 +56,7 @@
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#hasCohort
 :hasCohort rdf:type owl:ObjectProperty ;
            rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
-           rdfs:range <https://w3id.org/disk/ontology/enigma_hypothesis#Cohort> ;
+           rdfs:range :Cohort ;
            rdfs:comment "Describes the cohort a dataset is associated with."@en ;
            rdfs:label "has cohort"^^xsd:string .
 
@@ -136,12 +141,6 @@
                      rdfs:range xsd:string ;
                      rdfs:label "is regression results"@en .
 
-###  https://w3id.org/disk/ontology/enigma_hypothesis#hasEnigmaQueryLiteral
-:hasEnigmaQueryLiteral rdf:type owl:DatatypeProperty ;
-                     rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
-                     rdfs:range xsd:string ;
-                     rdfs:label "has Enigma Query literal"@en .
-
 
 #################################################################
 #    Classes
@@ -164,6 +163,12 @@
            rdfs:subClassOf <http://disk-project.org/ontology/disk#Data> ;
            rdfs:comment "An image of an individual's brain."@en ;
            rdfs:label "Brain Scan"@en .
+
+
+###  https://w3id.org/disk/ontology/enigma_hypothesis#Cohort
+:Cohort rdf:type owl:Class ;
+        rdfs:comment "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria."@en ;
+        rdfs:label "Cohort"@en .
 
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis
@@ -191,6 +196,12 @@
              rdfs:label "Genetic Data"@en .
 
 
+###  https://w3id.org/disk/ontology/enigma_hypothesis#Marker
+:Marker rdf:type owl:Class ;
+        rdfs:comment "A fragment of DNA that is associated with a certain location within the genome."@en ;
+        rdfs:label "Marker"@en .
+
+
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder
 :NeurologicalDisorder rdf:type owl:Class ;
                       rdfs:comment "Any disorder of the nervous system. Structural, biochemical or electrical abnormalities in the brain, spinal cord or other nerves can result in a range of symptoms."@en ;
@@ -201,19 +212,6 @@
 :Patient rdf:type owl:Class ;
          rdfs:comment "An individual participating in an ENIGMA cohort."@en ;
          rdfs:label "Patient"@en .
-
-
-###  https://w3id.org/disk/ontology/enigma_hypothesis#Cohort
-:Cohort rdf:type owl:Class ;
-         rdfs:comment "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria."@en ;
-         rdfs:label "Cohort"@en .
-
-
-
-###  https://w3id.org/disk/ontology/enigma_hypothesis#Marker
-:Marker rdf:type owl:Class ;
-         rdfs:comment "A fragment of DNA that is associated with a certain location within the genome."@en ;
-         rdfs:label "Marker"@en .f
 
 
 #################################################################

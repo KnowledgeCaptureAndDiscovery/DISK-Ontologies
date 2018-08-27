@@ -156,6 +156,11 @@
 <https://w3id.org/disk/ontology/enigma_hypothesis#BrainScan> <http://www.w3.org/2000/01/rdf-schema#comment> "An image of an individual's brain."@en .
 <https://w3id.org/disk/ontology/enigma_hypothesis#BrainScan> <http://www.w3.org/2000/01/rdf-schema#label> "Brain Scan"@en .
 # 
+# https://w3id.org/disk/ontology/enigma_hypothesis#Cohort
+<https://w3id.org/disk/ontology/enigma_hypothesis#Cohort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/disk/ontology/enigma_hypothesis#Cohort> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria."@en .
+<https://w3id.org/disk/ontology/enigma_hypothesis#Cohort> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort"@en .
+# 
 # https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis
 <https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual's medical diagnosis."@en .
@@ -177,6 +182,11 @@
 <https://w3id.org/disk/ontology/enigma_hypothesis#GeneticData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data storing information about particpants genes."@en .
 <https://w3id.org/disk/ontology/enigma_hypothesis#GeneticData> <http://www.w3.org/2000/01/rdf-schema#label> "Genetic Data"@en .
 # 
+# https://w3id.org/disk/ontology/enigma_hypothesis#Marker
+<https://w3id.org/disk/ontology/enigma_hypothesis#Marker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/disk/ontology/enigma_hypothesis#Marker> <http://www.w3.org/2000/01/rdf-schema#comment> "A fragment of DNA that is associated with a certain location within the genome."@en .
+<https://w3id.org/disk/ontology/enigma_hypothesis#Marker> <http://www.w3.org/2000/01/rdf-schema#label> "Marker"@en .
+# 
 # https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder
 <https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder> <http://www.w3.org/2000/01/rdf-schema#comment> "Any disorder of the nervous system. Structural, biochemical or electrical abnormalities in the brain, spinal cord or other nerves can result in a range of symptoms."@en .
@@ -186,16 +196,6 @@
 <https://w3id.org/disk/ontology/enigma_hypothesis#Patient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/disk/ontology/enigma_hypothesis#Patient> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual participating in an ENIGMA cohort."@en .
 <https://w3id.org/disk/ontology/enigma_hypothesis#Patient> <http://www.w3.org/2000/01/rdf-schema#label> "Patient"@en .
-# 
-# https://w3id.org/disk/ontology/enigma_hypothesis#Cohort
-<https://w3id.org/disk/ontology/enigma_hypothesis#Cohort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/disk/ontology/enigma_hypothesis#Cohort> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria."@en .
-<https://w3id.org/disk/ontology/enigma_hypothesis#Cohort> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort"@en .
-# 
-# https://w3id.org/disk/ontology/enigma_hypothesis#Marker
-<https://w3id.org/disk/ontology/enigma_hypothesis#Marker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/disk/ontology/enigma_hypothesis#Marker> <http://www.w3.org/2000/01/rdf-schema#comment> "A fragment of DNA that is associated with a certain location within the genome."@en .
-<https://w3id.org/disk/ontology/enigma_hypothesis#Marker> <http://www.w3.org/2000/01/rdf-schema#label> "Marker"@en .
 # 
 # 
 # 
