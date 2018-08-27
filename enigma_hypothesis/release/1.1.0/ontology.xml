@@ -11,7 +11,7 @@
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naomi Perez, Regina Wang, Daniel Garijo, Yolanda Gil</terms:creator>
         <terms:description xml:lang="en">An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</terms:description>
         <terms:license xml:lang="en">https://creativecommons.org/licenses/by/2.0/</terms:license>
-        <terms:title xml:lang="en">The ENIGMA Engima Hypothesis Ontology</terms:title>
+        <terms:title xml:lang="en">The ENIGMA Hypothesis Ontology</terms:title>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v1.1.0</owl:versionInfo>
     </owl:Ontology>
     
