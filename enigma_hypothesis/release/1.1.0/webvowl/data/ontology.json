@@ -4,11 +4,11 @@
     "languages" : [ "en", "undefined" ],
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/disk/ontology/enigma_hypothesis", "http://disk-project.org/ontology/disk", "http://www.w3.org/2001/XMLSchema" ],
     "title" : {
-      "en" : "The ENIGMA Enigma Hypothesis Ontology"
+      "en" : "The ENIGMA Hypothesis Ontology"
     },
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
-    "version" : "v1.1.0",
-    "author" : [ "Naomi Perez, Regina Wang, Daniel Garijo, Yolanda Gil" ],
+    "version" : "v1.0.0",
+    "author" : [ "Naomi Perez" ],
     "description" : {
       "en" : "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."
     },
@@ -22,19 +22,19 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Naomi Perez, Regina Wang, Daniel Garijo, Yolanda Gil",
+        "value" : "Naomi Perez",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "v1.1.0",
+        "value" : "v1.0.0",
         "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "en",
-        "value" : "The ENIGMA Enigma Hypothesis Ontology",
+        "value" : "The ENIGMA Hypothesis Ontology",
         "type" : "label"
       } ]
     }

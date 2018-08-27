@@ -7,11 +7,11 @@
 @base <https://w3id.org/disk/ontology/enigma_hypothesis> .
 
 <https://w3id.org/disk/ontology/enigma_hypothesis> rdf:type owl:Ontology ;
-                                                    <http://purl.org/dc/terms/creator> "Naomi Perez, Regina Wang, Daniel Garijo, Yolanda Gil"^^xsd:string ;
+                                                    <http://purl.org/dc/terms/creator> "Naomi Perez"^^xsd:string ;
                                                     <http://purl.org/dc/terms/description> "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."@en ;
                                                     <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/2.0/"@en ;
-                                                    <http://purl.org/dc/terms/title> "The ENIGMA Enigma Hypothesis Ontology"@en ;
-                                                    owl:versionInfo "v1.1.0"^^xsd:string .
+                                                    <http://purl.org/dc/terms/title> "The ENIGMA Hypothesis Ontology"@en ;
+                                                    owl:versionInfo "v1.0.0"^^xsd:string .
 
 #################################################################
 #    Annotation properties
