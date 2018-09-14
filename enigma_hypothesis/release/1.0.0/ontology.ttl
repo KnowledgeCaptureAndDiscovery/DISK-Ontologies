@@ -51,7 +51,7 @@
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#hasCohort
 :hasCohort rdf:type owl:ObjectProperty ;
            rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
-           rdfs:range <https://w3id.org/enigma#Cohort> ;
+           rdfs:range <https://w3id.org/disk/ontology/enigma_hypothesis#Cohort> ;
            rdfs:comment "Describes the cohort a dataset is associated with."@en ;
            rdfs:label "has cohort"^^xsd:string .
 
@@ -203,10 +203,17 @@
          rdfs:label "Patient"@en .
 
 
-###  https://w3id.org/enigma#Cohort
-<https://w3id.org/enigma#Cohort> rdf:type owl:Class ;
-                                 rdfs:comment "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria"@en ;
-                                 rdfs:label "Cohort"@en .
+###  https://w3id.org/disk/ontology/enigma_hypothesis#Cohort
+:Cohort rdf:type owl:Class ;
+         rdfs:comment "A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria."@en ;
+         rdfs:label "Cohort"@en .
+
+
+
+###  https://w3id.org/disk/ontology/enigma_hypothesis#Marker
+:Marker rdf:type owl:Class ;
+         rdfs:comment "A fragment of DNA that is associated with a certain location within the genome."@en ;
+         rdfs:label "Marker"@en .f
 
 
 #################################################################

@@ -120,6 +120,13 @@
         rdfs:label "has age"@en .
 
 
+###  https://w3id.org/disk/ontology/enigma_hypothesis#hasEnigmaQueryLiteral
+:hasEnigmaQueryLiteral rdf:type owl:DatatypeProperty ;
+                       rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "has Enigma Query literal"@en .
+
+
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#hasSex
 :hasSex rdf:type owl:DatatypeProperty ;
         rdfs:domain :Patient ;
