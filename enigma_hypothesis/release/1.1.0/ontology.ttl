@@ -229,6 +229,10 @@
 :APOE4 rdf:type owl:NamedIndividual ,
                 :Gene .
 
+###  https://w3id.org/disk/ontology/enigma_hypothesis#APOE4
+:APOE5 rdf:type owl:NamedIndividual ,
+                :Gene .
+
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume
 :HippocampalVolume rdf:type owl:NamedIndividual ,
