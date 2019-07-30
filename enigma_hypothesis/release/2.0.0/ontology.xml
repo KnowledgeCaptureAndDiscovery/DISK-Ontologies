@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://disk-project.org/ontology/neuro#"
-     xml:base="http://disk-project.org/ontology/neuro"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="https://w3id.org/disk/ontology/enigma_hypothesis#"
+     xml:base="https://w3id.org/disk/ontology/enigma_hypothesis"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis">
-        <terms:creator>Naomi Perez</terms:creator>
-        <terms:creator>Rosna Thomas</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naomi Perez</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosna Thomas</terms:creator>
         <terms:description xml:lang="en">An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain.</terms:description>
         <terms:license xml:lang="en">https://creativecommons.org/licenses/by/2.0/</terms:license>
         <terms:title xml:lang="en">The ENIGMA Hypothesis Ontology</terms:title>
-        <owl:versionInfo>v2.0.0</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v2.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -26,10 +26,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/dc/terms/contributor -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
@@ -37,11 +39,13 @@
 
     <!-- http://purl.org/dc/terms/creator -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
     <!-- http://purl.org/dc/terms/description -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
     
@@ -49,11 +53,13 @@
 
     <!-- http://purl.org/dc/terms/license -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
     <!-- http://purl.org/dc/terms/title -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
@@ -67,10 +73,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#collectedFrom -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#collectedFrom">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainScan"/>
@@ -83,6 +91,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#experimentedOn -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#experimentedOn">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainScan"/>
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Experiment"/>
@@ -94,21 +103,23 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#hasCohort -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#hasCohort">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
         <rdfs:range rdf:resource="https://w3id.org/enigma#Cohort"/>
         <rdfs:comment xml:lang="en">Describes the cohort a dataset is associated with.</rdfs:comment>
-        <rdfs:label>has cohort</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has cohort</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#hasDiagnosis -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#hasDiagnosis">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Patient"/>
         <rdfs:range rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis"/>
-        <rdfs:comment>Describes the Diagnosis of a Patient</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the Diagnosis of a Patient</rdfs:comment>
         <rdfs:label xml:lang="en">has diagnosis</rdfs:label>
     </owl:ObjectProperty>
     
@@ -116,16 +127,18 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#isAssociatedWith -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#isAssociatedWith">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
         <rdfs:range rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Demographic"/>
-        <rdfs:comment>Describes the association of a demographic with the effect size of a gene on a brain characteristic</rdfs:comment>
-        <rdfs:label>is associated with</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the association of a demographic with the effect size of a gene on a brain characteristic</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is associated with</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#isDiagnosedWith -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#isDiagnosedWith">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis"/>
@@ -138,6 +151,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#observedFrom -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#observedFrom">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic"/>
         <rdfs:range rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainScan"/>
@@ -149,6 +163,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#producedData -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#producedData">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Experiment"/>
         <rdfs:comment xml:lang="en">Dsecribes an experiment that produced data.</rdfs:comment>
@@ -159,22 +174,24 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#sourceGene -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#sourceGene">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
         <rdfs:range rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Gene"/>
-        <rdfs:comment>Describes the effect size of a gene</rdfs:comment>
-        <rdfs:label>source gene</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the effect size of a gene</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source gene</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#targetCharacteristic -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#targetCharacteristic">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
         <rdfs:range rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic"/>
-        <rdfs:comment>Describes the effect on a target brain characteristic</rdfs:comment>
-        <rdfs:label>target characteristic</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the effect on a target brain characteristic</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target characteristic</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -187,10 +204,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#collectedAt -->
+
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#collectedAt">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
@@ -203,6 +222,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#diagnosedAtAge -->
 
+
     <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#diagnosedAtAge">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
@@ -213,6 +233,7 @@
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#hasAge -->
+
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#hasAge">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Patient"/>
@@ -225,16 +246,18 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#hasSex -->
 
+
     <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#hasSex">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Patient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Describes the sex of an individual of a cohort.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes the sex of an individual of a cohort.</rdfs:comment>
         <rdfs:label xml:lang="en">has sex</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#isRawData -->
+
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#isRawData">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
@@ -245,6 +268,7 @@
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#isRegressionResults -->
+
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#isRegressionResults">
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
@@ -262,10 +286,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://disk-project.org/ontology/disk#Data -->
+
 
     <owl:Class rdf:about="http://disk-project.org/ontology/disk#Data">
         <rdfs:comment xml:lang="en">The results produced as a result of executing a workflow from a given line of inquiry.</rdfs:comment>
@@ -276,6 +302,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic -->
 
+
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic">
         <rdfs:comment xml:lang="en">A specific feature of an individuals brain, identified through MRI, EEG, or other methods of brain imaging.</rdfs:comment>
         <rdfs:label xml:lang="en">Brain Characteristic</rdfs:label>
@@ -284,6 +311,7 @@
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#BrainScan -->
+
 
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#BrainScan">
         <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Data"/>
@@ -295,14 +323,16 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#Demographic -->
 
+
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Demographic">
-        <rdfs:comment>Describe a charateristic of a human population or person</rdfs:comment>
-        <rdfs:label>Demographic</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describe a charateristic of a human population or person</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Demographic</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis -->
+
 
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Diagnosis">
         <rdfs:comment xml:lang="en">An individual&apos;s medical diagnosis.</rdfs:comment>
@@ -313,14 +343,16 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize -->
 
+
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize">
-        <rdfs:comment>A qualified relationship used to represent the relationship between a gene and a brain characteristic such as hypoccampal volume</rdfs:comment>
-        <rdfs:label>Effect Size</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A qualified relationship used to represent the relationship between a gene and a brain characteristic such as hypoccampal volume</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effect Size</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#Experiment -->
+
 
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Experiment">
         <rdfs:comment xml:lang="en">Describes a scientific experiment that produced data.</rdfs:comment>
@@ -331,6 +363,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#Gene -->
 
+
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Gene">
         <rdfs:comment xml:lang="en">A unit of heredity that is transferred from a parent to offspring.</rdfs:comment>
         <rdfs:label xml:lang="en">Gene</rdfs:label>
@@ -339,6 +372,7 @@
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#GeneticData -->
+
 
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#GeneticData">
         <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Data"/>
@@ -350,6 +384,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder -->
 
+
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder">
         <rdfs:comment xml:lang="en">Any disorder of the nervous system. Structural, biochemical or electrical abnormalities in the brain, spinal cord or other nerves can result in a range of symptoms.</rdfs:comment>
         <rdfs:label xml:lang="en">Neurological Disorder</rdfs:label>
@@ -359,6 +394,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#Patient -->
 
+
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Patient">
         <rdfs:comment xml:lang="en">An individual participating in an ENIGMA cohort.</rdfs:comment>
         <rdfs:label xml:lang="en">Patient</rdfs:label>
@@ -367,6 +403,7 @@
 
 
     <!-- https://w3id.org/enigma#Cohort -->
+
 
     <owl:Class rdf:about="https://w3id.org/enigma#Cohort">
         <rdfs:comment xml:lang="en">A group of individuals studied by an ENIGMA working group, limited by certain inclusion and exclusion criteria</rdfs:comment>
@@ -383,10 +420,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#APOE4 -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#APOE4">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Gene"/>
@@ -396,6 +435,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#Age -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Age">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Demographic"/>
     </owl:NamedIndividual>
@@ -403,6 +443,7 @@
 
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic"/>
@@ -412,6 +453,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#MajorDepression -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#MajorDepression">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder"/>
     </owl:NamedIndividual>
@@ -420,6 +462,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder"/>
     </owl:NamedIndividual>
@@ -427,5 +470,6 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
 
