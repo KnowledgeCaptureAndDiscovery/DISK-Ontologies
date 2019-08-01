@@ -313,10 +313,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize -->
 
-    <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize">
-        <rdfs:comment>A qualified relationship used to represent the relationship between a gene and a brain characteristic such as hypoccampal volume</rdfs:comment>
-        <rdfs:label>Effect Size</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
     
 
 
@@ -398,6 +395,14 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Age">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Demographic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize">
+        <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
     </owl:NamedIndividual>
     
 
