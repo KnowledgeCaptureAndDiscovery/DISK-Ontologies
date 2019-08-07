@@ -401,9 +401,7 @@
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize">
-        <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
     
 
 
@@ -428,6 +426,21 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize">
+        <rdfs:label>Effect Size</rdfs:label>
+        <rdfs:comment>Effect size is the magnitude of effect of a gene on a characterictic</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
