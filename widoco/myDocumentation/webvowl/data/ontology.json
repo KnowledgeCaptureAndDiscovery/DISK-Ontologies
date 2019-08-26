@@ -22,12 +22,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Naomi Perez",
+        "value" : "Rosna Thomas",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Rosna Thomas",
+        "value" : "Naomi Perez",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -475,12 +475,12 @@
   }, {
     "range" : "4",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "range" : "4",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "23"
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#isRawData",
