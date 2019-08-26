@@ -325,8 +325,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Demographic">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describe a charateristic of a human population or person</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Demographic</rdfs:label>
+        <rdfs:comment xml:lang="en">Describe a charateristic of a human population or person</rdfs:comment>
+        <rdfs:label xml:lang="en">Demographic</rdfs:label>
     </owl:Class>
     
 
@@ -344,7 +344,10 @@
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize -->
 
 
-    <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
+    <owl:Class rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize">
+        <rdfs:comment xml:lang="en">Effect size is the magnitude of effect of a gene on a characterictic</rdfs:comment>
+        <rdfs:label xml:lang="en">Effect Size</rdfs:label>
+    </owl:Class>
     
 
 
@@ -439,13 +442,6 @@
     
 
 
-    <!-- https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
-    
-
-
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume -->
 
 
@@ -470,22 +466,6 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effect size is the magnitude of effect of a gene on a characterictic</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effect Size</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 

@@ -22,12 +22,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Rosna Thomas",
+        "value" : "Naomi Perez",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Naomi Perez",
+        "value" : "Rosna Thomas",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -49,7 +49,7 @@
     "classCount" : 12,
     "objectPropertyCount" : 10,
     "datatypePropertyCount" : 6,
-    "individualCount" : 6
+    "individualCount" : 5
   },
   "class" : [ {
     "id" : "9",
@@ -216,7 +216,7 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "Demographic",
-      "undefined" : "Demographic"
+      "en" : "Demographic"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#Age",
@@ -226,7 +226,7 @@
       }
     } ],
     "comment" : {
-      "undefined" : "Describe a charateristic of a human population or person"
+      "en" : "Describe a charateristic of a human population or person"
     },
     "id" : "2"
   }, {
@@ -343,10 +343,10 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "EffectSize",
-      "undefined" : "Effect Size"
+      "en" : "Effect Size"
     },
     "comment" : {
-      "undefined" : "Effect size is the magnitude of effect of a gene on a characterictic"
+      "en" : "Effect size is the magnitude of effect of a gene on a characterictic"
     },
     "id" : "1"
   } ],
