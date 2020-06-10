@@ -76,9 +76,11 @@
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#isAssociatedWith
 :isAssociatedWith rdf:type owl:ObjectProperty ;
-                  rdfs:domain :EffectSize ;
-                  rdfs:range :Demographic ;
-                  rdfs:comment "Describes the association of a demographic with the effect size of a gene on a brain characteristic"^^xsd:string ;
+                  rdfs:domain :EffectSize ,
+                              :NeurologicalDisorder ;
+                  rdfs:range :Demographic ,
+                             :BrainCharacteristic;
+                  rdfs:comment "Describes the association of a demographic or neurological disorder with the effect size of a gene on a brain characteristic"^^xsd:string ;
                   rdfs:label "is associated with"^^xsd:string .
 
 
@@ -267,6 +269,13 @@
 :HippocampalVolume rdf:type owl:NamedIndividual ,
                             :BrainCharacteristic .
 
+##Cortical Thickness
+:CorticalThickness rdf:type owl:NamedIndividual ,
+                            :BrainCharacteristic .
+
+##Parkinsons Disease
+:Parkinsons rdf:type owl:NamedIndividual ,
+                          :NeurologicalDisorder .
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#MajorDepression
 :MajorDepression rdf:type owl:NamedIndividual ,
