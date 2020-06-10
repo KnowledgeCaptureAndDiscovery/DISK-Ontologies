@@ -118,7 +118,9 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#isAssociatedWith">
         <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize"/>
+        <rdfs:domain rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder"/>
         <rdfs:range rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#Demographic"/>
+        <rdfs:range rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic"/>
         <rdfs:comment>Describes the association of a demographic with the effect size of a gene on a brain characteristic</rdfs:comment>
         <rdfs:label>is associated with</rdfs:label>
     </owl:ObjectProperty>
@@ -408,11 +410,22 @@
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic"/>
     </owl:NamedIndividual>
     
+    <!-- https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume -->
 
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#CorticalThickness">
+        <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic"/>
+    </owl:NamedIndividual>
+    
 
     <!-- https://w3id.org/disk/ontology/enigma_hypothesis#MajorDepression -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#MajorDepression">
+        <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder"/>
+    </owl:NamedIndividual>
+    
+    <!-- https://w3id.org/disk/ontology/enigma_hypothesis#Parkinsons -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/disk/ontology/enigma_hypothesis#Parkinsons">
         <rdf:type rdf:resource="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder"/>
     </owl:NamedIndividual>
     
