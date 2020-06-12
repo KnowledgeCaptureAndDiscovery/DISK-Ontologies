@@ -273,7 +273,7 @@ rdf:Statement
 
 :hasWorkflow
       a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a Workflow bindong to its associated workflow"@en ;
+      rdfs:comment "Property that links a Workflow binding to its associated workflow"@en ;
       rdfs:domain :WorkflowBinding ;
       rdfs:label "has workflow"@en ;
       rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> .
@@ -293,6 +293,20 @@ rdf:Statement
       rdfs:comment "Link to the execution of a workflow in the corresponding workflow system"@en ;
       rdfs:domain :WorkflowBinding ;
       rdfs:label "has run link"@en .
+
+:dateCreated
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Property which describes when the hypothesis was created"@en ;
+      rdfs:domain :Hypothesis ;
+      rdfs:label "date created"@en ;
+      rdfs:range xsd:date .
+
+:dateModified
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Property which describes when the hypothesis was modified"@en ;
+      rdfs:domain :Hypothesis ;
+      rdfs:label "date modified"@en ;
+      rdfs:range xsd:date .
 
 <http://www.wings-workflows.org/ontology/workflow.owl#Workflow>
       a       owl:Class ;
