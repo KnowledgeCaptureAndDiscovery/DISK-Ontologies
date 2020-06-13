@@ -1,4 +1,4 @@
-<h2  id="crossreference" class="list">Cross reference for The ENIGMA Hypothesis Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="crossreference" class="list">Cross reference for The ENIGMA Hypothesis Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by The ENIGMA Hypothesis Ontology.
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
@@ -69,14 +69,22 @@ This section provides details for each class and property defined by The ENIGMA 
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#targetCharacteristic"
+            <a href="#isAssociatedWith"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#isAssociatedWith">is associated with</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#targetCharacteristic"
                title="https://w3id.org/disk/ontology/enigma_hypothesis#targetCharacteristic">target characteristic</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#HippocampalVolume"
+            <a href="#CorticalArea"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#CorticalArea">cortical area</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#CorticalThickness"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#CorticalThickness">cortical thickness</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HippocampalVolume"
                title="https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume">hippocampal volume</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SubcorticalVolume"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#SubcorticalVolume">subcortical volume</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -315,6 +323,12 @@ This section provides details for each class and property defined by The ENIGMA 
          <span class="markdown">Any disorder of the nervous system. Structural, biochemical or electrical abnormalities in the brain, spinal cord or other nerves can result in a range of symptoms.</span>
       </div>
       <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isAssociatedWith"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#isAssociatedWith">is associated with</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#isDiagnosedWith"
@@ -325,6 +339,8 @@ This section provides details for each class and property defined by The ENIGMA 
          <dd>
             <a href="#MajorDepression"
                title="https://w3id.org/disk/ontology/enigma_hypothesis#MajorDepression">major depression</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Parkinsons"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#Parkinsons">parkinsons</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#Schizophrenia"
                title="https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia">schizophrenia</a>
             <sup class="type-ni" title="named individual">ni</sup>
@@ -517,7 +533,7 @@ This section provides details for each class and property defined by The ENIGMA 
       <p>
          <strong>IRI:</strong> https://w3id.org/disk/ontology/enigma_hypothesis#isAssociatedWith</p>
       <div class="comment">
-         <span class="markdown">Describes the association of a demographic with the effect size of a gene on a brain characteristic</span>
+         <span class="markdown">Describes the association of a demographic or brain characteristic with a neurological disorder or the effect size of a gene on a brain characteristic</span>
       </div>
       <div class="description">
          <dl>
@@ -527,7 +543,17 @@ This section provides details for each class and property defined by The ENIGMA 
                   title="https://w3id.org/disk/ontology/enigma_hypothesis#EffectSize">Effect Size</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dd>
+               <a href="#NeurologicalDisorder"
+                  title="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder">Neurological Disorder</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
+            <dd>
+               <a href="#BrainCharacteristic"
+                  title="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic">Brain Characteristic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dd>
                <a href="#Demographic"
                   title="https://w3id.org/disk/ontology/enigma_hypothesis#Demographic">Demographic</a>
@@ -850,6 +876,18 @@ This section provides details for each class and property defined by The ENIGMA 
          </a>
       </li>
       <li>
+         <a href="#CorticalArea"
+            title="https://w3id.org/disk/ontology/enigma_hypothesis#CorticalArea">
+            <span>cortical area</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CorticalThickness"
+            title="https://w3id.org/disk/ontology/enigma_hypothesis#CorticalThickness">
+            <span>cortical thickness</span>
+         </a>
+      </li>
+      <li>
          <a href="#HippocampalVolume"
             title="https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume">
             <span>hippocampal volume</span>
@@ -862,9 +900,21 @@ This section provides details for each class and property defined by The ENIGMA 
          </a>
       </li>
       <li>
+         <a href="#Parkinsons"
+            title="https://w3id.org/disk/ontology/enigma_hypothesis#Parkinsons">
+            <span>parkinsons</span>
+         </a>
+      </li>
+      <li>
          <a href="#Schizophrenia"
             title="https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia">
             <span>schizophrenia</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SubcorticalVolume"
+            title="https://w3id.org/disk/ontology/enigma_hypothesis#SubcorticalVolume">
+            <span>subcortical volume</span>
          </a>
       </li>
    </ul>
@@ -896,6 +946,38 @@ This section provides details for each class and property defined by The ENIGMA 
          <dd>
             <a href="#Demographic"
                title="https://w3id.org/disk/ontology/enigma_hypothesis#Demographic">Demographic</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CorticalArea">
+      <h3>cortical area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/disk/ontology/enigma_hypothesis#CorticalArea</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#BrainCharacteristic"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic">Brain Characteristic</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CorticalThickness">
+      <h3>cortical thickness<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/disk/ontology/enigma_hypothesis#CorticalThickness</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#BrainCharacteristic"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic">Brain Characteristic</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -932,6 +1014,22 @@ This section provides details for each class and property defined by The ENIGMA 
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Parkinsons">
+      <h3>parkinsons<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/disk/ontology/enigma_hypothesis#Parkinsons</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#NeurologicalDisorder"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder">Neurological Disorder</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Schizophrenia">
       <h3>schizophrenia<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -944,6 +1042,22 @@ This section provides details for each class and property defined by The ENIGMA 
          <dd>
             <a href="#NeurologicalDisorder"
                title="https://w3id.org/disk/ontology/enigma_hypothesis#NeurologicalDisorder">Neurological Disorder</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SubcorticalVolume">
+      <h3>subcortical volume<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/disk/ontology/enigma_hypothesis#SubcorticalVolume</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#BrainCharacteristic"
+               title="https://w3id.org/disk/ontology/enigma_hypothesis#BrainCharacteristic">Brain Characteristic</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
