@@ -1,5 +1,5 @@
 {
-  "_comment" : "Created with OWL2VOWL (version 0.3.2-SNAPSHOT), http://vowl.visualdataweb.org",
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/enigma", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/disk/ontology/enigma_hypothesis", "http://disk-project.org/ontology/disk", "http://www.w3.org/2001/XMLSchema" ],
@@ -22,12 +22,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Naomi Perez",
+        "value" : "Rosna Thomas",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Rosna Thomas",
+        "value" : "Naomi Perez",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -45,14 +45,8 @@
     }
   },
   "namespace" : [ ],
-  "metrics" : {
-    "classCount" : 12,
-    "objectPropertyCount" : 10,
-    "datatypePropertyCount" : 6,
-    "individualCount" : 5
-  },
   "class" : [ {
-    "id" : "9",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "10",
@@ -67,22 +61,28 @@
     "id" : "5",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "17",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
-    "type" : "owl:Thing"
-  }, {
     "id" : "19",
-    "type" : "owl:Class"
+    "type" : "owl:Thing"
   }, {
     "id" : "20",
     "type" : "owl:Class"
   }, {
     "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "27",
@@ -91,16 +91,16 @@
     "id" : "28",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "21",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "37",
@@ -109,7 +109,7 @@
     "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "16",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -123,7 +123,7 @@
     "comment" : {
       "en" : "An individual's medical diagnosis."
     },
-    "id" : "9"
+    "id" : "6"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -163,7 +163,7 @@
     "comment" : {
       "en" : "Data storing information about particpants genes."
     },
-    "id" : "17",
+    "id" : "18",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "http://disk-project.org/ontology/disk#Data",
@@ -173,7 +173,7 @@
       "IRI-based" : "Data",
       "en" : "Data"
     },
-    "subClasses" : [ "7", "17" ],
+    "subClasses" : [ "8", "18" ],
     "comment" : {
       "en" : "The results produced as a result of executing a workflow from a given line of inquiry."
     },
@@ -182,7 +182,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "18",
+    "id" : "19",
     "label" : {
       "undefined" : "Thing"
     }
@@ -204,12 +204,12 @@
     "comment" : {
       "en" : "A unit of heredity that is transferred from a parent to offspring."
     },
-    "id" : "19"
+    "id" : "20"
   }, {
     "instances" : 0,
-    "union" : [ "7", "21" ],
+    "union" : [ "17", "21" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "20"
+    "id" : "2"
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#Demographic",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
@@ -228,7 +228,17 @@
     "comment" : {
       "en" : "Describe a charateristic of a human population or person"
     },
-    "id" : "2"
+    "id" : "21"
+  }, {
+    "instances" : 0,
+    "union" : [ "13", "16" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "1"
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "23" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "22"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -252,6 +262,24 @@
       "en" : "Brain Characteristic"
     },
     "individuals" : [ {
+      "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#CorticalThickness",
+      "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
+      "labels" : {
+        "IRI-based" : "CorticalThickness"
+      }
+    }, {
+      "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#SubcorticalVolume",
+      "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
+      "labels" : {
+        "IRI-based" : "SubcorticalVolume"
+      }
+    }, {
+      "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#CorticalArea",
+      "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
+      "labels" : {
+        "IRI-based" : "CorticalArea"
+      }
+    }, {
       "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume",
       "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
       "labels" : {
@@ -261,7 +289,7 @@
     "comment" : {
       "en" : "A specific feature of an individuals brain, identified through MRI, EEG, or other methods of brain imaging."
     },
-    "id" : "16"
+    "id" : "17"
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#BrainScan",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
@@ -273,7 +301,7 @@
     "comment" : {
       "en" : "An image of an individual's brain."
     },
-    "id" : "7",
+    "id" : "8",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#Experiment",
@@ -286,7 +314,7 @@
     "comment" : {
       "en" : "Describes a scientific experiment that produced data."
     },
-    "id" : "21"
+    "id" : "23"
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#Patient",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
@@ -298,7 +326,7 @@
     "comment" : {
       "en" : "An individual participating in an ENIGMA cohort."
     },
-    "id" : "8"
+    "id" : "9"
   }, {
     "iri" : "https://w3id.org/enigma#Cohort",
     "baseIri" : "https://w3id.org/enigma",
@@ -321,16 +349,22 @@
       "en" : "Neurological Disorder"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia",
+      "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#Parkinsons",
       "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
       "labels" : {
-        "IRI-based" : "Schizophrenia"
+        "IRI-based" : "Parkinsons"
       }
     }, {
       "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#MajorDepression",
       "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
       "labels" : {
         "IRI-based" : "MajorDepression"
+      }
+    }, {
+      "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia",
+      "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
+      "labels" : {
+        "IRI-based" : "Schizophrenia"
       }
     } ],
     "comment" : {
@@ -348,7 +382,7 @@
     "comment" : {
       "en" : "Effect size is the magnitude of effect of a gene on a characterictic"
     },
-    "id" : "1"
+    "id" : "16"
   } ],
   "property" : [ {
     "id" : "0",
@@ -357,7 +391,7 @@
     "id" : "3",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "6",
+    "id" : "7",
     "type" : "owl:objectProperty"
   }, {
     "id" : "12",
@@ -365,12 +399,6 @@
   }, {
     "id" : "15",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "22",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "23",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "24",
     "type" : "owl:datatypeProperty"
@@ -404,6 +432,12 @@
   }, {
     "id" : "36",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#isAssociatedWith",
@@ -415,7 +449,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "undefined" : "Describes the association of a demographic with the effect size of a gene on a brain characteristic"
+      "undefined" : "Describes the association of a demographic or brain characteristic with a neurological disorder or the effect size of a gene on a brain characteristic"
     },
     "attributes" : [ "object" ],
     "id" : "0"
@@ -433,17 +467,17 @@
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#collectedFrom",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
-    "range" : "8",
+    "range" : "9",
     "label" : {
       "IRI-based" : "collectedFrom",
       "en" : "collected from"
     },
-    "domain" : "7",
+    "domain" : "8",
     "comment" : {
       "en" : "Describes which Patient a Brain Scan was collected from."
     },
     "attributes" : [ "object" ],
-    "id" : "6"
+    "id" : "7"
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#isDiagnosedWith",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
@@ -452,7 +486,7 @@
       "IRI-based" : "isDiagnosedWith",
       "en" : "is diagnosed with"
     },
-    "domain" : "9",
+    "domain" : "6",
     "comment" : {
       "en" : "Describes which Neurological Disorder a Patient was diagnosed with."
     },
@@ -461,27 +495,17 @@
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#targetCharacteristic",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
-    "range" : "16",
+    "range" : "17",
     "label" : {
       "IRI-based" : "targetCharacteristic",
       "undefined" : "target characteristic"
     },
-    "domain" : "1",
+    "domain" : "16",
     "comment" : {
       "undefined" : "Describes the effect on a target brain characteristic"
     },
     "attributes" : [ "object" ],
     "id" : "15"
-  }, {
-    "range" : "4",
-    "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "22"
-  }, {
-    "range" : "4",
-    "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "23"
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#isRawData",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
@@ -496,12 +520,12 @@
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#observedFrom",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
-    "range" : "7",
+    "range" : "8",
     "label" : {
       "IRI-based" : "observedFrom",
       "en" : "observed from"
     },
-    "domain" : "16",
+    "domain" : "17",
     "comment" : {
       "en" : "Describes which Brain Scan the brain characteristic was observed from"
     },
@@ -510,12 +534,12 @@
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#hasDiagnosis",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
-    "range" : "9",
+    "range" : "6",
     "label" : {
       "IRI-based" : "hasDiagnosis",
       "en" : "has diagnosis"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "undefined" : "Describes the Diagnosis of a Patient"
     },
@@ -524,12 +548,12 @@
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#sourceGene",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
-    "range" : "19",
+    "range" : "20",
     "label" : {
       "IRI-based" : "sourceGene",
       "undefined" : "source gene"
     },
-    "domain" : "1",
+    "domain" : "16",
     "comment" : {
       "undefined" : "Describes the effect size of a gene"
     },
@@ -543,7 +567,7 @@
       "IRI-based" : "hasAge",
       "en" : "has age"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "en" : "Describes the age of an individual of a cohort."
     },
@@ -557,7 +581,7 @@
       "IRI-based" : "diagnosedAtAge",
       "en" : "diagnosed at age"
     },
-    "domain" : "9",
+    "domain" : "6",
     "comment" : {
       "en" : "Describes the age at which a Patient recieved a Diagnosis."
     },
@@ -571,7 +595,7 @@
       "IRI-based" : "hasSex",
       "en" : "has sex"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "undefined" : "Describes the sex of an individual of a cohort."
     },
@@ -580,12 +604,12 @@
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#experimentedOn",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
-    "range" : "18",
+    "range" : "19",
     "label" : {
       "IRI-based" : "experimentedOn",
       "en" : "experimented on"
     },
-    "domain" : "20",
+    "domain" : "22",
     "comment" : {
       "en" : "Denotes that an experiment and a Brain Scan can be experimented on."
     },
@@ -608,12 +632,12 @@
   }, {
     "iri" : "https://w3id.org/disk/ontology/enigma_hypothesis#producedData",
     "baseIri" : "https://w3id.org/disk/ontology/enigma_hypothesis",
-    "range" : "18",
+    "range" : "19",
     "label" : {
       "IRI-based" : "producedData",
       "en" : "produced data"
     },
-    "domain" : "21",
+    "domain" : "23",
     "comment" : {
       "en" : "Dsecribes an experiment that produced data."
     },
@@ -633,5 +657,15 @@
     },
     "attributes" : [ "object" ],
     "id" : "36"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "4",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
   } ]
 }
