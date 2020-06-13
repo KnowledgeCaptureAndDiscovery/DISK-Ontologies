@@ -7,12 +7,12 @@
 @base <https://w3id.org/disk/ontology/enigma_hypothesis> .
 
 <https://w3id.org/disk/ontology/enigma_hypothesis> rdf:type owl:Ontology ;
-                                                    <http://purl.org/dc/terms/creator> "Naomi Perez"^^xsd:string ,
-                                                                                       "Rosna Thomas"^^xsd:string ;
+                                                    <http://purl.org/dc/terms/creator> "Naomi Perez" ,
+                                                                                       "Rosna Thomas" ;
                                                     <http://purl.org/dc/terms/description> "An ontology for describing terms used in the DISK Hypothesis Reasoner for a neuroscience domain."@en ;
                                                     <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/2.0/"@en ;
                                                     <http://purl.org/dc/terms/title> "The ENIGMA Hypothesis Ontology"@en ;
-                                                    owl:versionInfo "v2.0.0"^^xsd:string .
+                                                    owl:versionInfo "v2.0.0" .
 
 #################################################################
 #    Annotation properties
@@ -63,14 +63,14 @@
            rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
            rdfs:range <https://w3id.org/enigma#Cohort> ;
            rdfs:comment "Describes the cohort a dataset is associated with."@en ;
-           rdfs:label "has cohort"^^xsd:string .
+           rdfs:label "has cohort" .
 
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#hasDiagnosis
 :hasDiagnosis rdf:type owl:ObjectProperty ;
               rdfs:domain :Patient ;
               rdfs:range :Diagnosis ;
-              rdfs:comment "Describes the Diagnosis of a Patient"^^xsd:string ;
+              rdfs:comment "Describes the Diagnosis of a Patient" ;
               rdfs:label "has diagnosis"@en .
 
 
@@ -78,10 +78,10 @@
 :isAssociatedWith rdf:type owl:ObjectProperty ;
                   rdfs:domain :EffectSize ,
                               :NeurologicalDisorder ;
-                  rdfs:range :Demographic ,
-                             :BrainCharacteristic;
-                  rdfs:comment "Describes the association of a demographic or neurological disorder with the effect size of a gene on a brain characteristic"^^xsd:string ;
-                  rdfs:label "is associated with"^^xsd:string .
+                  rdfs:range :BrainCharacteristic ,
+                             :Demographic ;
+                  rdfs:comment "Describes the association of a demographic or brain characteristic with a neurological disorder or the effect size of a gene on a brain characteristic" ;
+                  rdfs:label "is associated with" .
 
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#isDiagnosedWith
@@ -111,16 +111,16 @@
 :sourceGene rdf:type owl:ObjectProperty ;
             rdfs:domain :EffectSize ;
             rdfs:range :Gene ;
-            rdfs:comment "Describes the effect size of a gene"^^xsd:string ;
-            rdfs:label "source gene"^^xsd:string .
+            rdfs:comment "Describes the effect size of a gene" ;
+            rdfs:label "source gene" .
 
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#targetCharacteristic
 :targetCharacteristic rdf:type owl:ObjectProperty ;
                       rdfs:domain :EffectSize ;
                       rdfs:range :BrainCharacteristic ;
-                      rdfs:comment "Describes the effect on a target brain characteristic"^^xsd:string ;
-                      rdfs:label "target characteristic"^^xsd:string .
+                      rdfs:comment "Describes the effect on a target brain characteristic" ;
+                      rdfs:label "target characteristic" .
 
 
 #################################################################
@@ -155,7 +155,7 @@
 :hasSex rdf:type owl:DatatypeProperty ;
         rdfs:domain :Patient ;
         rdfs:range xsd:string ;
-        rdfs:comment "Describes the sex of an individual of a cohort."^^xsd:string ;
+        rdfs:comment "Describes the sex of an individual of a cohort." ;
         rdfs:label "has sex"@en .
 
 
@@ -265,21 +265,29 @@
               :Demographic .
 
 
+###  https://w3id.org/disk/ontology/enigma_hypothesis#CorticalArea
+:CorticalArea rdf:type owl:NamedIndividual ,
+                       :BrainCharacteristic .
+
+
+###  https://w3id.org/disk/ontology/enigma_hypothesis#CorticalThickness
+:CorticalThickness rdf:type owl:NamedIndividual ,
+                            :BrainCharacteristic .
+
+
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#HippocampalVolume
 :HippocampalVolume rdf:type owl:NamedIndividual ,
                             :BrainCharacteristic .
 
-##Cortical Thickness
-:CorticalThickness rdf:type owl:NamedIndividual ,
-                            :BrainCharacteristic .
-
-##Parkinsons Disease
-:Parkinsons rdf:type owl:NamedIndividual ,
-                          :NeurologicalDisorder .
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#MajorDepression
 :MajorDepression rdf:type owl:NamedIndividual ,
                           :NeurologicalDisorder .
+
+
+###  https://w3id.org/disk/ontology/enigma_hypothesis#Parkinsons
+:Parkinsons rdf:type owl:NamedIndividual ,
+                     :NeurologicalDisorder .
 
 
 ###  https://w3id.org/disk/ontology/enigma_hypothesis#Schizophrenia
@@ -287,4 +295,9 @@
                         :NeurologicalDisorder .
 
 
-###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
+###  https://w3id.org/disk/ontology/enigma_hypothesis#SubcorticalVolume
+:SubcorticalVolume rdf:type owl:NamedIndividual ,
+                            :BrainCharacteristic .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
