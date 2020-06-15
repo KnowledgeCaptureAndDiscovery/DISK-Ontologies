@@ -48,26 +48,42 @@ function loadTOC(){
       $("#introduction").load("sections/introduction-en.html"); 
       $("#overview").load("sections/overview-en.html"); 
       $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
+      //$("#references").load("sections/references-en.html"); 
       $("#crossref").load("sections/crossref-en.html", null, loadHash); 
     });
     </script> 
   </head> 
 
-<body>
-<div class="container">
-<div class="head">
+<body resource="http://disk-project.org/ontology/disk#" typeOf="owl:Ontology schema:TechArticle">
+<span resource="" typeOf="foaf:Document schema:WebPage">
+<span property="dc:created schema:dateCreated" content="2016-09-02"></span>
+<span property="dc:isVersionOf prov:specializationOf" resource="http://disk-project.org/ontology/disk#"></span>
+<span property="dc:contributor prov:wasAttributedTo schema:contributor" resource="http://purl.org/net/dgarijo"></span>
+</span>
+<div class="container"><div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
-<h1>The DISK Ontology</h1>
-
-
+<h1 property="dc:title schema:name">The DISK Ontology</h1>
+<span property="dc:modified schema:dateModified" content="2020-06-15"></span>
+<h2>Release  2016-09-02</h2>
 <dl>
-<dt>Revision:</dt>
-<dd>1.1.0</dd>
-<dt>Authors:</dt>
-<dd>Daniel Garijo</dd><dd>Varun Ratnakar</dd><dd>Yolanda Gil</dd>
+<dt>This version:</dt>
+<dd><a href="http://disk-project.org/ontology/disk/disk-1.1.0">http://disk-project.org/ontology/disk/disk-1.1.0</a></dd>
+</dl><dl><dt>Latest version:</dt>
+<dd><a href="http://disk-project.org/ontology/disk#">http://disk-project.org/ontology/disk#</a></dd>
+</dl><dt>Revision:</dt>
+<dd property="schema:version">1.1.0</dd>
+<dl><dt>Authors:</dt>
+<dd><a property="dc:creator schema:author prov:wasAttributedTo" resource="http://www.isi.edu/~varunr/" href="http://www.isi.edu/~varunr/">Varun Ratnakar</a>, (<a href="http://www.isi.edu/home">Information Sciences Institute</a>)</dd><dd><a property="dc:creator schema:author prov:wasAttributedTo" resource="http://w3id.org/people/dgarijo" href="http://w3id.org/people/dgarijo">Daniel Garijo</a>, (<a href="http://www.isi.edu/home">Information Sciences Institute</a>)</dd><dd><a property="dc:creator schema:author prov:wasAttributedTo" resource="http://www.isi.edu/~gil/" href="http://www.isi.edu/~gil/">Yolanda Gil</a>, (<a href="http://www.isi.edu/home">Information Sciences Institute</a>)</dd></dl>
+
+<dl><dt>Extended Ontologies:</dt>
+<dd><a property=" schema:mentions" resource="https://www.w3.org/TR/prov-o/" href="https://www.w3.org/TR/prov-o/">W3C PROV-O</a></dd><dd><a property=" schema:mentions" resource="http://www.wings-workflows.org/ontology/execution.owl#" href="http://www.wings-workflows.org/ontology/execution.owl#">Wings Execution Ontology</a></dd><dd><a property=" schema:mentions" resource="http://www.wings-workflows.org/ontology/workflow.owl#" href="http://www.wings-workflows.org/ontology/workflow.owl#">Wings Workflow Ontology</a></dd></dl>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by_nc_sa/2.0/-blue.svg" alt="http://creativecommons.org/licenses/by-nc-sa/2.0/" /></a>
+<dt>License: </dt><dd><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank"><img src="https://img.shields.io/badge/License-Creative Commons Attribution_NonCommercial_ShareAlike 2.0 License-blue.svg" alt="http://creativecommons.org/licenses/by-nc-sa/2.0/"></a>
+<span property="dc:license" resource="http://creativecommons.org/licenses/by-nc-sa/2.0/"></span>
+<a property="dc:rights" href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license" target="_blank">
+<img src="https://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" style="border-width:0" alt="License">
+</a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#ontology" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 </dl>
 
