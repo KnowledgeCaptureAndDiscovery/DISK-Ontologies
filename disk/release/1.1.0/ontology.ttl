@@ -1,150 +1,356 @@
-@prefix :        <http://disk-project.org/ontology/disk#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix terms:   <http://purl.org/dc/terms/> .
-@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vann:    <http://purl.org/vocab/vann/> .
-@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix : <http://disk-project.org/ontology/disk##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://disk-project.org/ontology/disk#> .
 
-<http://disk-project.org/ontology/disk#>
-      a       owl:Ontology ;
-      rdfs:label "DISK Ontology"@en ;
-      dc:creator "Varun Ratnakar" , "Yolanda Gil" , "Daniel Garijo" ;
-      terms:abstract "The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard"@en ;
-      terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
-      terms:title "The DISK Ontology"@en ;
-      vann:preferredNamespacePrefix
-              "disk" ;
-      vann:preferredNamespaceUri
-              "http://disk-project.org/ontology/disk#"^^xsd:anyURI ;
-      owl:versionInfo "1.0.0" .
+<http://disk-project.org/ontology/disk#> rdf:type owl:Ontology ;
+                                          <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"^^xsd:string ,
+                                                                                    "Varun Ratnakar"^^xsd:string ,
+                                                                                    "Yolanda Gil"^^xsd:string ;
+                                          <http://purl.org/dc/terms/abstract> "The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard"@en ;
+                                          <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
+                                          <http://purl.org/dc/terms/title> "The DISK Ontology"@en ;
+                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "disk"^^xsd:string ;
+                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://disk-project.org/ontology/disk#"^^xsd:anyURI ;
+                                          rdfs:label "DISK Ontology"@en ;
+                                          owl:versionInfo "1.1.0"^^xsd:string .
 
-:hasDataQuery
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Property that links a line of inquiry to the data query text associated to it"@en ;
-      rdfs:domain :LineOfInquiry ;
-      rdfs:label "has data query"@en ;
-      rdfs:range xsd:string .
+#################################################################
+#    Annotation properties
+#################################################################
 
-:hasId
-      a       owl:DatatypeProperty , owl:AnnotationProperty ;
-      rdfs:comment "Property that links to the ID of the described resource"@en ;
-      rdfs:domain owl:Thing , :WorkflowBinding ;
-      rdfs:label "has id"@en ;
-      rdfs:range xsd:string .
-
-:hasTriggeredLineOfInquiryStatus 
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Property that tells the triggered lline Of inquiry's status"@en ;
-      rdfs:domain :TriggeredLineOfInquiry ;
-      rdfs:label "Triggered Line Of Inquiry Status"@en ;
-      rdfs:range xsd:string .
+###  http://disk-project.org/ontology/disk#hasHypothesisVariable
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> rdf:type owl:AnnotationProperty ;
+                                                              rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
 
 
-:hasResultingHypothesis
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a triggered line of inquiry to the hypothesis revision that resulted from its analysis"@en ;
-      rdfs:domain :TriggeredLineOfInquiry ;
-      rdfs:label "has resulting hypothesis"@en ;
-      rdfs:range :Hypothesis .
+###  http://disk-project.org/ontology/disk#hasId
+<http://disk-project.org/ontology/disk#hasId> rdf:type owl:AnnotationProperty ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:domain <http://disk-project.org/ontology/disk#WorkflowBinding> ,
+                                                          owl:Thing .
 
-<http://www.wings-workflows.org/ontology/workflow.owl#Variable>
-      a       owl:Class ;
-      rdfs:comment "Variable of a workflow template"@en ;
-      rdfs:isDefinedBy <http://www.wings-workflows.org/ontology/workflow.owl#> ;
-      rdfs:label "Variable"@en .
 
-:Data
-      a       owl:Class ;
-      rdfs:comment "The results produced as a result of executing a workflow from a given line of inquiry"@en ;
-      rdfs:label "Data"@en .
+###  http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> rdf:type owl:AnnotationProperty ;
+                                                                     rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
 
-:hasRevisedHypothesisVariable
-      a       owl:AnnotationProperty , owl:ObjectProperty ;
-      rdfs:comment "Property that links a metaworkflow to its revised hypothesis variable."@en ;
-      rdfs:domain :WorkflowBinding , :MetaWorkflow ;
-      rdfs:label "has revised hypothesis variable"@en ;
-      rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
 
-:hasTriggeredLineOfInquiryStatus
-      a       owl:DatatypeProperty;
-      rdfs:comment "Property that states the status of a triggered line of inquiry."@en ;
-      rdfs:domain :TriggeredLineOfInquiry ;
-      rdfs:label "has triggered line of inquiry status"@en ;
-      rdfs:range xsd:string .
+###  http://disk-project.org/ontology/disk#hasRunLink
+<http://disk-project.org/ontology/disk#hasRunLink> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:domain <http://disk-project.org/ontology/disk#WorkflowBinding> .
 
-:VariableBinding
-      a       owl:Class ;
-      rdfs:comment "Contains a Variable and a binding value"@en ;
-      rdfs:label "Variable binding"@en .
 
-:hasStatus
-      a       owl:DatatypeProperty , owl:AnnotationProperty ;
-      rdfs:comment "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"@en ;
-      rdfs:domain :WorkflowBinding ;
-      rdfs:domain
-              [] ;
-      rdfs:label "has run status"@en ;
-      rdfs:range xsd:string .
+###  http://disk-project.org/ontology/disk#hasStatus
+<http://disk-project.org/ontology/disk#hasStatus> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:domain _:genid-nodeid-genid-0c11a9ca1c1d4e0c962a46b50d773e96-genid-nodeid-node1ealleodvx1 ,
+                                                              <http://disk-project.org/ontology/disk#WorkflowBinding> .
 
-:hasHypothesis
-      a       owl:ObjectProperty ;
-      rdfs:comment "property that links a triggered line of inquiry to the hypothesis that matched to it."@en ;
-      rdfs:domain :TriggeredLineOfInquiry ;
-      rdfs:label "has hypothesis"@en ;
-      rdfs:range :Hypothesis .
 
-:hasHypothesisVariable
-      a       owl:AnnotationProperty , owl:ObjectProperty ;
-      rdfs:comment "This property is used to identify which variables in the hypothesis are used in the workflows."@en ;
-      rdfs:domain :WorkflowBinding , :MetaWorkflow ;
-      rdfs:label "has hypothesis variable"@en ;
-      rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
-:hasVariableBinding
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a Workflow binding to it correspondent variable binding"@en ;
-      rdfs:domain :WorkflowBinding ;
-      rdfs:label "has variable binding"@en ;
-      rdfs:range :VariableBinding .
 
-:hasWorkflowBinding
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a line of inquiry or executed line of inquiry to the workflow bindings present on it"@en ;
-      rdfs:domain
-              [ a       owl:Class ;
-                owl:unionOf (:LineOfInquiry :TriggeredLineOfInquiry)
-              ] ;
-      rdfs:label "has workflow bindings"@en ;
-      rdfs:range :WorkflowBinding .
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
 
-<http://www.wings-workflows.org/ontology/execution.owl#Execution>
-      a       owl:Class ;
-      rdfs:comment "An execution of a workflow"@en ;
-      rdfs:isDefinedBy <http://www.wings-workflows.org/ontology/execution.owl#> ;
-      rdfs:label "Execution"@en ;
-      rdfs:subClassOf <http://www.w3.org/ns/prov/#Bundle> .
 
-:hasVariable
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a variable binding to its corresponding variable"@en ;
-      rdfs:domain :VariableBinding ;
-      rdfs:label "has variable"@en ;
-      rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
-:hasParentHypothesis
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links to the parent hypothesis from which the current hypothesis has been derived"@en ;
-      rdfs:domain :Hypothesis ;
-      rdfs:label "has parent hypothesis"@en ;
-      rdfs:range :Hypothesis ;
-      rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasRevisionOf> .
 
-:LineOfInquiry
-      a       owl:Class ;
-      rdfs:comment """A line of inquiry represents potential analyses that can be pursued to test a type of hypothesis.  A line of inquiry consists of:
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://disk-project.org/ontology/disk#createdFrom
+<http://disk-project.org/ontology/disk#createdFrom> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+                                                    rdfs:domain <http://disk-project.org/ontology/disk#Data> ;
+                                                    rdfs:comment "Property that states from where these data have been created (e-g-, workflow, metaworkflow, line of inquiry, etc.)"@en ;
+                                                    rdfs:label "created from"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasConfidenceReport
+<http://disk-project.org/ontology/disk#hasConfidenceReport> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain [ rdf:type owl:Class ;
+                                                                          owl:unionOf ( <http://disk-project.org/ontology/disk#Hypothesis>
+                                                                                        rdf:Statement
+                                                                                      )
+                                                                        ] ;
+                                                            rdfs:range <http://disk-project.org/ontology/disk#ConfidenceReport> ;
+                                                            rdfs:label "Property that links the hypothesis or statement to the ConfidenceReport that supports them"@en ,
+                                                                       "has confidence report"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasExecution
+<http://disk-project.org/ontology/disk#hasExecution> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://disk-project.org/ontology/disk#WorkflowBinding> ;
+                                                     rdfs:range <http://www.wings-workflows.org/ontology/execution.owl#Execution> ;
+                                                     rdfs:comment "Property that links a workflow bundle to the execution results of the workflow"@en ;
+                                                     rdfs:label "has execution"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasHypothesis
+<http://disk-project.org/ontology/disk#hasHypothesis> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> ;
+                                                      rdfs:range <http://disk-project.org/ontology/disk#Hypothesis> ;
+                                                      rdfs:comment "property that links a triggered line of inquiry to the hypothesis that matched to it."@en ;
+                                                      rdfs:label "has hypothesis"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasHypothesisVariable
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://disk-project.org/ontology/disk#MetaWorkflow> ,
+                                                                          <http://disk-project.org/ontology/disk#WorkflowBinding> .
+
+
+###  http://disk-project.org/ontology/disk#hasLineOfInquiry
+<http://disk-project.org/ontology/disk#hasLineOfInquiry> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+                                                         rdfs:domain <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> ;
+                                                         rdfs:range <http://disk-project.org/ontology/disk#LineOfInquiry> ;
+                                                         rdfs:comment "Property that links a triggered line of inquiry to the original line of inquiry from which it was derived"@en ;
+                                                         rdfs:label "has line of inquiry"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasMetaWorkflowBinding
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://disk-project.org/ontology/disk#hasWorkflowBinding> ;
+                                                               rdfs:domain [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( <http://disk-project.org/ontology/disk#LineOfInquiry>
+                                                                                           <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry>
+                                                                                         )
+                                                                           ] ;
+                                                               rdfs:range <http://disk-project.org/ontology/disk#WorkflowBinding> ;
+                                                               rdfs:comment "The workflow bindings associated to a metaworkflow, i.e., a workflow and a variable binding"@en ;
+                                                               rdfs:label "has metaworkflow binding"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasParentHypothesis
+<http://disk-project.org/ontology/disk#hasParentHypothesis> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasRevisionOf> ;
+                                                            rdfs:domain <http://disk-project.org/ontology/disk#Hypothesis> ;
+                                                            rdfs:range <http://disk-project.org/ontology/disk#Hypothesis> ;
+                                                            rdfs:comment "Property that links to the parent hypothesis from which the current hypothesis has been derived"@en ;
+                                                            rdfs:label "has parent hypothesis"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasResultingHypothesis
+<http://disk-project.org/ontology/disk#hasResultingHypothesis> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> ;
+                                                               rdfs:range <http://disk-project.org/ontology/disk#Hypothesis> ;
+                                                               rdfs:comment "Property that links a triggered line of inquiry to the hypothesis revision that resulted from its analysis"@en ;
+                                                               rdfs:label "has resulting hypothesis"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://disk-project.org/ontology/disk#MetaWorkflow> ,
+                                                                                 <http://disk-project.org/ontology/disk#WorkflowBinding> .
+
+
+###  http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry
+<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf <http://www.w3.org/ns/prov#has_provenance> ;
+                                                                  rdfs:domain <http://disk-project.org/ontology/disk#ConfidenceReport> ;
+                                                                  rdfs:range <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> ;
+                                                                  rdfs:comment "Property that links a confidence report to the triggered line of inquiry that contains all the provenance for the report's value."@en ;
+                                                                  rdfs:label "has triggered line of inquiry"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasVariable
+<http://disk-project.org/ontology/disk#hasVariable> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://disk-project.org/ontology/disk#VariableBinding> ;
+                                                    rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Variable> ;
+                                                    rdfs:comment "Property that links a variable binding to its corresponding variable"@en ;
+                                                    rdfs:label "has variable"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasVariableBinding
+<http://disk-project.org/ontology/disk#hasVariableBinding> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://disk-project.org/ontology/disk#WorkflowBinding> ;
+                                                           rdfs:range <http://disk-project.org/ontology/disk#VariableBinding> ;
+                                                           rdfs:comment "Property that links a Workflow binding to it correspondent variable binding"@en ;
+                                                           rdfs:label "has variable binding"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasWorkflow
+<http://disk-project.org/ontology/disk#hasWorkflow> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://disk-project.org/ontology/disk#WorkflowBinding> ;
+                                                    rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> ;
+                                                    rdfs:comment "Property that links a Workflow binding to its associated workflow"@en ;
+                                                    rdfs:label "has workflow"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasWorkflowBinding
+<http://disk-project.org/ontology/disk#hasWorkflowBinding> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <http://disk-project.org/ontology/disk#LineOfInquiry>
+                                                                                       <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry>
+                                                                                     )
+                                                                       ] ;
+                                                           rdfs:range <http://disk-project.org/ontology/disk#WorkflowBinding> ;
+                                                           rdfs:comment "Property that links a line of inquiry or executed line of inquiry to the workflow bindings present on it"@en ;
+                                                           rdfs:label "has workflow bindings"@en .
+
+
+###  http://www.w3.org/ns/prov#has_provenance
+<http://www.w3.org/ns/prov#has_provenance> rdf:type owl:ObjectProperty ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                           rdfs:label "has provenance"@en .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                           rdfs:label "was derived from"@en .
+
+
+###  http://www.w3.org/ns/prov#wasRevisionOf
+<http://www.w3.org/ns/prov#wasRevisionOf> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                          rdfs:label "was revision of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://disk-project.org/ontology/disk#dateCreated
+<http://disk-project.org/ontology/disk#dateCreated> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( <http://disk-project.org/ontology/disk#Hypothesis>
+                                                                                <http://disk-project.org/ontology/disk#LineOfInquiry>
+                                                                                <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry>
+                                                                              )
+                                                                ] ;
+                                                    rdfs:range xsd:date ;
+                                                    rdfs:comment "Property which describes when the hypothesis was created"@en ;
+                                                    rdfs:label "date created"@en .
+
+
+###  http://disk-project.org/ontology/disk#dateModified
+<http://disk-project.org/ontology/disk#dateModified> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( <http://disk-project.org/ontology/disk#Hypothesis>
+                                                                                 <http://disk-project.org/ontology/disk#LineOfInquiry>
+                                                                                 <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry>
+                                                                               )
+                                                                 ] ;
+                                                     rdfs:range xsd:date ;
+                                                     rdfs:comment "Property which describes when the hypothesis was modified"@en ;
+                                                     rdfs:label "date modified"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasBindingValue
+<http://disk-project.org/ontology/disk#hasBindingValue> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://disk-project.org/ontology/disk#VariableBinding> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:comment "Property that links a binding to its associated value"@en ;
+                                                        rdfs:label "has binding value"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasConfidenceValue
+<http://disk-project.org/ontology/disk#hasConfidenceValue> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <http://disk-project.org/ontology/disk#ConfidenceReport> ;
+                                                           rdfs:range xsd:double ;
+                                                           rdfs:comment "Property that binds a confidence report to its confidence value"@en ;
+                                                           rdfs:label "has confidence value"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasDataQuery
+<http://disk-project.org/ontology/disk#hasDataQuery> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://disk-project.org/ontology/disk#LineOfInquiry> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:comment "Property that links a line of inquiry to the data query text associated to it"@en ;
+                                                     rdfs:label "has data query"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasHypothesisQuery
+<http://disk-project.org/ontology/disk#hasHypothesisQuery> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <http://disk-project.org/ontology/disk#LineOfInquiry> ;
+                                                           rdfs:range xsd:string ;
+                                                           rdfs:comment "Property that links a line of inquiry to the hypothesis query text"@en ;
+                                                           rdfs:label "has hypothesis query"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasId
+<http://disk-project.org/ontology/disk#hasId> rdf:type owl:DatatypeProperty .
+
+
+###  http://disk-project.org/ontology/disk#hasRunLink
+<http://disk-project.org/ontology/disk#hasRunLink> rdf:type owl:DatatypeProperty .
+
+
+###  http://disk-project.org/ontology/disk#hasStatus
+<http://disk-project.org/ontology/disk#hasStatus> rdf:type owl:DatatypeProperty .
+
+
+###  http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus
+<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> ;
+                                                                        rdfs:range xsd:string ;
+                                                                        rdfs:comment "Property that states the status of a triggered line of inquiry."@en ,
+                                                                                     "Property that tells the triggered lline Of inquiry's status"@en ;
+                                                                        rdfs:label "Triggered Line Of Inquiry Status"@en ,
+                                                                                   "has triggered line of inquiry status"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://disk-project.org/ontology/disk#ConfidenceReport
+<http://disk-project.org/ontology/disk#ConfidenceReport> rdf:type owl:Class ;
+                                                         rdfs:comment "A confidence report groups the confidence value and the link to the triggered line of inquiry of a given statement or hypothesis"@en ;
+                                                         rdfs:label "Confidence report"@en .
+
+
+###  http://disk-project.org/ontology/disk#Data
+<http://disk-project.org/ontology/disk#Data> rdf:type owl:Class ;
+                                             rdfs:comment "The results produced as a result of executing a workflow from a given line of inquiry"@en ;
+                                             rdfs:label "Data"@en .
+
+
+###  http://disk-project.org/ontology/disk#Hypothesis
+<http://disk-project.org/ontology/disk#Hypothesis> rdf:type owl:Class ;
+                                                   rdfs:comment """A hypothesis h consists of: 
+1. A hypothesis statement, which is a set of assertions about entities in the domain.  For example, they express assertions such as “The mutant form of Protein ABCD is associated with colon cancer.”
+2. A hypothesis qualification (confidence report) , which qualifies the veracity of the hypothesis based on the data and the analyses done so far.  A typical qualification is a numeric confidence value.  For example, for the hypothesis statement above we could have a confidence value of 0.7. Each of the statements of a hypothesis may have a different confidence value.
+3. A hypothesis provenance, which is a record of the analyses that were carried out in support of the hypothesis statement.  For example the provenance may include an analysis of mass spectrometry data for 25 patients with colon cancer and 25 healthy controls followed by clustering, cluster metrics and binary hypothesis testing.
+4. A hypothesis history, which points to a prior hypothesis h’ that was revised to generate h.  In our example, a prior hypothesis could be “Protein ABCD is associated with cancer.”"""@en ;
+                                                   rdfs:label "Hypothesis"@en .
+
+
+###  http://disk-project.org/ontology/disk#LineOfInquiry
+<http://disk-project.org/ontology/disk#LineOfInquiry> rdf:type owl:Class ;
+                                                      rdfs:comment """A line of inquiry represents potential analyses that can be pursued to test a type of hypothesis.  A line of inquiry consists of:
 1. A hypothesis pattern, which represents the type of hypotheses that can be explored with this line of inquiry.  An example of a hypothesis pattern is “Protein ?p is associated with cancer ?c”.  This hypothesis pattern must be expressed in the same language as hypothesis statements, so that they can be matched against a user’s hypothesis.
 2. A set of query patterns, representing the kinds of data relevant to testing the hypothesis pattern as a set of templates of queries to a data repository.  Several kinds of data may be relevant, so there may be several query patterns.  For example, “Retrieve data of mass spectrometry experiments of tumor samples from patients with cancer ?c”.  
 3. A set of workflows, which capture data analysis methods that can be applied to the data retrieved by the query patterns in order to test the hypothesis pattern.  For example, a workflow to analyze mass spectrometry data could include steps such as matching proteins from either a patient’s custom database or on a reference human proteomic database to tandem mass spectrometry data.
@@ -152,171 +358,98 @@
 5. A set of meta-workflows, which describe how to aggregate the results of the workflow executions done to analyze the data.  For example, suppose that one of the workflows in the line of inquiry is for analyzing protein mass spectrometry data for n patients finding evidence for the protein ?p with a p-value p1 and another workflow is for protein fluorescence data for m patients giving a p-value p1, then the meta-workflow would indicate how to combine that evidence into a joint confidence value.
 6. A set of meta-workflow mappings, which describe how the results of the workflow executions are to be used to generate bindings for the inputs of the meta-workflows.
 7. A set of priorities, which describe the relative importance of running different execution-ready workflows given the hypothesis at hand"""@en ;
-      rdfs:label "Line of Inquiry"@en .
+                                                      rdfs:label "Line of Inquiry"@en .
 
-<http://www.w3.org/ns/prov#has_provenance>
-      a       owl:ObjectProperty ;
-      rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
-      rdfs:label "has provenance"@en .
 
-:ConfidenceReport
-      a       owl:Class ;
-      rdfs:comment "A confidence report groups the confidence value and the link to the triggered line of inquiry of a given statement or hypothesis"@en ;
-      rdfs:label "Confidence report"@en .
+###  http://disk-project.org/ontology/disk#MetaWorkflow
+<http://disk-project.org/ontology/disk#MetaWorkflow> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> ;
+                                                     rdfs:comment "A metaworkflow is a special type of workflow which uses as inputs the results of other workflows"@en ;
+                                                     rdfs:label "Metaworkflow"@en .
 
-:hasConfidenceReport
-      a       owl:ObjectProperty ;
-      rdfs:domain
-              [ a       owl:Class ;
-                owl:unionOf (:Hypothesis rdf:Statement)
-              ] ;
-      rdfs:label "has confidence report"@en , "Property that links the hypothesis or statement to the ConfidenceReport that supports them"@en ;
-      rdfs:range :ConfidenceReport .
 
-:hasExecution
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a workflow bundle to the execution results of the workflow"@en ;
-      rdfs:domain :WorkflowBinding ;
-      rdfs:label "has execution"@en ;
-      rdfs:range <http://www.wings-workflows.org/ontology/execution.owl#Execution> .
+###  http://disk-project.org/ontology/disk#TriggeredLineOfInquiry
+<http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> rdf:type owl:Class ;
+                                                               rdfs:comment "A triggered line of inquiry represents a strategy for exploring a hypothesis that is currently being explored by executing its associated workflows and metaworkflows. A triggered line of inquiry may require a long time to complete. When finished, the triggered line of inquiry will include pointers to the provenance of the workflows and metaworkflows that participated on the execution, as well as a confidence value on the original hypothesis."@en ;
+                                                               rdfs:label "Triggered line of inquiry"@en .
 
-:hasTriggeredLineOfInquiry
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a confidence report to the triggered line of inquiry that contains all the provenance for the report's value."@en ;
-      rdfs:domain :ConfidenceReport ;
-      rdfs:label "has triggered line of inquiry"@en ;
-      rdfs:range :TriggeredLineOfInquiry ;
-      rdfs:subPropertyOf <http://www.w3.org/ns/prov#has_provenance> .
 
-:hasConfidenceValue
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Property that binds a confidence report to its confidence value"@en ;
-      rdfs:domain :ConfidenceReport ;
-      rdfs:label "has confidence value"@en ;
-      rdfs:range xsd:double .
+###  http://disk-project.org/ontology/disk#VariableBinding
+<http://disk-project.org/ontology/disk#VariableBinding> rdf:type owl:Class ;
+                                                        rdfs:comment "Contains a Variable and a binding value"@en ;
+                                                        rdfs:label "Variable binding"@en .
 
-<http://www.w3.org/ns/prov#wasRevisionOf>
-      a       owl:ObjectProperty ;
-      rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
-      rdfs:label "was revision of"@en ;
-      rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> .
 
-:hasHypothesisQuery
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Property that links a line of inquiry to the hypothesis query text"@en ;
-      rdfs:domain :LineOfInquiry ;
-      rdfs:label "has hypothesis query"@en ;
-      rdfs:range xsd:string .
+###  http://disk-project.org/ontology/disk#WorkflowBinding
+<http://disk-project.org/ontology/disk#WorkflowBinding> rdf:type owl:Class ;
+                                                        rdfs:comment "Contains a workflow and a variable binding"@en ;
+                                                        rdfs:label "Workflow binding"@en .
 
-:TriggeredLineOfInquiry
-      a       owl:Class ;
-      rdfs:comment "A triggered line of inquiry represents a strategy for exploring a hypothesis that is currently being explored by executing its associated workflows and metaworkflows. A triggered line of inquiry may require a long time to complete. When finished, the triggered line of inquiry will include pointers to the provenance of the workflows and metaworkflows that participated on the execution, as well as a confidence value on the original hypothesis."@en ;
-      rdfs:label "Triggered line of inquiry"@en .
 
-:createdFrom
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that states from where these data have been created (e-g-, workflow, metaworkflow, line of inquiry, etc.)"@en ;
-      rdfs:domain :Data ;
-      rdfs:label "created from"@en ;
-      rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> .
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+rdf:Statement rdf:type owl:Class ;
+              rdfs:isDefinedBy <https://www.w3.org/TR/rdf-schema/> ;
+              rdfs:label "Statement"@en .
 
-rdf:Statement
-      a       owl:Class ;
-      rdfs:isDefinedBy <https://www.w3.org/TR/rdf-schema/> ;
-      rdfs:label "Statement"@en .
 
-:hasBindingValue
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Property that links a binding to its associated value"@en ;
-      rdfs:domain :VariableBinding ;
-      rdfs:label "has binding value"@en ;
-      rdfs:range xsd:string .
+###  http://www.w3.org/ns/prov#Plan
+<http://www.w3.org/ns/prov#Plan> rdf:type owl:Class ;
+                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                 rdfs:label "Plan"@en .
 
-:hasLineOfInquiry
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a triggered line of inquiry to the original line of inquiry from which it was derived"@en ;
-      rdfs:domain :TriggeredLineOfInquiry ;
-      rdfs:label "has line of inquiry"@en ;
-      rdfs:range :LineOfInquiry ;
-      rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> .
 
-:MetaWorkflow
-      a       owl:Class ;
-      rdfs:comment "A metaworkflow is a special type of workflow which uses as inputs the results of other workflows"@en ;
-      rdfs:label "Metaworkflow"@en ;
-      rdfs:subClassOf <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> .
+###  http://www.w3.org/ns/prov/#Bundle
+<http://www.w3.org/ns/prov/#Bundle> rdf:type owl:Class ;
+                                    rdfs:comment "A bundle is a named set of provenance descriptions, and is itself an entity, so allowing provenance of provenance to be expressed."@en ;
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                    rdfs:label "Bundle"@en .
 
-:hasMetaWorkflowBinding
-      a       owl:ObjectProperty ;
-      rdfs:comment "The workflow bindings associated to a metaworkflow, i.e., a workflow and a variable binding"@en ;
-      rdfs:domain
-              [ a       owl:Class ;
-                owl:unionOf (:LineOfInquiry :TriggeredLineOfInquiry)
-              ] ;
-      rdfs:label "has metaworkflow binding"@en ;
-      rdfs:range :WorkflowBinding ;
-      rdfs:subPropertyOf :hasWorkflowBinding .
 
-:Hypothesis
-      a       owl:Class ;
-      rdfs:comment """A hypothesis h consists of: 
-1. A hypothesis statement, which is a set of assertions about entities in the domain.  For example, they express assertions such as “The mutant form of Protein ABCD is associated with colon cancer.”
-2. A hypothesis qualification (confidence report) , which qualifies the veracity of the hypothesis based on the data and the analyses done so far.  A typical qualification is a numeric confidence value.  For example, for the hypothesis statement above we could have a confidence value of 0.7. Each of the statements of a hypothesis may have a different confidence value.
-3. A hypothesis provenance, which is a record of the analyses that were carried out in support of the hypothesis statement.  For example the provenance may include an analysis of mass spectrometry data for 25 patients with colon cancer and 25 healthy controls followed by clustering, cluster metrics and binary hypothesis testing.
-4. A hypothesis history, which points to a prior hypothesis h’ that was revised to generate h.  In our example, a prior hypothesis could be “Protein ABCD is associated with cancer.”"""@en ;
-      rdfs:label "Hypothesis"@en .
+###  http://www.wings-workflows.org/ontology/execution.owl#Execution
+<http://www.wings-workflows.org/ontology/execution.owl#Execution> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.w3.org/ns/prov/#Bundle> ;
+                                                                  rdfs:comment "An execution of a workflow"@en ;
+                                                                  rdfs:isDefinedBy <http://www.wings-workflows.org/ontology/execution.owl#> ;
+                                                                  rdfs:label "Execution"@en .
 
-<http://www.w3.org/ns/prov#Plan>
-      a       owl:Class ;
-      rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
-      rdfs:label "Plan"@en .
 
-:hasWorkflow
-      a       owl:ObjectProperty ;
-      rdfs:comment "Property that links a Workflow binding to its associated workflow"@en ;
-      rdfs:domain :WorkflowBinding ;
-      rdfs:label "has workflow"@en ;
-      rdfs:range <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> .
+###  http://www.wings-workflows.org/ontology/workflow.owl#Variable
+<http://www.wings-workflows.org/ontology/workflow.owl#Variable> rdf:type owl:Class ;
+                                                                rdfs:comment "Variable of a workflow template"@en ;
+                                                                rdfs:isDefinedBy <http://www.wings-workflows.org/ontology/workflow.owl#> ;
+                                                                rdfs:label "Variable"@en .
 
-<http://www.w3.org/ns/prov#wasDerivedFrom>
-      a       owl:ObjectProperty ;
-      rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
-      rdfs:label "was derived from"@en .
 
-:WorkflowBinding
-      a       owl:Class ;
-      rdfs:comment "Contains a workflow and a variable binding"@en ;
-      rdfs:label "Workflow binding"@en .
+###  http://www.wings-workflows.org/ontology/workflow.owl#Workflow
+<http://www.wings-workflows.org/ontology/workflow.owl#Workflow> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.w3.org/ns/prov#Plan> ;
+                                                                rdfs:comment "Workflows define the set of computational tasks and dependencies needed to carry out in silico experiments"@en ;
+                                                                rdfs:isDefinedBy <http://www.wings-workflows.org/ontology/workflow.owl#> ;
+                                                                rdfs:label "Workflow"@en .
 
-:hasRunLink
-      a       owl:DatatypeProperty , owl:AnnotationProperty ;
-      rdfs:comment "Link to the execution of a workflow in the corresponding workflow system"@en ;
-      rdfs:domain :WorkflowBinding ;
-      rdfs:label "has run link"@en .
 
-:dateCreated
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Property which describes when the hypothesis was created"@en ;
-      rdfs:domain :Hypothesis ;
-      rdfs:label "date created"@en ;
-      rdfs:range xsd:date .
+#################################################################
+#    Annotations
+#################################################################
 
-:dateModified
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Property which describes when the hypothesis was modified"@en ;
-      rdfs:domain :Hypothesis ;
-      rdfs:label "date modified"@en ;
-      rdfs:range xsd:date .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> rdfs:comment "This property is used to identify which variables in the hypothesis are used in the workflows."@en ;
+                                                              rdfs:label "has hypothesis variable"@en .
 
-<http://www.wings-workflows.org/ontology/workflow.owl#Workflow>
-      a       owl:Class ;
-      rdfs:comment "Workflows define the set of computational tasks and dependencies needed to carry out in silico experiments"@en ;
-      rdfs:isDefinedBy <http://www.wings-workflows.org/ontology/workflow.owl#> ;
-      rdfs:label "Workflow"@en ;
-      rdfs:subClassOf <http://www.w3.org/ns/prov#Plan> .
 
-<http://www.w3.org/ns/prov/#Bundle>
-      a       owl:Class ;
-      rdfs:comment "A bundle is a named set of provenance descriptions, and is itself an entity, so allowing provenance of provenance to be expressed."@en ;
-      rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
-      rdfs:label "Bundle"@en .
+<http://disk-project.org/ontology/disk#hasId> rdfs:comment "Property that links to the ID of the described resource"@en ;
+                                              rdfs:label "has id"@en .
+
+
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> rdfs:comment "Property that links a metaworkflow to its revised hypothesis variable."@en ;
+                                                                     rdfs:label "has revised hypothesis variable"@en .
+
+
+<http://disk-project.org/ontology/disk#hasRunLink> rdfs:comment "Link to the execution of a workflow in the corresponding workflow system"@en ;
+                                                   rdfs:label "has run link"@en .
+
+
+<http://disk-project.org/ontology/disk#hasStatus> rdfs:comment "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"@en ;
+                                                  rdfs:label "has run status"@en .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
