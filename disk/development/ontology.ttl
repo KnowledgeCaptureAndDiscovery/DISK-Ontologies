@@ -219,7 +219,7 @@ xsd:date rdf:type rdfs:Datatype .
                                     ] ;
              rdfs:range :Person ;
              rdfs:comment "Property that links a Line of Inquiry, Triggered Line of Inquiry or Hypothesis to its author"@en ;
-             rdfs:label "has workflow"@en .
+             rdfs:label "has author"@en .
 
 ###  http://disk-project.org/ontology/disk#hasWorkflowBinding
 :hasWorkflowBinding rdf:type owl:ObjectProperty ;
