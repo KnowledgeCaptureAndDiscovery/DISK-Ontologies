@@ -209,8 +209,8 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:comment "Property that links a Workflow binding to its associated workflow"@en ;
              rdfs:label "has workflow"@en .
 
-###  http://disk-project.org/ontology/disk#author
-:author rdf:type owl:ObjectProperty ;
+###  http://disk-project.org/ontology/disk#hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
              rdfs:domain [ rdf:type owl:Class ;
                                       owl:unionOf ( :LineOfInquiry
                                                     :TriggeredLineOfInquiry
