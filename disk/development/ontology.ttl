@@ -209,6 +209,17 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:comment "Property that links a Workflow binding to its associated workflow"@en ;
              rdfs:label "has workflow"@en .
 
+###  http://disk-project.org/ontology/disk#author
+:author rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :LineOfInquiry
+                                                    :TriggeredLineOfInquiry
+                                                    :Hypothesis
+                                                  )
+                                    ] ;
+             rdfs:range :Person ;
+             rdfs:comment "Property that links a Line of Inquiry, Triggered Line of Inquiry or Hypothesis to its author"@en ;
+             rdfs:label "has workflow"@en .
 
 ###  http://disk-project.org/ontology/disk#hasWorkflowBinding
 :hasWorkflowBinding rdf:type owl:ObjectProperty ;
@@ -302,6 +313,20 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:comment "Property that links a line of inquiry to the hypothesis query text"@en ;
                     rdfs:label "has hypothesis query"@en .
 
+###  http://disk-project.org/ontology/disk#hasEmail
+:hasEmail rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Person ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Email of a person"@en ;
+                 rdfs:label "has email"@en .
+
+###  http://disk-project.org/ontology/disk#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Person ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Name of a person"@en ;
+                 rdfs:label "has name"@en .
+
 
 ###  http://disk-project.org/ontology/disk#hasId
 :hasId rdf:type owl:DatatypeProperty .
@@ -335,11 +360,15 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:label "Confidence report"@en .
 
 
+###  http://disk-project.org/ontology/disk#Person
+:Person rdf:type owl:Class ;
+      rdfs:comment "Contains details about a person"@en ;
+      rdfs:label "Person"@en .
+
 ###  http://disk-project.org/ontology/disk#Data
 :Data rdf:type owl:Class ;
       rdfs:comment "The results produced as a result of executing a workflow from a given line of inquiry"@en ;
       rdfs:label "Data"@en .
-
 
 ###  http://disk-project.org/ontology/disk#Hypothesis
 :Hypothesis rdf:type owl:Class ;
