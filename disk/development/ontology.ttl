@@ -135,7 +135,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasQuestionVariable rdf:type owl:ObjectProperty ;
                rdfs:domain :Question ;
                rdfs:range :QuestionVariable ;
-               rdfs:comment "property that links a question to a question variable to store bindings."@en ;
+               rdfs:comment "Property that links a hypothesis question to a variable that appears in the question."@en ;
                rdfs:label "has question variable"@en .
 
 ###  http://disk-project.org/ontology/disk#hasLineOfInquiry
@@ -224,7 +224,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                   )
                                     ] ;
              rdfs:range :Person ;
-             rdfs:comment "Property that links a Line of Inquiry, Triggered Line of Inquiry or Hypothesis to its author"@en ;
+             rdfs:comment "Property to describe the author of a Line of Inquiry, Triggered Line of Inquiry or Hypothesis"@en ;
              rdfs:label "has author"@en .
 
 ###  http://disk-project.org/ontology/disk#hasQuestion
@@ -348,14 +348,14 @@ xsd:date rdf:type rdfs:Datatype .
                                                   )
                                     ] ;
              rdfs:range xsd:string ;
-             rdfs:comment "Property that add notes to Line of Inquiry and Hypothesis"@en ;
+             rdfs:comment "Property to indicate the usage notes to consider when using a line of inquiry or hypothesis"@en ;
              rdfs:label "has usage notes"@en .
 
 ###  http://disk-project.org/ontology/disk#hasQuestionTemplate
 :hasQuestionTemplate rdf:type owl:DatatypeProperty ;
                rdfs:domain :Question ;
                rdfs:range xsd:string ;
-               rdfs:comment "property to store human readable template of hypothesis question"@en ;
+               rdfs:comment "Property designed to store a readable template associated with a hypothesis question"@en ;
                rdfs:label "has question template"@en .
 
 
@@ -363,7 +363,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasVariableName rdf:type owl:DatatypeProperty ;
                rdfs:domain :QuestionVariable ;
                rdfs:range xsd:string ;
-               rdfs:comment "property to store a variable name"@en ;
+               rdfs:comment "Property that indicates the name of a given variable"@en ;
                rdfs:label "has variable name"@en .
 
 
@@ -371,7 +371,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasConstraints rdf:type owl:DatatypeProperty ;
                rdfs:domain :QuestionVariable ;
                rdfs:range xsd:string ;
-               rdfs:comment "property to store a query that will return possible values"@en ;
+               rdfs:comment "Property which contains the query to retrieve possible values for a question variable."@en ;
                rdfs:label "has constraints"@en .
 
 ###  http://disk-project.org/ontology/disk#hasId
@@ -408,7 +408,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#Person
 :Person rdf:type owl:Class ;
-      rdfs:comment "Contains details about a person"@en ;
+      rdfs:comment "Property to identify a person"@en ;
       rdfs:label "Person"@en .
 
 ###  http://disk-project.org/ontology/disk#Data
@@ -465,12 +465,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#Question
 :Question rdf:type owl:Class ;
-                 rdfs:comment "Contains a hypothesis question"@en ;
+                 rdfs:comment "Identifies a specific hypothesis question which is associated with a question template."@en ;
                  rdfs:label "Question"@en .
 
 ###  http://disk-project.org/ontology/disk#QuestionVariable
 :QuestionVariable rdf:type owl:Class ;
-                 rdfs:comment "Contains a hypothesis question variable"@en ;
+                 rdfs:comment "Identifies a variable within hypothesis question. The value of the variable may be defined by the user or line of inquiry."@en ;
                  rdfs:label "Question Variable"@en .
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
