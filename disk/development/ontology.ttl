@@ -371,7 +371,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasConstraints rdf:type owl:DatatypeProperty ;
                rdfs:domain :QuestionVariable ;
                rdfs:range xsd:string ;
-               rdfs:comment "Property which contains the query to retrieve possible values for a question variable."@en ;
+               rdfs:comment "Property designed to indicate the constraints of a question variable."@en ;
                rdfs:label "has constraints"@en .
 
 ###  http://disk-project.org/ontology/disk#hasId
@@ -465,7 +465,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#Question
 :Question rdf:type owl:Class ;
-                 rdfs:comment "Identifies a specific hypothesis question which is associated with a question template."@en ;
+                 rdfs:comment "Identifies a specific hypothesis question which is associated with a question template along with question variables."@en ;
                  rdfs:label "Question"@en .
 
 ###  http://disk-project.org/ontology/disk#QuestionVariable
