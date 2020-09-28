@@ -131,6 +131,12 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:domain :MetaWorkflow ,
                                    :WorkflowBinding .
 
+###  http://disk-project.org/ontology/disk#hasQuestionVariable
+:hasQuestionVariable rdf:type owl:ObjectProperty ;
+               rdfs:domain :Question ;
+               rdfs:range :QuestionVariable ;
+               rdfs:comment "Property that links a hypothesis question to a variable that appears in the question."@en ;
+               rdfs:label "has question variable"@en .
 
 ###  http://disk-project.org/ontology/disk#hasLineOfInquiry
 :hasLineOfInquiry rdf:type owl:ObjectProperty ;
@@ -209,6 +215,24 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:comment "Property that links a Workflow binding to its associated workflow"@en ;
              rdfs:label "has workflow"@en .
 
+###  http://disk-project.org/ontology/disk#hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :LineOfInquiry
+                                                    :TriggeredLineOfInquiry
+                                                    :Hypothesis
+                                                  )
+                                    ] ;
+             rdfs:range :Person ;
+             rdfs:comment "Property to describe the author of a Line of Inquiry, Triggered Line of Inquiry or Hypothesis"@en ;
+             rdfs:label "has author"@en .
+
+###  http://disk-project.org/ontology/disk#hasQuestion
+:hasQuestion rdf:type owl:ObjectProperty ;
+                    rdfs:domain :LineOfInquiry ;
+                    rdfs:range :Question ;
+                    rdfs:comment "Property that links a Line of Inquiry with a question"@en ;
+                    rdfs:label "has question"@en .
 
 ###  http://disk-project.org/ontology/disk#hasWorkflowBinding
 :hasWorkflowBinding rdf:type owl:ObjectProperty ;
@@ -302,6 +326,53 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:comment "Property that links a line of inquiry to the hypothesis query text"@en ;
                     rdfs:label "has hypothesis query"@en .
 
+###  http://disk-project.org/ontology/disk#hasEmail
+:hasEmail rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Person ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Email of a person"@en ;
+                 rdfs:label "has email"@en .
+
+###  http://disk-project.org/ontology/disk#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Person ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Name of a person"@en ;
+                 rdfs:label "has name"@en .
+
+###  http://disk-project.org/ontology/disk#hasUsageNotes
+:hasUsageNotes rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :LineOfInquiry
+                                                    :Hypothesis
+                                                  )
+                                    ] ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Property to indicate the usage notes to consider when using a line of inquiry or hypothesis"@en ;
+             rdfs:label "has usage notes"@en .
+
+###  http://disk-project.org/ontology/disk#hasQuestionTemplate
+:hasQuestionTemplate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Question ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Property designed to store a readable template associated with a hypothesis question"@en ;
+               rdfs:label "has question template"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasVariableName
+:hasVariableName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :QuestionVariable ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Property that indicates the name of a given variable"@en ;
+               rdfs:label "has variable name"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasConstraints
+:hasConstraints rdf:type owl:DatatypeProperty ;
+               rdfs:domain :QuestionVariable ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Property designed to indicate the constraints of a question variable."@en ;
+               rdfs:label "has constraints"@en .
 
 ###  http://disk-project.org/ontology/disk#hasId
 :hasId rdf:type owl:DatatypeProperty .
@@ -335,11 +406,15 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:label "Confidence report"@en .
 
 
+###  http://disk-project.org/ontology/disk#Person
+:Person rdf:type owl:Class ;
+      rdfs:comment "Property to identify a person"@en ;
+      rdfs:label "Person"@en .
+
 ###  http://disk-project.org/ontology/disk#Data
 :Data rdf:type owl:Class ;
       rdfs:comment "The results produced as a result of executing a workflow from a given line of inquiry"@en ;
       rdfs:label "Data"@en .
-
 
 ###  http://disk-project.org/ontology/disk#Hypothesis
 :Hypothesis rdf:type owl:Class ;
@@ -388,6 +463,15 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:comment "Contains a workflow and a variable binding"@en ;
                  rdfs:label "Workflow binding"@en .
 
+###  http://disk-project.org/ontology/disk#Question
+:Question rdf:type owl:Class ;
+                 rdfs:comment "Identifies a specific hypothesis question which is associated with a question template along with question variables."@en ;
+                 rdfs:label "Question"@en .
+
+###  http://disk-project.org/ontology/disk#QuestionVariable
+:QuestionVariable rdf:type owl:Class ;
+                 rdfs:comment "Identifies a variable within hypothesis question. The value of the variable may be defined by the user or line of inquiry."@en ;
+                 rdfs:label "Question Variable"@en .
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
 rdf:Statement rdf:type owl:Class ;
