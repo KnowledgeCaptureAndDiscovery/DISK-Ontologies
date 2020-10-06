@@ -48,7 +48,7 @@
 
 
 ###  http://disk-project.org/ontology/disk#hasRunStatus
-:hasStatus rdf:type owl:AnnotationProperty ;
+:hasRunStatus rdf:type owl:AnnotationProperty ;
            rdfs:range xsd:string ;
            rdfs:domain _:genid-nodeid-node1ealleodvx1 ,
                        :WorkflowBinding .
@@ -382,19 +382,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasId
 :hasId rdf:type owl:DatatypeProperty ;
-       rdfs:domain :Thing,
-                   :WorkflowBinding ;
-       rdfs:range xsd:string ;
-       rdfs:comment "Property that links to the ID of the described resource."@en ;
-       rdfs:label "has id"@en .
+      rdfs:domain owl:Thing , :WorkflowBinding ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Property that links to the ID of the described resource."@en ;
+      rdfs:label "has id"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasRunLink
 :hasRunLink rdf:type owl:DatatypeProperty ;
-            rdfs:domain :WorkflowBinding ;
-            rdfs:range xsd:string ;
-            rdfs:comment "Link to the execution of a workflow in the corresponding workflow system."@en ;
-            rdfs:label "has run link"@en .
+           rdfs:domain :WorkflowBinding ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Link to the execution of a workflow in the corresponding workflow system."@en ;
+           rdfs:label "has run link"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasRunStatus
