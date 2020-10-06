@@ -106,8 +106,8 @@ xsd:date rdf:type rdfs:Datatype .
                                                )
                                  ] ;
                      rdfs:range :ConfidenceReport ;
-                     rdfs:label "Property that links the hypothesis or statement to the ConfidenceReport that supports them"@en ,
-                                "has confidence report"@en .
+                     rdfs:label "Property that links the hypothesis or statement to the ConfidenceReport that supports them"@en ;
+                     rdfs:comment "has confidence report"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasExecution
@@ -382,11 +382,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasId
 :hasId rdf:type owl:DatatypeProperty ;
-       rdfs:domain [ rdf:type owl:Class;
-                             owl:unionOf ( :Thing
-                                           :WorkflowBinding
-                                         )
-                             ];
+       rdfs:domain :Thing,
+                   :WorkflowBinding ;
        rdfs:range xsd:string ;
        rdfs:comment "Property that links to the ID of the described resource."@en ;
        rdfs:label "has id"@en .
@@ -394,7 +391,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasRunLink
 :hasRunLink rdf:type owl:DatatypeProperty ;
-            rdfs:domain owl:WorkflowBinding ;
+            rdfs:domain :WorkflowBinding ;
             rdfs:range xsd:string ;
             rdfs:comment "Link to the execution of a workflow in the corresponding workflow system."@en ;
             rdfs:label "has run link"@en .
@@ -402,7 +399,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasRunStatus
 :hasRunStatus rdf:type owl:DatatypeProperty ;
-           rdfs:domain owl:WorkflowBinding ;
+           rdfs:domain :WorkflowBinding ;
            rdfs:range xsd:string ;
            rdfs:comment "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e. ongoing, finished, etc.)"@en ;
            rdfs:label "has run status"@en .
