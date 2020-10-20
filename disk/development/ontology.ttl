@@ -382,7 +382,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasId
 :hasId rdf:type owl:DatatypeProperty ;
-               rdfs:domain owl:Thing , :WorkflowBinding ;
+               rdfs:domain :WorkflowBinding, owl:Thing ;
                rdfs:range xsd:string ;
                rdfs:comment "Property that links to the ID of the described resource"@en ;
                rdfs:label "has id"@en .
