@@ -414,6 +414,14 @@ xsd:date rdf:type rdfs:Datatype .
                                             "has triggered line of inquiry status"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasDataQueryDescription
+:hasDataQueryDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :LineOfInquiry ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Property to describe the data retrieved from a data query in a Line of Inquiry."@en ;
+                         rdfs:label "Data Query Description"@en ;
+
+
 #################################################################
 #    Classes
 #################################################################
