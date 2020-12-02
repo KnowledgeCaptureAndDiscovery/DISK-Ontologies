@@ -47,8 +47,8 @@
             rdfs:domain :WorkflowBinding .
 
 
-###  http://disk-project.org/ontology/disk#hasStatus
-:hasStatus rdf:type owl:AnnotationProperty ;
+###  http://disk-project.org/ontology/disk#hasRunStatus
+:hasRunStatus rdf:type owl:AnnotationProperty ;
            rdfs:range xsd:string ;
            rdfs:domain _:genid-nodeid-node1ealleodvx1 ,
                        :WorkflowBinding .
@@ -106,8 +106,8 @@ xsd:date rdf:type rdfs:Datatype .
                                                )
                                  ] ;
                      rdfs:range :ConfidenceReport ;
-                     rdfs:label "Property that links the hypothesis or statement to the ConfidenceReport that supports them"@en ,
-                                "has confidence report"@en .
+                     rdfs:label "Property that links the hypothesis or statement to the ConfidenceReport that supports them"@en ;
+                     rdfs:comment "has confidence report"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasExecution
@@ -129,7 +129,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://disk-project.org/ontology/disk#hasHypothesisVariable
 :hasHypothesisVariable rdf:type owl:ObjectProperty ;
                        rdfs:domain :MetaWorkflow ,
-                                   :WorkflowBinding .
+                                   :WorkflowBinding ;
+                       rdfs:range :Variable ;
+                       rdfs:comment "This property is used to identify which variables in the hypothesis are used in the workflows."@en ;
+                       rdfs:label "has hypothesis variable"@en .
 
 ###  http://disk-project.org/ontology/disk#hasQuestionVariable
 :hasQuestionVariable rdf:type owl:ObjectProperty ;
@@ -180,7 +183,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable
 :hasRevisedHypothesisVariable rdf:type owl:ObjectProperty ;
                               rdfs:domain :MetaWorkflow ,
-                                          :WorkflowBinding .
+                                          :WorkflowBinding ;
+                              rdfs:range :Variable ;
+                              rdfs:comment "Property that links a metaworkflow to its revised hypothesis variable"@en ;
+                              rdfs:label "has revised hypothesis variable"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry
@@ -263,6 +269,13 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
                                           rdfs:label "was revision of"@en .
+
+### http://disk-project.org/ontology/disk#hasParameter
+:hasParameter rdf:type owl:ObjectProperty ;
+              rdfs:domain :WorkflowBinding ;
+              rdfs:range :VariableBinding ;
+              rdfs:comment "Property to store the parameters to be inputted to a workflow"@en ;
+              rdfs:label "has parameter"@en .
 
 
 #################################################################
@@ -363,7 +376,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasVariableName rdf:type owl:DatatypeProperty ;
                rdfs:domain :QuestionVariable ;
                rdfs:range xsd:string ;
-               rdfs:comment "Property that indicates the name of a given variable"@en ;
+               rdfs:comment "Property that indicates the name of a given variable."@en ;
                rdfs:label "has variable name"@en .
 
 
@@ -375,15 +388,27 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "has constraints"@en .
 
 ###  http://disk-project.org/ontology/disk#hasId
-:hasId rdf:type owl:DatatypeProperty .
+:hasId rdf:type owl:DatatypeProperty ;
+               rdfs:domain :WorkflowBinding ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Property that links to the ID of the described resource"@en ;
+               rdfs:label "has id"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasRunLink
-:hasRunLink rdf:type owl:DatatypeProperty .
+:hasRunLink rdf:type owl:DatatypeProperty ;
+               rdfs:domain :WorkflowBinding ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Link to the execution of a workflow in the corresponding workflow system"@en ;
+               rdfs:label "has run link"@en .
 
 
-###  http://disk-project.org/ontology/disk#hasStatus
-:hasStatus rdf:type owl:DatatypeProperty .
+###  http://disk-project.org/ontology/disk#hasRunStatus
+:hasRunStatus rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :WorkflowBinding ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e. ongoing, finished, etc.)"@en ;
+                                 rdfs:label "has run status"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus
@@ -394,6 +419,14 @@ xsd:date rdf:type rdfs:Datatype .
                                               "Property that tells the triggered lline Of inquiry's status"@en ;
                                  rdfs:label "Triggered Line Of Inquiry Status"@en ,
                                             "has triggered line of inquiry status"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasDataQueryDescription
+:hasDataQueryDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :LineOfInquiry ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Property to describe the data retrieved from a data query in a Line of Inquiry."@en ;
+                         rdfs:label "Data Query Description"@en ;
 
 
 #################################################################
@@ -535,7 +568,7 @@ rdf:Statement rdf:type owl:Class ;
             rdfs:label "has run link"@en .
 
 
-:hasStatus rdfs:comment "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"@en ;
+:hasRunStatus rdfs:comment "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"@en ;
            rdfs:label "has run status"@en .
 
 

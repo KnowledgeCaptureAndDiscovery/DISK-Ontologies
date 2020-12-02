@@ -513,16 +513,19 @@ This section provides details for each class and property defined by DISK Ontolo
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasExecution"
+            <a href="#hasId"
+               title="http://disk-project.org/ontology/disk#hasId">has id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunLink"
+               title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunStatus"
+               title="http://disk-project.org/ontology/disk#hasRunStatus">has run status</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExecution"
                title="http://disk-project.org/ontology/disk#hasExecution">has execution</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasHypothesisVariable"
                title="http://disk-project.org/ontology/disk#hasHypothesisVariable">has hypothesis variable</a>
-            <sup class="type-op" title="object property">op</sup>, <span class="dotted" title="http://disk-project.org/ontology/disk#hasId">has id</span>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRevisedHypothesisVariable"
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRevisedHypothesisVariable"
                title="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">has revised hypothesis variable</a>
-            <sup class="type-op" title="object property">op</sup>, <span class="dotted" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</span>
-            <sup class="type-dp" title="data property">dp</sup>, <span class="dotted" title="http://disk-project.org/ontology/disk#hasStatus">has run status</span>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasVariableBinding"
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariableBinding"
                title="http://disk-project.org/ontology/disk#hasVariableBinding">has variable binding</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasWorkflow"
                title="http://disk-project.org/ontology/disk#hasWorkflow">has workflow</a>
@@ -1260,11 +1263,23 @@ This section provides details for each class and property defined by DISK Ontolo
          title="http://disk-project.org/ontology/disk#hasHypothesisQuery">has hypothesis query</a>
    </li>
    <li>
+      <a href="#hasId"
+         title="http://disk-project.org/ontology/disk#hasId">has id</a>
+   </li>
+   <li>
       <a href="#hasName" title="http://disk-project.org/ontology/disk#hasName">has name</a>
    </li>
    <li>
       <a href="#hasQuestionTemplate"
          title="http://disk-project.org/ontology/disk#hasQuestionTemplate">has question template</a>
+   </li>
+   <li>
+      <a href="#hasRunLink"
+         title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
+   </li>
+   <li>
+      <a href="#hasRunStatus"
+         title="http://disk-project.org/ontology/disk#hasRunStatus">has run status</a>
    </li>
    <li>
       <a href="#hasUsageNotes"
@@ -1492,6 +1507,31 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasId">
+      <h3>has id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasId</p>
+      <div class="comment">
+         <span class="markdown">Property that links to the ID of the described resource</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">WorkflowBinding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasName">
       <h3>has name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1531,6 +1571,56 @@ This section provides details for each class and property defined by DISK Ontolo
             <dt>has domain</dt>
             <dd>
                <a href="#Question" title="http://disk-project.org/ontology/disk#Question">Question</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRunLink">
+      <h3>has run link<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasRunLink</p>
+      <div class="comment">
+         <span class="markdown">Link to the execution of a workflow in the corresponding workflow system</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">WorkflowBinding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRunStatus">
+      <h3>has run status<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasRunStatus</p>
+      <div class="comment">
+         <span class="markdown">Link to the execution of a workflow in the corresponding workflow system</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">WorkflowBinding</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
