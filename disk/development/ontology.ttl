@@ -270,6 +270,13 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
                                           rdfs:label "was revision of"@en .
 
+### http://disk-project.org/ontology/disk#hasParameter
+:hasParameter rdf:type owl:ObjectProperty ;
+              rdfs:domain :WorkflowBinding ;
+              rdfs:range :VariableBinding ;
+              rdfs:comment "Property to store the parameters to be inputted to a workflow"@en ;
+              rdfs:label "has parameter"@en .
+
 
 #################################################################
 #    Data properties
