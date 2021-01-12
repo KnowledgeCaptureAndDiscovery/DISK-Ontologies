@@ -428,6 +428,17 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:comment "Property to describe the data retrieved from a data query in a Line of Inquiry."@en ;
                          rdfs:label "Data Query Description"@en ;
 
+###  http://disk-project.org/ontology/disk#hasDataSource
+:hasDataSource rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :LineOfInquiry
+                                                    :TriggeredLineOfInquiry
+                                                  )
+                                    ] ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Property to configure the desired target wiki for the data query in a Line of Inquiry."@en ;
+             rdfs:label "has data source"@en .
+
 
 #################################################################
 #    Classes
