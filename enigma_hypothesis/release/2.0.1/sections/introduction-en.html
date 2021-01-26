@@ -1,100 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1671.6">
-  <style type="text/css">
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-    span.s2 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
-    td.td1 {width: 107.1px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
-    td.td2 {width: 261.0px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
-  </style>
-</head>
-<body>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Introduction back to </b></span><span class="s2"><b>ToC</b></span></h2>
-<p class="p2"><span class="s1">Because ENIGMA is a neuroimaging consortium, it is necessary to create an ontology describing neuroimaging terms that will be used to form hypothesis. Lines of inquiry are triggered by certain hypothesis patterns, so its necessary to be able to identify instances of certain terms. Below is a visualization of the DISK Hypothesis Reasoner.</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; line-height: 17.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Namespace declarations</b></span></h3>
-<p class="p4"><span class="s2">Table 1</span><span class="s1">: Namespaces used in the document<span class="Apple-converted-space"> </span></span></p>
-<table cellspacing="0" cellpadding="0">
+<html><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></h2>
+<p>
+Because ENIGMA is a neuroimaging consortium, it is necessary to create an ontology describing neuroimaging terms that will be used to form hypothesis. Lines of inquiry are triggered by certain hypothesis patterns, so its necessary to be able to identify instances of certain terms. Below is a visualization of the DISK Hypothesis Reasoner.</p>
+<h3><span class="s1"><b>Namespace declarations</b></h3>
+<p class="p4">Table 1: Namespaces used in the document</p>
+<table>
   <tbody>
     <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>disk</b></span></p>
+      <td>
+        <p><b>disk</b></p>
       </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;http://disk-project.org/ontology/disk#&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>enigma</b></span></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;https://w3id.org/enigma#&gt;</span></p>
+      <td>
+        <p>&lt;http://disk-project.org/ontology/disk#&gt;</p>
       </td>
     </tr>
     <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>owl</b></span></p>
+      <td >
+        <p><b>enigma</b></p>
       </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;http://www.w3.org/2002/07/owl#&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>rdf</b></span></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span></p>
+      <td>
+        <p>&lt;https://w3id.org/enigma#&gt;</p>
       </td>
     </tr>
     <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>terms</b></span></p>
+      <td >
+        <p><b>owl</b></p>
       </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;http://purl.org/dc/terms/&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>xsd</b></span></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span></p>
+      <td>
+        <p>&lt;http://www.w3.org/2002/07/owl#&gt;</p>
       </td>
     </tr>
     <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>rdfs</b></span></p>
+      <td >
+        <p><b>rdf</b></p>
       </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>ontology</b></span></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;https://w3id.org/disk/ontology/&gt;</span></p>
+      <td>
+        <p>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</p>
       </td>
     </tr>
     <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"><b>[Ontology NS Prefix]</b></span></p>
+      <td >
+        <p><b>terms</b></p>
       </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1">&lt;https://w3id.org/disk/ontology/enigma_hypothesis#&gt;</span></p>
+      <td>
+        <p>&lt;http://purl.org/dc/terms/&gt;</p>
+      </td>
+    </tr>
+    <tr>
+      <td >
+        <p><b>xsd</b></p>
+      </td>
+      <td>
+        <p>&lt;http://www.w3.org/2001/XMLSchema#&gt;</p>
+      </td>
+    </tr>
+    <tr>
+      <td >
+        <p><b>rdfs</b></p>
+      </td>
+      <td>
+        <p>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</p>
+      </td>
+    </tr>
+    <tr>
+      <td >
+        <p><b>ontology</b></p>
+      </td>
+      <td>
+        <p>&lt;https://w3id.org/disk/ontology/&gt;</p>
+      </td>
+    </tr>
+    <tr>
+      <td >
+        <p><b>[Ontology NS Prefix]</b></p>
+      </td>
+      <td>
+        <p>&lt;https://w3id.org/disk/ontology/enigma_hypothesis#&gt;</p>
       </td>
     </tr>
   </tbody>
 </table>
-</body>
 </html>
