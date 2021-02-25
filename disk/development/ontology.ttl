@@ -440,6 +440,14 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "has data source"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasFixedOptions
+:hasFixedOptions rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :QuestionVariable ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Property to describe valid options for a question variable."@en ;
+                         rdfs:label "has fixed options"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
