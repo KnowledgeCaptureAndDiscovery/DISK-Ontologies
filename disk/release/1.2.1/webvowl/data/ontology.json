@@ -1,0 +1,1632 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/ns/prov/", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://disk-project.org/ontology/disk", "http://www.w3.org/2001/XMLSchema", "http://www.wings-workflows.org/ontology/execution.owl", "http://www.wings-workflows.org/ontology/workflow.owl" ],
+    "title" : {
+      "en" : "The DISK Ontology"
+    },
+    "iri" : "http://disk-project.org/ontology/disk#",
+    "version" : "1.2.1",
+    "author" : [ "Yolanda Gil", "Daniel Garijo", "Varun Ratnakar" ],
+    "labels" : {
+      "en" : "DISK Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Daniel Garijo",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Varun Ratnakar",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Yolanda Gil",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "disk",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.2.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://disk-project.org/ontology/disk#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The DISK Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "1",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "64",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "92",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "86",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "0",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "1",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "3", "4" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "10" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#Question",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Question",
+      "en" : "Question"
+    },
+    "comment" : {
+      "en" : "Identifies a specific hypothesis question which is associated with a question template along with question variables."
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "10", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TriggeredLineOfInquiry",
+      "en" : "Triggered line of inquiry"
+    },
+    "comment" : {
+      "en" : "A triggered line of inquiry represents a strategy for exploring a hypothesis that is currently being explored by executing its associated workflows and metaworkflows. A triggered line of inquiry may require a long time to complete. When finished, the triggered line of inquiry will include pointers to the provenance of the workflows and metaworkflows that participated on the execution, as well as a confidence value on the original hypothesis."
+    },
+    "id" : "43"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#QuestionFilter",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuestionFilter",
+      "en" : "Question Filter"
+    },
+    "comment" : {
+      "en" : "Identifies a optional variable within hypothesis question. The value of the variable may be defined by the user."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#QuestionVariable",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuestionVariable",
+      "en" : "Question Variable"
+    },
+    "comment" : {
+      "en" : "Identifies a variable within hypothesis question. The value of the variable may be defined by the user or line of inquiry."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#LineOfInquiry",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LineOfInquiry",
+      "en" : "Line of Inquiry"
+    },
+    "comment" : {
+      "en" : "A line of inquiry represents potential analyses that can be pursued to test a type of hypothesis.  A line of inquiry consists of:\n1. A hypothesis pattern, which represents the type of hypotheses that can be explored with this line of inquiry.  An example of a hypothesis pattern is “Protein ?p is associated with cancer ?c”.  This hypothesis pattern must be expressed in the same language as hypothesis statements, so that they can be matched against a user’s hypothesis.\n2. A set of query patterns, representing the kinds of data relevant to testing the hypothesis pattern as a set of templates of queries to a data repository.  Several kinds of data may be relevant, so there may be several query patterns.  For example, “Retrieve data of mass spectrometry experiments of tumor samples from patients with cancer ?c”.  \n3. A set of workflows, which capture data analysis methods that can be applied to the data retrieved by the query patterns in order to test the hypothesis pattern.  For example, a workflow to analyze mass spectrometry data could include steps such as matching proteins from either a patient’s custom database or on a reference human proteomic database to tandem mass spectrometry data.\n4. A set of workflow mappings, indicating how the query patterns and the datasets retrieved should be used to instantiate the workflows above to create execution-ready workflows.  \n5. A set of meta-workflows, which describe how to aggregate the results of the workflow executions done to analyze the data.  For example, suppose that one of the workflows in the line of inquiry is for analyzing protein mass spectrometry data for n patients finding evidence for the protein ?p with a p-value p1 and another workflow is for protein fluorescence data for m patients giving a p-value p1, then the meta-workflow would indicate how to combine that evidence into a joint confidence value.\n6. A set of meta-workflow mappings, which describe how the results of the workflow executions are to be used to generate bindings for the inputs of the meta-workflows.\n7. A set of priorities, which describe the relative importance of running different execution-ready workflows given the hypothesis at hand"
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#WorkflowBinding",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkflowBinding",
+      "en" : "Workflow binding"
+    },
+    "comment" : {
+      "en" : "Contains a workflow and a variable binding"
+    },
+    "id" : "32"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#Data",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Data",
+      "en" : "Data"
+    },
+    "comment" : {
+      "en" : "The results produced as a result of executing a workflow from a given line of inquiry"
+    },
+    "id" : "18"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#Hypothesis",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hypothesis",
+      "en" : "Hypothesis"
+    },
+    "comment" : {
+      "en" : "A hypothesis h consists of: \n1. A hypothesis statement, which is a set of assertions about entities in the domain.  For example, they express assertions such as “The mutant form of Protein ABCD is associated with colon cancer.”\n2. A hypothesis qualification (confidence report) , which qualifies the veracity of the hypothesis based on the data and the analyses done so far.  A typical qualification is a numeric confidence value.  For example, for the hypothesis statement above we could have a confidence value of 0.7. Each of the statements of a hypothesis may have a different confidence value.\n3. A hypothesis provenance, which is a record of the analyses that were carried out in support of the hypothesis statement.  For example the provenance may include an analysis of mass spectrometry data for 25 patients with colon cancer and 25 healthy controls followed by clustering, cluster metrics and binary hypothesis testing.\n4. A hypothesis history, which points to a prior hypothesis h’ that was revised to generate h.  In our example, a prior hypothesis could be “Protein ABCD is associated with cancer.”"
+    },
+    "id" : "9"
+  }, {
+    "iri" : "http://www.wings-workflows.org/ontology/workflow.owl#Workflow",
+    "baseIri" : "http://www.wings-workflows.org/ontology/workflow.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.wings-workflows.org/ontology/workflow.owl#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Workflow",
+      "en" : "Workflow"
+    },
+    "subClasses" : [ "56" ],
+    "comment" : {
+      "en" : "Workflows define the set of computational tasks and dependencies needed to carry out in silico experiments"
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov/#Bundle",
+    "baseIri" : "http://www.w3.org/ns/prov/",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Bundle",
+      "en" : "Bundle"
+    },
+    "subClasses" : [ "59" ],
+    "comment" : {
+      "en" : "A bundle is a named set of provenance descriptions, and is itself an entity, so allowing provenance of provenance to be expressed."
+    },
+    "attributes" : [ "external" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "19",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "64",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "56" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "65"
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "56" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "67",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/rdf-schema/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Statement",
+      "en" : "Statement"
+    },
+    "attributes" : [ "external" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#MetaWorkflow",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetaWorkflow",
+      "en" : "Metaworkflow"
+    },
+    "comment" : {
+      "en" : "A metaworkflow is a special type of workflow which uses as inputs the results of other workflows"
+    },
+    "id" : "56",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.wings-workflows.org/ontology/workflow.owl#Variable",
+    "baseIri" : "http://www.wings-workflows.org/ontology/workflow.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.wings-workflows.org/ontology/workflow.owl#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Variable",
+      "en" : "Variable"
+    },
+    "comment" : {
+      "en" : "Variable of a workflow template"
+    },
+    "attributes" : [ "external" ],
+    "id" : "73"
+  }, {
+    "instances" : 0,
+    "union" : [ "10", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "94"
+  }, {
+    "instances" : 0,
+    "union" : [ "10", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "10", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "10", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#Person",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "comment" : {
+      "en" : "Property to identify a person"
+    },
+    "id" : "24"
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "10", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "41"
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "79" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#VariableBinding",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VariableBinding",
+      "en" : "Variable binding"
+    },
+    "comment" : {
+      "en" : "Contains a Variable and a binding value"
+    },
+    "id" : "72"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#ConfidenceReport",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConfidenceReport",
+      "en" : "Confidence report"
+    },
+    "comment" : {
+      "en" : "A confidence report groups the confidence value and the link to the triggered line of inquiry of a given statement or hypothesis"
+    },
+    "id" : "87"
+  }, {
+    "iri" : "http://www.wings-workflows.org/ontology/execution.owl#Execution",
+    "baseIri" : "http://www.wings-workflows.org/ontology/execution.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.wings-workflows.org/ontology/execution.owl#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Execution",
+      "en" : "Execution"
+    },
+    "comment" : {
+      "en" : "An execution of a workflow"
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Plan",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Plan",
+      "en" : "Plan"
+    },
+    "subClasses" : [ "33" ],
+    "attributes" : [ "external" ],
+    "id" : "55"
+  } ],
+  "property" : [ {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://disk-project.org/ontology/disk#hasQuestion",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasQuestion",
+      "en" : "has question"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Property that links a Line of Inquiry with a question"
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#dataQueryDescription",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "dataQueryDescription",
+      "en" : "has query description"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Text description of this line of inquiry data query"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#createdFrom",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "createdFrom",
+      "en" : "created from"
+    },
+    "superproperty" : [ "20" ],
+    "domain" : "18",
+    "comment" : {
+      "en" : "Property that states from where these data have been created (e-g-, workflow, metaworkflow, line of inquiry, etc.)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasName",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasName",
+      "en" : "has name"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Name of a person"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasRevisionOf",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "0",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasRevisionOf",
+      "en" : "was revision of"
+    },
+    "superproperty" : [ "20" ],
+    "domain" : "0",
+    "subproperty" : [ "26" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasFixedOptions",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasFixedOptions",
+      "en" : "has fixed options"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Property to describe valid options for a question variable."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasQuestionVariable",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasQuestionVariable",
+      "en" : "has question variable"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Property that links a hypothesis question to a variable that appears in the question."
+    },
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasQuestionTemplate",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasQuestionTemplate",
+      "en" : "has question template"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Property designed to store a readable template associated with a hypothesis question"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasWorkflow",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasWorkflow",
+      "en" : "has workflow"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Property that links a Workflow binding to its associated workflow"
+    },
+    "attributes" : [ "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasFilterPattern",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasFilterPattern",
+      "en" : "has filter pattern"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Property designed to store a RDF pattern that will generate the filter"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#dateCreated",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "dateCreated",
+      "en" : "date created"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Property which describes when the hypothesis was created"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasAuthor",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "hasAuthor",
+      "en" : "has author"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Property to describe the author of a Line of Inquiry, Triggered Line of Inquiry or Hypothesis"
+    },
+    "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#dateModified",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "dateModified",
+      "en" : "date modified"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Property which describes when the hypothesis was modified"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasUsageNotes",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasUsageNotes",
+      "en" : "has usage notes"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Property to indicate the usage notes to consider when using a line of inquiry or hypothesis"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasDataQueryDescription",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "hasDataQueryDescription",
+      "en" : "Data Query Description"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Property to describe the data retrieved from a data query in a Line of Inquiry."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasOptionalFilter",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasOptionalFilter",
+      "en" : "has optional filter"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Property that links a hypothesis question to a optional filter that can appear in the question."
+    },
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "range" : "55",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "58",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasEmail",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "hasEmail",
+      "en" : "has email"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Email of a person"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "range" : "33",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasVariable",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "hasVariable",
+      "en" : "has variable"
+    },
+    "domain" : "72",
+    "comment" : {
+      "en" : "Property that links a variable binding to its corresponding variable"
+    },
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasHypothesis",
+      "en" : "has hypothesis"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "property that links a triggered line of inquiry to the hypothesis that matched to it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "0",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasDerivedFrom",
+      "en" : "was derived from"
+    },
+    "domain" : "0",
+    "subproperty" : [ "25", "75", "17" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#has_provenance",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "0",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_provenance",
+      "en" : "has provenance"
+    },
+    "domain" : "0",
+    "subproperty" : [ "77" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasHypothesisVariable",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "hasHypothesisVariable",
+      "en" : "has hypothesis variable"
+    },
+    "domain" : "66",
+    "comment" : {
+      "en" : "This property is used to identify which variables in the hypothesis are used in the workflows."
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasParameter",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasParameter",
+      "en" : "has parameter"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Property to store the parameters to be inputted to a workflow"
+    },
+    "attributes" : [ "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasId",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "hasId",
+      "en" : "has id"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Property that links to the ID of the described resource"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasVariableName",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasVariableName",
+      "en" : "has variable name"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Property that indicates the name of a given variable."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasParentHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasParentHypothesis",
+      "en" : "has parent hypothesis"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "9",
+    "comment" : {
+      "en" : "Property that links to the parent hypothesis from which the current hypothesis has been derived"
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasOptionalParameter",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasOptionalParameter",
+      "en" : "has optional parameter"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Property to store the optional parameters that can be inputted to a workflow"
+    },
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasTriggeredLineOfInquiryStatus",
+      "en" : "has triggered line of inquiry status"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Property that states the status of a triggered line of inquiry."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasConfidenceReport",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "hasConfidenceReport",
+      "en" : "Property that links the hypothesis or statement to the ConfidenceReport that supports them"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "has confidence report"
+    },
+    "attributes" : [ "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasExecution",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "hasExecution",
+      "en" : "has execution"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Property that links a workflow bundle to the execution results of the workflow"
+    },
+    "attributes" : [ "object" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasRunStatus",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "hasRunStatus",
+      "en" : "has run status"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasQuestionPattern",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasQuestionPattern",
+      "en" : "has question pattern"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Property designed to store a RDF pattern that will generate the formal question"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasWorkflowBinding",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasWorkflowBinding",
+      "en" : "has workflow bindings"
+    },
+    "domain" : "92",
+    "subproperty" : [ "93" ],
+    "comment" : {
+      "en" : "Property that links a line of inquiry or executed line of inquiry to the workflow bindings present on it"
+    },
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasRunLink",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "hasRunLink",
+      "en" : "has run link"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Link to the execution of a workflow in the corresponding workflow system"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasTriggeredLineOfInquiry",
+      "en" : "has triggered line of inquiry"
+    },
+    "superproperty" : [ "76" ],
+    "domain" : "87",
+    "comment" : {
+      "en" : "Property that links a confidence report to the triggered line of inquiry that contains all the provenance for the report's value."
+    },
+    "attributes" : [ "object" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasVariableBinding",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasVariableBinding",
+      "en" : "has variable binding"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Property that links a Workflow binding to it correspondent variable binding"
+    },
+    "attributes" : [ "object" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasConfidenceValue",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "hasConfidenceValue",
+      "en" : "has confidence value"
+    },
+    "domain" : "87",
+    "comment" : {
+      "en" : "Property that binds a confidence report to its confidence value"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "hasRevisedHypothesisVariable",
+      "en" : "has revised hypothesis variable"
+    },
+    "domain" : "65",
+    "comment" : {
+      "en" : "Property that links a metaworkflow to its revised hypothesis variable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasConstraints",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hasConstraints",
+      "en" : "has constraints"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Property designed to indicate the constraints of a question variable."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasRelevantVariables",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasRelevantVariables",
+      "en" : "has relevant variables"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Property that specify which variables of the data query will be shown on the triggered line of inquiry"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasFilterTemplate",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasFilterTemplate",
+      "en" : "has filter template"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Property designed to store a readable template associated with a filter"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasBindingValue",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "97",
+    "label" : {
+      "IRI-based" : "hasBindingValue",
+      "en" : "has binding value"
+    },
+    "domain" : "72",
+    "comment" : {
+      "en" : "Property that links a binding to its associated value"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasLineOfInquiry",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasLineOfInquiry",
+      "en" : "has line of inquiry"
+    },
+    "superproperty" : [ "20" ],
+    "domain" : "43",
+    "comment" : {
+      "en" : "Property that links a triggered line of inquiry to the original line of inquiry from which it was derived"
+    },
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasDataSource",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "hasDataSource",
+      "en" : "has data source"
+    },
+    "domain" : "42",
+    "comment" : {
+      "en" : "Property to configure the desired target wiki for the data query in a Line of Inquiry."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasHypothesisQuery",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasHypothesisQuery",
+      "en" : "has hypothesis query"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Property that links a line of inquiry to the hypothesis query text"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasResultingHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasResultingHypothesis",
+      "en" : "has resulting hypothesis"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Property that links a triggered line of inquiry to the hypothesis revision that resulted from its analysis"
+    },
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasMetaWorkflowBinding",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasMetaWorkflowBinding",
+      "en" : "has metaworkflow binding"
+    },
+    "superproperty" : [ "91" ],
+    "domain" : "94",
+    "comment" : {
+      "en" : "The workflow bindings associated to a metaworkflow, i.e., a workflow and a variable binding"
+    },
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#hasDataQuery",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "hasDataQuery",
+      "en" : "has data query"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Property that links a line of inquiry to the data query text associated to it"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  } ]
+}
