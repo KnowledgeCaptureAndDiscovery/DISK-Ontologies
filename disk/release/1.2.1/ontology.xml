@@ -1,0 +1,1048 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://disk-project.org/ontology/disk#"
+     xml:base="http://disk-project.org/ontology/disk"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:disk="http://disk-project.org/ontology/disk#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://disk-project.org/ontology/disk#">
+        <dc:creator>Daniel Garijo</dc:creator>
+        <dc:creator>Varun Ratnakar</dc:creator>
+        <dc:creator>Yolanda Gil</dc:creator>
+        <terms:abstract xml:lang="en">The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard</terms:abstract>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://creativecommons.org/licenses/by-nc-sa/2.0/</terms:license>
+        <terms:title xml:lang="en">The DISK Ontology</terms:title>
+        <vann:preferredNamespacePrefix>disk</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://disk-project.org/ontology/disk#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">DISK Ontology</rdfs:label>
+        <owl:versionInfo>1.2.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasHypothesisVariable -->
+
+
+    <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/disk#hasHypothesisVariable">
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Variable"/>
+        <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/disk#hasId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable -->
+
+
+    <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Variable"/>
+        <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasRunLink -->
+
+
+    <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/disk#hasRunLink">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasRunStatus -->
+
+
+    <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/disk#hasRunStatus">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="_:genid-nodeid-genid-2805ab2ee48b44fd9b3b0d63407d769f-genid-nodeid-node1ealleodvx1"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#createdFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#createdFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:comment xml:lang="en">Property that states from where these data have been created (e-g-, workflow, metaworkflow, line of inquiry, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">created from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasAuthor -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasAuthor">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Person"/>
+        <rdfs:comment xml:lang="en">Property to describe the author of a Line of Inquiry, Triggered Line of Inquiry or Hypothesis</rdfs:comment>
+        <rdfs:label xml:lang="en">has author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasConfidenceReport -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasConfidenceReport">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
+                    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#ConfidenceReport"/>
+        <rdfs:comment xml:lang="en">has confidence report</rdfs:comment>
+        <rdfs:label xml:lang="en">Property that links the hypothesis or statement to the ConfidenceReport that supports them</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasExecution -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasExecution">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
+        <rdfs:comment xml:lang="en">Property that links a workflow bundle to the execution results of the workflow</rdfs:comment>
+        <rdfs:label xml:lang="en">has execution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasHypothesis -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasHypothesis">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
+        <rdfs:comment xml:lang="en">property that links a triggered line of inquiry to the hypothesis that matched to it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has hypothesis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasHypothesisVariable -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasHypothesisVariable">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#MetaWorkflow"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasLineOfInquiry -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasLineOfInquiry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:comment xml:lang="en">Property that links a triggered line of inquiry to the original line of inquiry from which it was derived</rdfs:comment>
+        <rdfs:label xml:lang="en">has line of inquiry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasMetaWorkflowBinding -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasMetaWorkflowBinding">
+        <rdfs:subPropertyOf rdf:resource="http://disk-project.org/ontology/disk#hasWorkflowBinding"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:comment xml:lang="en">The workflow bindings associated to a metaworkflow, i.e., a workflow and a variable binding</rdfs:comment>
+        <rdfs:label xml:lang="en">has metaworkflow binding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasOptionalFilter -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasOptionalFilter">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Question"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#QuestionFilter"/>
+        <rdfs:comment xml:lang="en">Property that links a hypothesis question to a optional filter that can appear in the question.</rdfs:comment>
+        <rdfs:label xml:lang="en">has optional filter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasOptionalParameter -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasOptionalParameter">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:comment xml:lang="en">Property to store the optional parameters that can be inputted to a workflow</rdfs:comment>
+        <rdfs:label xml:lang="en">has optional parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasParameter -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasParameter">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:comment xml:lang="en">Property to store the parameters to be inputted to a workflow</rdfs:comment>
+        <rdfs:label xml:lang="en">has parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasParentHypothesis -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasParentHypothesis">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
+        <rdfs:comment xml:lang="en">Property that links to the parent hypothesis from which the current hypothesis has been derived</rdfs:comment>
+        <rdfs:label xml:lang="en">has parent hypothesis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasQuestion -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasQuestion">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Question"/>
+        <rdfs:comment xml:lang="en">Property that links a Line of Inquiry with a question</rdfs:comment>
+        <rdfs:label xml:lang="en">has question</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasQuestionVariable -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasQuestionVariable">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Question"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#QuestionVariable"/>
+        <rdfs:comment xml:lang="en">Property that links a hypothesis question to a variable that appears in the question.</rdfs:comment>
+        <rdfs:label xml:lang="en">has question variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasResultingHypothesis -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasResultingHypothesis">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
+        <rdfs:comment xml:lang="en">Property that links a triggered line of inquiry to the hypothesis revision that resulted from its analysis</rdfs:comment>
+        <rdfs:label xml:lang="en">has resulting hypothesis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#MetaWorkflow"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#has_provenance"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#ConfidenceReport"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+        <rdfs:comment xml:lang="en">Property that links a confidence report to the triggered line of inquiry that contains all the provenance for the report&apos;s value.</rdfs:comment>
+        <rdfs:label xml:lang="en">has triggered line of inquiry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasVariable -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasVariable">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+        <rdfs:comment xml:lang="en">Property that links a variable binding to its corresponding variable</rdfs:comment>
+        <rdfs:label xml:lang="en">has variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasVariableBinding -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasVariableBinding">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:comment xml:lang="en">Property that links a Workflow binding to it correspondent variable binding</rdfs:comment>
+        <rdfs:label xml:lang="en">has variable binding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasWorkflow -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasWorkflow">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+        <rdfs:comment xml:lang="en">Property that links a Workflow binding to its associated workflow</rdfs:comment>
+        <rdfs:label xml:lang="en">has workflow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasWorkflowBinding -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasWorkflowBinding">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:comment xml:lang="en">Property that links a line of inquiry or executed line of inquiry to the workflow bindings present on it</rdfs:comment>
+        <rdfs:label xml:lang="en">has workflow bindings</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#has_provenance -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#has_provenance">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:label xml:lang="en">has provenance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:label xml:lang="en">was derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasRevisionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:label xml:lang="en">was revision of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#dataQueryDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#dataQueryDescription">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Text description of this line of inquiry data query</rdfs:comment>
+        <rdfs:label xml:lang="en">has query description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#dateCreated -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#dateCreated">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Property which describes when the hypothesis was created</rdfs:comment>
+        <rdfs:label xml:lang="en">date created</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#dateModified -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#dateModified">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Property which describes when the hypothesis was modified</rdfs:comment>
+        <rdfs:label xml:lang="en">date modified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasBindingValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasBindingValue">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that links a binding to its associated value</rdfs:comment>
+        <rdfs:label xml:lang="en">has binding value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasConfidenceValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasConfidenceValue">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#ConfidenceReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Property that binds a confidence report to its confidence value</rdfs:comment>
+        <rdfs:label xml:lang="en">has confidence value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasConstraints -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasConstraints">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#QuestionVariable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property designed to indicate the constraints of a question variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">has constraints</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasDataQuery -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasDataQuery">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that links a line of inquiry to the data query text associated to it</rdfs:comment>
+        <rdfs:label xml:lang="en">has data query</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasDataQueryDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasDataQueryDescription">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property to describe the data retrieved from a data query in a Line of Inquiry.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Query Description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasDataSource -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasDataSource">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property to configure the desired target wiki for the data query in a Line of Inquiry.</rdfs:comment>
+        <rdfs:label xml:lang="en">has data source</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasEmail">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Email of a person</rdfs:comment>
+        <rdfs:label xml:lang="en">has email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasFilterPattern -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasFilterPattern">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#QuestionFilter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property designed to store a RDF pattern that will generate the filter</rdfs:comment>
+        <rdfs:label xml:lang="en">has filter pattern</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasFilterTemplate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasFilterTemplate">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#QuestionFilter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property designed to store a readable template associated with a filter</rdfs:comment>
+        <rdfs:label xml:lang="en">has filter template</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasFixedOptions -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasFixedOptions">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#QuestionVariable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property to describe valid options for a question variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">has fixed options</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasHypothesisQuery -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasHypothesisQuery">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that links a line of inquiry to the hypothesis query text</rdfs:comment>
+        <rdfs:label xml:lang="en">has hypothesis query</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasId"/>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasName">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of a person</rdfs:comment>
+        <rdfs:label xml:lang="en">has name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasQuestionPattern -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasQuestionPattern">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Question"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property designed to store a RDF pattern that will generate the formal question</rdfs:comment>
+        <rdfs:label xml:lang="en">has question pattern</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasQuestionTemplate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasQuestionTemplate">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Question"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property designed to store a readable template associated with a hypothesis question</rdfs:comment>
+        <rdfs:label xml:lang="en">has question template</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasRelevantVariables -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRelevantVariables">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that specify which variables of the data query will be shown on the triggered line of inquiry</rdfs:comment>
+        <rdfs:label xml:lang="en">has relevant variables</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasRunLink -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunLink"/>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasRunStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunStatus"/>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that states the status of a triggered line of inquiry.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property that tells the triggered lline Of inquiry&apos;s status</rdfs:comment>
+        <rdfs:label xml:lang="en">Triggered Line Of Inquiry Status</rdfs:label>
+        <rdfs:label xml:lang="en">has triggered line of inquiry status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasUsageNotes -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasUsageNotes">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property to indicate the usage notes to consider when using a line of inquiry or hypothesis</rdfs:comment>
+        <rdfs:label xml:lang="en">has usage notes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasVariableName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasVariableName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#QuestionFilter"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#QuestionVariable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that indicates the name of a given variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">has variable name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#ConfidenceReport -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#ConfidenceReport">
+        <rdfs:comment xml:lang="en">A confidence report groups the confidence value and the link to the triggered line of inquiry of a given statement or hypothesis</rdfs:comment>
+        <rdfs:label xml:lang="en">Confidence report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#Data -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Data">
+        <rdfs:comment xml:lang="en">The results produced as a result of executing a workflow from a given line of inquiry</rdfs:comment>
+        <rdfs:label xml:lang="en">Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#Hypothesis -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Hypothesis">
+        <rdfs:comment xml:lang="en">A hypothesis h consists of: 
+1. A hypothesis statement, which is a set of assertions about entities in the domain.  For example, they express assertions such as “The mutant form of Protein ABCD is associated with colon cancer.”
+2. A hypothesis qualification (confidence report) , which qualifies the veracity of the hypothesis based on the data and the analyses done so far.  A typical qualification is a numeric confidence value.  For example, for the hypothesis statement above we could have a confidence value of 0.7. Each of the statements of a hypothesis may have a different confidence value.
+3. A hypothesis provenance, which is a record of the analyses that were carried out in support of the hypothesis statement.  For example the provenance may include an analysis of mass spectrometry data for 25 patients with colon cancer and 25 healthy controls followed by clustering, cluster metrics and binary hypothesis testing.
+4. A hypothesis history, which points to a prior hypothesis h’ that was revised to generate h.  In our example, a prior hypothesis could be “Protein ABCD is associated with cancer.”</rdfs:comment>
+        <rdfs:label xml:lang="en">Hypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#LineOfInquiry -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry">
+        <rdfs:comment xml:lang="en">A line of inquiry represents potential analyses that can be pursued to test a type of hypothesis.  A line of inquiry consists of:
+1. A hypothesis pattern, which represents the type of hypotheses that can be explored with this line of inquiry.  An example of a hypothesis pattern is “Protein ?p is associated with cancer ?c”.  This hypothesis pattern must be expressed in the same language as hypothesis statements, so that they can be matched against a user’s hypothesis.
+2. A set of query patterns, representing the kinds of data relevant to testing the hypothesis pattern as a set of templates of queries to a data repository.  Several kinds of data may be relevant, so there may be several query patterns.  For example, “Retrieve data of mass spectrometry experiments of tumor samples from patients with cancer ?c”.  
+3. A set of workflows, which capture data analysis methods that can be applied to the data retrieved by the query patterns in order to test the hypothesis pattern.  For example, a workflow to analyze mass spectrometry data could include steps such as matching proteins from either a patient’s custom database or on a reference human proteomic database to tandem mass spectrometry data.
+4. A set of workflow mappings, indicating how the query patterns and the datasets retrieved should be used to instantiate the workflows above to create execution-ready workflows.  
+5. A set of meta-workflows, which describe how to aggregate the results of the workflow executions done to analyze the data.  For example, suppose that one of the workflows in the line of inquiry is for analyzing protein mass spectrometry data for n patients finding evidence for the protein ?p with a p-value p1 and another workflow is for protein fluorescence data for m patients giving a p-value p1, then the meta-workflow would indicate how to combine that evidence into a joint confidence value.
+6. A set of meta-workflow mappings, which describe how the results of the workflow executions are to be used to generate bindings for the inputs of the meta-workflows.
+7. A set of priorities, which describe the relative importance of running different execution-ready workflows given the hypothesis at hand</rdfs:comment>
+        <rdfs:label xml:lang="en">Line of Inquiry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#MetaWorkflow -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#MetaWorkflow">
+        <rdfs:subClassOf rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
+        <rdfs:comment xml:lang="en">A metaworkflow is a special type of workflow which uses as inputs the results of other workflows</rdfs:comment>
+        <rdfs:label xml:lang="en">Metaworkflow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#Person -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Person">
+        <rdfs:comment xml:lang="en">Property to identify a person</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#Question -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Question">
+        <rdfs:comment xml:lang="en">Identifies a specific hypothesis question which is associated with a question template along with question variables.</rdfs:comment>
+        <rdfs:label xml:lang="en">Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#QuestionFilter -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#QuestionFilter">
+        <rdfs:comment xml:lang="en">Identifies a optional variable within hypothesis question. The value of the variable may be defined by the user.</rdfs:comment>
+        <rdfs:label xml:lang="en">Question Filter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#QuestionVariable -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#QuestionVariable">
+        <rdfs:comment xml:lang="en">Identifies a variable within hypothesis question. The value of the variable may be defined by the user or line of inquiry.</rdfs:comment>
+        <rdfs:label xml:lang="en">Question Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#TriggeredLineOfInquiry -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry">
+        <rdfs:comment xml:lang="en">A triggered line of inquiry represents a strategy for exploring a hypothesis that is currently being explored by executing its associated workflows and metaworkflows. A triggered line of inquiry may require a long time to complete. When finished, the triggered line of inquiry will include pointers to the provenance of the workflows and metaworkflows that participated on the execution, as well as a confidence value on the original hypothesis.</rdfs:comment>
+        <rdfs:label xml:lang="en">Triggered line of inquiry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#VariableBinding -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#VariableBinding">
+        <rdfs:comment xml:lang="en">Contains a Variable and a binding value</rdfs:comment>
+        <rdfs:label xml:lang="en">Variable binding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#WorkflowBinding -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding">
+        <rdfs:comment xml:lang="en">Contains a workflow and a variable binding</rdfs:comment>
+        <rdfs:label xml:lang="en">Workflow binding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/rdf-schema/"/>
+        <rdfs:label xml:lang="en">Statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Plan -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Plan">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:label xml:lang="en">Plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov/#Bundle -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov/#Bundle">
+        <rdfs:comment xml:lang="en">A bundle is a named set of provenance descriptions, and is itself an entity, so allowing provenance of provenance to be expressed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:label xml:lang="en">Bundle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wings-workflows.org/ontology/execution.owl#Execution -->
+
+
+    <owl:Class rdf:about="http://www.wings-workflows.org/ontology/execution.owl#Execution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov/#Bundle"/>
+        <rdfs:comment xml:lang="en">An execution of a workflow</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.wings-workflows.org/ontology/execution.owl#"/>
+        <rdfs:label xml:lang="en">Execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wings-workflows.org/ontology/workflow.owl#Variable -->
+
+
+    <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Variable">
+        <rdfs:comment xml:lang="en">Variable of a workflow template</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#"/>
+        <rdfs:label xml:lang="en">Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wings-workflows.org/ontology/workflow.owl#Workflow -->
+
+
+    <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Workflow">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+        <rdfs:comment xml:lang="en">Workflows define the set of computational tasks and dependencies needed to carry out in silico experiments</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#"/>
+        <rdfs:label xml:lang="en">Workflow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#hasHypothesisVariable">
+        <rdfs:comment xml:lang="en">This property is used to identify which variables in the hypothesis are used in the workflows.</rdfs:comment>
+        <rdfs:label xml:lang="en">has hypothesis variable</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#hasId">
+        <rdfs:comment xml:lang="en">Property that links to the ID of the described resource</rdfs:comment>
+        <rdfs:label xml:lang="en">has id</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">
+        <rdfs:comment xml:lang="en">Property that links a metaworkflow to its revised hypothesis variable</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property that links a metaworkflow to its revised hypothesis variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">has revised hypothesis variable</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#hasRunLink">
+        <rdfs:comment xml:lang="en">Link to the execution of a workflow in the corresponding workflow system</rdfs:comment>
+        <rdfs:label xml:lang="en">has run link</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#hasRunStatus">
+        <rdfs:comment xml:lang="en">Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e. ongoing, finished, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">has run status</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+
