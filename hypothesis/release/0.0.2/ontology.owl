@@ -65,19 +65,19 @@
 
     <!-- http://disk-project.org/ontology/hypothesis#moreThan -->
 
-    <owl:DataProperty rdf:about="http://disk-project.org/ontology/hypothesis#moreThan">
+    <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/hypothesis#moreThan">
         <example xml:lang="en">Effect Size is associated with Age more than 50.</example>
         <rdfs:comment xml:lang="en">Optional parameter for describing a lower limit for an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">more than</rdfs:label>
-    </owl:DataProperty>
+    </owl:AnnotationProperty>
     
     <!-- http://disk-project.org/ontology/hypothesis#lessThan -->
 
-    <owl:DataProperty rdf:about="http://disk-project.org/ontology/hypothesis#lessThan">
+    <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/hypothesis#lessThan">
         <example xml:lang="en">Effect Size is associated with Age less than 30.</example>
         <rdfs:comment xml:lang="en">Optional parameter for describing an upper limit for an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">less than</rdfs:label>
-    </owl:DataProperty>
+    </owl:AnnotationProperty>
 
 </rdf:RDF>
 
