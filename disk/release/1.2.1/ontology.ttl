@@ -50,7 +50,7 @@
 ###  http://disk-project.org/ontology/disk#hasRunStatus
 :hasRunStatus rdf:type owl:AnnotationProperty ;
               rdfs:range xsd:string ;
-              rdfs:domain _:genid-nodeid-genid-2805ab2ee48b44fd9b3b0d63407d769f-genid-nodeid-node1ealleodvx1 ,
+              rdfs:domain _:genid-nodeid-genid-1612b5920aab4c0f8e63647ebbb37aa7-genid-nodeid-node1ealleodvx1 ,
                           :WorkflowBinding .
 
 
@@ -342,9 +342,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasConfidenceValue
 :hasConfidenceValue rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :ConfidenceReport ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :ConfidenceReport
+                                                :TriggeredLineOfInquiry
+                                              )
+                                ] ;
                     rdfs:range xsd:double ;
-                    rdfs:comment "Property that binds a confidence report to its confidence value"@en ;
+                    rdfs:comment "Property that binds a resource to its confidence value"@en ;
                     rdfs:label "has confidence value"@en .
 
 
@@ -428,12 +432,28 @@ xsd:date rdf:type rdfs:Datatype .
 :hasId rdf:type owl:DatatypeProperty .
 
 
+###  http://disk-project.org/ontology/disk#hasInputFile
+:hasInputFile rdf:type owl:DatatypeProperty ;
+              rdfs:domain :TriggeredLineOfInquiry ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Property that states the input files for a triggered line of inquiry."@en ;
+              rdfs:label "has input file"@en .
+
+
 ###  http://disk-project.org/ontology/disk#hasName
 :hasName rdf:type owl:DatatypeProperty ;
          rdfs:domain :Person ;
          rdfs:range xsd:string ;
          rdfs:comment "Name of a person"@en ;
          rdfs:label "has name"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasOutputFile
+:hasOutputFile rdf:type owl:DatatypeProperty ;
+               rdfs:domain :TriggeredLineOfInquiry ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Property that states the output files for a triggered line of inquiry."@en ;
+               rdfs:label "has output file"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasQuestionPattern

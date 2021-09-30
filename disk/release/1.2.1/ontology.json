@@ -49,7 +49,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://disk-project.org/ontology/disk#LineOfInquiry"
+      "@id" : "http://disk-project.org/ontology/disk#ConfidenceReport"
     }, {
       "@id" : "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"
     } ]
@@ -59,13 +59,23 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "http://disk-project.org/ontology/disk#LineOfInquiry"
+    }, {
+      "@id" : "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
       "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
     }, {
       "@id" : "http://disk-project.org/ontology/disk#LineOfInquiry"
     } ]
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -389,10 +399,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property that binds a confidence report to its confidence value"
+    "@value" : "Property that binds a resource to its confidence value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://disk-project.org/ontology/disk#ConfidenceReport"
+    "@id" : "_:genid22"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -460,7 +470,7 @@
     "@value" : "Property to configure the desired target wiki for the data query in a Line of Inquiry."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid22"
+    "@id" : "_:genid25"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -629,6 +639,23 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://disk-project.org/ontology/disk#hasInputFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that states the input files for a triggered line of inquiry."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has input file"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://disk-project.org/ontology/disk#hasLineOfInquiry",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -718,6 +745,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://disk-project.org/ontology/disk#VariableBinding"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/disk#hasOutputFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that states the output files for a triggered line of inquiry."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has output file"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://disk-project.org/ontology/disk#hasParameter",
@@ -910,7 +954,7 @@
     "@value" : "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://disk-project.org/ontology/disk#_:genid-nodeid-genid-2805ab2ee48b44fd9b3b0d63407d769f-genid-nodeid-node1ealleodvx1"
+    "@id" : "http://disk-project.org/ontology/disk#_:genid-nodeid-genid-1612b5920aab4c0f8e63647ebbb37aa7-genid-nodeid-node1ealleodvx1"
   }, {
     "@id" : "http://disk-project.org/ontology/disk#WorkflowBinding"
   } ],
@@ -972,7 +1016,7 @@
     "@value" : "Property to indicate the usage notes to consider when using a line of inquiry or hypothesis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid25"
+    "@id" : "_:genid28"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1023,7 +1067,7 @@
     "@value" : "Property that indicates the name of a given variable."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid28"
+    "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

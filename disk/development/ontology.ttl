@@ -332,9 +332,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasConfidenceValue
 :hasConfidenceValue rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :ConfidenceReport ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :TriggeredLineOfInquiry
+                                                :ConfidenceReport
+                                )] ;
                     rdfs:range xsd:double ;
-                    rdfs:comment "Property that binds a confidence report to its confidence value"@en ;
+                    rdfs:comment "Property that binds a resource to its confidence value"@en ;
                     rdfs:label "has confidence value"@en .
 
 
@@ -471,6 +474,22 @@ xsd:date rdf:type rdfs:Datatype .
                                               "Property that tells the triggered lline Of inquiry's status"@en ;
                                  rdfs:label "Triggered Line Of Inquiry Status"@en ,
                                             "has triggered line of inquiry status"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasInputFile
+:hasInputFile rdf:type owl:DatatypeProperty ;
+              rdfs:domain :TriggeredLineOfInquiry ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Property that states the input files for a triggered line of inquiry."@en;
+              rdfs:label "has input file"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasOutputFile
+:hasOutputFile rdf:type owl:DatatypeProperty ;
+              rdfs:domain :TriggeredLineOfInquiry ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Property that states the output files for a triggered line of inquiry."@en;
+              rdfs:label "has output file"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasDataQueryDescription
