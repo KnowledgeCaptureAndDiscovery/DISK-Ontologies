@@ -18,33 +18,6 @@
 # #################################################################
 # 
 # 
-# http://disk-project.org/ontology/disk#hasHypothesisVariable
-<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#Variable> .
-<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
-# 
-# http://disk-project.org/ontology/disk#hasId
-<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
-<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-# 
-# http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable
-<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#Variable> .
-<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
-# 
-# http://disk-project.org/ontology/disk#hasRunLink
-<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
-# 
-# http://disk-project.org/ontology/disk#hasRunStatus
-<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#_:genid-nodeid-genid-1612b5920aab4c0f8e63647ebbb37aa7-genid-nodeid-node1ealleodvx1> .
-<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
-# 
 # http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -140,8 +113,26 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://disk-project.org/ontology/disk#hasHypothesisVariable
 <http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#MetaWorkflow> .
-<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#MetaWorkflow> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#range> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Variable> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to identify which variables in the hypothesis are used in the workflows."@en .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has hypothesis variable"@en .
 # 
 # http://disk-project.org/ontology/disk#hasLineOfInquiry
 <http://disk-project.org/ontology/disk#hasLineOfInquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -154,15 +145,15 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://disk-project.org/ontology/disk#hasMetaWorkflowBinding
 <http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://disk-project.org/ontology/disk#hasWorkflowBinding> .
-<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#WorkflowBinding> .
 <http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "The workflow bindings associated to a metaworkflow, i.e., a workflow and a variable binding"@en .
 <http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#label> "has metaworkflow binding"@en .
@@ -219,8 +210,26 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable
 <http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#MetaWorkflow> .
-<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#MetaWorkflow> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#range> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Variable> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a metaworkflow to its revised hypothesis variable."@en .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has revised hypothesis variable"@en .
 # 
 # http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry
 <http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -253,15 +262,15 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://disk-project.org/ontology/disk#hasWorkflowBinding
 <http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#WorkflowBinding> .
 <http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a line of inquiry or executed line of inquiry to the workflow bindings present on it"@en .
 <http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#label> "has workflow bindings"@en .
@@ -300,36 +309,36 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://disk-project.org/ontology/disk#dateCreated
 <http://disk-project.org/ontology/disk#dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://disk-project.org/ontology/disk#dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Hypothesis> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid26 <http://www.w3.org/2002/07/owl#unionOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Hypothesis> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://disk-project.org/ontology/disk#dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <http://disk-project.org/ontology/disk#dateCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "Property which describes when the hypothesis was created"@en .
 <http://disk-project.org/ontology/disk#dateCreated> <http://www.w3.org/2000/01/rdf-schema#label> "date created"@en .
 # 
 # http://disk-project.org/ontology/disk#dateModified
 <http://disk-project.org/ontology/disk#dateModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://disk-project.org/ontology/disk#dateModified> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Hypothesis> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#dateModified> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid30 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Hypothesis> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://disk-project.org/ontology/disk#dateModified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <http://disk-project.org/ontology/disk#dateModified> <http://www.w3.org/2000/01/rdf-schema#comment> "Property which describes when the hypothesis was modified"@en .
 <http://disk-project.org/ontology/disk#dateModified> <http://www.w3.org/2000/01/rdf-schema#label> "date modified"@en .
@@ -343,15 +352,15 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://disk-project.org/ontology/disk#hasConfidenceValue
 <http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#ConfidenceReport> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid34 <http://www.w3.org/2002/07/owl#unionOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#ConfidenceReport> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
 <http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that binds a resource to its confidence value"@en .
 <http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#label> "has confidence value"@en .
@@ -379,15 +388,15 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://disk-project.org/ontology/disk#hasDataSource
 <http://disk-project.org/ontology/disk#hasDataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://disk-project.org/ontology/disk#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid37 <http://www.w3.org/2002/07/owl#unionOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://disk-project.org/ontology/disk#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://disk-project.org/ontology/disk#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to configure the desired target wiki for the data query in a Line of Inquiry."@en .
 <http://disk-project.org/ontology/disk#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#label> "has data source"@en .
@@ -429,6 +438,18 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://disk-project.org/ontology/disk#hasId
 <http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid40 <http://www.w3.org/2002/07/owl#unionOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links to the ID of the described resource"@en .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#label> "has id"@en .
 # 
 # http://disk-project.org/ontology/disk#hasInputFile
 <http://disk-project.org/ontology/disk#hasInputFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -474,45 +495,51 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://disk-project.org/ontology/disk#hasRunLink
 <http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the execution of a workflow in the corresponding workflow system"@en .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#label> "has run link"@en .
 # 
 # http://disk-project.org/ontology/disk#hasRunStatus
 <http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"@en .
+<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has run status"@en .
 # 
 # http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus
 <http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
 <http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that states the status of a triggered line of inquiry."@en .
-<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that tells the triggered lline Of inquiry's status"@en .
-<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Triggered Line Of Inquiry Status"@en .
 <http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has triggered line of inquiry status"@en .
 # 
 # http://disk-project.org/ontology/disk#hasUsageNotes
 <http://disk-project.org/ontology/disk#hasUsageNotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://disk-project.org/ontology/disk#hasUsageNotes> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Hypothesis> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasUsageNotes> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid43 <http://www.w3.org/2002/07/owl#unionOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Hypothesis> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://disk-project.org/ontology/disk#hasUsageNotes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://disk-project.org/ontology/disk#hasUsageNotes> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate the usage notes to consider when using a line of inquiry or hypothesis"@en .
 <http://disk-project.org/ontology/disk#hasUsageNotes> <http://www.w3.org/2000/01/rdf-schema#label> "has usage notes"@en .
 # 
 # http://disk-project.org/ontology/disk#hasVariableName
 <http://disk-project.org/ontology/disk#hasVariableName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://disk-project.org/ontology/disk#hasVariableName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid31 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#QuestionFilter> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#QuestionVariable> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://disk-project.org/ontology/disk#hasVariableName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid46 <http://www.w3.org/2002/07/owl#unionOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#QuestionFilter> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#QuestionVariable> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://disk-project.org/ontology/disk#hasVariableName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://disk-project.org/ontology/disk#hasVariableName> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates the name of a given variable."@en .
 <http://disk-project.org/ontology/disk#hasVariableName> <http://www.w3.org/2000/01/rdf-schema#label> "has variable name"@en .
@@ -577,6 +604,9 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#comment> "A triggered line of inquiry represents a strategy for exploring a hypothesis that is currently being explored by executing its associated workflows and metaworkflows. A triggered line of inquiry may require a long time to complete. When finished, the triggered line of inquiry will include pointers to the provenance of the workflows and metaworkflows that participated on the execution, as well as a confidence value on the original hypothesis."@en .
 <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#label> "Triggered line of inquiry"@en .
 # 
+# http://disk-project.org/ontology/disk#Variable
+<http://disk-project.org/ontology/disk#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://disk-project.org/ontology/disk#VariableBinding
 <http://disk-project.org/ontology/disk#VariableBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/disk#VariableBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains a Variable and a binding value"@en .
@@ -622,31 +652,5 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "Workflows define the set of computational tasks and dependencies needed to carry out in silico experiments"@en .
 <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.wings-workflows.org/ontology/workflow.owl#> .
 <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow"@en .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to identify which variables in the hypothesis are used in the workflows."@en .
-<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has hypothesis variable"@en .
-# 
-<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links to the ID of the described resource"@en .
-<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#label> "has id"@en .
-# 
-<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a metaworkflow to its revised hypothesis variable"@en .
-<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a metaworkflow to its revised hypothesis variable."@en .
-<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has revised hypothesis variable"@en .
-# 
-<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the execution of a workflow in the corresponding workflow system"@en .
-<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#label> "has run link"@en .
-# 
-<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e. ongoing, finished, etc.)"@en .
-<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"@en .
-<http://disk-project.org/ontology/disk#hasRunStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has run status"@en .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

@@ -18,7 +18,8 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://www.wings-workflows.org/ontology/execution.owl#Execution">Execution</a>
       </li>
       <li>
-         <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+         <a href="#Hypothesis"
+            title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
       </li>
       <li>
          <a href="#LineOfInquiry"
@@ -133,8 +134,7 @@ This section provides details for each class and property defined by DISK Ontolo
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#createdFrom"
-               title="http://disk-project.org/ontology/disk#createdFrom">created from</a>
+            <a href="#createdFrom" title="http://disk-project.org/ontology/disk#createdFrom">created from</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -260,14 +260,6 @@ This section provides details for each class and property defined by DISK Ontolo
             <a href="#http://www.wings-workflows.org/ontology/workflow.owl#Workflow"
                title="http://www.wings-workflows.org/ontology/workflow.owl#Workflow">Workflow</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasHypothesisVariable"
-               title="http://disk-project.org/ontology/disk#hasHypothesisVariable">has hypothesis variable</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasRevisedHypothesisVariable"
-               title="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">has revised hypothesis variable</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -429,9 +421,7 @@ This section provides details for each class and property defined by DISK Ontolo
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasTriggeredLineOfInquiryStatus"
-               title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">Triggered Line Of Inquiry Status</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasHypothesis"
+            <a href="#hasHypothesis"
                title="http://disk-project.org/ontology/disk#hasHypothesis">has hypothesis</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasInputFile"
                title="http://disk-project.org/ontology/disk#hasInputFile">has input file</a>
@@ -441,7 +431,9 @@ This section provides details for each class and property defined by DISK Ontolo
                title="http://disk-project.org/ontology/disk#hasOutputFile">has output file</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasResultingHypothesis"
                title="http://disk-project.org/ontology/disk#hasResultingHypothesis">has resulting hypothesis</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTriggeredLineOfInquiryStatus"
+               title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">has triggered line of inquiry status</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -470,11 +462,7 @@ This section provides details for each class and property defined by DISK Ontolo
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasHypothesisVariable"
-               title="http://disk-project.org/ontology/disk#hasHypothesisVariable">has hypothesis variable</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasRevisedHypothesisVariable"
-               title="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">has revised hypothesis variable</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable"
+            <a href="#hasVariable"
                title="http://disk-project.org/ontology/disk#hasVariable">has variable</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -562,18 +550,13 @@ This section provides details for each class and property defined by DISK Ontolo
          <dd>
             <a href="#hasExecution"
                title="http://disk-project.org/ontology/disk#hasExecution">has execution</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasHypothesisVariable"
-               title="http://disk-project.org/ontology/disk#hasHypothesisVariable">has hypothesis variable</a>
-            <sup class="type-op" title="object property">op</sup>, <span class="dotted" title="http://disk-project.org/ontology/disk#hasId">has id</span>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOptionalParameter"
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOptionalParameter"
                title="http://disk-project.org/ontology/disk#hasOptionalParameter">has optional parameter</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasParameter"
                title="http://disk-project.org/ontology/disk#hasParameter">has parameter</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasRevisedHypothesisVariable"
-               title="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">has revised hypothesis variable</a>
-            <sup class="type-op" title="object property">op</sup>, <span class="dotted" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</span>
-            <sup class="type-dp" title="data property">dp</sup>, <span class="dotted"
-                  title="http://disk-project.org/ontology/disk#hasRunStatus">has run status</span>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRunLink" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunStatus"
+               title="http://disk-project.org/ontology/disk#hasRunStatus">has run status</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasVariableBinding"
                title="http://disk-project.org/ontology/disk#hasVariableBinding">has variable binding</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasWorkflow"
@@ -594,8 +577,7 @@ This section provides details for each class and property defined by DISK Ontolo
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#createdFrom"
-            title="http://disk-project.org/ontology/disk#createdFrom">created from</a>
+         <a href="#createdFrom" title="http://disk-project.org/ontology/disk#createdFrom">created from</a>
       </li>
       <li>
          <a href="#hasAuthor" title="http://disk-project.org/ontology/disk#hasAuthor">has author</a>
@@ -610,9 +592,7 @@ This section provides details for each class and property defined by DISK Ontolo
       </li>
       <li>
          <a href="#hasHypothesisVariable"
-            title="http://disk-project.org/ontology/disk#hasHypothesisVariable">
-            <span>has hypothesis variable</span>
-         </a>
+            title="http://disk-project.org/ontology/disk#hasHypothesisVariable">has hypothesis variable</a>
       </li>
       <li>
          <a href="#hasLineOfInquiry"
@@ -655,9 +635,7 @@ This section provides details for each class and property defined by DISK Ontolo
       </li>
       <li>
          <a href="#hasRevisedHypothesisVariable"
-            title="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">
-            <span>has revised hypothesis variable</span>
-         </a>
+            title="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">has revised hypothesis variable</a>
       </li>
       <li>
          <a href="#hasTriggeredLineOfInquiry"
@@ -729,7 +707,8 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <a href="#LineOfInquiry"
@@ -795,7 +774,8 @@ This section provides details for each class and property defined by DISK Ontolo
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -808,22 +788,29 @@ This section provides details for each class and property defined by DISK Ontolo
       </h3>
       <p>
          <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasHypothesisVariable</p>
+      <div class="comment">
+         <span class="markdown">This property is used to identify which variables in the hypothesis are used in the workflows.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#MetaWorkflow"
                   title="http://disk-project.org/ontology/disk#MetaWorkflow">Metaworkflow</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#WorkflowBinding"
                   title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>is also defined as</dt>
+            <dt>has range</dt>
             <dd>
-               <a href="#hasHypothesisVariable">annotation property</a>
+               <span class="dotted" title="http://disk-project.org/ontology/disk#Variable">variable</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://www.wings-workflows.org/ontology/workflow.owl#Variable"
+                  title="http://www.wings-workflows.org/ontology/workflow.owl#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -996,12 +983,14 @@ This section provides details for each class and property defined by DISK Ontolo
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1103,7 +1092,8 @@ This section provides details for each class and property defined by DISK Ontolo
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1116,22 +1106,29 @@ This section provides details for each class and property defined by DISK Ontolo
       </h3>
       <p>
          <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable</p>
+      <div class="comment">
+         <span class="markdown">Property that links a metaworkflow to its revised hypothesis variable.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#MetaWorkflow"
                   title="http://disk-project.org/ontology/disk#MetaWorkflow">Metaworkflow</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#WorkflowBinding"
                   title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>is also defined as</dt>
+            <dt>has range</dt>
             <dd>
-               <a href="#hasRevisedHypothesisVariable">annotation property</a>
+               <span class="dotted" title="http://disk-project.org/ontology/disk#Variable">variable</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://www.wings-workflows.org/ontology/workflow.owl#Variable"
+                  title="http://www.wings-workflows.org/ontology/workflow.owl#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1300,7 +1297,8 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
@@ -1333,8 +1331,7 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#createdFrom"
-                  title="http://disk-project.org/ontology/disk#createdFrom">created from</a>
+               <a href="#createdFrom" title="http://disk-project.org/ontology/disk#createdFrom">created from</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#hasLineOfInquiry"
                   title="http://disk-project.org/ontology/disk#hasLineOfInquiry">has line of inquiry</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasRevisionOf" title="http://www.w3.org/ns/prov#wasRevisionOf">was revision of</a>
@@ -1427,6 +1424,9 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://disk-project.org/ontology/disk#hasHypothesisQuery">has hypothesis query</a>
       </li>
       <li>
+         <a href="#hasId" title="http://disk-project.org/ontology/disk#hasId">has id</a>
+      </li>
+      <li>
          <a href="#hasInputFile"
             title="http://disk-project.org/ontology/disk#hasInputFile">has input file</a>
       </li>
@@ -1454,16 +1454,23 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://disk-project.org/ontology/disk#hasRelevantVariables">has relevant variables</a>
       </li>
       <li>
+         <a href="#hasRunLink" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
+      </li>
+      <li>
+         <a href="#hasRunStatus"
+            title="http://disk-project.org/ontology/disk#hasRunStatus">has run status</a>
+      </li>
+      <li>
+         <a href="#hasTriggeredLineOfInquiryStatus"
+            title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">has triggered line of inquiry status</a>
+      </li>
+      <li>
          <a href="#hasUsageNotes"
             title="http://disk-project.org/ontology/disk#hasUsageNotes">has usage notes</a>
       </li>
       <li>
          <a href="#hasVariableName"
             title="http://disk-project.org/ontology/disk#hasVariableName">has variable name</a>
-      </li>
-      <li>
-         <a href="#hasTriggeredLineOfInquiryStatus"
-            title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">Triggered Line Of Inquiry Status</a>
       </li>
    </ul>
    <div class="entity" id="hasDataQueryDescription">
@@ -1505,7 +1512,8 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <a href="#LineOfInquiry"
@@ -1537,7 +1545,8 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <a href="#LineOfInquiry"
@@ -1812,6 +1821,34 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasId">
+      <h3>has id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasId</p>
+      <div class="comment">
+         <span class="markdown">Property that links to the ID of the described resource</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasInputFile">
       <h3>has input file<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1984,6 +2021,81 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasRunLink">
+      <h3>has run link<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasRunLink</p>
+      <div class="comment">
+         <span class="markdown">Link to the execution of a workflow in the corresponding workflow system</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRunStatus">
+      <h3>has run status<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasRunStatus</p>
+      <div class="comment">
+         <span class="markdown">Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTriggeredLineOfInquiryStatus">
+      <h3>has triggered line of inquiry status<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus</p>
+      <div class="comment">
+         <span class="markdown">Property that states the status of a triggered line of inquiry.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TriggeredLineOfInquiry"
+                  title="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry">Triggered line of inquiry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasUsageNotes">
       <h3>has usage notes<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1998,7 +2110,8 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Hypothesis" title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
+               <a href="#Hypothesis"
+                  title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <a href="#LineOfInquiry"
@@ -2032,31 +2145,6 @@ This section provides details for each class and property defined by DISK Ontolo
                <span class="logic">or</span> 
                <a href="#QuestionVariable"
                   title="http://disk-project.org/ontology/disk#QuestionVariable">Question Variable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasTriggeredLineOfInquiryStatus">
-      <h3>Triggered Line Of Inquiry Status<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus</p>
-      <div class="comment">
-         <span class="markdown">Property that states the status of a triggered line of inquiry.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#TriggeredLineOfInquiry"
-                  title="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry">Triggered line of inquiry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
