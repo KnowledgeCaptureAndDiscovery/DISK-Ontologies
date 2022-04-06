@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <https://w3id.org/sqo#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix terms: <http://purl.org/dc/terms/> .
@@ -171,6 +172,14 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:range :Hypothesis ;
                      rdfs:comment "Property that links to the parent hypothesis from which the current hypothesis has been derived"@en ;
                      rdfs:label "has parent hypothesis"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasQuestion
+:hasQuestion rdf:type owl:ObjectProperty ;
+             rdfs:domain :LineOfInquiry ;
+             rdfs:range ns1:Question ;
+             rdfs:comment "Property that links a Line of Inquiry with a question"@en ;
+             rdfs:label "has question"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasResultingHypothesis

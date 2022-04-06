@@ -218,7 +218,9 @@ This section provides details for each class and property defined by DISK Ontolo
                title="http://disk-project.org/ontology/disk#hasHypothesisQuery">has hypothesis query</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#dataQueryDescription"
                title="http://disk-project.org/ontology/disk#dataQueryDescription">has query description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRelevantVariables"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasQuestion"
+               title="http://disk-project.org/ontology/disk#hasQuestion">has question</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRelevantVariables"
                title="http://disk-project.org/ontology/disk#hasRelevantVariables">has relevant variables</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -517,6 +519,10 @@ This section provides details for each class and property defined by DISK Ontolo
       </li>
       <li>
          <a href="#http://www.w3.org/ns/prov#has_provenance" title="http://www.w3.org/ns/prov#has_provenance">has provenance</a>
+      </li>
+      <li>
+         <a href="#hasQuestion"
+            title="http://disk-project.org/ontology/disk#hasQuestion">has question</a>
       </li>
       <li>
          <a href="#hasResultingHypothesis"
@@ -875,6 +881,32 @@ This section provides details for each class and property defined by DISK Ontolo
                <a href="#hasTriggeredLineOfInquiry"
                   title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry">has triggered line of inquiry</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasQuestion">
+      <h3>has question<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasQuestion</p>
+      <div class="comment">
+         <span class="markdown">Property that links a Line of Inquiry with a question</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#LineOfInquiry"
+                  title="http://disk-project.org/ontology/disk#LineOfInquiry">Line of Inquiry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/sqo#Question">question</span>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>

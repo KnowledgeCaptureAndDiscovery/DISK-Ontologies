@@ -280,6 +280,18 @@
     
 
 
+    <!-- http://disk-project.org/ontology/disk#hasQuestion -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasQuestion">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="https://w3id.org/sqo#Question"/>
+        <rdfs:comment xml:lang="en">Property that links a Line of Inquiry with a question</rdfs:comment>
+        <rdfs:label xml:lang="en">has question</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://disk-project.org/ontology/disk#hasResultingHypothesis -->
 
 
@@ -885,6 +897,13 @@
         <rdfs:isDefinedBy rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#"/>
         <rdfs:label xml:lang="en">Workflow</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/sqo#Question -->
+
+
+    <owl:Class rdf:about="https://w3id.org/sqo#Question"/>
 </rdf:RDF>
 
 
