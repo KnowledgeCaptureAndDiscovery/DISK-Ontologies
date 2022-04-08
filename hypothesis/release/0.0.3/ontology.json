@@ -1,0 +1,137 @@
+[ {
+  "@id" : "http://disk-project.org/ontology/disk#Hypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#CoherenceHypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Coherence Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#CorrelationHypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Correlation Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Periodicities Existence Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Periodicities Intermitence Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Record Comparison Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#associatedWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://disk-project.org/ontology/hypothesis#example" : [ {
+    "@language" : "en",
+    "@value" : "EGFR Protein associatedWith Colon Cancer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describes an association between two entities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "associated with"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#expressedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes when an entity is expresed in terms of another entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "expressed in"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#fromDataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes when an entity is from a dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "from dataset"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#fromSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes when an entity is from a site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "from site"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#hasVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes when an entity has or uses another entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has variable"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#lessThan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://disk-project.org/ontology/hypothesis#example" : [ {
+    "@language" : "en",
+    "@value" : "Effect Size is associated with Age less than 30."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Optional parameter for describing an upper limit for an entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "less than"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#moreThan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://disk-project.org/ontology/hypothesis#example" : [ {
+    "@language" : "en",
+    "@value" : "Effect Size is associated with Age more than 50."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Optional parameter for describing a lower limit for an entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "more than"
+  } ]
+} ]

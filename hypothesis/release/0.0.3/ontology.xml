@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:hypothesis="http://disk-project.org/ontology/hypothesis#">
     <owl:Ontology rdf:about="http://disk-project.org/ontology/hypothesis"/>
     
 
@@ -18,10 +19,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://disk-project.org/ontology/hypothesis#example -->
+
 
     <owl:AnnotationProperty rdf:about="http://disk-project.org/ontology/hypothesis#example"/>
     
@@ -35,10 +38,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://disk-project.org/ontology/hypothesis#associatedWith -->
+
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#associatedWith">
         <example xml:lang="en">EGFR Protein associatedWith Colon Cancer.</example>
@@ -50,6 +55,7 @@
 
     <!-- http://disk-project.org/ontology/hypothesis#expressedIn -->
 
+
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#expressedIn">
         <rdfs:comment>Describes when an entity is expresed in terms of another entity.</rdfs:comment>
         <rdfs:label xml:lang="en">expressed in</rdfs:label>
@@ -58,6 +64,7 @@
 
 
     <!-- http://disk-project.org/ontology/hypothesis#fromDataset -->
+
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#fromDataset">
         <rdfs:comment>Describes when an entity is from a dataset</rdfs:comment>
@@ -68,6 +75,7 @@
 
     <!-- http://disk-project.org/ontology/hypothesis#fromSite -->
 
+
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#fromSite">
         <rdfs:comment>Describes when an entity is from a site</rdfs:comment>
         <rdfs:label>from site</rdfs:label>
@@ -76,6 +84,7 @@
 
 
     <!-- http://disk-project.org/ontology/hypothesis#hasVariable -->
+
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#hasVariable">
         <rdfs:comment>Describes when an entity has or uses another entity.</rdfs:comment>
@@ -92,10 +101,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://disk-project.org/ontology/hypothesis#lessThan -->
+
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/hypothesis#lessThan">
         <example xml:lang="en">Effect Size is associated with Age less than 30.</example>
@@ -106,6 +117,7 @@
 
 
     <!-- http://disk-project.org/ontology/hypothesis#moreThan -->
+
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/hypothesis#moreThan">
         <example xml:lang="en">Effect Size is associated with Age more than 50.</example>
@@ -123,10 +135,19 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#Hypothesis -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
     
 
 
     <!-- http://disk-project.org/ontology/hypothesis#CoherenceHypothesis -->
+
 
     <owl:Class rdf:about="http://disk-project.org/ontology/hypothesis#CoherenceHypothesis">
         <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
@@ -137,6 +158,7 @@
 
     <!-- http://disk-project.org/ontology/hypothesis#CorrelationHypothesis -->
 
+
     <owl:Class rdf:about="http://disk-project.org/ontology/hypothesis#CorrelationHypothesis">
         <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
         <rdfs:label>Correlation Hypothesis</rdfs:label>
@@ -145,6 +167,7 @@
 
 
     <!-- http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis -->
+
 
     <owl:Class rdf:about="http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis">
         <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
@@ -155,6 +178,7 @@
 
     <!-- http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis -->
 
+
     <owl:Class rdf:about="http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis">
         <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
         <rdfs:label>Periodicities Intermitence Hypothesis</rdfs:label>
@@ -164,6 +188,7 @@
 
     <!-- http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis -->
 
+
     <owl:Class rdf:about="http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis">
         <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
         <rdfs:label>Record Comparison Hypothesis</rdfs:label>
@@ -172,5 +197,6 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
 

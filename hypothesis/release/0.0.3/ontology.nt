@@ -1,0 +1,107 @@
+<http://disk-project.org/ontology/hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://disk-project.org/ontology/hypothesis#example
+<http://disk-project.org/ontology/hypothesis#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://disk-project.org/ontology/hypothesis#associatedWith
+<http://disk-project.org/ontology/hypothesis#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/hypothesis#associatedWith> <http://disk-project.org/ontology/hypothesis#example> "EGFR Protein associatedWith Colon Cancer."@en .
+<http://disk-project.org/ontology/hypothesis#associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes an association between two entities."@en .
+<http://disk-project.org/ontology/hypothesis#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "associated with"@en .
+# 
+# http://disk-project.org/ontology/hypothesis#expressedIn
+<http://disk-project.org/ontology/hypothesis#expressedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/hypothesis#expressedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity is expresed in terms of another entity." .
+<http://disk-project.org/ontology/hypothesis#expressedIn> <http://www.w3.org/2000/01/rdf-schema#label> "expressed in"@en .
+# 
+# http://disk-project.org/ontology/hypothesis#fromDataset
+<http://disk-project.org/ontology/hypothesis#fromDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/hypothesis#fromDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity is from a dataset" .
+<http://disk-project.org/ontology/hypothesis#fromDataset> <http://www.w3.org/2000/01/rdf-schema#label> "from dataset" .
+# 
+# http://disk-project.org/ontology/hypothesis#fromSite
+<http://disk-project.org/ontology/hypothesis#fromSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/hypothesis#fromSite> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity is from a site" .
+<http://disk-project.org/ontology/hypothesis#fromSite> <http://www.w3.org/2000/01/rdf-schema#label> "from site" .
+# 
+# http://disk-project.org/ontology/hypothesis#hasVariable
+<http://disk-project.org/ontology/hypothesis#hasVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/hypothesis#hasVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity has or uses another entity." .
+<http://disk-project.org/ontology/hypothesis#hasVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has variable" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://disk-project.org/ontology/hypothesis#lessThan
+<http://disk-project.org/ontology/hypothesis#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/hypothesis#lessThan> <http://disk-project.org/ontology/hypothesis#example> "Effect Size is associated with Age less than 30."@en .
+<http://disk-project.org/ontology/hypothesis#lessThan> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional parameter for describing an upper limit for an entity."@en .
+<http://disk-project.org/ontology/hypothesis#lessThan> <http://www.w3.org/2000/01/rdf-schema#label> "less than"@en .
+# 
+# http://disk-project.org/ontology/hypothesis#moreThan
+<http://disk-project.org/ontology/hypothesis#moreThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/hypothesis#moreThan> <http://disk-project.org/ontology/hypothesis#example> "Effect Size is associated with Age more than 50."@en .
+<http://disk-project.org/ontology/hypothesis#moreThan> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional parameter for describing a lower limit for an entity."@en .
+<http://disk-project.org/ontology/hypothesis#moreThan> <http://www.w3.org/2000/01/rdf-schema#label> "more than"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://disk-project.org/ontology/disk#Hypothesis
+<http://disk-project.org/ontology/disk#Hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://disk-project.org/ontology/hypothesis#CoherenceHypothesis
+<http://disk-project.org/ontology/hypothesis#CoherenceHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/hypothesis#CoherenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/hypothesis#CoherenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Coherence Hypothesis" .
+# 
+# http://disk-project.org/ontology/hypothesis#CorrelationHypothesis
+<http://disk-project.org/ontology/hypothesis#CorrelationHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/hypothesis#CorrelationHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/hypothesis#CorrelationHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Correlation Hypothesis" .
+# 
+# http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis
+<http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Periodicities Existence Hypothesis" .
+# 
+# http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis
+<http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Periodicities Intermitence Hypothesis" .
+# 
+# http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis
+<http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Record Comparison Hypothesis" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

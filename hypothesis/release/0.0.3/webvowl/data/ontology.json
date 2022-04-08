@@ -1,0 +1,304 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://disk-project.org/ontology/disk", "http://www.w3.org/2001/XMLSchema", "http://disk-project.org/ontology/hypothesis" ],
+    "iri" : "http://disk-project.org/ontology/hypothesis"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecordComparisonHypothesis",
+      "undefined" : "Record Comparison Hypothesis"
+    },
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#CorrelationHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrelationHypothesis",
+      "undefined" : "Correlation Hypothesis"
+    },
+    "id" : "8",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://disk-project.org/ontology/disk#Hypothesis",
+    "baseIri" : "http://disk-project.org/ontology/disk",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hypothesis"
+    },
+    "subClasses" : [ "5", "8", "10", "12", "17" ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PeriodicitiesIntermitenceHypothesis",
+      "undefined" : "Periodicities Intermitence Hypothesis"
+    },
+    "id" : "10",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PeriodicitiesExistenceHypothesis",
+      "undefined" : "Periodicities Existence Hypothesis"
+    },
+    "id" : "12",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#CoherenceHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoherenceHypothesis",
+      "undefined" : "Coherence Hypothesis"
+    },
+    "id" : "17",
+    "superClasses" : [ "6" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "2",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://disk-project.org/ontology/hypothesis#hasVariable",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasVariable",
+      "undefined" : "has variable"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Describes when an entity has or uses another entity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#moreThan",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "3",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Effect Size is associated with Age more than 50.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "moreThan",
+      "en" : "more than"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Optional parameter for describing a lower limit for an entity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "2"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "4"
+  }, {
+    "range" : "6",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
+  }, {
+    "range" : "6",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "6",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#associatedWith",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "1",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "EGFR Protein associatedWith Colon Cancer.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "associatedWith",
+      "en" : "associated with"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Describes an association between two entities."
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#expressedIn",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "expressedIn",
+      "en" : "expressed in"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Describes when an entity is expresed in terms of another entity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#fromDataset",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "fromDataset",
+      "undefined" : "from dataset"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Describes when an entity is from a dataset"
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "range" : "6",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#lessThan",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "19",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Effect Size is associated with Age less than 30.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lessThan",
+      "en" : "less than"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Optional parameter for describing an upper limit for an entity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#fromSite",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "fromSite",
+      "undefined" : "from site"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Describes when an entity is from a site"
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  } ]
+}
