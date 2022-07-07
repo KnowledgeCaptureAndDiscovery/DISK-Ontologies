@@ -220,8 +220,10 @@ This section provides details for each class and property defined by DISK Ontolo
                title="http://disk-project.org/ontology/disk#dataQueryDescription">has query description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasQuestion"
                title="http://disk-project.org/ontology/disk#hasQuestion">has question</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasRelevantVariables"
-               title="http://disk-project.org/ontology/disk#hasRelevantVariables">has relevant variables</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTableDescription"
+               title="http://disk-project.org/ontology/disk#hasTableDescription">has table description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTableVariables"
+               title="http://disk-project.org/ontology/disk#hasTableVariables">has table variables</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -1264,10 +1266,6 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://disk-project.org/ontology/disk#dataQueryDescription">has query description</a>
       </li>
       <li>
-         <a href="#hasRelevantVariables"
-            title="http://disk-project.org/ontology/disk#hasRelevantVariables">has relevant variables</a>
-      </li>
-      <li>
          <a href="#hasRunLink" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
       </li>
       <li>
@@ -1276,6 +1274,14 @@ This section provides details for each class and property defined by DISK Ontolo
       </li>
       <li>
          <a href="#hasSource" title="http://disk-project.org/ontology/disk#hasSource">Has Source</a>
+      </li>
+      <li>
+         <a href="#hasTableDescription"
+            title="http://disk-project.org/ontology/disk#hasTableDescription">has table description</a>
+      </li>
+      <li>
+         <a href="#hasTableVariables"
+            title="http://disk-project.org/ontology/disk#hasTableVariables">has table variables</a>
       </li>
       <li>
          <a href="#hasTriggeredLineOfInquiryStatus"
@@ -1659,31 +1665,6 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasRelevantVariables">
-      <h3>has relevant variables<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasRelevantVariables</p>
-      <div class="comment">
-         <span class="markdown">Property that specify which variables of the data query will be shown on the triggered line of inquiry</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#LineOfInquiry"
-                  title="http://disk-project.org/ontology/disk#LineOfInquiry">Line of Inquiry</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasRunLink">
       <h3>has run link<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1750,6 +1731,56 @@ This section provides details for each class and property defined by DISK Ontolo
             <dd>
                <a href="#WorkflowBinding"
                   title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTableDescription">
+      <h3>has table description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasTableDescription</p>
+      <div class="comment">
+         <span class="markdown">Brief description of table generated</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#LineOfInquiry"
+                  title="http://disk-project.org/ontology/disk#LineOfInquiry">Line of Inquiry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTableVariables">
+      <h3>has table variables<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasTableVariables</p>
+      <div class="comment">
+         <span class="markdown">Property that specify which variables of the data query will be used to generate a table</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#LineOfInquiry"
+                  title="http://disk-project.org/ontology/disk#LineOfInquiry">Line of Inquiry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

@@ -409,14 +409,6 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "has output file"@en .
 
 
-###  http://disk-project.org/ontology/disk#hasRelevantVariables
-:hasRelevantVariables rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :LineOfInquiry ;
-                      rdfs:range xsd:string ;
-                      rdfs:comment "Property that specify which variables of the data query will be shown on the triggered line of inquiry"@en ;
-                      rdfs:label "has relevant variables"@en .
-
-
 ###  http://disk-project.org/ontology/disk#hasRunLink
 :hasRunLink rdf:type owl:DatatypeProperty ;
             rdfs:domain :WorkflowBinding ;
@@ -439,6 +431,22 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:range xsd:string ;
            rdfs:comment "Denotes the source of a Workflow" ;
            rdfs:label "Has Source" .
+
+
+###  http://disk-project.org/ontology/disk#hasTableDescription
+:hasTableDescription rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :LineOfInquiry ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Brief description of table generated" ;
+                     rdfs:label "has table description" .
+
+
+###  http://disk-project.org/ontology/disk#hasTableVariables
+:hasTableVariables rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :LineOfInquiry ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Property that specify which variables of the data query will be used to generate a table" ;
+                   rdfs:label "has table variables" .
 
 
 ###  http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus

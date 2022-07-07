@@ -431,13 +431,6 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://disk-project.org/ontology/disk#hasOutputFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that states the output files for a triggered line of inquiry."@en .
 <http://disk-project.org/ontology/disk#hasOutputFile> <http://www.w3.org/2000/01/rdf-schema#label> "has output file"@en .
 # 
-# http://disk-project.org/ontology/disk#hasRelevantVariables
-<http://disk-project.org/ontology/disk#hasRelevantVariables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://disk-project.org/ontology/disk#hasRelevantVariables> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#LineOfInquiry> .
-<http://disk-project.org/ontology/disk#hasRelevantVariables> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://disk-project.org/ontology/disk#hasRelevantVariables> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that specify which variables of the data query will be shown on the triggered line of inquiry"@en .
-<http://disk-project.org/ontology/disk#hasRelevantVariables> <http://www.w3.org/2000/01/rdf-schema#label> "has relevant variables"@en .
-# 
 # http://disk-project.org/ontology/disk#hasRunLink
 <http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
@@ -458,6 +451,20 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://disk-project.org/ontology/disk#hasSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://disk-project.org/ontology/disk#hasSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the source of a Workflow" .
 <http://disk-project.org/ontology/disk#hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "Has Source" .
+# 
+# http://disk-project.org/ontology/disk#hasTableDescription
+<http://disk-project.org/ontology/disk#hasTableDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasTableDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasTableDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasTableDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Brief description of table generated" .
+<http://disk-project.org/ontology/disk#hasTableDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has table description" .
+# 
+# http://disk-project.org/ontology/disk#hasTableVariables
+<http://disk-project.org/ontology/disk#hasTableVariables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasTableVariables> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasTableVariables> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasTableVariables> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that specify which variables of the data query will be used to generate a table" .
+<http://disk-project.org/ontology/disk#hasTableVariables> <http://www.w3.org/2000/01/rdf-schema#label> "has table variables" .
 # 
 # http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus
 <http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

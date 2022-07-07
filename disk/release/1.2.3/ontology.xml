@@ -647,18 +647,6 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasRelevantVariables -->
-
-
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRelevantVariables">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Property that specify which variables of the data query will be shown on the triggered line of inquiry</rdfs:comment>
-        <rdfs:label xml:lang="en">has relevant variables</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://disk-project.org/ontology/disk#hasRunLink -->
 
 
@@ -691,6 +679,30 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Denotes the source of a Workflow</rdfs:comment>
         <rdfs:label>Has Source</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasTableDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasTableDescription">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Brief description of table generated</rdfs:comment>
+        <rdfs:label>has table description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasTableVariables -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasTableVariables">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Property that specify which variables of the data query will be used to generate a table</rdfs:comment>
+        <rdfs:label>has table variables</rdfs:label>
     </owl:DatatypeProperty>
     
 
