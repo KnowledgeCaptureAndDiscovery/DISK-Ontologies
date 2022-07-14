@@ -124,6 +124,14 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:label "has hypothesis variable"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasInputFile
+:hasInputFile rdf:type owl:ObjectProperty ;
+              rdfs:domain :WorkflowBinding ;
+              rdfs:range :VariableBinding ;
+              rdfs:comment "Property that states the input files for a workflow run" ;
+              rdfs:label "has input file" .
+
+
 ###  http://disk-project.org/ontology/disk#hasLineOfInquiry
 :hasLineOfInquiry rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
@@ -152,6 +160,14 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:range :VariableBinding ;
                       rdfs:comment "Property to store the optional parameters that can be inputted to a workflow"@en ;
                       rdfs:label "has optional parameter"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasOutputFile
+:hasOutputFile rdf:type owl:ObjectProperty ;
+               rdfs:domain :WorkflowBinding ;
+               rdfs:range :VariableBinding ;
+               rdfs:comment "Property that states the output files for a workflow run" ;
+               rdfs:label "has output file" .
 
 
 ###  http://disk-project.org/ontology/disk#hasParameter
@@ -338,7 +354,7 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:domain :LineOfInquiry ;
                          rdfs:range xsd:string ;
                          rdfs:comment "Property to describe the data retrieved from a data query in a Line of Inquiry."@en ;
-                         rdfs:label "Data Query Description"@en .
+                         rdfs:label "has data query description"@en .
 
 
 ###  http://disk-project.org/ontology/disk#hasDataSource
@@ -381,14 +397,6 @@ xsd:date rdf:type rdfs:Datatype .
        rdfs:label "has id"@en .
 
 
-###  http://disk-project.org/ontology/disk#hasInputFile
-:hasInputFile rdf:type owl:DatatypeProperty ;
-              rdfs:domain :TriggeredLineOfInquiry ;
-              rdfs:range xsd:string ;
-              rdfs:comment "Property that states the input files for a triggered line of inquiry."@en ;
-              rdfs:label "has input file"@en .
-
-
 ###  http://disk-project.org/ontology/disk#hasName
 :hasName rdf:type owl:DatatypeProperty ;
          rdfs:domain :Person ;
@@ -397,12 +405,12 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "has name"@en .
 
 
-###  http://disk-project.org/ontology/disk#hasOutputFile
-:hasOutputFile rdf:type owl:DatatypeProperty ;
-               rdfs:domain :TriggeredLineOfInquiry ;
-               rdfs:range xsd:string ;
-               rdfs:comment "Property that states the output files for a triggered line of inquiry."@en ;
-               rdfs:label "has output file"@en .
+###  http://disk-project.org/ontology/disk#hasRunEndDate
+:hasRunEndDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :WorkflowBinding ;
+               rdfs:range xsd:date ;
+               rdfs:comment "Date when the workflow run was finished" ;
+               rdfs:label "has run end date" .
 
 
 ###  http://disk-project.org/ontology/disk#hasRunLink
@@ -411,6 +419,14 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:range xsd:string ;
             rdfs:comment "Link to the execution of a workflow in the corresponding workflow system"@en ;
             rdfs:label "has run link"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasRunStartDate
+:hasRunStartDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :WorkflowBinding ;
+                 rdfs:range xsd:date ;
+                 rdfs:comment "Date when the workflow run started" ;
+                 rdfs:label "has run start date" .
 
 
 ###  http://disk-project.org/ontology/disk#hasRunStatus

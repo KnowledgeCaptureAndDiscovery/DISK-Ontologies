@@ -211,6 +211,18 @@
     
 
 
+    <!-- http://disk-project.org/ontology/disk#hasInputFile -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasInputFile">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:comment>Property that states the input files for a workflow run</rdfs:comment>
+        <rdfs:label>has input file</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://disk-project.org/ontology/disk#hasLineOfInquiry -->
 
 
@@ -252,6 +264,18 @@
         <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
         <rdfs:comment xml:lang="en">Property to store the optional parameters that can be inputted to a workflow</rdfs:comment>
         <rdfs:label xml:lang="en">has optional parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasOutputFile -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasOutputFile">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:comment>Property that states the output files for a workflow run</rdfs:comment>
+        <rdfs:label>has output file</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -544,7 +568,7 @@
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Property to describe the data retrieved from a data query in a Line of Inquiry.</rdfs:comment>
-        <rdfs:label xml:lang="en">Data Query Description</rdfs:label>
+        <rdfs:label xml:lang="en">has data query description</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -611,18 +635,6 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasInputFile -->
-
-
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasInputFile">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Property that states the input files for a triggered line of inquiry.</rdfs:comment>
-        <rdfs:label xml:lang="en">has input file</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://disk-project.org/ontology/disk#hasName -->
 
 
@@ -635,14 +647,14 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasOutputFile -->
+    <!-- http://disk-project.org/ontology/disk#hasRunEndDate -->
 
 
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasOutputFile">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Property that states the output files for a triggered line of inquiry.</rdfs:comment>
-        <rdfs:label xml:lang="en">has output file</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunEndDate">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date when the workflow run was finished</rdfs:comment>
+        <rdfs:label>has run end date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -655,6 +667,18 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Link to the execution of a workflow in the corresponding workflow system</rdfs:comment>
         <rdfs:label xml:lang="en">has run link</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasRunStartDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunStartDate">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date when the workflow run started</rdfs:comment>
+        <rdfs:label>has run start date</rdfs:label>
     </owl:DatatypeProperty>
     
 

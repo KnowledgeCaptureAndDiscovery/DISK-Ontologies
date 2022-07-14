@@ -210,10 +210,10 @@ This section provides details for each class and property defined by DISK Ontolo
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasDataQueryDescription"
-               title="http://disk-project.org/ontology/disk#hasDataQueryDescription">Data Query Description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDataQuery"
+            <a href="#hasDataQuery"
                title="http://disk-project.org/ontology/disk#hasDataQuery">has data query</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDataQueryDescription"
+               title="http://disk-project.org/ontology/disk#hasDataQueryDescription">has data query description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasHypothesisQuery"
                title="http://disk-project.org/ontology/disk#hasHypothesisQuery">has hypothesis query</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#dataQueryDescription"
@@ -328,13 +328,9 @@ This section provides details for each class and property defined by DISK Ontolo
          <dd>
             <a href="#hasHypothesis"
                title="http://disk-project.org/ontology/disk#hasHypothesis">has hypothesis</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasInputFile"
-               title="http://disk-project.org/ontology/disk#hasInputFile">has input file</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLineOfInquiry"
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasLineOfInquiry"
                title="http://disk-project.org/ontology/disk#hasLineOfInquiry">has line of inquiry</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasOutputFile"
-               title="http://disk-project.org/ontology/disk#hasOutputFile">has output file</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasResultingHypothesis"
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasResultingHypothesis"
                title="http://disk-project.org/ontology/disk#hasResultingHypothesis">has resulting hypothesis</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasTriggeredLineOfInquiryStatus"
                title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">has triggered line of inquiry status</a>
@@ -394,8 +390,12 @@ This section provides details for each class and property defined by DISK Ontolo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasOptionalParameter"
+            <a href="#hasInputFile"
+               title="http://disk-project.org/ontology/disk#hasInputFile">has input file</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOptionalParameter"
                title="http://disk-project.org/ontology/disk#hasOptionalParameter">has optional parameter</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOutputFile"
+               title="http://disk-project.org/ontology/disk#hasOutputFile">has output file</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasParameter"
                title="http://disk-project.org/ontology/disk#hasParameter">has parameter</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasVariableBinding"
@@ -456,11 +456,19 @@ This section provides details for each class and property defined by DISK Ontolo
             <a href="#hasSource" title="http://disk-project.org/ontology/disk#hasSource">Has Source</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExecution"
                title="http://disk-project.org/ontology/disk#hasExecution">has execution</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasInputFile"
+               title="http://disk-project.org/ontology/disk#hasInputFile">has input file</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasOptionalParameter"
                title="http://disk-project.org/ontology/disk#hasOptionalParameter">has optional parameter</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOutputFile"
+               title="http://disk-project.org/ontology/disk#hasOutputFile">has output file</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasParameter"
                title="http://disk-project.org/ontology/disk#hasParameter">has parameter</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasRunLink" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRunEndDate"
+               title="http://disk-project.org/ontology/disk#hasRunEndDate">has run end date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunLink" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunStartDate"
+               title="http://disk-project.org/ontology/disk#hasRunStartDate">has run start date</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunStatus"
                title="http://disk-project.org/ontology/disk#hasRunStatus">has run status</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasVariableBinding"
@@ -505,6 +513,10 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://disk-project.org/ontology/disk#hasHypothesisVariable">has hypothesis variable</a>
       </li>
       <li>
+         <a href="#hasInputFile"
+            title="http://disk-project.org/ontology/disk#hasInputFile">has input file</a>
+      </li>
+      <li>
          <a href="#hasLineOfInquiry"
             title="http://disk-project.org/ontology/disk#hasLineOfInquiry">has line of inquiry</a>
       </li>
@@ -515,6 +527,10 @@ This section provides details for each class and property defined by DISK Ontolo
       <li>
          <a href="#hasOptionalParameter"
             title="http://disk-project.org/ontology/disk#hasOptionalParameter">has optional parameter</a>
+      </li>
+      <li>
+         <a href="#hasOutputFile"
+            title="http://disk-project.org/ontology/disk#hasOutputFile">has output file</a>
       </li>
       <li>
          <a href="#hasParameter"
@@ -741,6 +757,33 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasInputFile">
+      <h3>has input file<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasInputFile</p>
+      <div class="comment">
+         <span class="markdown">Property that states the input files for a workflow run</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VariableBinding"
+                  title="http://disk-project.org/ontology/disk#VariableBinding">Variable binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasLineOfInquiry">
       <h3>has line of inquiry<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -819,6 +862,33 @@ This section provides details for each class and property defined by DISK Ontolo
          <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasOptionalParameter</p>
       <div class="comment">
          <span class="markdown">Property to store the optional parameters that can be inputted to a workflow</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VariableBinding"
+                  title="http://disk-project.org/ontology/disk#VariableBinding">Variable binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasOutputFile">
+      <h3>has output file<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasOutputFile</p>
+      <div class="comment">
+         <span class="markdown">Property that states the output files for a workflow run</span>
       </div>
       <div class="description">
          <dl>
@@ -1213,10 +1283,6 @@ This section provides details for each class and property defined by DISK Ontolo
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasDataQueryDescription"
-            title="http://disk-project.org/ontology/disk#hasDataQueryDescription">Data Query Description</a>
-      </li>
-      <li>
          <a href="#dateCreated"
             title="http://disk-project.org/ontology/disk#dateCreated">date created</a>
       </li>
@@ -1237,6 +1303,10 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://disk-project.org/ontology/disk#hasDataQuery">has data query</a>
       </li>
       <li>
+         <a href="#hasDataQueryDescription"
+            title="http://disk-project.org/ontology/disk#hasDataQueryDescription">has data query description</a>
+      </li>
+      <li>
          <a href="#hasDataSource"
             title="http://disk-project.org/ontology/disk#hasDataSource">has data source</a>
       </li>
@@ -1251,22 +1321,22 @@ This section provides details for each class and property defined by DISK Ontolo
          <a href="#hasId" title="http://disk-project.org/ontology/disk#hasId">has id</a>
       </li>
       <li>
-         <a href="#hasInputFile"
-            title="http://disk-project.org/ontology/disk#hasInputFile">has input file</a>
-      </li>
-      <li>
          <a href="#hasName" title="http://disk-project.org/ontology/disk#hasName">has name</a>
-      </li>
-      <li>
-         <a href="#hasOutputFile"
-            title="http://disk-project.org/ontology/disk#hasOutputFile">has output file</a>
       </li>
       <li>
          <a href="#dataQueryDescription"
             title="http://disk-project.org/ontology/disk#dataQueryDescription">has query description</a>
       </li>
       <li>
+         <a href="#hasRunEndDate"
+            title="http://disk-project.org/ontology/disk#hasRunEndDate">has run end date</a>
+      </li>
+      <li>
          <a href="#hasRunLink" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
+      </li>
+      <li>
+         <a href="#hasRunStartDate"
+            title="http://disk-project.org/ontology/disk#hasRunStartDate">has run start date</a>
       </li>
       <li>
          <a href="#hasRunStatus"
@@ -1292,31 +1362,6 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://disk-project.org/ontology/disk#hasUsageNotes">has usage notes</a>
       </li>
    </ul>
-   <div class="entity" id="hasDataQueryDescription">
-      <h3>Data Query Description<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasDataQueryDescription</p>
-      <div class="comment">
-         <span class="markdown">Property to describe the data retrieved from a data query in a Line of Inquiry.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#LineOfInquiry"
-                  title="http://disk-project.org/ontology/disk#LineOfInquiry">Line of Inquiry</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="dateCreated">
       <h3>date created<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1460,6 +1505,31 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasDataQueryDescription">
+      <h3>has data query description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasDataQueryDescription</p>
+      <div class="comment">
+         <span class="markdown">Property to describe the data retrieved from a data query in a Line of Inquiry.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#LineOfInquiry"
+                  title="http://disk-project.org/ontology/disk#LineOfInquiry">Line of Inquiry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasDataSource">
       <h3>has data source<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1566,31 +1636,6 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasInputFile">
-      <h3>has input file<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasInputFile</p>
-      <div class="comment">
-         <span class="markdown">Property that states the input files for a triggered line of inquiry.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#TriggeredLineOfInquiry"
-                  title="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry">Triggered line of inquiry</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasName">
       <h3>has name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1606,31 +1651,6 @@ This section provides details for each class and property defined by DISK Ontolo
             <dt>has domain</dt>
             <dd>
                <a href="#Person" title="http://disk-project.org/ontology/disk#Person">Person</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasOutputFile">
-      <h3>has output file<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasOutputFile</p>
-      <div class="comment">
-         <span class="markdown">Property that states the output files for a triggered line of inquiry.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#TriggeredLineOfInquiry"
-                  title="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry">Triggered line of inquiry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1665,6 +1685,31 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasRunEndDate">
+      <h3>has run end date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasRunEndDate</p>
+      <div class="comment">
+         <span class="markdown">Date when the workflow run was finished</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#date">date</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasRunLink">
       <h3>has run link<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1686,6 +1731,31 @@ This section provides details for each class and property defined by DISK Ontolo
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRunStartDate">
+      <h3>has run start date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasRunStartDate</p>
+      <div class="comment">
+         <span class="markdown">Date when the workflow run started</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#date">date</span>
             </dd>
          </dl>
       </div>
