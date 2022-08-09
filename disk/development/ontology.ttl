@@ -345,6 +345,18 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "has confidence value"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasConfidenceType
+:hasConfidenceType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :ConfidenceReport
+                                                :TriggeredLineOfInquiry
+                                              )
+                                ] ;
+                    rdfs:range xsd:double ;
+                    rdfs:comment "Property that binds a resource to its confidence type"@en ;
+                    rdfs:label "has confidence type"@en .
+
+
 ###  http://disk-project.org/ontology/disk#hasDataQuery
 :hasDataQuery rdf:type owl:DatatypeProperty ;
               rdfs:domain :LineOfInquiry ;
