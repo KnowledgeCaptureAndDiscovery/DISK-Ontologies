@@ -15,7 +15,7 @@
                                                      "Hernan Vargas" ,
                                                      "Varun Ratnakar" ,
                                                      "Yolanda Gil" ,
-                                                     "Maximiliano Osorio";
+                                                     "Maximiliano Osorio" ;
                                           terms:abstract "The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard"@en ;
                                           terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
                                           terms:title "The DISK Ontology"@en ;
