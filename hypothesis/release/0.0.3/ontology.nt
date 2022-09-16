@@ -36,10 +36,10 @@
 <http://disk-project.org/ontology/hypothesis#fromDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity is from a dataset" .
 <http://disk-project.org/ontology/hypothesis#fromDataset> <http://www.w3.org/2000/01/rdf-schema#label> "from dataset" .
 # 
-# http://disk-project.org/ontology/hypothesis#fromSite
-<http://disk-project.org/ontology/hypothesis#fromSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://disk-project.org/ontology/hypothesis#fromSite> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity is from a site" .
-<http://disk-project.org/ontology/hypothesis#fromSite> <http://www.w3.org/2000/01/rdf-schema#label> "from site" .
+# http://disk-project.org/ontology/hypothesis#fromLocation
+<http://disk-project.org/ontology/hypothesis#fromLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/hypothesis#fromLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity is from a geographical location" .
+<http://disk-project.org/ontology/hypothesis#fromLocation> <http://www.w3.org/2000/01/rdf-schema#label> "from location" .
 # 
 # http://disk-project.org/ontology/hypothesis#hasVariable
 <http://disk-project.org/ontology/hypothesis#hasVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

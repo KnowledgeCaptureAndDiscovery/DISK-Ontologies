@@ -73,12 +73,12 @@
     
 
 
-    <!-- http://disk-project.org/ontology/hypothesis#fromSite -->
+    <!-- http://disk-project.org/ontology/hypothesis#fromLocation -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#fromSite">
-        <rdfs:comment>Describes when an entity is from a site</rdfs:comment>
-        <rdfs:label>from site</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#fromLocation">
+        <rdfs:comment>Describes when an entity is from a geographical location</rdfs:comment>
+        <rdfs:label>from location</rdfs:label>
     </owl:ObjectProperty>
     
 

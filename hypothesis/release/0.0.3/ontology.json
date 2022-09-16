@@ -87,13 +87,13 @@
     "@value" : "from dataset"
   } ]
 }, {
-  "@id" : "http://disk-project.org/ontology/hypothesis#fromSite",
+  "@id" : "http://disk-project.org/ontology/hypothesis#fromLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Describes when an entity is from a site"
+    "@value" : "Describes when an entity is from a geographical location"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "from site"
+    "@value" : "from location"
   } ]
 }, {
   "@id" : "http://disk-project.org/ontology/hypothesis#hasVariable",

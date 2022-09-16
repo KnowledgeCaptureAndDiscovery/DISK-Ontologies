@@ -39,10 +39,10 @@
              rdfs:label "from dataset" .
 
 
-###  http://disk-project.org/ontology/hypothesis#fromSite
-:fromSite rdf:type owl:ObjectProperty ;
-          rdfs:comment "Describes when an entity is from a site" ;
-          rdfs:label "from site" .
+###  http://disk-project.org/ontology/hypothesis#fromLocation
+:fromLocation rdf:type owl:ObjectProperty ;
+              rdfs:comment "Describes when an entity is from a geographical location" ;
+              rdfs:label "from location" .
 
 
 ###  http://disk-project.org/ontology/hypothesis#hasVariable
