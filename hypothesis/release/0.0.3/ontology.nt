@@ -41,6 +41,11 @@
 <http://disk-project.org/ontology/hypothesis#fromLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity is from a geographical location" .
 <http://disk-project.org/ontology/hypothesis#fromLocation> <http://www.w3.org/2000/01/rdf-schema#label> "from location" .
 # 
+# http://disk-project.org/ontology/hypothesis#hasTimeInterval
+<http://disk-project.org/ontology/hypothesis#hasTimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/hypothesis#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an entity to a time interval." .
+<http://disk-project.org/ontology/hypothesis#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "has time interval" .
+# 
 # http://disk-project.org/ontology/hypothesis#hasVariable
 <http://disk-project.org/ontology/hypothesis#hasVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://disk-project.org/ontology/hypothesis#hasVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes when an entity has or uses another entity." .
@@ -54,6 +59,36 @@
 # #
 # #################################################################
 # 
+# 
+# http://disk-project.org/ontology/hypothesis#hasEndTime
+<http://disk-project.org/ontology/hypothesis#hasEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/hypothesis#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "End time of a time interval"@en .
+<http://disk-project.org/ontology/hypothesis#hasEndTime> <http://www.w3.org/2000/01/rdf-schema#label> "has end time"@en .
+# 
+# http://disk-project.org/ontology/hypothesis#hasMaxLat
+<http://disk-project.org/ontology/hypothesis#hasMaxLat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/hypothesis#hasMaxLat> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the maximum latitude of a geographical location" .
+<http://disk-project.org/ontology/hypothesis#hasMaxLat> <http://www.w3.org/2000/01/rdf-schema#label> "has maximum latitude" .
+# 
+# http://disk-project.org/ontology/hypothesis#hasMaxLng
+<http://disk-project.org/ontology/hypothesis#hasMaxLng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/hypothesis#hasMaxLng> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the maximum longitude of a geographical location" .
+<http://disk-project.org/ontology/hypothesis#hasMaxLng> <http://www.w3.org/2000/01/rdf-schema#label> "has maximum longitude" .
+# 
+# http://disk-project.org/ontology/hypothesis#hasMinLat
+<http://disk-project.org/ontology/hypothesis#hasMinLat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/hypothesis#hasMinLat> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the minimum latitude of a geographical location" .
+<http://disk-project.org/ontology/hypothesis#hasMinLat> <http://www.w3.org/2000/01/rdf-schema#label> "has minimum latitude" .
+# 
+# http://disk-project.org/ontology/hypothesis#hasMinLng
+<http://disk-project.org/ontology/hypothesis#hasMinLng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/hypothesis#hasMinLng> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the minimum longitude of a geographical location" .
+<http://disk-project.org/ontology/hypothesis#hasMinLng> <http://www.w3.org/2000/01/rdf-schema#label> "has minimum longitude" .
+# 
+# http://disk-project.org/ontology/hypothesis#hasStartTime
+<http://disk-project.org/ontology/hypothesis#hasStartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/hypothesis#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Start time of a time interval"@en .
+<http://disk-project.org/ontology/hypothesis#hasStartTime> <http://www.w3.org/2000/01/rdf-schema#label> "has start time"@en .
 # 
 # http://disk-project.org/ontology/hypothesis#lessThan
 <http://disk-project.org/ontology/hypothesis#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -79,6 +114,11 @@
 # http://disk-project.org/ontology/disk#Hypothesis
 <http://disk-project.org/ontology/disk#Hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://disk-project.org/ontology/hypothesis#CausalityHypothesis
+<http://disk-project.org/ontology/hypothesis#CausalityHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/hypothesis#CausalityHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/hypothesis#CausalityHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Causality Hypothesis" .
+# 
 # http://disk-project.org/ontology/hypothesis#CoherenceHypothesis
 <http://disk-project.org/ontology/hypothesis#CoherenceHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/hypothesis#CoherenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
@@ -98,10 +138,5 @@
 <http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
 <http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Periodicities Intermitence Hypothesis" .
-# 
-# http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis
-<http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Hypothesis> .
-<http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Record Comparison Hypothesis" .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

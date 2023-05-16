@@ -83,6 +83,16 @@
     
 
 
+    <!-- http://disk-project.org/ontology/hypothesis#hasTimeInterval -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/hypothesis#hasTimeInterval">
+        <rdfs:comment>Links an entity to a time interval.</rdfs:comment>
+        <rdfs:label>has time interval</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://disk-project.org/ontology/hypothesis#hasVariable -->
 
 
@@ -102,6 +112,66 @@
      -->
 
 
+    
+
+
+    <!-- http://disk-project.org/ontology/hypothesis#hasEndTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/hypothesis#hasEndTime">
+        <rdfs:comment xml:lang="en">End time of a time interval</rdfs:comment>
+        <rdfs:label xml:lang="en">has end time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/hypothesis#hasMaxLat -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/hypothesis#hasMaxLat">
+        <rdfs:comment>Denotes the maximum latitude of a geographical location</rdfs:comment>
+        <rdfs:label>has maximum latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/hypothesis#hasMaxLng -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/hypothesis#hasMaxLng">
+        <rdfs:comment>Denotes the maximum longitude of a geographical location</rdfs:comment>
+        <rdfs:label>has maximum longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/hypothesis#hasMinLat -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/hypothesis#hasMinLat">
+        <rdfs:comment>Denotes the minimum latitude of a geographical location</rdfs:comment>
+        <rdfs:label>has minimum latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/hypothesis#hasMinLng -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/hypothesis#hasMinLng">
+        <rdfs:comment>Denotes the minimum longitude of a geographical location</rdfs:comment>
+        <rdfs:label>has minimum longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/hypothesis#hasStartTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/hypothesis#hasStartTime">
+        <rdfs:comment xml:lang="en">Start time of a time interval</rdfs:comment>
+        <rdfs:label xml:lang="en">has start time</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -146,6 +216,16 @@
     
 
 
+    <!-- http://disk-project.org/ontology/hypothesis#CausalityHypothesis -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/hypothesis#CausalityHypothesis">
+        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
+        <rdfs:label>Causality Hypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://disk-project.org/ontology/hypothesis#CoherenceHypothesis -->
 
 
@@ -182,16 +262,6 @@
     <owl:Class rdf:about="http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis">
         <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
         <rdfs:label>Periodicities Intermitence Hypothesis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis -->
-
-
-    <owl:Class rdf:about="http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis">
-        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
-        <rdfs:label>Record Comparison Hypothesis</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

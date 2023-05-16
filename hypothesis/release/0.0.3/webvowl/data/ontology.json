@@ -7,19 +7,31 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "4",
+    "id" : "6",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "6",
-    "type" : "owl:Class"
+    "id" : "3",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "7",
-    "type" : "owl:Class"
+    "type" : "rdfs:Literal"
   }, {
-    "id" : "9",
-    "type" : "owl:Class"
+    "id" : "5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "11",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "1",
@@ -28,29 +40,67 @@
     "id" : "20",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "13",
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "18",
     "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "4",
+    "id" : "6",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
   }, {
-    "iri" : "http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis",
-    "baseIri" : "http://disk-project.org/ontology/hypothesis",
-    "instances" : 0,
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "3",
     "label" : {
-      "IRI-based" : "RecordComparisonHypothesis",
-      "undefined" : "Record Comparison Hypothesis"
-    },
-    "id" : "6",
-    "superClasses" : [ "7" ]
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "http://disk-project.org/ontology/disk#Hypothesis",
     "baseIri" : "http://disk-project.org/ontology/disk",
@@ -58,19 +108,9 @@
     "label" : {
       "IRI-based" : "Hypothesis"
     },
-    "subClasses" : [ "6", "9", "11", "13", "18" ],
+    "subClasses" : [ "14", "16", "17", "18", "19" ],
     "attributes" : [ "external" ],
-    "id" : "7"
-  }, {
-    "iri" : "http://disk-project.org/ontology/hypothesis#CorrelationHypothesis",
-    "baseIri" : "http://disk-project.org/ontology/hypothesis",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "CorrelationHypothesis",
-      "undefined" : "Correlation Hypothesis"
-    },
-    "id" : "9",
-    "superClasses" : [ "7" ]
+    "id" : "15"
   }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#PeriodicitiesIntermitenceHypothesis",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
@@ -79,8 +119,8 @@
       "IRI-based" : "PeriodicitiesIntermitenceHypothesis",
       "undefined" : "Periodicities Intermitence Hypothesis"
     },
-    "id" : "11",
-    "superClasses" : [ "7" ]
+    "id" : "16",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -96,6 +136,26 @@
       "undefined" : "Literal"
     }
   }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#CausalityHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CausalityHypothesis",
+      "undefined" : "Causality Hypothesis"
+    },
+    "id" : "17",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#CorrelationHypothesis",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrelationHypothesis",
+      "undefined" : "Correlation Hypothesis"
+    },
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#PeriodicitiesExistenceHypothesis",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
     "instances" : 0,
@@ -103,8 +163,8 @@
       "IRI-based" : "PeriodicitiesExistenceHypothesis",
       "undefined" : "Periodicities Existence Hypothesis"
     },
-    "id" : "13",
-    "superClasses" : [ "7" ]
+    "id" : "18",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#CoherenceHypothesis",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
@@ -113,61 +173,68 @@
       "IRI-based" : "CoherenceHypothesis",
       "undefined" : "Coherence Hypothesis"
     },
-    "id" : "18",
-    "superClasses" : [ "7" ]
+    "id" : "19",
+    "superClasses" : [ "15" ]
   } ],
   "property" : [ {
     "id" : "0",
     "type" : "owl:objectProperty"
   }, {
     "id" : "2",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "3",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "5",
-    "type" : "rdfs:SubClassOf"
+    "id" : "4",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "8",
-    "type" : "rdfs:SubClassOf"
+    "id" : "9",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "10",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "12",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "14",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "15",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "16",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "17",
+    "id" : "13",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "19",
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "http://disk-project.org/ontology/hypothesis#fromLocation",
-    "baseIri" : "http://disk-project.org/ontology/hypothesis",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "fromLocation",
-      "undefined" : "from location"
-    },
-    "domain" : "1",
-    "comment" : {
-      "undefined" : "Describes when an entity is from a geographical location"
-    },
-    "attributes" : [ "object" ],
-    "id" : "0"
-  }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#hasVariable",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
     "range" : "1",
@@ -180,11 +247,25 @@
       "undefined" : "Describes when an entity has or uses another entity."
     },
     "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#hasMaxLat",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasMaxLat",
+      "undefined" : "has maximum latitude"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Denotes the maximum latitude of a geographical location"
+    },
+    "attributes" : [ "datatype" ],
     "id" : "2"
   }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#moreThan",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
-    "range" : "4",
+    "range" : "5",
     "annotations" : {
       "example" : [ {
         "identifier" : "example",
@@ -202,27 +283,7 @@
       "en" : "Optional parameter for describing a lower limit for an entity."
     },
     "attributes" : [ "datatype" ],
-    "id" : "3"
-  }, {
-    "range" : "7",
-    "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "5"
-  }, {
-    "range" : "7",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "8"
-  }, {
-    "range" : "7",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "10"
-  }, {
-    "range" : "7",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "12"
+    "id" : "4"
   }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#expressedIn",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
@@ -236,7 +297,7 @@
       "undefined" : "Describes when an entity is expresed in terms of another entity."
     },
     "attributes" : [ "object" ],
-    "id" : "14"
+    "id" : "9"
   }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#fromDataset",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
@@ -250,7 +311,68 @@
       "undefined" : "Describes when an entity is from a dataset"
     },
     "attributes" : [ "object" ],
-    "id" : "15"
+    "id" : "10"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#fromLocation",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "fromLocation",
+      "undefined" : "from location"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Describes when an entity is from a geographical location"
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#hasStartTime",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasStartTime",
+      "en" : "has start time"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Start time of a time interval"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#hasEndTime",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasEndTime",
+      "en" : "has end time"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "End time of a time interval"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#hasMinLat",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasMinLat",
+      "undefined" : "has minimum latitude"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Denotes the minimum latitude of a geographical location"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
   }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#associatedWith",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
@@ -272,16 +394,25 @@
       "en" : "Describes an association between two entities."
     },
     "attributes" : [ "object" ],
-    "id" : "16"
+    "id" : "25"
   }, {
-    "range" : "7",
-    "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "17"
+    "iri" : "http://disk-project.org/ontology/hypothesis#hasTimeInterval",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasTimeInterval",
+      "undefined" : "has time interval"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Links an entity to a time interval."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
   }, {
     "iri" : "http://disk-project.org/ontology/hypothesis#lessThan",
     "baseIri" : "http://disk-project.org/ontology/hypothesis",
-    "range" : "20",
+    "range" : "8",
     "annotations" : {
       "example" : [ {
         "identifier" : "example",
@@ -299,6 +430,54 @@
       "en" : "Optional parameter for describing an upper limit for an entity."
     },
     "attributes" : [ "datatype" ],
-    "id" : "19"
+    "id" : "27"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#hasMinLng",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasMinLng",
+      "undefined" : "has minimum longitude"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Denotes the minimum longitude of a geographical location"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "28"
+  }, {
+    "range" : "15",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "15",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "15",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://disk-project.org/ontology/hypothesis#hasMaxLng",
+    "baseIri" : "http://disk-project.org/ontology/hypothesis",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasMaxLng",
+      "undefined" : "has maximum longitude"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Denotes the maximum longitude of a geographical location"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "32"
+  }, {
+    "range" : "15",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
   } ]
 }

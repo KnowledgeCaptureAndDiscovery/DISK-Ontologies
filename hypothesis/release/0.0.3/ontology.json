@@ -5,6 +5,15 @@
   "@id" : "http://disk-project.org/ontology/hypothesis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
 }, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#CausalityHypothesis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Causality Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
+  } ]
+}, {
   "@id" : "http://disk-project.org/ontology/hypothesis#CoherenceHypothesis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -36,15 +45,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Periodicities Intermitence Hypothesis"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
-  } ]
-}, {
-  "@id" : "http://disk-project.org/ontology/hypothesis#RecordComparisonHypothesis",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Record Comparison Hypothesis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
@@ -94,6 +94,73 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "from location"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#hasEndTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "End time of a time interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has end time"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#hasMaxLat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Denotes the maximum latitude of a geographical location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has maximum latitude"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#hasMaxLng",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Denotes the maximum longitude of a geographical location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has maximum longitude"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#hasMinLat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Denotes the minimum latitude of a geographical location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has minimum latitude"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#hasMinLng",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Denotes the minimum longitude of a geographical location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has minimum longitude"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#hasStartTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Start time of a time interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has start time"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/hypothesis#hasTimeInterval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links an entity to a time interval."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has time interval"
   } ]
 }, {
   "@id" : "http://disk-project.org/ontology/hypothesis#hasVariable",
