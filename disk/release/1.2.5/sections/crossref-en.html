@@ -18,6 +18,10 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://www.wings-workflows.org/ontology/execution.owl#Execution">Execution</a>
       </li>
       <li>
+         <a href="#ExecutionInfo"
+            title="http://disk-project.org/ontology/disk#ExecutionInfo">Execution information</a>
+      </li>
+      <li>
          <a href="#Hypothesis"
             title="http://disk-project.org/ontology/disk#Hypothesis">Hypothesis</a>
       </li>
@@ -150,10 +154,33 @@ This section provides details for each class and property defined by DISK Ontolo
             <a href="#http://www.w3.org/ns/prov/#Bundle" title="http://www.w3.org/ns/prov/#Bundle">Bundle</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasStep" title="http://disk-project.org/ontology/disk#hasStep">has step</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasExecution"
                title="http://disk-project.org/ontology/disk#hasExecution">has execution</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ExecutionInfo">
+      <h3>Execution information<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#ExecutionInfo</p>
+      <div class="comment">
+         <span class="markdown">Stores the state of an execution, start time, end time, status and log.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasStep" title="http://disk-project.org/ontology/disk#hasStep">has step</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -375,6 +402,9 @@ This section provides details for each class and property defined by DISK Ontolo
          <dd>
             <a href="#hasBindingValue"
                title="http://disk-project.org/ontology/disk#hasBindingValue">has binding value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDatatype"
+               title="http://disk-project.org/ontology/disk#hasDatatype">has datatype</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasType" title="http://disk-project.org/ontology/disk#hasType">has type</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasVariable"
                title="http://disk-project.org/ontology/disk#hasVariable">has variable</a>
             <sup class="type-op" title="object property">op</sup>
@@ -454,13 +484,7 @@ This section provides details for each class and property defined by DISK Ontolo
                title="http://disk-project.org/ontology/disk#hasOutputFile">has output file</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasParameter"
                title="http://disk-project.org/ontology/disk#hasParameter">has parameter</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasRunEndDate"
-               title="http://disk-project.org/ontology/disk#hasRunEndDate">has run end date</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunLink" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunStartDate"
-               title="http://disk-project.org/ontology/disk#hasRunStartDate">has run start date</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRunStatus"
-               title="http://disk-project.org/ontology/disk#hasRunStatus">has run status</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRunLink" title="http://disk-project.org/ontology/disk#hasRunLink">has run link</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSource" title="http://disk-project.org/ontology/disk#hasSource">has source</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasVariableBinding"
                title="http://disk-project.org/ontology/disk#hasVariableBinding">has variable binding</a>
@@ -545,6 +569,9 @@ This section provides details for each class and property defined by DISK Ontolo
       <li>
          <a href="#hasRevisedHypothesisVariable"
             title="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">has revised hypothesis variable</a>
+      </li>
+      <li>
+         <a href="#hasStep" title="http://disk-project.org/ontology/disk#hasStep">has step</a>
       </li>
       <li>
          <a href="#hasTriggeredLineOfInquiry"
@@ -1071,6 +1098,33 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasStep">
+      <h3>has step<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasStep</p>
+      <div class="comment">
+         <span class="markdown">Inner step of a execution</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.wings-workflows.org/ontology/execution.owl#Execution"
+                  title="http://www.wings-workflows.org/ontology/execution.owl#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ExecutionInfo"
+                  title="http://disk-project.org/ontology/disk#ExecutionInfo">Execution information</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasTriggeredLineOfInquiry">
       <h3>has triggered line of inquiry<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1312,6 +1366,10 @@ This section provides details for each class and property defined by DISK Ontolo
             title="http://disk-project.org/ontology/disk#hasDataSource">has data source</a>
       </li>
       <li>
+         <a href="#hasDatatype"
+            title="http://disk-project.org/ontology/disk#hasDatatype">has datatype</a>
+      </li>
+      <li>
          <a href="#hasEmail" title="http://disk-project.org/ontology/disk#hasEmail">has email</a>
       </li>
       <li>
@@ -1320,6 +1378,9 @@ This section provides details for each class and property defined by DISK Ontolo
       </li>
       <li>
          <a href="#hasId" title="http://disk-project.org/ontology/disk#hasId">has id</a>
+      </li>
+      <li>
+         <a href="#hasLog" title="http://disk-project.org/ontology/disk#hasLog">has log</a>
       </li>
       <li>
          <a href="#hasName" title="http://disk-project.org/ontology/disk#hasName">has name</a>
@@ -1357,6 +1418,9 @@ This section provides details for each class and property defined by DISK Ontolo
       <li>
          <a href="#hasTriggeredLineOfInquiryStatus"
             title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">has triggered line of inquiry status</a>
+      </li>
+      <li>
+         <a href="#hasType" title="http://disk-project.org/ontology/disk#hasType">has type</a>
       </li>
       <li>
          <a href="#hasUsageNotes"
@@ -1599,6 +1663,31 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasDatatype">
+      <h3>has datatype<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasDatatype</p>
+      <div class="comment">
+         <span class="markdown">datatype of a binding</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VariableBinding"
+                  title="http://disk-project.org/ontology/disk#VariableBinding">Variable binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasEmail">
       <h3>has email<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1680,6 +1769,35 @@ This section provides details for each class and property defined by DISK Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasLog">
+      <h3>has log<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasLog</p>
+      <div class="comment">
+         <span class="markdown">Log file for this run</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExecutionInfo"
+                  title="http://disk-project.org/ontology/disk#ExecutionInfo">Execution information</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#WorkflowBinding"
+                  title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasName">
       <h3>has name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1743,6 +1861,10 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#ExecutionInfo"
+                  title="http://disk-project.org/ontology/disk#ExecutionInfo">Execution information</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#WorkflowBinding"
                   title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
                <sup class="type-c" title="class">c</sup>
@@ -1793,6 +1915,10 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#ExecutionInfo"
+                  title="http://disk-project.org/ontology/disk#ExecutionInfo">Execution information</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#WorkflowBinding"
                   title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
                <sup class="type-c" title="class">c</sup>
@@ -1818,6 +1944,10 @@ This section provides details for each class and property defined by DISK Ontolo
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#ExecutionInfo"
+                  title="http://disk-project.org/ontology/disk#ExecutionInfo">Execution information</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#WorkflowBinding"
                   title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
                <sup class="type-c" title="class">c</sup>
@@ -1928,6 +2058,31 @@ This section provides details for each class and property defined by DISK Ontolo
             <dd>
                <a href="#TriggeredLineOfInquiry"
                   title="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry">Triggered line of inquiry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasType">
+      <h3>has type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://disk-project.org/ontology/disk#hasType</p>
+      <div class="comment">
+         <span class="markdown">Type of this binding</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VariableBinding"
+                  title="http://disk-project.org/ontology/disk#VariableBinding">Variable binding</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

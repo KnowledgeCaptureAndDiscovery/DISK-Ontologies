@@ -356,6 +356,18 @@
     
 
 
+    <!-- http://disk-project.org/ontology/disk#hasStep -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasStep">
+        <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+        <rdfs:comment>Inner step of a execution</rdfs:comment>
+        <rdfs:label>has step</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry -->
 
 
@@ -614,6 +626,18 @@
     
 
 
+    <!-- http://disk-project.org/ontology/disk#hasDatatype -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasDatatype">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>datatype of a binding</rdfs:comment>
+        <rdfs:label>has datatype</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://disk-project.org/ontology/disk#hasEmail -->
 
 
@@ -664,6 +688,25 @@
     
 
 
+    <!-- http://disk-project.org/ontology/disk#hasLog -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasLog">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Log file for this run</rdfs:comment>
+        <rdfs:label>has log</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://disk-project.org/ontology/disk#hasName -->
 
 
@@ -692,7 +735,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunEndDate">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment>Date when the workflow run was finished</rdfs:comment>
         <rdfs:label>has run end date</rdfs:label>
@@ -716,7 +766,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunStartDate">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:comment>Date when the workflow run started</rdfs:comment>
         <rdfs:label>has run start date</rdfs:label>
@@ -728,7 +785,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunStatus">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">has run status</rdfs:label>
@@ -798,6 +862,18 @@
     
 
 
+    <!-- http://disk-project.org/ontology/disk#hasType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasType">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Type of this binding</rdfs:comment>
+        <rdfs:label>has type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://disk-project.org/ontology/disk#hasUsageNotes -->
 
 
@@ -846,6 +922,16 @@
     <owl:Class rdf:about="http://disk-project.org/ontology/disk#Data">
         <rdfs:comment xml:lang="en">The results produced as a result of executing a workflow from a given line of inquiry</rdfs:comment>
         <rdfs:label xml:lang="en">Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#ExecutionInfo -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo">
+        <rdfs:comment>Stores the state of an execution, start time, end time, status and log.</rdfs:comment>
+        <rdfs:label>Execution information</rdfs:label>
     </owl:Class>
     
 
