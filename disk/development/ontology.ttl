@@ -224,6 +224,14 @@ xsd:date rdf:type rdfs:Datatype .
                               rdfs:label "has revised hypothesis variable"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasStep
+:hasStep rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.wings-workflows.org/ontology/execution.owl#Execution> ;
+         rdfs:range :ExecutionInfo ;
+         rdfs:comment "Inner step of a execution" ;
+         rdfs:label "has step" .
+
+
 ###  http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry
 :hasTriggeredLineOfInquiry rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf <http://www.w3.org/ns/prov#has_provenance> ;
@@ -374,6 +382,18 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:label "has data query description"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasDataSourceURL
+:hasDataSourceURL rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :LineOfInquiry
+                                              :TriggeredLineOfInquiry
+                                            )
+                              ] ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Property to configure the desired target wiki for the data query in a Line of Inquiry. Here we store the URL of the data source."@en ;
+                  rdfs:label "has data source URL"@en .
+
+
 ###  http://disk-project.org/ontology/disk#hasDataSource
 :hasDataSource rdf:type owl:DatatypeProperty ;
                rdfs:domain [ rdf:type owl:Class ;
@@ -384,6 +404,14 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:range xsd:string ;
                rdfs:comment "Property to configure the desired target wiki for the data query in a Line of Inquiry."@en ;
                rdfs:label "has data source"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasDatatype
+:hasDatatype rdf:type owl:DatatypeProperty ;
+             rdfs:domain :VariableBinding ;
+             rdfs:range xsd:string ;
+             rdfs:comment "datatype of a binding" ;
+             rdfs:label "has datatype" .
 
 
 ###  http://disk-project.org/ontology/disk#hasEmail
@@ -418,6 +446,18 @@ xsd:date rdf:type rdfs:Datatype .
        rdfs:label "has id"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasLog
+:hasLog rdf:type owl:DatatypeProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :ExecutionInfo
+                                    :WorkflowBinding
+                                  )
+                    ] ;
+        rdfs:range xsd:anyURI ;
+        rdfs:comment "Log file for this run" ;
+        rdfs:label "has log" .
+
+
 ###  http://disk-project.org/ontology/disk#hasName
 :hasName rdf:type owl:DatatypeProperty ;
          rdfs:domain :Person ;
@@ -436,7 +476,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasRunEndDate
 :hasRunEndDate rdf:type owl:DatatypeProperty ;
-               rdfs:domain :WorkflowBinding ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :ExecutionInfo
+                                           :WorkflowBinding
+                                         )
+                           ] ;
                rdfs:range xsd:date ;
                rdfs:comment "Date when the workflow run was finished" ;
                rdfs:label "has run end date" .
@@ -452,7 +496,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasRunStartDate
 :hasRunStartDate rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :WorkflowBinding ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :ExecutionInfo
+                                             :WorkflowBinding
+                                           )
+                             ] ;
                  rdfs:range xsd:date ;
                  rdfs:comment "Date when the workflow run started" ;
                  rdfs:label "has run start date" .
@@ -460,17 +508,29 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasRunStatus
 :hasRunStatus rdf:type owl:DatatypeProperty ;
-              rdfs:domain :WorkflowBinding ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :ExecutionInfo
+                                          :WorkflowBinding
+                                        )
+                          ] ;
               rdfs:range xsd:string ;
               rdfs:comment "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"@en ;
               rdfs:label "has run status"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasSourceURL
+:hasSourceURL rdf:type owl:DatatypeProperty ;
+              rdfs:domain :WorkflowBinding ;
+              rdfs:range xsd:string ;
+              rdfs:comment "URL for the source of the Workflow" ;
+              rdfs:label "has source" .
 
 
 ###  http://disk-project.org/ontology/disk#hasSource
 :hasSource rdf:type owl:DatatypeProperty ;
            rdfs:domain :WorkflowBinding ;
            rdfs:range xsd:string ;
-           rdfs:comment "Denotes the source of a Workflow" ;
+           rdfs:comment "Identifier for the source of a Workflow" ;
            rdfs:label "has source" .
 
 
@@ -506,6 +566,14 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:label "has triggered line of inquiry status"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasType
+:hasType rdf:type owl:DatatypeProperty ;
+         rdfs:domain :VariableBinding ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Type of this binding" ;
+         rdfs:label "has type" .
+
+
 ###  http://disk-project.org/ontology/disk#hasUsageNotes
 :hasUsageNotes rdf:type owl:DatatypeProperty ;
                rdfs:domain [ rdf:type owl:Class ;
@@ -533,6 +601,12 @@ xsd:date rdf:type rdfs:Datatype .
 :Data rdf:type owl:Class ;
       rdfs:comment "The results produced as a result of executing a workflow from a given line of inquiry"@en ;
       rdfs:label "Data"@en .
+
+
+###  http://disk-project.org/ontology/disk#ExecutionInfo
+:ExecutionInfo rdf:type owl:Class ;
+               rdfs:comment "Stores the state of an execution, start time, end time, status and log." ;
+               rdfs:label "Execution information" .
 
 
 ###  http://disk-project.org/ontology/disk#Hypothesis

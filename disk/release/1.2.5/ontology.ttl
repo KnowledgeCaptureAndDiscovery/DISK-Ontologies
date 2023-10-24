@@ -390,6 +390,18 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "has data source"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasDataSourceURL
+:hasDataSourceURL rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :LineOfInquiry
+                                              :TriggeredLineOfInquiry
+                                            )
+                              ] ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Property to configure the desired target wiki for the data query in a Line of Inquiry. Here we store the URL of the data source."@en ;
+                  rdfs:label "has data source URL"@en .
+
+
 ###  http://disk-project.org/ontology/disk#hasDatatype
 :hasDatatype rdf:type owl:DatatypeProperty ;
              rdfs:domain :VariableBinding ;
@@ -506,8 +518,16 @@ xsd:date rdf:type rdfs:Datatype .
 :hasSource rdf:type owl:DatatypeProperty ;
            rdfs:domain :WorkflowBinding ;
            rdfs:range xsd:string ;
-           rdfs:comment "Denotes the source of a Workflow" ;
+           rdfs:comment "Identifier for the source of a Workflow" ;
            rdfs:label "has source" .
+
+
+###  http://disk-project.org/ontology/disk#hasSourceURL
+:hasSourceURL rdf:type owl:DatatypeProperty ;
+              rdfs:domain :WorkflowBinding ;
+              rdfs:range xsd:string ;
+              rdfs:comment "URL for the source of the Workflow" ;
+              rdfs:label "has source" .
 
 
 ###  http://disk-project.org/ontology/disk#hasTableDescription

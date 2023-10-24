@@ -159,9 +159,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://disk-project.org/ontology/disk#WorkflowBinding"
+      "@id" : "http://disk-project.org/ontology/disk#LineOfInquiry"
     }, {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+      "@id" : "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"
     } ]
   } ]
 }, {
@@ -169,9 +169,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://disk-project.org/ontology/disk#ExecutionInfo"
-    }, {
       "@id" : "http://disk-project.org/ontology/disk#WorkflowBinding"
+    }, {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
     } ]
   } ]
 }, {
@@ -209,9 +209,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://disk-project.org/ontology/disk#LineOfInquiry"
+      "@id" : "http://disk-project.org/ontology/disk#ExecutionInfo"
     }, {
-      "@id" : "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"
+      "@id" : "http://disk-project.org/ontology/disk#WorkflowBinding"
     } ]
   } ]
 }, {
@@ -226,6 +226,16 @@
   } ]
 }, {
   "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://disk-project.org/ontology/disk#LineOfInquiry"
+    }, {
+      "@id" : "http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -588,6 +598,23 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://disk-project.org/ontology/disk#hasDataSourceURL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to configure the desired target wiki for the data query in a Line of Inquiry. Here we store the URL of the data source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid49"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has data source URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://disk-project.org/ontology/disk#hasDatatype",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -661,7 +688,7 @@
     "@value" : "Property that links a line of inquiry to the hypothesis query text"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid49"
+    "@id" : "_:genid52"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -695,7 +722,7 @@
     "@value" : "Property that links to the ID of the described resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid52"
+    "@id" : "_:genid55"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -746,7 +773,7 @@
     "@value" : "Log file for this run"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid55"
+    "@id" : "_:genid58"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has log"
@@ -933,7 +960,7 @@
     "@value" : "Date when the workflow run was finished"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid58"
+    "@id" : "_:genid61"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has run end date"
@@ -965,7 +992,7 @@
     "@value" : "Date when the workflow run started"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid61"
+    "@id" : "_:genid64"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has run start date"
@@ -981,7 +1008,7 @@
     "@value" : "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid64"
+    "@id" : "_:genid67"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -994,7 +1021,22 @@
   "@id" : "http://disk-project.org/ontology/disk#hasSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Denotes the source of a Workflow"
+    "@value" : "Identifier for the source of a Workflow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://disk-project.org/ontology/disk#WorkflowBinding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://disk-project.org/ontology/disk#hasSourceURL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "URL for the source of the Workflow"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://disk-project.org/ontology/disk#WorkflowBinding"
@@ -1027,7 +1069,7 @@
     "@value" : "Brief description of table generated"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid67"
+    "@id" : "_:genid70"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has table description"
@@ -1042,7 +1084,7 @@
     "@value" : "Property that specify which variables of the data query will be used to generate a table"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid70"
+    "@id" : "_:genid73"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has table variables"
@@ -1110,7 +1152,7 @@
     "@value" : "Property to indicate the usage notes to consider when using a line of inquiry or hypothesis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid73"
+    "@id" : "_:genid76"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
