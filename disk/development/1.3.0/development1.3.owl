@@ -66,7 +66,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#createdFrom
 :createdFrom rdf:type owl:ObjectProperty ;
-             rdfs:domain :WorflowInstantiation ;
+             rdfs:domain :WorkflowInstantiation ;
              rdfs:range :WorkflowSeed ;
              rdfs:comment "Workflow seed from which this workflow instantiation was derived" ;
              rdfs:label "created from" .
@@ -75,7 +75,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://disk-project.org/ontology/disk#hasAuthor
 :hasAuthor rdf:type owl:ObjectProperty ;
            rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :Hypothesis
+                         owl:unionOf ( :Goal
+                                       :Hypothesis
                                        :LineOfInquiry
                                        :TriggeredLineOfInquiry
                                      )
@@ -87,7 +88,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasDataBindings
 :hasDataBindings rdf:type owl:ObjectProperty ;
-                 rdfs:domain :WorflowInstantiation ;
+                 rdfs:domain :WorkflowInstantiation ;
                  rdfs:range :VariableBinding ;
                  rdfs:comment "Property to store the data and files to be inputted to a workflow. This data is generated after data query execution." ;
                  rdfs:label "has data bindings" .
@@ -113,14 +114,14 @@ xsd:date rdf:type rdfs:Datatype .
 :hasDataSource rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasSource ;
                rdfs:domain :DataQueryTemplate ;
-               rdfs:range :endpoint ;
+               rdfs:range :Endpoint ;
                rdfs:comment "Endpoint used as data source" ;
                rdfs:label "has data source" .
 
 
 ###  http://disk-project.org/ontology/disk#hasExecution
 :hasExecution rdf:type owl:ObjectProperty ;
-              rdfs:domain :WorflowInstantiation ;
+              rdfs:domain :WorkflowInstantiation ;
               rdfs:range :Execution ;
               rdfs:comment "Property that links a workflow bundle to the execution results of the workflow"@en ;
               rdfs:label "has execution"@en .
@@ -128,7 +129,10 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasGoal
 :hasGoal rdf:type owl:ObjectProperty ;
-         rdfs:domain :TriggeredLineOfInquiry .
+         rdfs:domain :TriggeredLineOfInquiry ;
+         rdfs:range :Goal ;
+         rdfs:comment "Property that links a triggered line of inquiry with its goal" ;
+         rdfs:label "has goal" .
 
 
 ###  http://disk-project.org/ontology/disk#hasHypothesis
@@ -139,6 +143,14 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "has hypothesis"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasInput
+:hasInput rdf:type owl:ObjectProperty ;
+          rdfs:domain :WorkflowSeed ;
+          rdfs:range :VariableBinding ;
+          rdfs:comment "Input data assignation for a workflow seed" ;
+          rdfs:label "has input files" .
+
+
 ###  http://disk-project.org/ontology/disk#hasInputFile
 :hasInputFile rdf:type owl:ObjectProperty ;
               rdfs:domain :Execution ;
@@ -147,20 +159,21 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "has input file" .
 
 
-###  http://disk-project.org/ontology/disk#hasInputFiles
-:hasInputFiles rdf:type owl:ObjectProperty ;
-               rdfs:domain :WorkflowSeed ;
-               rdfs:range :VariableBinding ;
-               rdfs:comment "Input data assignation for a workflow seed" ;
-               rdfs:label "has input files" .
-
-
 ###  http://disk-project.org/ontology/disk#hasLineOfInquiry
 :hasLineOfInquiry rdf:type owl:ObjectProperty ;
                   rdfs:domain :TriggeredLineOfInquiry ;
                   rdfs:range :LineOfInquiry ;
                   rdfs:comment "Property that links a triggered line of inquiry to the original line of inquiry from which it was derived"@en ;
                   rdfs:label "has line of inquiry"@en .
+
+
+###  http://disk-project.org/ontology/disk#hasMetaWorkflowInstantiation
+:hasMetaWorkflowInstantiation rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :hasWorkflowInstantiation ;
+                              rdfs:domain :TriggeredLineOfInquiry ;
+                              rdfs:range :WorkflowInstantiation ;
+                              rdfs:comment "Property that links a triggered line of inquiry with a meta-workflow instantiation" ;
+                              rdfs:label "has metaworkflow instantiation" .
 
 
 ###  http://disk-project.org/ontology/disk#hasMetaWorkflowSeed
@@ -204,6 +217,14 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "has question"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasQuestionBindings
+:hasQuestionBindings rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Goal ;
+                     rdfs:range :VariableBinding ;
+                     rdfs:comment "Variable assignations choose for the user on Goal creation" ;
+                     rdfs:label "has question bindings" .
+
+
 ###  http://disk-project.org/ontology/disk#hasResult
 :hasResult rdf:type owl:ObjectProperty ;
            rdfs:domain [ rdf:type owl:Class ;
@@ -238,6 +259,14 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "has workflow"@en .
 
 
+###  http://disk-project.org/ontology/disk#hasWorkflowInstantiation
+:hasWorkflowInstantiation rdf:type owl:ObjectProperty ;
+                          rdfs:domain :TriggeredLineOfInquiry ;
+                          rdfs:range :WorkflowInstantiation ;
+                          rdfs:comment "Property that links a triggered line of inquiry with a workflow instantiation" ;
+                          rdfs:label "has workflow instantiation" .
+
+
 ###  http://disk-project.org/ontology/disk#hasWorkflowSeed
 :hasWorkflowSeed rdf:type owl:ObjectProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
@@ -254,7 +283,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasWorkflowSource rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasSource ;
                    rdfs:domain :WorkflowSeed ;
-                   rdfs:range :endpoint ;
+                   rdfs:range :Endpoint ;
                    rdfs:comment "Endpoint used as workflow system" ;
                    rdfs:label "has workflow source" .
 
@@ -266,10 +295,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://disk-project.org/ontology/disk#dateCreated
 :dateCreated rdf:type owl:DatatypeProperty ;
              rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :Hypothesis
+                           owl:unionOf ( :Goal
+                                         :Hypothesis
                                          :LineOfInquiry
                                          :TriggeredLineOfInquiry
-                                         :goal
                                        )
                          ] ;
              rdfs:range xsd:date ;
@@ -280,10 +309,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://disk-project.org/ontology/disk#dateModified
 :dateModified rdf:type owl:DatatypeProperty ;
               rdfs:domain [ rdf:type owl:Class ;
-                            owl:unionOf ( :Hypothesis
+                            owl:unionOf ( :Goal
+                                          :Hypothesis
                                           :LineOfInquiry
                                           :TriggeredLineOfInquiry
-                                          :goal
                                         )
                           ] ;
               rdfs:range xsd:date ;
@@ -337,11 +366,6 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:range xsd:string ;
           rdfs:comment "Email of a person"@en ;
           rdfs:label "has email"@en .
-
-
-###  http://disk-project.org/ontology/disk#hasGoal
-:hasGoal rdf:type owl:DatatypeProperty ;
-         rdfs:range xsd:string .
 
 
 ###  http://disk-project.org/ontology/disk#hasGoalQuery
@@ -446,7 +470,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasSourceName
 :hasSourceName rdf:type owl:DatatypeProperty ;
-               rdfs:domain :endpoint ;
+               rdfs:domain :Endpoint ;
                rdfs:range xsd:string ;
                rdfs:comment "Name of an endpoint" ;
                rdfs:label "has source name" .
@@ -454,7 +478,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://disk-project.org/ontology/disk#hasSourceURL
 :hasSourceURL rdf:type owl:DatatypeProperty ;
-              rdfs:domain :endpoint ;
+              rdfs:domain :Endpoint ;
               rdfs:range xsd:string ;
               rdfs:comment "URL of an endpoint" ;
               rdfs:label "has source URL" .
@@ -465,7 +489,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :ExecutionRecord
                                        :TriggeredLineOfInquiry
-                                       :WorflowInstantiation
+                                       :WorkflowInstantiation
                                        <http://www.wings-workflows.org/ontology/execution.owl#Execution>
                                      )
                        ] ;
@@ -517,10 +541,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://disk-project.org/ontology/disk#hasUsageNotes
 :hasUsageNotes rdf:type owl:DatatypeProperty ;
                rdfs:domain [ rdf:type owl:Class ;
-                             owl:unionOf ( :Hypothesis
+                             owl:unionOf ( :Goal
+                                           :Hypothesis
                                            :LineOfInquiry
                                            :TriggeredLineOfInquiry
-                                           :goal
                                          )
                            ] ;
                rdfs:range xsd:string ;
@@ -545,6 +569,12 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:label "Data query template" .
 
 
+###  http://disk-project.org/ontology/disk#Endpoint
+:Endpoint rdf:type owl:Class ;
+          rdfs:comment "Endpoint API information. Used to store data sources and workflow systems." ;
+          rdfs:label "Endpoint" .
+
+
 ###  http://disk-project.org/ontology/disk#Entity
 :Entity rdf:type owl:Class ;
         rdfs:comment "Entity that is using the system. Accounts can be personal or institutional" ;
@@ -565,6 +595,11 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:subClassOf :Execution ;
                  rdfs:comment "Stores the state of an execution, start time, end time, status and log." ;
                  rdfs:label "Execution record" .
+
+
+###  http://disk-project.org/ontology/disk#Goal
+:Goal rdf:type owl:Class ;
+      rdfs:label "Goal" .
 
 
 ###  http://disk-project.org/ontology/disk#GoalResult
@@ -616,13 +651,6 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "Variable binding"@en .
 
 
-###  http://disk-project.org/ontology/disk#WorflowInstantiation
-:WorflowInstantiation rdf:type owl:Class ;
-                      rdfs:subClassOf :WorkflowSeed ;
-                      rdfs:comment "A worflow instantiation contains a link to a Workflow template and bindings for parameters and inputs using data obtained by a line of inquiry." ;
-                      rdfs:label "Workflow instantiation"@en .
-
-
 ###  http://disk-project.org/ontology/disk#Workflow
 :Workflow rdf:type owl:Class ;
           owl:equivalentClass <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> ;
@@ -632,21 +660,17 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "Workflow" .
 
 
+###  http://disk-project.org/ontology/disk#WorkflowInstantiation
+:WorkflowInstantiation rdf:type owl:Class ;
+                       rdfs:subClassOf :WorkflowSeed ;
+                       rdfs:comment "A worflow instantiation contains a link to a Workflow template and bindings for parameters and inputs using data obtained by a line of inquiry." ;
+                       rdfs:label "Workflow instantiation"@en .
+
+
 ###  http://disk-project.org/ontology/disk#WorkflowSeed
 :WorkflowSeed rdf:type owl:Class ;
               rdfs:comment "A worflow seed is a link to a Workflow template and assignations of  bindings that will be fill after data query execution." ;
               rdfs:label "Workflow seed"@en .
-
-
-###  http://disk-project.org/ontology/disk#endpoint
-:endpoint rdf:type owl:Class ;
-          rdfs:comment "Endpoint API information. Used to store data sources and workflow systems." ;
-          rdfs:label "Endpoint" .
-
-
-###  http://disk-project.org/ontology/disk#goal
-:goal rdf:type owl:Class ;
-      rdfs:label "Goal" .
 
 
 ###  http://www.w3.org/ns/prov#Plan
@@ -680,14 +704,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/sqo#Question
 ns1:Question rdf:type owl:Class .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-:hasGoal rdfs:comment "Property that links a triggered line of inquiry with its goal" ;
-         rdfs:label "has goal" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
