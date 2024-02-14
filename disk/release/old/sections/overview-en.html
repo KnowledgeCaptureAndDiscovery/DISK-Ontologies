@@ -7,36 +7,19 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/ns/prov/#Bundle" title="http://www.w3.org/ns/prov/#Bundle">Bundle</a>
    </li>
    <li>
-      <a href="#DataQueryResults"
-         title="http://disk-project.org/ontology/disk#DataQueryResults">Data query result</a>
+      <a href="#ConfidenceReport"
+         title="http://disk-project.org/ontology/disk#ConfidenceReport">Confidence report</a>
    </li>
    <li>
-      <a href="#DataQueryTemplate"
-         title="http://disk-project.org/ontology/disk#DataQueryTemplate">Data query template</a>
-   </li>
-   <li>
-      <a href="#Endpoint" title="http://disk-project.org/ontology/disk#Endpoint">Endpoint</a>
-   </li>
-   <li>
-      <a href="#Entity" title="http://disk-project.org/ontology/disk#Entity">Entity</a>
-   </li>
-   <li>
-      <a href="#Execution" title="http://disk-project.org/ontology/disk#Execution">Execution</a>
+      <a href="#Data" title="http://disk-project.org/ontology/disk#Data">Data</a>
    </li>
    <li>
       <a href="#http://www.wings-workflows.org/ontology/execution.owl#Execution"
          title="http://www.wings-workflows.org/ontology/execution.owl#Execution">Execution</a>
    </li>
    <li>
-      <a href="#ExecutionRecord"
-         title="http://disk-project.org/ontology/disk#ExecutionRecord">Execution record</a>
-   </li>
-   <li>
-      <a href="#Goal" title="http://disk-project.org/ontology/disk#Goal">Goal</a>
-   </li>
-   <li>
-      <a href="#GoalResult"
-         title="http://disk-project.org/ontology/disk#GoalResult">Goal result</a>
+      <a href="#ExecutionInfo"
+         title="http://disk-project.org/ontology/disk#ExecutionInfo">Execution information</a>
    </li>
    <li>
       <a href="#Hypothesis"
@@ -51,30 +34,34 @@ This ontology has the following classes and properties.</span>
          title="http://disk-project.org/ontology/disk#MetaWorkflow">Metaworkflow</a>
    </li>
    <li>
+      <a href="#Person" title="http://disk-project.org/ontology/disk#Person">Person</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/ns/prov#Plan" title="http://www.w3.org/ns/prov#Plan">Plan</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+         title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">Statement</a>
    </li>
    <li>
       <a href="#TriggeredLineOfInquiry"
          title="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry">Triggered line of inquiry</a>
    </li>
    <li>
-      <a href="#VariableBinding"
-         title="http://disk-project.org/ontology/disk#VariableBinding">Variable binding</a>
+      <a href="#http://www.wings-workflows.org/ontology/workflow.owl#Variable"
+         title="http://www.wings-workflows.org/ontology/workflow.owl#Variable">Variable</a>
    </li>
    <li>
-      <a href="#Workflow" title="http://disk-project.org/ontology/disk#Workflow">Workflow</a>
+      <a href="#VariableBinding"
+         title="http://disk-project.org/ontology/disk#VariableBinding">Variable binding</a>
    </li>
    <li>
       <a href="#http://www.wings-workflows.org/ontology/workflow.owl#Workflow"
          title="http://www.wings-workflows.org/ontology/workflow.owl#Workflow">Workflow</a>
    </li>
    <li>
-      <a href="#WorkflowInstantiation"
-         title="http://disk-project.org/ontology/disk#WorkflowInstantiation">Workflow instantiation</a>
-   </li>
-   <li>
-      <a href="#WorkflowSeed"
-         title="http://disk-project.org/ontology/disk#WorkflowSeed">Workflow seed</a>
+      <a href="#WorkflowBinding"
+         title="http://disk-project.org/ontology/disk#WorkflowBinding">Workflow binding</a>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
@@ -84,34 +71,20 @@ This ontology has the following classes and properties.</span>
       <a href="#hasAuthor" title="http://disk-project.org/ontology/disk#hasAuthor">has author</a>
    </li>
    <li>
-      <a href="#hasDataBindings"
-         title="http://disk-project.org/ontology/disk#hasDataBindings">has data bindings</a>
-   </li>
-   <li>
-      <a href="#hasDataQuery"
-         title="http://disk-project.org/ontology/disk#hasDataQuery">has data query</a>
-   </li>
-   <li>
-      <a href="#hasDataQueryResult"
-         title="http://disk-project.org/ontology/disk#hasDataQueryResult">has data query result</a>
-   </li>
-   <li>
-      <a href="#hasDataSource"
-         title="http://disk-project.org/ontology/disk#hasDataSource">has data source</a>
+      <a href="#hasConfidenceReport"
+         title="http://disk-project.org/ontology/disk#hasConfidenceReport">has confidence report</a>
    </li>
    <li>
       <a href="#hasExecution"
          title="http://disk-project.org/ontology/disk#hasExecution">has execution</a>
    </li>
    <li>
-      <a href="#hasGoal" title="http://disk-project.org/ontology/disk#hasGoal">has goal</a>
-   </li>
-   <li>
       <a href="#hasHypothesis"
          title="http://disk-project.org/ontology/disk#hasHypothesis">has hypothesis</a>
    </li>
    <li>
-      <a href="#hasInput" title="http://disk-project.org/ontology/disk#hasInput">has input</a>
+      <a href="#hasHypothesisVariable"
+         title="http://disk-project.org/ontology/disk#hasHypothesisVariable">has hypothesis variable</a>
    </li>
    <li>
       <a href="#hasInputFile"
@@ -122,15 +95,12 @@ This ontology has the following classes and properties.</span>
          title="http://disk-project.org/ontology/disk#hasLineOfInquiry">has line of inquiry</a>
    </li>
    <li>
-      <a href="#hasMetaWorkflowInstantiation"
-         title="http://disk-project.org/ontology/disk#hasMetaWorkflowInstantiation">has metaworkflow instantiation</a>
+      <a href="#hasMetaWorkflowBinding"
+         title="http://disk-project.org/ontology/disk#hasMetaWorkflowBinding">has metaworkflow binding</a>
    </li>
    <li>
-      <a href="#hasMetaWorkflowSeed"
-         title="http://disk-project.org/ontology/disk#hasMetaWorkflowSeed">has metaworkflow seed</a>
-   </li>
-   <li>
-      <a href="#hasOutput" title="http://disk-project.org/ontology/disk#hasOutput">has output</a>
+      <a href="#hasOptionalParameter"
+         title="http://disk-project.org/ontology/disk#hasOptionalParameter">has optional parameter</a>
    </li>
    <li>
       <a href="#hasOutputFile"
@@ -141,37 +111,52 @@ This ontology has the following classes and properties.</span>
          title="http://disk-project.org/ontology/disk#hasParameter">has parameter</a>
    </li>
    <li>
+      <a href="#hasParentHypothesis"
+         title="http://disk-project.org/ontology/disk#hasParentHypothesis">has parent hypothesis</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#has_provenance" title="http://www.w3.org/ns/prov#has_provenance">has provenance</a>
+   </li>
+   <li>
       <a href="#hasQuestion"
          title="http://disk-project.org/ontology/disk#hasQuestion">has question</a>
    </li>
    <li>
-      <a href="#hasQuestionBindings"
-         title="http://disk-project.org/ontology/disk#hasQuestionBindings">has question bindings</a>
+      <a href="#hasResultingHypothesis"
+         title="http://disk-project.org/ontology/disk#hasResultingHypothesis">has resulting hypothesis</a>
    </li>
    <li>
-      <a href="#hasResult" title="http://disk-project.org/ontology/disk#hasResult">has result</a>
-   </li>
-   <li>
-      <a href="#hasSource" title="http://disk-project.org/ontology/disk#hasSource">has source</a>
+      <a href="#hasRevisedHypothesisVariable"
+         title="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">has revised hypothesis variable</a>
    </li>
    <li>
       <a href="#hasStep" title="http://disk-project.org/ontology/disk#hasStep">has step</a>
+   </li>
+   <li>
+      <a href="#hasTriggeredLineOfInquiry"
+         title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry">has triggered line of inquiry</a>
+   </li>
+   <li>
+      <a href="#hasVariable"
+         title="http://disk-project.org/ontology/disk#hasVariable">has variable</a>
+   </li>
+   <li>
+      <a href="#hasVariableBinding"
+         title="http://disk-project.org/ontology/disk#hasVariableBinding">has variable binding</a>
    </li>
    <li>
       <a href="#hasWorkflow"
          title="http://disk-project.org/ontology/disk#hasWorkflow">has workflow</a>
    </li>
    <li>
-      <a href="#hasWorkflowInstantiation"
-         title="http://disk-project.org/ontology/disk#hasWorkflowInstantiation">has workflow instantiation</a>
+      <a href="#hasWorkflowBinding"
+         title="http://disk-project.org/ontology/disk#hasWorkflowBinding">has workflow bindings</a>
    </li>
    <li>
-      <a href="#hasWorkflowSeed"
-         title="http://disk-project.org/ontology/disk#hasWorkflowSeed">has workflow seed</a>
+      <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">was derived from</a>
    </li>
    <li>
-      <a href="#hasWorkflowSource"
-         title="http://disk-project.org/ontology/disk#hasWorkflowSource">has workflow source</a>
+      <a href="#http://www.w3.org/ns/prov#wasRevisionOf" title="http://www.w3.org/ns/prov#wasRevisionOf">was revision of</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
@@ -187,16 +172,24 @@ This ontology has the following classes and properties.</span>
          title="http://disk-project.org/ontology/disk#hasBindingValue">has binding value</a>
    </li>
    <li>
-      <a href="#hasBindingVariable"
-         title="http://disk-project.org/ontology/disk#hasBindingVariable">has binding variable</a>
-   </li>
-   <li>
       <a href="#hasConfidenceType"
          title="http://disk-project.org/ontology/disk#hasConfidenceType">has confidence type</a>
    </li>
    <li>
       <a href="#hasConfidenceValue"
          title="http://disk-project.org/ontology/disk#hasConfidenceValue">has confidence value</a>
+   </li>
+   <li>
+      <a href="#hasDataQuery"
+         title="http://disk-project.org/ontology/disk#hasDataQuery">has data query</a>
+   </li>
+   <li>
+      <a href="#hasDataQueryDescription"
+         title="http://disk-project.org/ontology/disk#hasDataQueryDescription">has data query description</a>
+   </li>
+   <li>
+      <a href="#hasDataSource"
+         title="http://disk-project.org/ontology/disk#hasDataSource">has data source</a>
    </li>
    <li>
       <a href="#hasDatatype"
@@ -206,8 +199,8 @@ This ontology has the following classes and properties.</span>
       <a href="#hasEmail" title="http://disk-project.org/ontology/disk#hasEmail">has email</a>
    </li>
    <li>
-      <a href="#hasGoalQuery"
-         title="http://disk-project.org/ontology/disk#hasGoalQuery">has goal query</a>
+      <a href="#hasHypothesisQuery"
+         title="http://disk-project.org/ontology/disk#hasHypothesisQuery">has hypothesis query</a>
    </li>
    <li>
       <a href="#hasId" title="http://disk-project.org/ontology/disk#hasId">has id</a>
@@ -219,15 +212,8 @@ This ontology has the following classes and properties.</span>
       <a href="#hasName" title="http://disk-project.org/ontology/disk#hasName">has name</a>
    </li>
    <li>
-      <a href="#hasQuery" title="http://disk-project.org/ontology/disk#hasQuery">has query</a>
-   </li>
-   <li>
       <a href="#hasQueryResults"
          title="http://disk-project.org/ontology/disk#hasQueryResults">has query results</a>
-   </li>
-   <li>
-      <a href="#hasQueryTemplate"
-         title="http://disk-project.org/ontology/disk#hasQueryTemplate">has query template</a>
    </li>
    <li>
       <a href="#hasRunEndDate"
@@ -241,15 +227,11 @@ This ontology has the following classes and properties.</span>
          title="http://disk-project.org/ontology/disk#hasRunStartDate">has run start date</a>
    </li>
    <li>
-      <a href="#hasSourceName"
-         title="http://disk-project.org/ontology/disk#hasSourceName">has source name</a>
+      <a href="#hasRunStatus"
+         title="http://disk-project.org/ontology/disk#hasRunStatus">has run status</a>
    </li>
    <li>
-      <a href="#hasSourceURL"
-         title="http://disk-project.org/ontology/disk#hasSourceURL">has source URL</a>
-   </li>
-   <li>
-      <a href="#hasStatus" title="http://disk-project.org/ontology/disk#hasStatus">has status</a>
+      <a href="#hasSource" title="http://disk-project.org/ontology/disk#hasSource">has source</a>
    </li>
    <li>
       <a href="#hasTableDescription"
@@ -260,11 +242,11 @@ This ontology has the following classes and properties.</span>
          title="http://disk-project.org/ontology/disk#hasTableVariables">has table variables</a>
    </li>
    <li>
-      <a href="#hasType" title="http://disk-project.org/ontology/disk#hasType">has type</a>
+      <a href="#hasTriggeredLineOfInquiryStatus"
+         title="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">has triggered line of inquiry status</a>
    </li>
    <li>
-      <a href="#hasUpdateCondition"
-         title="http://disk-project.org/ontology/disk#hasUpdateCondition">has update condition</a>
+      <a href="#hasType" title="http://disk-project.org/ontology/disk#hasType">has type</a>
    </li>
    <li>
       <a href="#hasUsageNotes"

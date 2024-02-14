@@ -147,8 +147,16 @@ xsd:date rdf:type rdfs:Datatype .
 :hasInput rdf:type owl:ObjectProperty ;
           rdfs:domain :WorkflowSeed ;
           rdfs:range :VariableBinding ;
-          rdfs:comment "Input data assignation for a workflow seed" ;
-          rdfs:label "has input files" .
+          rdfs:comment "Variable for input data assignation on a workflow seed" ;
+          rdfs:label "has input" .
+
+
+###  http://disk-project.org/ontology/disk#hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:domain :WorkflowSeed ;
+           rdfs:range :VariableBinding ;
+           rdfs:comment "Variable for output data assignation on a workflow seed" ;
+           rdfs:label "has output" .
 
 
 ###  http://disk-project.org/ontology/disk#hasInputFile

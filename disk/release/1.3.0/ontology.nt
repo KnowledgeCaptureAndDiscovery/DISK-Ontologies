@@ -141,8 +141,8 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://disk-project.org/ontology/disk#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://disk-project.org/ontology/disk#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowSeed> .
 <http://disk-project.org/ontology/disk#hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#VariableBinding> .
-<http://disk-project.org/ontology/disk#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Input data assignation for a workflow seed" .
-<http://disk-project.org/ontology/disk#hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input files" .
+<http://disk-project.org/ontology/disk#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable for input data assignation on a workflow seed" .
+<http://disk-project.org/ontology/disk#hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input" .
 # 
 # http://disk-project.org/ontology/disk#hasInputFile
 <http://disk-project.org/ontology/disk#hasInputFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -181,6 +181,13 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://disk-project.org/ontology/disk#hasMetaWorkflowSeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#WorkflowSeed> .
 <http://disk-project.org/ontology/disk#hasMetaWorkflowSeed> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a line of inquiry with a meta workflow seed" .
 <http://disk-project.org/ontology/disk#hasMetaWorkflowSeed> <http://www.w3.org/2000/01/rdf-schema#label> "has metaworkflow seed" .
+# 
+# http://disk-project.org/ontology/disk#hasOutput
+<http://disk-project.org/ontology/disk#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowSeed> .
+<http://disk-project.org/ontology/disk#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#VariableBinding> .
+<http://disk-project.org/ontology/disk#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable for output data assignation on a workflow seed" .
+<http://disk-project.org/ontology/disk#hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has output" .
 # 
 # http://disk-project.org/ontology/disk#hasOutputFile
 <http://disk-project.org/ontology/disk#hasOutputFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

@@ -21,7 +21,7 @@
         <vann:preferredNamespacePrefix>disk</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://disk-project.org/ontology/disk#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">DISK Ontology</rdfs:label>
-        <owl:versionInfo>1.3.0</owl:versionInfo>
+        <owl:versionInfo>1.2.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -115,10 +115,10 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#createdFrom">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowInstantiation"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
-        <rdfs:comment>Workflow seed from which this workflow instantiation was derived</rdfs:comment>
-        <rdfs:label>created from</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Data"/>
+        <rdfs:comment xml:lang="en">Property that states from where these data have been created (e-g-, workflow, metaworkflow, line of inquiry, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">created from</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -130,65 +130,34 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Goal"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Entity"/>
-        <rdfs:comment xml:lang="en">Property to describe the author of a Line of Inquiry, Triggered Line of Inquiry or Goal</rdfs:comment>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Person"/>
+        <rdfs:comment xml:lang="en">Property to describe the author of a Line of Inquiry, Triggered Line of Inquiry or Hypothesis</rdfs:comment>
         <rdfs:label xml:lang="en">has author</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasDataBindings -->
+    <!-- http://disk-project.org/ontology/disk#hasConfidenceReport -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasDataBindings">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowInstantiation"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
-        <rdfs:comment>Property to store the data and files to be inputted to a workflow. This data is generated after data query execution.</rdfs:comment>
-        <rdfs:label>has data bindings</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasDataQuery -->
-
-
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasDataQuery">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#DataQueryTemplate"/>
-        <rdfs:comment>Property that links a line of inquiry to the data query associated to it</rdfs:comment>
-        <rdfs:label>has data query</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasDataQueryResult -->
-
-
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasDataQueryResult">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#DataQueryResults"/>
-        <rdfs:comment>Raw result of executing a data query</rdfs:comment>
-        <rdfs:label>has data query result</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasDataSource -->
-
-
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasDataSource">
-        <rdfs:subPropertyOf rdf:resource="http://disk-project.org/ontology/disk#hasSource"/>
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#DataQueryTemplate"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Endpoint"/>
-        <rdfs:comment>Endpoint used as data source</rdfs:comment>
-        <rdfs:label>has data source</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasConfidenceReport">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
+                    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#ConfidenceReport"/>
+        <rdfs:comment xml:lang="en">Property that links the hypothesis or statement to the ConfidenceReport that supports them</rdfs:comment>
+        <rdfs:label xml:lang="en">has confidence report</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -197,22 +166,10 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasExecution">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowInstantiation"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Execution"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
         <rdfs:comment xml:lang="en">Property that links a workflow bundle to the execution results of the workflow</rdfs:comment>
         <rdfs:label xml:lang="en">has execution</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasGoal -->
-
-
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasGoal">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Goal"/>
-        <rdfs:comment>Property that links a triggered line of inquiry with its goal</rdfs:comment>
-        <rdfs:label>has goal</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -229,14 +186,28 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasInput -->
+    <!-- http://disk-project.org/ontology/disk#hasHypothesisVariable -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasInput">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
-        <rdfs:comment>Variable for input data assignation on a workflow seed</rdfs:comment>
-        <rdfs:label>has input</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasHypothesisVariable">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#MetaWorkflow"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Variable"/>
+                    <rdf:Description rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">This property is used to identify which variables in the hypothesis are used in the workflows.</rdfs:comment>
+        <rdfs:label xml:lang="en">has hypothesis variable</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -245,9 +216,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasInputFile">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Execution"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
         <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
-        <rdfs:comment>Input files created from the execution of a workflow seed</rdfs:comment>
+        <rdfs:comment>Property that states the input files for a workflow run</rdfs:comment>
         <rdfs:label>has input file</rdfs:label>
     </owl:ObjectProperty>
     
@@ -257,6 +228,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasLineOfInquiry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
         <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
         <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
         <rdfs:comment xml:lang="en">Property that links a triggered line of inquiry to the original line of inquiry from which it was derived</rdfs:comment>
@@ -265,24 +237,11 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasMetaWorkflowInstantiation -->
+    <!-- http://disk-project.org/ontology/disk#hasMetaWorkflowBinding -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasMetaWorkflowInstantiation">
-        <rdfs:subPropertyOf rdf:resource="http://disk-project.org/ontology/disk#hasWorkflowInstantiation"/>
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowInstantiation"/>
-        <rdfs:comment>Property that links a triggered line of inquiry with a meta-workflow instantiation</rdfs:comment>
-        <rdfs:label>has metaworkflow instantiation</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasMetaWorkflowSeed -->
-
-
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasMetaWorkflowSeed">
-        <rdfs:subPropertyOf rdf:resource="http://disk-project.org/ontology/disk#hasWorkflowSeed"/>
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasMetaWorkflowBinding">
+        <rdfs:subPropertyOf rdf:resource="http://disk-project.org/ontology/disk#hasWorkflowBinding"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -291,21 +250,21 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
-        <rdfs:comment>Property that links a line of inquiry with a meta workflow seed</rdfs:comment>
-        <rdfs:label>has metaworkflow seed</rdfs:label>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:comment xml:lang="en">The workflow bindings associated to a metaworkflow, i.e., a workflow and a variable binding</rdfs:comment>
+        <rdfs:label xml:lang="en">has metaworkflow binding</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasOutput -->
+    <!-- http://disk-project.org/ontology/disk#hasOptionalParameter -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasOutput">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasOptionalParameter">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
         <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
-        <rdfs:comment>Variable for output data assignation on a workflow seed</rdfs:comment>
-        <rdfs:label>has output</rdfs:label>
+        <rdfs:comment xml:lang="en">Property to store the optional parameters that can be inputted to a workflow</rdfs:comment>
+        <rdfs:label xml:lang="en">has optional parameter</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -314,9 +273,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasOutputFile">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Execution"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
         <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
-        <rdfs:comment>Output files created from the execution of a workflow seed</rdfs:comment>
+        <rdfs:comment>Property that states the output files for a workflow run</rdfs:comment>
         <rdfs:label>has output file</rdfs:label>
     </owl:ObjectProperty>
     
@@ -326,10 +285,23 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasParameter">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
         <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
-        <rdfs:comment xml:lang="en">Parameter assignation to be inputted in a workflow seed</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property to store the parameters to be inputted to a workflow</rdfs:comment>
         <rdfs:label xml:lang="en">has parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasParentHypothesis -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasParentHypothesis">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
+        <rdfs:comment xml:lang="en">Property that links to the parent hypothesis from which the current hypothesis has been derived</rdfs:comment>
+        <rdfs:label xml:lang="en">has parent hypothesis</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -338,14 +310,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasQuestion">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
         <rdfs:range rdf:resource="https://w3id.org/sqo#Question"/>
         <rdfs:comment xml:lang="en">Property that links a Line of Inquiry with a question</rdfs:comment>
         <rdfs:label xml:lang="en">has question</rdfs:label>
@@ -353,43 +318,40 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasQuestionBindings -->
+    <!-- http://disk-project.org/ontology/disk#hasResultingHypothesis -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasQuestionBindings">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Goal"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
-        <rdfs:comment>Variable assignations choose for the user on Goal creation</rdfs:comment>
-        <rdfs:label>has question bindings</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasResultingHypothesis">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Hypothesis"/>
+        <rdfs:comment xml:lang="en">Property that links a triggered line of inquiry to the hypothesis revision that resulted from its analysis</rdfs:comment>
+        <rdfs:label xml:lang="en">has resulting hypothesis</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasResult -->
+    <!-- http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasResult">
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-                    <rdf:Description rdf:about="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#MetaWorkflow"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#GoalResult"/>
-        <rdfs:comment>Results generated from an execution and related to a triggered line of inquiry</rdfs:comment>
-        <rdfs:label>has result</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasSource -->
-
-
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasSource">
-        <rdfs:comment>Endpoint used as source API for this resource</rdfs:comment>
-        <rdfs:label>has source</rdfs:label>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Variable"/>
+                    <rdf:Description rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Property that links a metaworkflow to its revised hypothesis variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">has revised hypothesis variable</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -398,10 +360,47 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasStep">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Execution"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#ExecutionRecord"/>
+        <rdfs:domain rdf:resource="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#ExecutionInfo"/>
         <rdfs:comment>Inner step of a execution</rdfs:comment>
         <rdfs:label>has step</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#has_provenance"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#ConfidenceReport"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+        <rdfs:comment xml:lang="en">Property that links a confidence report to the triggered line of inquiry that contains all the provenance for the report&apos;s value.</rdfs:comment>
+        <rdfs:label xml:lang="en">has triggered line of inquiry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasVariable -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasVariable">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Variable"/>
+        <rdfs:comment xml:lang="en">Property that links a variable binding to its corresponding variable</rdfs:comment>
+        <rdfs:label xml:lang="en">has variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasVariableBinding -->
+
+
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasVariableBinding">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
+        <rdfs:comment xml:lang="en">Property that links a Workflow binding to it correspondent variable binding</rdfs:comment>
+        <rdfs:label xml:lang="en">has variable binding</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -410,30 +409,18 @@
 
 
     <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasWorkflow">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Workflow"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
         <rdfs:comment xml:lang="en">Property that links a Workflow binding to its associated workflow</rdfs:comment>
         <rdfs:label xml:lang="en">has workflow</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasWorkflowInstantiation -->
+    <!-- http://disk-project.org/ontology/disk#hasWorkflowBinding -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasWorkflowInstantiation">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowInstantiation"/>
-        <rdfs:comment>Property that links a triggered line of inquiry with a workflow instantiation</rdfs:comment>
-        <rdfs:label>has workflow instantiation</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasWorkflowSeed -->
-
-
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasWorkflowSeed">
+    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasWorkflowBinding">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -442,22 +429,40 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
-        <rdfs:comment>Property that links a line of inquiry with a workflow seed</rdfs:comment>
-        <rdfs:label>has workflow seed</rdfs:label>
+        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:comment xml:lang="en">Property that links a line of inquiry or executed line of inquiry to the workflow bindings present on it</rdfs:comment>
+        <rdfs:label xml:lang="en">has workflow bindings</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasWorkflowSource -->
+    <!-- http://www.w3.org/ns/prov#has_provenance -->
 
 
-    <owl:ObjectProperty rdf:about="http://disk-project.org/ontology/disk#hasWorkflowSource">
-        <rdfs:subPropertyOf rdf:resource="http://disk-project.org/ontology/disk#hasSource"/>
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
-        <rdfs:range rdf:resource="http://disk-project.org/ontology/disk#Endpoint"/>
-        <rdfs:comment>Endpoint used as workflow system</rdfs:comment>
-        <rdfs:label>has workflow source</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#has_provenance">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:label xml:lang="en">has provenance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:label xml:lang="en">was derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasRevisionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:label xml:lang="en">was revision of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -481,7 +486,6 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Goal"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
@@ -502,7 +506,6 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Goal"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
@@ -528,23 +531,18 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasBindingVariable -->
-
-
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasBindingVariable">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#VariableBinding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Property that links a binding to its associated variable</rdfs:comment>
-        <rdfs:label>has binding variable</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://disk-project.org/ontology/disk#hasConfidenceType -->
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasConfidenceType">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#GoalResult"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ConfidenceReport"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Property that binds a resource to its confidence type</rdfs:comment>
         <rdfs:label xml:lang="en">has confidence type</rdfs:label>
@@ -556,10 +554,74 @@
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasConfidenceValue">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#GoalResult"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ConfidenceReport"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">Property that binds a resource to its confidence value</rdfs:comment>
         <rdfs:label xml:lang="en">has confidence value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasDataQuery -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasDataQuery">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that links a line of inquiry to the data query text associated to it</rdfs:comment>
+        <rdfs:label xml:lang="en">has data query</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasDataQueryDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasDataQueryDescription">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property to describe the data retrieved from a data query in a Line of Inquiry.</rdfs:comment>
+        <rdfs:label xml:lang="en">has data query description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasDataSource -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasDataSource">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property to configure the desired target wiki for the data query in a Line of Inquiry.</rdfs:comment>
+        <rdfs:label xml:lang="en">has data source</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -580,7 +642,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasEmail">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Entity"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Email of a person</rdfs:comment>
         <rdfs:label xml:lang="en">has email</rdfs:label>
@@ -588,14 +650,21 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasGoalQuery -->
+    <!-- http://disk-project.org/ontology/disk#hasHypothesisQuery -->
 
 
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasGoalQuery">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasHypothesisQuery">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Query that will be used to find matching goals</rdfs:comment>
-        <rdfs:label>has goal query</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that links a line of inquiry to the hypothesis query text</rdfs:comment>
+        <rdfs:label xml:lang="en">has hypothesis query</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -607,8 +676,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Execution"/>
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowSeed"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -626,8 +695,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Execution"/>
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionRecord"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -642,22 +711,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasName">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Entity"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Name of a person</rdfs:comment>
         <rdfs:label xml:lang="en">has name</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasQuery -->
-
-
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasQuery">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#DataQueryResults"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Query created after processing data available on goals.</rdfs:comment>
-        <rdfs:label>has query</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -666,22 +723,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasQueryResults">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#DataQueryResults"/>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Results of data query execution at the moment of execution</rdfs:comment>
         <rdfs:label>has query results</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasQueryTemplate -->
-
-
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasQueryTemplate">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#DataQueryTemplate"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Query template used to generate executable data queries with the data provided on goals.</rdfs:comment>
-        <rdfs:label>has query template</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -693,8 +738,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionRecord"/>
-                    <rdf:Description rdf:about="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -709,14 +754,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunLink">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionRecord"/>
-                    <rdf:Description rdf:about="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Link to the execution of a workflow in the corresponding workflow system</rdfs:comment>
         <rdfs:label xml:lang="en">has run link</rdfs:label>
@@ -731,8 +769,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Execution"/>
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionRecord"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -743,47 +781,33 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasSourceName -->
+    <!-- http://disk-project.org/ontology/disk#hasRunStatus -->
 
 
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasSourceName">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Endpoint"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Name of an endpoint</rdfs:comment>
-        <rdfs:label>has source name</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasSourceURL -->
-
-
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasSourceURL">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#Endpoint"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>URL of an endpoint</rdfs:comment>
-        <rdfs:label>has source URL</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#hasStatus -->
-
-
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasStatus">
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasRunStatus">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionRecord"/>
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowInstantiation"/>
-                    <rdf:Description rdf:about="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Status of a digital object.</rdfs:comment>
-        <rdfs:label>has status</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">has run status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasSource -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasSource">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#WorkflowBinding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Denotes the source of a Workflow</rdfs:comment>
+        <rdfs:label>has source</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -795,8 +819,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#DataQueryResults"/>
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#DataQueryTemplate"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -814,14 +838,26 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#DataQueryResults"/>
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#DataQueryTemplate"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
+                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Property that specify which variables of the data query will be used to generate a table</rdfs:comment>
         <rdfs:label>has table variables</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiryStatus">
+        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that states the status of a triggered line of inquiry.</rdfs:comment>
+        <rdfs:label xml:lang="en">has triggered line of inquiry status</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -838,18 +874,6 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#hasUpdateCondition -->
-
-
-    <owl:DatatypeProperty rdf:about="http://disk-project.org/ontology/disk#hasUpdateCondition">
-        <rdfs:domain rdf:resource="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Update condition of the Line of inquiry. Can be updated on data changes, on method changes or manually.</rdfs:comment>
-        <rdfs:label>has update condition</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://disk-project.org/ontology/disk#hasUsageNotes -->
 
 
@@ -857,7 +881,6 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Goal"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#Hypothesis"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#LineOfInquiry"/>
                     <rdf:Description rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry"/>
@@ -883,86 +906,32 @@
     
 
 
-    <!-- http://disk-project.org/ontology/disk#DataQueryResults -->
+    <!-- http://disk-project.org/ontology/disk#ConfidenceReport -->
 
 
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#DataQueryResults">
-        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#DataQueryTemplate"/>
-        <rdfs:comment>Data retrieved from the execution of a data query. Includes variables specified on the Data Query Template</rdfs:comment>
-        <rdfs:label>Data query result</rdfs:label>
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#ConfidenceReport">
+        <rdfs:comment xml:lang="en">A confidence report groups the confidence value and the link to the triggered line of inquiry of a given statement or hypothesis</rdfs:comment>
+        <rdfs:label xml:lang="en">Confidence report</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#DataQueryTemplate -->
+    <!-- http://disk-project.org/ontology/disk#Data -->
 
 
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#DataQueryTemplate">
-        <rdfs:comment>Template of a query to retrieve data from a data source. The variables used on this query can be replaced with values from Goal variables.</rdfs:comment>
-        <rdfs:label>Data query template</rdfs:label>
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Data">
+        <rdfs:comment xml:lang="en">The results produced as a result of executing a workflow from a given line of inquiry</rdfs:comment>
+        <rdfs:label xml:lang="en">Data</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#Endpoint -->
+    <!-- http://disk-project.org/ontology/disk#ExecutionInfo -->
 
 
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Endpoint">
-        <rdfs:comment>Endpoint API information. Used to store data sources and workflow systems.</rdfs:comment>
-        <rdfs:label>Endpoint</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#Entity -->
-
-
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Entity">
-        <rdfs:comment>Entity that is using the system. Accounts can be personal or institutional</rdfs:comment>
-        <rdfs:label>Entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#Execution -->
-
-
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Execution">
-        <owl:equivalentClass rdf:resource="http://www.wings-workflows.org/ontology/execution.owl#Execution"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov/#Bundle"/>
-        <rdfs:comment>An execution of a workflow</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.wings-workflows.org/ontology/execution.owl#"/>
-        <rdfs:label>Execution</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#ExecutionRecord -->
-
-
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#ExecutionRecord">
-        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#Execution"/>
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#ExecutionInfo">
         <rdfs:comment>Stores the state of an execution, start time, end time, status and log.</rdfs:comment>
-        <rdfs:label>Execution record</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#Goal -->
-
-
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Goal">
-        <rdfs:label>Goal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#GoalResult -->
-
-
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#GoalResult">
-        <rdfs:comment>Stores metadata asociated to the triggering of a line of inquiry such as confidence values.</rdfs:comment>
-        <rdfs:label>Goal result</rdfs:label>
+        <rdfs:label>Execution information</rdfs:label>
     </owl:Class>
     
 
@@ -1009,14 +978,30 @@
     
 
 
+    <!-- http://disk-project.org/ontology/disk#Person -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Person">
+        <rdfs:comment xml:lang="en">Property to identify a person</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://disk-project.org/ontology/disk#TriggeredLineOfInquiry -->
 
 
     <owl:Class rdf:about="http://disk-project.org/ontology/disk#TriggeredLineOfInquiry">
-        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#LineOfInquiry"/>
         <rdfs:comment xml:lang="en">A triggered line of inquiry represents a strategy for exploring a hypothesis that is currently being explored by executing its associated workflows and metaworkflows. A triggered line of inquiry may require a long time to complete. When finished, the triggered line of inquiry will include pointers to the provenance of the workflows and metaworkflows that participated on the execution, as well as a confidence value on the original hypothesis.</rdfs:comment>
         <rdfs:label xml:lang="en">Triggered line of inquiry</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://disk-project.org/ontology/disk#Variable -->
+
+
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Variable"/>
     
 
 
@@ -1024,42 +1009,28 @@
 
 
     <owl:Class rdf:about="http://disk-project.org/ontology/disk#VariableBinding">
-        <rdfs:comment xml:lang="en">A variable binding includes the name of the variable, the value and and optional datatype.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Contains a Variable and a binding value</rdfs:comment>
         <rdfs:label xml:lang="en">Variable binding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#Workflow -->
+    <!-- http://disk-project.org/ontology/disk#WorkflowBinding -->
 
 
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#Workflow">
-        <owl:equivalentClass rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#Workflow"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
-        <rdfs:comment>Workflows define the set of computational tasks and dependencies needed to carry out in silico experiments</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#"/>
-        <rdfs:label>Workflow</rdfs:label>
+    <owl:Class rdf:about="http://disk-project.org/ontology/disk#WorkflowBinding">
+        <rdfs:comment xml:lang="en">Contains a workflow and a variable binding</rdfs:comment>
+        <rdfs:label xml:lang="en">Workflow binding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://disk-project.org/ontology/disk#WorkflowInstantiation -->
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
 
 
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#WorkflowInstantiation">
-        <rdfs:subClassOf rdf:resource="http://disk-project.org/ontology/disk#WorkflowSeed"/>
-        <rdfs:comment>A worflow instantiation contains a link to a Workflow template and bindings for parameters and inputs using data obtained by a line of inquiry.</rdfs:comment>
-        <rdfs:label xml:lang="en">Workflow instantiation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://disk-project.org/ontology/disk#WorkflowSeed -->
-
-
-    <owl:Class rdf:about="http://disk-project.org/ontology/disk#WorkflowSeed">
-        <rdfs:comment>A worflow seed is a link to a Workflow template and assignations of  bindings that will be fill after data query execution.</rdfs:comment>
-        <rdfs:label xml:lang="en">Workflow seed</rdfs:label>
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/rdf-schema/"/>
+        <rdfs:label xml:lang="en">Statement</rdfs:label>
     </owl:Class>
     
 
@@ -1093,6 +1064,17 @@
         <rdfs:comment xml:lang="en">An execution of a workflow</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.wings-workflows.org/ontology/execution.owl#"/>
         <rdfs:label xml:lang="en">Execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wings-workflows.org/ontology/workflow.owl#Variable -->
+
+
+    <owl:Class rdf:about="http://www.wings-workflows.org/ontology/workflow.owl#Variable">
+        <rdfs:comment xml:lang="en">Variable of a workflow template</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.wings-workflows.org/ontology/workflow.owl#"/>
+        <rdfs:label xml:lang="en">Variable</rdfs:label>
     </owl:Class>
     
 
